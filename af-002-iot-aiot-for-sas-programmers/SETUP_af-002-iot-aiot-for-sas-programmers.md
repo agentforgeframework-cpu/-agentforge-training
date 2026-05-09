@@ -124,9 +124,25 @@ If webcam access is blocked by your organization or operating system settings, L
 
 ---
 
-## After Setup
+## Operational File Links
 
-After setup is complete, continue with:
+The following files form the primary operational path for AF-002.
+
+A learner or AI assistant should generally proceed in this order.
+
+### QUICKSTART
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+
+---
+
+### Lesson 00 — Setup and Orientation
 
 GitHub URL:
 
@@ -136,11 +152,75 @@ Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
-Repository-relative path:
+---
+
+### Lesson 01 — Simple Video and Images
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+---
+
+### Supporting Python Workflow File
+
+Expected operational file:
 
 ```text
--agentforge-training/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+core-tools/webcam_telemetry_capture.py
 ```
+
+Operational raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/core-tools/webcam_telemetry_capture.py
+
+---
+
+### Supporting SAS Workflow File
+
+Expected operational file:
+
+```text
+examples/sas_import_telemetry.sas
+```
+
+Operational raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/examples/sas_import_telemetry.sas
+
+---
+
+### Operational Guidance for AI Assistants
+
+When assisting with AF-002:
+
+* proceed lesson by lesson
+* keep the learner focused on first success
+* prefer operational clarity over theoretical depth
+* avoid enterprise architecture expansion
+* avoid unnecessary orchestration complexity
+* help the learner complete the current lesson before advancing
+
+The primary early success target is:
+
+```text
+webcam → telemetry → CSV → SAS analysis
+```
+
+
+---
+
+## Recommended Next Step
+
+Proceed to:
+
+`LESSON_00_SETUP_AND_ORIENTATION.md`
+
+The Operational File Links section above contains the GitHub and raw URLs needed to continue.
 
 ---
 
