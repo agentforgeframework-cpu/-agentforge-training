@@ -1,76 +1,51 @@
-# QUICKSTART - AF-002 IoT and AIoT for SAS Programmers
+# QUICKSTART — AF-002 IoT/AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`  
-GitHub URL: pending repository placement
+## Purpose
 
----
-
-# Start Here
-
-AF-002 is designed to give SAS professionals a fast, practical first success with IoT-style telemetry data.
-
-You do not need to understand industrial IoT before beginning.
-
-You need to get your environment ready, create simple telemetry, write it to CSV, and analyze it with SAS.
+This QUICKSTART document helps a human learner begin the course rapidly with minimal friction.
 
 ---
 
-# Human Learner Flow
+## Start Here
 
-1. Open `README.md`.
-2. Open this QUICKSTART file.
-3. Open `SETUP_af-002-iot-aiot-for-sas-programmers.md`.
-4. Complete Lesson 00 - Setup and Orientation.
-5. Begin Lesson 01 - Simple Video and Images.
-6. Produce your first telemetry CSV.
-7. Import that CSV into SAS.
+Proceed to:
 
-Your first major win is:
+`LESSON_00_SETUP_AND_ORIENTATION.md`
 
-> I generated operational telemetry data and analyzed it with SAS.
+This lesson establishes:
 
----
+- setup
+- environment validation
+- tooling checks
+- operational orientation
+- AI instructional context
 
-# Working With an AI Assistant
+GitHub URL:
 
-Use plain language.
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
-Example:
+Raw URL:
 
-> I am starting AF-002. Please help me begin with Lesson 00 - Setup and Orientation.
-
-The AI assistant should guide you through the lesson and prompt you when it is time to move forward.
-
-You should not need to manually run lesson LOAD files yourself during normal learning.
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
 ---
 
-# New Chat Workspace Pattern
+## Important Operational Principle
 
-For a clean lesson workspace, the AI assistant may provide a short prompt to copy into a new chat.
+Each `LESSON_*.md` file is a self-contained instructional compartment.
 
-If the new chat does not work correctly, copy the response back into your current chat and troubleshoot from there.
+The lesson file itself:
+- contains the instructional content
+- establishes AI context
+- acts as the restart boundary
+- provides lesson-specific workflow guidance
+
+No separate `LOAD_LESSON*.md` files are used.
 
 ---
 
-# Success Standard
+# Development & Test Environment
 
-This QUICKSTART succeeds if a learner can begin without feeling lost.
-
-
----
-
-# Development and Test Environment
-
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
+- Platform: ChatGPT (Web)
+- Model: GPT-5.5
 - Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
-
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-© 2026 Paul McDonald

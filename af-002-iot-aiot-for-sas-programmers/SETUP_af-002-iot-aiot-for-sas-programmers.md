@@ -1,110 +1,104 @@
-# SETUP - AF-002 IoT and AIoT for SAS Programmers
+# SETUP — AF-002 IoT/AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md`  
-GitHub URL: pending repository placement
+## Purpose
 
----
+This file defines the basic environment assumptions and setup checks for AF-002.
 
-# Purpose
+SETUP is for environment preparation.
 
-This file defines the AF-002 study and lab environment.
+It does not load lessons.
+It does not replace lesson files.
+It does not create a separate orchestration layer.
 
-Setup is intentionally practical. The goal is not to build an enterprise AIoT platform. The goal is to prepare a survivable learning environment.
+After setup is complete, continue with:
 
----
-
-# Required Environment
-
-AF-002 assumes:
-
-- Typical Windows PC
-- Webcam
-- Current Windows deployment
-- Basic Python installed
-- Free and freely available Python tools
-- SAS access, possibly through SAS OnDemand for Academics
-- Suitable internet access
-- Suitable AI assistant access
-
-This required list defines the v1.0 setup boundary.
+`LESSON_00_SETUP_AND_ORIENTATION.md`
 
 ---
 
-# Python Check
+## Course Setup Assumptions
 
-Open Command Prompt and run:
+AF-002 assumes the learner has access to:
 
-```bat
+- a typical Windows PC
+- a working webcam
+- suitable internet access
+- suitable AI assistant access
+- basic Python installation or ability to install Python
+- free and freely available Python tools where practical
+- SAS access, possibly through SAS OnDemand for Academics or another available SAS environment
+
+---
+
+## First Setup Target
+
+The first setup goal is simple:
+
+Confirm that the learner can run Python well enough to support the first webcam-to-CSV telemetry workflow.
+
+A typical check may be:
+
+```text
 python --version
 ```
 
-If you see a Python version, continue.
+or:
 
-If not, install Python from the official Python distribution or a trusted organization-approved source, then repeat the check.
-
----
-
-# Python Package Check
-
-Lesson 1 uses OpenCV for webcam capture.
-
-Run:
-
-```bat
-python -m pip show opencv-python
+```text
+py --version
 ```
 
-If it is not installed and your environment permits Python packages, run:
+If Python is available, continue.
 
-```bat
-python -m pip install opencv-python
+If Python is not available, install Python using a current, standard installation method appropriate for Windows.
+
+---
+
+## After Setup
+
+After setup is complete, continue with:
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Repository-relative path:
+
+```text
+-agentforge-training/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 ```
 
-If your organization blocks package installation, continue with still image examples or ask your AI assistant to help adapt the lesson.
+---
+
+## Educational Architecture Note
+
+For AF-002 and similar AgentForge educational kits:
+
+```text
+LESSON_*.md IS the loadable instructional unit.
+```
+
+No separate `LOAD_LESSON*.md` files are used.
+
+Each lesson file contains:
+
+- instructional content
+- AI context
+- restart boundary
+- operational guidance
+- lesson-specific workflow support
 
 ---
 
-# SAS Check
+# Development & Test Environment
 
-Confirm you can run SAS code in one of these environments:
-
-- local SAS
-- SAS Studio
-- SAS OnDemand for Academics
-- organization-provided SAS environment
-
-You need to be able to import a CSV file and run basic SAS procedures.
-
----
-
-# Webcam Check
-
-Confirm the PC has a working webcam.
-
-If webcam access is blocked, Lesson 1 can still use saved image files as a fallback.
-
----
-
-# Orientation Check
-
-After setup, continue to:
-
-`lessons/LESSON_00_SETUP_AND_ORIENTATION.md`
-
-
----
-
-# Development and Test Environment
-
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
+- Platform: ChatGPT (Web)
+- Model: GPT-5.5
 - Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
 
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-© 2026 Paul McDonald
+Notes:
+- Updated to align with the finalized LESSON_*.md educational architecture.

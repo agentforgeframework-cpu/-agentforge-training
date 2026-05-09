@@ -6,8 +6,13 @@ Course ID: AF-002
 Project: AgentForge Training  
 Owner: Paul McDonald
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/af-002-iot-aiot-for-sas-programmers.md`  
-GitHub URL: pending repository placement
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/af-002-iot-aiot-for-sas-programmers.md`
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/af-002-iot-aiot-for-sas-programmers.md
 
 ---
 
@@ -79,6 +84,16 @@ Apply the course in one small directed telemetry workflow.
 
 ---
 
+# Educational Architecture
+
+For educational kits:
+
+```text
+LESSON_*.md IS the loadable instructional unit.
+```
+
+---
+
 # v1.0 Completion Standard
 
 AF-002 v1.0 is complete when:
@@ -88,7 +103,7 @@ AF-002 v1.0 is complete when:
 - setup is survivable
 - Lesson 1 creates a reliable first success
 - one complete telemetry workflow functions
-- lesson-level LOAD files exist
+- lesson-level LESSON_*.md instructional compartments exist
 - lightweight validation exists
 - a SAS professional can independently achieve first success
 

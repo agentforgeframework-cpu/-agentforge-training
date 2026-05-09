@@ -1,79 +1,125 @@
-# USER GUIDE - AF-002 IoT and AIoT for SAS Programmers
+# USER GUIDE — AF-002 IoT/AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/USER_GUIDE_af-002-iot-aiot-for-sas-programmers.md`  
-GitHub URL: pending repository placement
+## Purpose
 
----
+This guide explains how to use AF-002 as an AgentForge educational kit.
 
-# How To Use This Course
-
-AF-002 is intended to be used with a human learner and, when helpful, an AI assistant.
-
-The human remains in command. The AI assistant helps with orientation, troubleshooting, lesson progression, and explanation.
+AF-002 is designed to help SAS professionals see that their existing operational analytics mindset applies naturally to telemetry systems, event systems, and AIoT workflows.
 
 ---
 
-# Lesson Pattern
+## How to Use This Course
 
-Each lesson should usually follow this pattern:
+Start with:
 
-1. Read the lesson purpose.
-2. Confirm the required setup.
-3. Run the operational activity.
-4. Review the result.
-5. Connect the result back to SAS operational analytics.
-6. Move forward only when the learner is ready.
+`QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`
+
+Then continue to:
+
+`LESSON_00_SETUP_AND_ORIENTATION.md`
+
+The course proceeds through the lesson files in `/lessons/`.
 
 ---
 
-# AI Assistant Behavior
+## Lesson Files
+
+Each `LESSON_*.md` file acts as a self-contained instructional compartment.
+
+A lesson file contains:
+
+- instructional content
+- operational workflow
+- AI context
+- restart boundary
+- lesson-specific guidance
+
+This means the lesson file itself is the AI-loadable instructional unit.
+
+No separate `LOAD_LESSON*.md` files are used.
+
+---
+
+## Lesson Sequence
+
+```text
+LESSON_00_SETUP_AND_ORIENTATION.md
+LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+LESSON_03_AIOT_DECISION_LOOPS.md
+LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+LESSON_05_CAPSTONE_WORKFLOW.md
+```
+
+---
+
+## Working With an AI Assistant
+
+A learner may provide the current `LESSON_*.md` file to an AI assistant and work through that lesson.
 
 The AI assistant should:
 
-- guide the learner conversationally
-- keep the lesson focused
-- avoid unnecessary AI jargon
-- avoid expanding the course scope
-- ask simple checks when needed
-- help troubleshoot failed setup steps
-- prompt the learner when the current lesson is complete
+- follow the lesson file directly
+- keep the learner oriented
+- help troubleshoot setup and execution issues
+- avoid adding unnecessary scope
+- prompt the learner when ready to continue
+- suggest moving to the next lesson when the current lesson is complete
 
-The learner should not normally need to manually invoke `LOAD_LESSONNN.md` files.
-
----
-
-# Lesson 0 Tradition
-
-Lesson 0 is named Setup and Orientation.
-
-It is instructional. It teaches the learner how to prepare the lab environment, verify tools, and become grounded enough to succeed.
-
-Think of it as the first day of kindergarten: the teacher shows the student where things are, checks their gear, and helps them get ready to learn.
+The learner should not need to manually invoke separate lesson-loading files.
 
 ---
 
-# Capstone Philosophy
+## Restarting a Lesson
 
-The capstone is intentionally small.
+To restart or continue a lesson:
 
-The purpose of a capstone is not to change the world. The purpose is to apply what was learned to a directed effort.
-
-Small directed efforts are more likely to succeed.
-
+1. Open the appropriate `LESSON_*.md` file.
+2. Provide it to the AI assistant.
+3. Ask the AI assistant to continue from that lesson.
+4. If the result seems incorrect, copy the response back to the current support chat for troubleshooting.
 
 ---
 
-# Development and Test Environment
+## Course Design Principles
 
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
+AF-002 is intentionally:
+
+- lightweight
+- practical
+- operational
+- survivable
+- low-friction
+- friendly to SAS professionals
+
+The course should not drift into:
+
+- AI hype
+- enterprise architecture sprawl
+- hardware complexity
+- cloud lock-in
+- unnecessary dependency chains
+- LMS-style orchestration
+
+---
+
+## Primary Success Pattern
+
+The central early success pattern is:
+
+```text
+webcam → telemetry → CSV → SAS analysis
+```
+
+This gives the learner a fast operational win and helps reframe IoT as operational analytics data rather than mysterious hardware.
+
+---
+
+# Development & Test Environment
+
+- Platform: ChatGPT (Web)
+- Model: GPT-5.5
 - Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
 
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-© 2026 Paul McDonald
+Notes:
+- Updated to align with the finalized LESSON_*.md educational architecture.

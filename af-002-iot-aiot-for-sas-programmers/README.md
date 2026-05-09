@@ -1,108 +1,95 @@
-# AF-002 - IoT and AIoT for SAS Programmers
+# AF-002 — IoT/AIoT for SAS Programmers
 
-Status: ACTIVE DEVELOPMENT  
-Version: 0.2  
-Course ID: AF-002  
-Project: AgentForge Training  
-Owner: Paul McDonald
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/`  
-GitHub URL: pending repository placement
-
----
-
-# What This Is
-
-AF-002 is a small, practical AgentForge educational kit for SAS professionals who want to understand IoT and AIoT through operational data.
-
-This course is not built around hardware enthusiasm, cloud hype, or enterprise architecture diagrams.
-
-It is built around one practical realization:
-
-> IoT becomes approachable when it becomes timestamped operational data that SAS can analyze.
-
-The course helps SAS programmers see that their existing operational analytics mindset already applies naturally to telemetry systems, event systems, and AIoT workflows.
-
----
-
-# Course Sequence
-
-- Lesson 00 - Setup and Orientation
-- Lesson 01 - Simple Video and Images
-- Lesson 02 - Event Streams and Real Time Thinking
-- Lesson 03 - AIoT Decision Loops
-- Lesson 04 - Architecture Follows Data for AIoT
-- Lesson 05 - Capstone Workflow
-
-The lesson sequence is locked for v1.0.
-
----
-
-# Start Here
+## Start Here
 
 Human learners should start with:
 
 `QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`
 
-AI assistants supporting the learner should load the course context using:
+AI assistants supporting the learner should work directly from the appropriate lesson file in `/lessons/`.
 
-`LOAD_af-002-iot-aiot-for-sas-programmers.md`
+Each `LESSON_*.md` file is a training-tight compartment. It contains:
+- lesson content
+- AI-use context
+- restart boundary
+- operational guidance
+- lesson-specific workflow support
 
-Each lesson also has its own `LOAD_LESSONNN.md` file for lesson-level AI orchestration.
+Begin with:
 
----
+GitHub URL:
 
-# Operating Philosophy
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
-- Lesson 0 checks the learner's gear and helps them get grounded.
-- Lesson 1 creates the first practical win.
-- Later lessons build from that success.
-- The capstone stays intentionally small.
-- The human remains in command.
-- The architecture stays lightweight.
+Raw URL:
 
----
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
-# Required Environment
+Repository-relative path:
 
-AF-002 assumes:
-
-- Typical Windows PC
-- Webcam
-- Current Windows deployment
-- Basic Python installed, with free and freely available Python tools
-- SAS access, possibly through SAS OnDemand for Academics
-- Suitable internet access
-- Suitable AI assistant access
-
-The required list defines the operational boundary for v1.0.
+-agentforge-training/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
 ---
 
-# Folder Overview
+## Folder Structure
 
-- `/core-tools/` - small scripts and reusable operational helpers
-- `/lessons/` - course lessons and lesson-level LOAD files
-- `/examples/` - sample data and SAS examples
-- `/exercises/` - learner exercises
-- `/validation/` - lightweight validation records and checklists
-- `/lessons-learned/` - operational notes from rollout and testing
-- `/media/` - images, handout assets, or future media references
+```text
+/af-002-iot-aiot-for-sas-programmers
+│
+├── README.md
+├── LICENSE.md
+├── QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+├── SETUP_af-002-iot-aiot-for-sas-programmers.md
+├── USER_GUIDE_af-002-iot-aiot-for-sas-programmers.md
+├── af-002-iot-aiot-for-sas-programmers.md
+│
+├── /core-tools
+├── /lessons
+├── /examples
+├── /exercises
+├── /validation
+├── /lessons-learned
+└── /media
+```
 
+### Lessons Folder
+
+`/lessons/` - lesson files. Each `LESSON_*.md` file is a self-contained, AI-loadable training compartment.
 
 ---
 
-# Development and Test Environment
+## Educational Architecture
 
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
+For educational kits:
+
+```text
+LESSON_*.md IS the loadable instructional unit.
+```
+
+No separate `LOAD_LESSON*.md` files are required.
+
+---
+
+## Operational Philosophy
+
+AF-002 is intentionally:
+
+- lightweight
+- practical
+- survivable
+- operational
+- conference-friendly
+- low-friction
+
+The goal is operational usefulness under real-world conditions.
+
+---
+
+# Development & Test Environment
+
+- Platform: ChatGPT (Web)
+- Model: GPT-5.5
 - Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
 
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-© 2026 Paul McDonald
+Notes:
+- Updated to align with the finalized LESSON_*.md educational architecture.
