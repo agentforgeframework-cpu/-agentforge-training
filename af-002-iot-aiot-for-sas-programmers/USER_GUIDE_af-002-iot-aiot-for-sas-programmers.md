@@ -22,6 +22,18 @@ The course proceeds through the lesson files in `/lessons/`.
 
 ---
 
+## Primary Success Pattern
+
+The central early success pattern is:
+
+```text
+webcam → telemetry → CSV → SAS analysis
+```
+
+This gives the learner a fast operational win and helps reframe IoT as operational analytics data rather than mysterious hardware.
+
+---
+
 ## Lesson Files
 
 Each `LESSON_*.md` file acts as a self-contained instructional compartment.
@@ -35,8 +47,6 @@ A lesson file contains:
 - lesson-specific guidance
 
 This means the lesson file itself is the AI-loadable instructional unit.
-
-No separate `LOAD_LESSON*.md` files are used.
 
 ---
 
@@ -66,7 +76,11 @@ The AI assistant should:
 - prompt the learner when ready to continue
 - suggest moving to the next lesson when the current lesson is complete
 
-The learner should not need to manually invoke separate lesson-loading files.
+To provide a lesson file to an AI assistant, use one of these methods:
+
+- paste the raw lesson URL
+- paste the lesson text
+- upload the lesson file, if supported by the AI tool
 
 ---
 
@@ -77,7 +91,8 @@ To restart or continue a lesson:
 1. Open the appropriate `LESSON_*.md` file.
 2. Provide it to the AI assistant.
 3. Ask the AI assistant to continue from that lesson.
-4. If the result seems incorrect, copy the response back to the current support chat for troubleshooting.
+4. If the result seems incorrect, save the response and compare it with the lesson instructions.
+5. If needed, return to the previous working chat or project notes and troubleshoot from the saved response.
 
 ---
 
@@ -103,23 +118,9 @@ The course should not drift into:
 
 ---
 
-## Primary Success Pattern
+## Development and Test Environment
 
-The central early success pattern is:
-
-```text
-webcam → telemetry → CSV → SAS analysis
-```
-
-This gives the learner a fast operational win and helps reframe IoT as operational analytics data rather than mysterious hardware.
-
----
-
-# Development & Test Environment
-
-- Platform: ChatGPT (Web)
-- Model: GPT-5.5
+- Platform: ChatGPT Web
+- Model: GPT-5.5 Thinking
 - Date: 2026-05-09
-
-Notes:
-- Updated to align with the finalized LESSON_*.md educational architecture.
+- Notes: Updated after Claude digital twin survivability test.

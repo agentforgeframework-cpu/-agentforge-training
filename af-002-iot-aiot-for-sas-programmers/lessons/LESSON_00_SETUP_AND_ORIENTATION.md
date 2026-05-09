@@ -1,9 +1,14 @@
-# Lesson 00 - Setup and Orientation
+# LESSON 00 — Setup and Orientation
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md`  
-GitHub URL: pending repository placement
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md`
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
 
 ---
 
@@ -11,38 +16,218 @@ GitHub URL: pending repository placement
 
 Prepare the learner for the AF-002 study and lab environment.
 
+This lesson checks your gear, confirms the basic workspace, and helps you get grounded before the first telemetry workflow.
+
+Think of this as the first day of class: where things are, what tools you need, and how to know you are ready.
+
+---
+
+# AI Assistant Guidance
+
+If you are assisting a learner with this lesson:
+
+- guide the learner step by step
+- do not skip setup checks
+- do not expand into advanced IoT architecture
+- keep the tone practical and reassuring
+- help troubleshoot only the current setup issue
+- transition to Lesson 01 only when the learner has confirmed readiness
+
+The goal is confidence and readiness, not technical depth.
+
 ---
 
 # Learning Objectives
 
-- understand the course workspace
+By the end of this lesson, the learner should be able to:
+
+- identify the main course files
 - verify Python access
+- install or confirm required Python packages
 - verify SAS access
-- verify webcam or image-file readiness
-- prepare for Lesson 01
+- verify webcam access or understand the image-file fallback
+- understand what will happen in Lesson 01
 
 ---
 
-## Activity
+# What You Are Preparing For
 
-1. Open the course README.
-2. Open the QUICKSTART file.
-3. Open the SETUP file.
-4. Verify Python with `python --version`.
-5. Verify SAS access.
-6. Verify webcam access or image-file fallback.
-7. Open Lesson 01.
+In Lesson 01, you will create the first practical course success:
 
-## Lesson 0 Success
+```text
+webcam → telemetry → CSV → SAS analysis
+```
+
+This means:
+
+1. Python will use your webcam as a simple sensor.
+2. Python will write a small telemetry CSV file.
+3. SAS will import and inspect that CSV file.
+4. You will see that IoT data is operational analytics data.
+
+---
+
+# Setup Check 1 — Confirm Python
+
+Open Command Prompt or PowerShell.
+
+Run:
+
+```text
+python --version
+```
+
+If that does not work, run:
+
+```text
+py --version
+```
+
+A successful result should look something like:
+
+```text
+Python 3.11.8
+```
+
+Any current Python 3.x version should be suitable for this introductory course.
+
+## If Python Is Not Found
+
+Install Python using a current trusted Windows installation method.
+
+During installation, choose the option to add Python to PATH if it is offered.
+
+After installation:
+
+1. Close Command Prompt or PowerShell.
+2. Open it again.
+3. Run `python --version` or `py --version` again.
+
+Do not continue until one of those commands returns a Python 3.x version.
+
+---
+
+# Setup Check 2 — Confirm Python Package Installation
+
+Lesson 01 expects Python packages that support webcam capture and CSV work.
+
+Run:
+
+```text
+python -m pip install opencv-python pandas
+```
+
+If `python` does not work but `py` does, run:
+
+```text
+py -m pip install opencv-python pandas
+```
+
+A successful result may say the packages were installed or that they are already satisfied.
+
+Either result is acceptable.
+
+---
+
+# Setup Check 3 — Confirm Webcam Access
+
+Open the Windows Camera app.
+
+Confirm that the webcam displays an image.
+
+If the webcam works in the Windows Camera app, it should usually be available to Python.
+
+If your webcam is blocked by security settings, privacy settings, or organizational policy, do not panic. Lesson 01 can still use an image-file fallback path if needed.
+
+---
+
+# Setup Check 4 — Confirm SAS Access
+
+Open your SAS environment.
+
+Suitable options may include:
+
+- SAS OnDemand for Academics
+- SAS Studio
+- local SAS
+- a workplace SAS environment
+- another SAS environment available to you
+
+The basic requirement is simple:
+
+You need to be able to run a small SAS program that imports a CSV file.
+
+You do not need an enterprise IoT platform.
+
+You do not need a cloud IoT service.
+
+You do not need special hardware beyond the course assumptions.
+
+---
+
+# Setup Check 5 — Confirm File Awareness
+
+You should know where these course folders are:
+
+```text
+/core-tools
+/examples
+/lessons
+/validation
+```
+
+For Lesson 01, the most important supporting files are expected to be:
+
+```text
+core-tools/webcam_telemetry_capture.py
+examples/sas_import_telemetry.sas
+```
+
+If those files are not present, pause and confirm that the course repository copied or downloaded correctly.
+
+---
+
+# Lesson 00 Success
 
 You are ready when you can say:
 
 > My basic lab environment is ready, and I know where the course files are.
 
-## Recap
+You should also be able to say:
 
-Lesson 0 checks your gear and helps you get grounded so you can succeed in the rest of the course.
+> I know that Lesson 01 will turn webcam input into telemetry data, save it as CSV, and inspect it in SAS.
 
+---
+
+# What You Just Did
+
+You checked the basic lab environment before running the first telemetry workflow.
+
+That matters because IoT and AIoT work often fails from setup friction before it fails from analytics difficulty.
+
+This lesson keeps setup simple so the first operational success can happen quickly.
+
+---
+
+# Next Step
+
+Continue to:
+
+`LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md`
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+---
+
+# Recap
+
+Lesson 00 checks your gear and helps you get grounded so you can succeed in the rest of the course.
 
 ---
 
@@ -51,7 +236,7 @@ Lesson 0 checks your gear and helps you get grounded so you can succeed in the r
 - Platform: ChatGPT Web
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
+- Notes: Updated after Claude digital twin survivability test.
 
 ---
 

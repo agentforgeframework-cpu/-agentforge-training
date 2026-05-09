@@ -56,6 +56,16 @@ The course avoids dependency sprawl, hardware complexity, cloud lock-in, and ent
 
 ---
 
+# Primary Success Pattern
+
+```text
+webcam → telemetry → CSV → SAS analysis
+```
+
+This early success helps SAS professionals recognize telemetry as operational analytics data.
+
+---
+
 # v1.0 Lesson Sequence
 
 ## Lesson 00 - Setup and Orientation
@@ -92,6 +102,12 @@ For educational kits:
 LESSON_*.md IS the loadable instructional unit.
 ```
 
+Each lesson file is:
+- self-contained
+- AI-loadable
+- restartable
+- operationally compartmentalized
+
 ---
 
 # v1.0 Completion Standard
@@ -103,12 +119,11 @@ AF-002 v1.0 is complete when:
 - setup is survivable
 - Lesson 1 creates a reliable first success
 - one complete telemetry workflow functions
-- lesson-level LESSON_*.md instructional compartments exist
+- lesson-level `LESSON_*.md` instructional compartments exist
 - lightweight validation exists
 - a SAS professional can independently achieve first success
 
 This is not a second course outline. It is the operational release boundary.
-
 
 ---
 
@@ -117,7 +132,7 @@ This is not a second course outline. It is the operational release boundary.
 - Platform: ChatGPT Web
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
+- Notes: Updated after Claude digital twin survivability test.
 
 ---
 

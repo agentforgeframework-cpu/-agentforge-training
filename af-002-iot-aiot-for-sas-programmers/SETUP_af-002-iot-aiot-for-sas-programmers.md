@@ -6,10 +6,6 @@ This file defines the basic environment assumptions and setup checks for AF-002.
 
 SETUP is for environment preparation.
 
-It does not load lessons.
-It does not replace lesson files.
-It does not create a separate orchestration layer.
-
 After setup is complete, continue with:
 
 `LESSON_00_SETUP_AND_ORIENTATION.md`
@@ -24,19 +20,45 @@ AF-002 assumes the learner has access to:
 - a working webcam
 - suitable internet access
 - suitable AI assistant access
-- basic Python installation or ability to install Python
+- Python or the ability to install Python
 - free and freely available Python tools where practical
 - SAS access, possibly through SAS OnDemand for Academics or another available SAS environment
 
 ---
 
-## First Setup Target
+## Python Setup Check
 
-The first setup goal is simple:
+Open Command Prompt or PowerShell.
 
-Confirm that the learner can run Python well enough to support the first webcam-to-CSV telemetry workflow.
+Try:
 
-A typical check may be:
+```text
+python --version
+```
+
+If that does not work, try:
+
+```text
+py --version
+```
+
+A successful result should look something like:
+
+```text
+Python 3.11.8
+```
+
+Any current Python 3.x version should be suitable for this introductory course.
+
+---
+
+## If Python Is Not Found
+
+Install Python from the official Python download site or another trusted standard source.
+
+When installing on Windows, enable the option to add Python to PATH if it is offered.
+
+After installation, close and reopen Command Prompt or PowerShell, then run:
 
 ```text
 python --version
@@ -48,9 +70,57 @@ or:
 py --version
 ```
 
-If Python is available, continue.
+Do not continue until one of those commands returns a Python 3.x version.
 
-If Python is not available, install Python using a current, standard installation method appropriate for Windows.
+---
+
+## Python Packages Used in Lesson 01
+
+Lesson 01 uses Python packages to capture webcam data and write telemetry output.
+
+Install the expected packages with:
+
+```text
+python -m pip install opencv-python pandas
+```
+
+If `python` does not work but `py` does, use:
+
+```text
+py -m pip install opencv-python pandas
+```
+
+If pip reports that the packages are already installed, that is fine.
+
+---
+
+## SAS Access Check
+
+Confirm that you can open your SAS environment.
+
+Suitable options may include:
+
+- SAS OnDemand for Academics
+- SAS Studio
+- local SAS
+- a workplace SAS environment
+- another SAS environment available to you
+
+The goal is simple:
+
+You need to be able to run a small SAS program that imports a CSV file.
+
+---
+
+## Webcam Check
+
+Confirm that your webcam works in Windows.
+
+A simple check is to open the Windows Camera app.
+
+If the camera works there, it should usually be available to Python.
+
+If webcam access is blocked by your organization or operating system settings, Lesson 01 includes an image-file fallback path.
 
 ---
 
@@ -74,31 +144,9 @@ Repository-relative path:
 
 ---
 
-## Educational Architecture Note
+## Development and Test Environment
 
-For AF-002 and similar AgentForge educational kits:
-
-```text
-LESSON_*.md IS the loadable instructional unit.
-```
-
-No separate `LOAD_LESSON*.md` files are used.
-
-Each lesson file contains:
-
-- instructional content
-- AI context
-- restart boundary
-- operational guidance
-- lesson-specific workflow support
-
----
-
-# Development & Test Environment
-
-- Platform: ChatGPT (Web)
-- Model: GPT-5.5
+- Platform: ChatGPT Web
+- Model: GPT-5.5 Thinking
 - Date: 2026-05-09
-
-Notes:
-- Updated to align with the finalized LESSON_*.md educational architecture.
+- Notes: Updated after Claude digital twin survivability test.

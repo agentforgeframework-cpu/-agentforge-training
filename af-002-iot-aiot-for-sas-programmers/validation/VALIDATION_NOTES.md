@@ -37,13 +37,11 @@ For educational kits:
 LESSON_*.md IS the loadable instructional unit.
 ```
 
-Validation should confirm that an AI assistant can operate correctly when provided directly with:
+Validation should confirm that an AI assistant can operate correctly when provided directly with a lesson file such as:
 
 ```text
 LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
 ```
-
-No separate `LOAD_LESSON*.md` files are used.
 
 ---
 
@@ -64,6 +62,19 @@ The goal is survivability, not perfection.
 
 ---
 
+## Lesson 01 Operational Validation
+
+Lesson 01 should be considered operationally ready when a learner can:
+
+1. Install or confirm Python package readiness.
+2. Run the webcam telemetry capture workflow.
+3. Produce a CSV telemetry file.
+4. Import that CSV file into SAS.
+5. View a visible SAS result.
+6. Explain that the webcam produced timestamped operational telemetry.
+
+---
+
 ## Validation Philosophy
 
 Operational validation asks:
@@ -80,8 +91,9 @@ Can an ideal expert succeed under ideal conditions?
 
 ---
 
-# Development & Test Environment
+## Development and Test Environment
 
-- Platform: ChatGPT (Web)
-- Model: GPT-5.5
+- Platform: ChatGPT Web
+- Model: GPT-5.5 Thinking
 - Date: 2026-05-09
+- Notes: Updated after Claude digital twin survivability test.

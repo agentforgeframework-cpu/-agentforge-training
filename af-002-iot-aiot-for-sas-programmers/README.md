@@ -1,21 +1,40 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 
+## What This Course Does
+
+AF-002 helps SAS professionals see that IoT and AIoT are not mysterious hardware problems first.
+
+They are operational analytics problems.
+
+The early course success pattern is:
+
+```text
+webcam → telemetry → CSV → SAS analysis
+```
+
+By the end of the first working lesson, you should have created a small telemetry dataset and analyzed it with SAS.
+
+That first success matters.
+
+---
+
 ## Start Here
 
 Human learners should start with:
 
 `QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`
 
-AI assistants supporting the learner should work directly from the appropriate lesson file in `/lessons/`.
+GitHub URL:
 
-Each `LESSON_*.md` file is a training-tight compartment. It contains:
-- lesson content
-- AI-use context
-- restart boundary
-- operational guidance
-- lesson-specific workflow support
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
 
-Begin with:
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+
+After the QUICKSTART, proceed to:
+
+`LESSON_00_SETUP_AND_ORIENTATION.md`
 
 GitHub URL:
 
@@ -27,7 +46,22 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Repository-relative path:
 
+```text
 -agentforge-training/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+```
+
+---
+
+## Course Sequence
+
+```text
+LESSON_00_SETUP_AND_ORIENTATION.md
+LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+LESSON_03_AIOT_DECISION_LOOPS.md
+LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+LESSON_05_CAPSTONE_WORKFLOW.md
+```
 
 ---
 
@@ -54,19 +88,15 @@ Repository-relative path:
 
 ### Lessons Folder
 
-`/lessons/` - lesson files. Each `LESSON_*.md` file is a self-contained, AI-loadable training compartment.
+`/lessons/` contains the course lesson files.
 
----
+Each `LESSON_*.md` file is a self-contained, AI-loadable training compartment.
 
-## Educational Architecture
+### Supporting Folders
 
-For educational kits:
+Some supporting folders may be lightly populated during active development.
 
-```text
-LESSON_*.md IS the loadable instructional unit.
-```
-
-No separate `LOAD_LESSON*.md` files are required.
+Primary learner flow should begin with the QUICKSTART and the lesson files.
 
 ---
 
@@ -85,11 +115,9 @@ The goal is operational usefulness under real-world conditions.
 
 ---
 
-# Development & Test Environment
+## Development and Test Environment
 
-- Platform: ChatGPT (Web)
-- Model: GPT-5.5
+- Platform: ChatGPT Web
+- Model: GPT-5.5 Thinking
 - Date: 2026-05-09
-
-Notes:
-- Updated to align with the finalized LESSON_*.md educational architecture.
+- Notes: Updated after Claude digital twin survivability test.
