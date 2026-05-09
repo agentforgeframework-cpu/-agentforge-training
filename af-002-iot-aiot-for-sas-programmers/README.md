@@ -77,9 +77,11 @@ LESSON_05_CAPSTONE_WORKFLOW.md
 ├── USER_GUIDE_af-002-iot-aiot-for-sas-programmers.md
 ├── af-002-iot-aiot-for-sas-programmers.md
 │
-├── /core-tools
 ├── /lessons
 ├── /examples
+├── /python
+├── /sas
+├── /data
 ├── /exercises
 ├── /validation
 ├── /lessons-learned

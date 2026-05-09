@@ -3,7 +3,13 @@
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md`  
-GitHub URL: pending repository placement
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md`
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
 
 ---
 

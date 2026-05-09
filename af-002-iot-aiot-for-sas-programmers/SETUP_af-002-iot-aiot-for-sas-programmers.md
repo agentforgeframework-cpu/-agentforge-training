@@ -171,12 +171,12 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 Expected operational file:
 
 ```text
-core-tools/webcam_telemetry_capture.py
+python/webcam_telemetry_capture.py
 ```
 
 Operational raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/core-tools/webcam_telemetry_capture.py
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
 
 ---
 
@@ -185,14 +185,31 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 Expected operational file:
 
 ```text
-examples/sas_import_telemetry.sas
+sas/sas_import_telemetry.sas
 ```
 
 Operational raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/examples/sas_import_telemetry.sas
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
 
 ---
+
+
+
+---
+
+### Supporting Sample Telemetry Data File
+
+Operational data file:
+
+```text
+data/webcam_telemetry_sample.csv
+```
+
+Operational raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
+
 
 ### Operational Guidance for AI Assistants
 

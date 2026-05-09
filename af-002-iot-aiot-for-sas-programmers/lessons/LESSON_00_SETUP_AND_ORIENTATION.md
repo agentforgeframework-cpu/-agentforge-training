@@ -179,8 +179,8 @@ You should know where these course folders are:
 For Lesson 01, the most important supporting files are expected to be:
 
 ```text
-core-tools/webcam_telemetry_capture.py
-examples/sas_import_telemetry.sas
+python/webcam_telemetry_capture.py
+sas/sas_import_telemetry.sas
 ```
 
 If those files are not present, pause and confirm that the course repository copied or downloaded correctly.

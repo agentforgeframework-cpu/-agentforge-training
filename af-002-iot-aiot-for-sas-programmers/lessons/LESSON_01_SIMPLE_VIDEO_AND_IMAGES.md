@@ -73,8 +73,8 @@ Operationally, this means:
 This lesson expects the following files:
 
 ```text
-core-tools/webcam_telemetry_capture.py
-examples/sas_import_telemetry.sas
+python/webcam_telemetry_capture.py
+sas/sas_import_telemetry.sas
 ```
 
 If these files are missing, pause and confirm that the course repository copied or downloaded correctly.
@@ -108,13 +108,13 @@ Either result is acceptable.
 From the course folder, run:
 
 ```text
-python core-tools/webcam_telemetry_capture.py
+python python/webcam_telemetry_capture.py
 ```
 
 If `python` does not work but `py` does, run:
 
 ```text
-py core-tools/webcam_telemetry_capture.py
+py python/webcam_telemetry_capture.py
 ```
 
 The script should access the webcam and create a telemetry CSV file.
@@ -163,7 +163,7 @@ Open your SAS environment.
 Use:
 
 ```text
-examples/sas_import_telemetry.sas
+sas/sas_import_telemetry.sas
 ```
 
 The SAS program should import the telemetry CSV and display the data.
