@@ -5,10 +5,11 @@ Place these files as follows:
 ```text
 -agentforge-training/
 └── af-002-iot-aiot-for-sas-programmers/
-    ├── core-tools/
+    ├── python/
     │   └── webcam_telemetry_capture.py
-    ├── examples/
+    ├── sas/
     │   ├── sas_import_telemetry.sas
+    ├── data/
     │   └── webcam_telemetry_sample.csv
     └── lessons-learned/
         └── OPERATIONAL_ASSET_SUMMARY.md
@@ -51,7 +52,7 @@ py python/webcam_telemetry_capture.py
 Expected output:
 
 ```text
-examples/webcam_telemetry.csv
+data/webcam_telemetry.csv
 ```
 
 Then run:

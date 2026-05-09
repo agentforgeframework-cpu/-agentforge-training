@@ -170,8 +170,9 @@ You do not need special hardware beyond the course assumptions.
 You should know where these course folders are:
 
 ```text
-/core-tools
-/examples
+/python
+/sas
+/data
 /lessons
 /validation
 ```

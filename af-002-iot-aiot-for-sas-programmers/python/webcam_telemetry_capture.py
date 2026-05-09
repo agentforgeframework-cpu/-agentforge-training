@@ -17,7 +17,7 @@ Raw URL:
     https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
 
 Expected output:
-    examples/webcam_telemetry.csv
+    data/webcam_telemetry.csv
 
 Required packages:
     opencv-python
@@ -152,8 +152,8 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument(
         "--output",
-        default="examples/webcam_telemetry.csv",
-        help="Output CSV path. Default: examples/webcam_telemetry.csv",
+        default="data/webcam_telemetry.csv",
+        help="Output CSV path. Default: data/webcam_telemetry.csv",
     )
 
     parser.add_argument(

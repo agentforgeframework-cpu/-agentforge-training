@@ -15,7 +15,7 @@ Purpose:
     python/webcam_telemetry_capture.py
 
 Expected CSV:
-    examples/webcam_telemetry.csv
+    data/webcam_telemetry.csv
 
 Fallback CSV:
     data/webcam_telemetry_sample.csv
@@ -35,7 +35,7 @@ Note:
 
 /*
 Example Windows local path:
-%let TELEMETRY_CSV = C:\Users\Owner\Documents\#git\agentforgeframework-cpu\-agentforge-training\af-002-iot-aiot-for-sas-programmers\examples\webcam_telemetry.csv;
+%let TELEMETRY_CSV = C:\Users\Owner\Documents\#git\agentforgeframework-cpu\-agentforge-training\af-002-iot-aiot-for-sas-programmers\data\webcam_telemetry.csv;
 
 Example SAS OnDemand style path after upload:
 %let TELEMETRY_CSV = /home/u12345678/webcam_telemetry.csv;

@@ -122,7 +122,7 @@ The script should access the webcam and create a telemetry CSV file.
 Expected output file:
 
 ```text
-examples/webcam_telemetry.csv
+data/webcam_telemetry.csv
 ```
 
 If the script uses a different output path, use the path shown by the script.
