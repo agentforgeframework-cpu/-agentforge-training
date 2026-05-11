@@ -81,6 +81,27 @@ If these files are missing, pause and confirm that the course repository copied 
 
 ---
 
+# Local File Map
+
+Keep this simple.
+
+During this lesson, the key paths are:
+
+```text
+python/webcam_telemetry_capture.py
+sas/sas_import_telemetry.sas
+data/webcam_telemetry.csv
+data/webcam_telemetry_sample.csv
+```
+
+The Python script writes the telemetry CSV.
+
+The SAS program reads the telemetry CSV.
+
+The sample CSV is a safety net if the webcam workflow fails.
+
+---
+
 # Step 1 — Confirm Python Packages
 
 Open Command Prompt or PowerShell.
@@ -100,6 +121,8 @@ py -m pip install opencv-python pandas
 A successful result may say the packages were installed or already satisfied.
 
 Either result is acceptable.
+
+If Python package installation takes a couple attempts, that is normal. Keep the error message visible and ask your AI assistant to help interpret it.
 
 ---
 
@@ -177,6 +200,22 @@ Expected SAS actions may include:
 
 If the CSV path in the SAS program does not match your local folder, update the path to the location of your generated CSV file.
 
+Inside the SAS file, look for:
+
+```sas
+%let TELEMETRY_CSV = data/webcam_telemetry.csv;
+```
+
+If needed, change it to the actual path of your generated CSV file.
+
+For example, on a local Windows PC:
+
+```sas
+%let TELEMETRY_CSV = C:\AF-002\data\webcam_telemetry.csv;
+```
+
+For SAS OnDemand, upload the CSV to your SAS Files area and use the server-side path shown by SAS.
+
 ---
 
 # Step 5 — Confirm Visible SAS Output
@@ -220,7 +259,27 @@ Use this fallback when:
 - organizational policy blocks the camera
 - you are testing without live camera access
 
-If the current script does not yet support image-file input, record that as a validation issue and continue using the provided sample CSV if available.
+The Python script supports an image-file fallback with the `--image` option.
+
+Example:
+
+```text
+python python/webcam_telemetry_capture.py --image path\to\your_image.jpg
+```
+
+or:
+
+```text
+py python/webcam_telemetry_capture.py --image path\to\your_image.jpg
+```
+
+If the webcam and image fallback are both unavailable, continue with:
+
+```text
+data/webcam_telemetry_sample.csv
+```
+
+That sample data keeps the SAS portion of the lesson survivable.
 
 The fallback should preserve the same learning point:
 
@@ -274,13 +333,44 @@ Check:
 - whether the script completed
 - whether the script printed an output path
 - whether you ran the command from the course folder
-- whether the `/examples/` folder exists
+- whether the `/data/` folder exists
 
 ## SAS cannot find the CSV
 
 Update the file path in the SAS program.
 
 Use the exact path to your generated CSV file.
+
+---
+
+# Success Checkpoint
+
+Before moving on, confirm that you can physically identify:
+
+- the Python script in `/python/`
+- the SAS program in `/sas/`
+- the telemetry CSV in `/data/`
+- visible SAS output from the telemetry CSV
+
+If you can identify those four things, you have completed the operational heart of Lesson 01.
+
+---
+
+# Restart Checkpoint
+
+If you stop here, restart later by opening this lesson file again and checking:
+
+```text
+data/webcam_telemetry.csv
+```
+
+If that file exists, continue with the SAS import step.
+
+If it does not exist, rerun the Python script or use:
+
+```text
+data/webcam_telemetry_sample.csv
+```
 
 ---
 

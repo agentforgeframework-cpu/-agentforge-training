@@ -2,7 +2,6 @@
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md`  
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md`
 
 GitHub URL:
@@ -10,6 +9,16 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+
+---
+
+# Freeze-Period Status
+
+This lesson is part of the approved AF-002 course sequence.
+
+During the stabilization freeze, this lesson may function as a structured lesson description or lightweight operational module.
+
+Lesson 00 and Lesson 01 remain the primary fully operational first-success path.
 
 ---
 
@@ -40,6 +49,30 @@ Then discuss what the human should verify before acting.
 
 The goal is operationally useful action with accountability and validation.
 
+
+---
+
+# Restart Checkpoint
+
+If you stop here, restart later by opening this lesson file and confirming what you completed in the previous lesson.
+
+The course is designed so each `LESSON_*.md` file can serve as a restart boundary.
+
+---
+
+# Next Step
+
+After completing this lesson, continue to:
+
+`LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md`
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
 
 ---
 

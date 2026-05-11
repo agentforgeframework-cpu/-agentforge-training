@@ -139,6 +139,10 @@ If the webcam works in the Windows Camera app, it should usually be available to
 
 If your webcam is blocked by security settings, privacy settings, or organizational policy, do not panic. Lesson 01 can still use an image-file fallback path if needed.
 
+If webcam permissions, Python packages, or local file paths take a couple attempts to work correctly, that is normal.
+
+The goal is to recover calmly and keep the workflow understandable.
+
 ---
 
 # Setup Check 4 — Confirm SAS Access
@@ -171,8 +175,7 @@ You should know where these course folders are:
 
 ```text
 /python
-/sas
-/data
+/examples
 /lessons
 /validation
 ```
@@ -207,6 +210,20 @@ You checked the basic lab environment before running the first telemetry workflo
 That matters because IoT and AIoT work often fails from setup friction before it fails from analytics difficulty.
 
 This lesson keeps setup simple so the first operational success can happen quickly.
+
+---
+
+# Restart Checkpoint
+
+If you stop here, restart later by opening this lesson file again and confirming:
+
+- Python works.
+- Required Python packages are installed.
+- SAS access works.
+- Webcam or image-file fallback is available.
+- You know where the `/python/`, `/sas/`, and `/data/` folders are.
+
+Then continue to Lesson 01.
 
 ---
 

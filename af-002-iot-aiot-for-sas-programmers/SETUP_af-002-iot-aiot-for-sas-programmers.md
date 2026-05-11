@@ -124,6 +124,39 @@ If webcam access is blocked by your organization or operating system settings, L
 
 ---
 
+## Local Working Folder Guidance
+
+A simple local working folder is enough.
+
+One workable Windows example is:
+
+```text
+C:\AF-002\
+    python\
+    sas\
+    data\
+    lessons\
+```
+
+If you are unsure where to place files on your PC, ask your AI assistant to help you create a simple AF-002 working folder and place the files in the matching folders.
+
+The important point is that the paths stay understandable.
+
+The early workflow expects:
+
+```text
+python/webcam_telemetry_capture.py
+sas/sas_import_telemetry.sas
+data/webcam_telemetry.csv
+data/webcam_telemetry_sample.csv
+```
+
+If Python package installation, webcam permissions, or file paths take a couple attempts to work correctly, that is normal.
+
+The goal is bounded recovery, not perfect first-try setup.
+
+---
+
 ## Operational File Links
 
 The following files form the primary operational path for AF-002.
@@ -193,23 +226,6 @@ Operational raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
 
 ---
-
-
-
----
-
-### Supporting Sample Telemetry Data File
-
-Operational data file:
-
-```text
-data/webcam_telemetry_sample.csv
-```
-
-Operational raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
-
 
 ### Operational Guidance for AI Assistants
 

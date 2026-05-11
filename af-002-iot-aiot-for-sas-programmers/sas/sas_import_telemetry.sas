@@ -31,11 +31,11 @@ Note:
 */
 
 /* Update this path if your CSV is stored somewhere else. */
-%let TELEMETRY_CSV = examples/webcam_telemetry.csv;
+%let TELEMETRY_CSV = data/webcam_telemetry.csv;
 
 /*
 Example Windows local path:
-%let TELEMETRY_CSV = C:\Users\Owner\Documents\#git\agentforgeframework-cpu\-agentforge-training\af-002-iot-aiot-for-sas-programmers\data\webcam_telemetry.csv;
+%let TELEMETRY_CSV = C:\Users\Owner\Documents\#git\agentforgeframework-cpu\-agentforge-training\af-002-iot-aiot-for-sas-programmers\examples\webcam_telemetry.csv;
 
 Example SAS OnDemand style path after upload:
 %let TELEMETRY_CSV = /home/u12345678/webcam_telemetry.csv;

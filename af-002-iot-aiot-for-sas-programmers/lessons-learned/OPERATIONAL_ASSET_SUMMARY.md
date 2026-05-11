@@ -7,9 +7,8 @@ Place these files as follows:
 └── af-002-iot-aiot-for-sas-programmers/
     ├── python/
     │   └── webcam_telemetry_capture.py
-    ├── sas/
+    ├── examples/
     │   ├── sas_import_telemetry.sas
-    ├── data/
     │   └── webcam_telemetry_sample.csv
     └── lessons-learned/
         └── OPERATIONAL_ASSET_SUMMARY.md
@@ -22,7 +21,7 @@ These files address the load-bearing operational issues found in Claude's digita
 1. `python/webcam_telemetry_capture.py`
    - Provides the executable webcam-to-CSV telemetry workflow.
    - Supports optional image-file fallback using `--image`.
-   - Writes `examples/webcam_telemetry.csv` by default.
+   - Writes `data/webcam_telemetry.csv` by default.
 
 2. `sas/sas_import_telemetry.sas`
    - Imports the telemetry CSV into SAS.

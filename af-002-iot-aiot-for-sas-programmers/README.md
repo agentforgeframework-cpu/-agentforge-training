@@ -77,11 +77,9 @@ LESSON_05_CAPSTONE_WORKFLOW.md
 ├── USER_GUIDE_af-002-iot-aiot-for-sas-programmers.md
 ├── af-002-iot-aiot-for-sas-programmers.md
 │
+├── /python
 ├── /lessons
 ├── /examples
-├── /python
-├── /sas
-├── /data
 ├── /exercises
 ├── /validation
 ├── /lessons-learned
@@ -96,9 +94,16 @@ Each `LESSON_*.md` file is a self-contained, AI-loadable training compartment.
 
 ### Supporting Folders
 
-Some supporting folders may be lightly populated during active development.
+Supporting folders use operational meaning:
 
-Primary learner flow should begin with the QUICKSTART and the lesson files.
+- `/python/` contains executable Python assets.
+- `/sas/` contains executable SAS assets.
+- `/data/` contains sample, input, and output data files.
+- `/examples/` contains supplemental markdown examples when needed.
+- `/validation/` contains operational validation notes.
+- `/lessons-learned/` contains project evolution and stabilization notes.
+
+Primary learner flow should begin with the QUICKSTART, SETUP, and lesson files.
 
 ---
 

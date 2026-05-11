@@ -2,7 +2,6 @@
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md`  
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md`
 
 GitHub URL:
@@ -10,6 +9,16 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+
+---
+
+# Freeze-Period Status
+
+This lesson is part of the approved AF-002 course sequence.
+
+During the stabilization freeze, this lesson may function as a structured lesson description or lightweight operational module.
+
+Lesson 00 and Lesson 01 remain the primary fully operational first-success path.
 
 ---
 
@@ -50,6 +59,30 @@ Build a mini telemetry workflow:
 
 You now have a complete small AIoT workflow using practical SAS-centered techniques.
 
+
+---
+
+# Restart Checkpoint
+
+If you stop here, restart later by opening this lesson file and confirming what you completed in the previous lesson.
+
+The course is designed so each `LESSON_*.md` file can serve as a restart boundary.
+
+---
+
+# Course Completion Checkpoint
+
+The capstone is intentionally small.
+
+A successful capstone should show that the learner can:
+
+- locate telemetry data
+- inspect the CSV
+- analyze it in SAS
+- identify a simple operational signal
+- explain what the result means
+
+The goal is directed application, not a giant enterprise simulation.
 
 ---
 
