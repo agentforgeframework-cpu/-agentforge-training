@@ -130,6 +130,10 @@ Validation:
 This step is successful if pip reports that the packages were installed or already satisfied.
 
 
+Lesson 00 Milestone:
+
+Python and required packages are operational.
+
 ---
 
 # Setup Check 3 — Confirm Webcam Access
@@ -175,7 +179,7 @@ You do not need special hardware beyond the course assumptions.
 
 Validation:
 
-This step is successful when the learner verifies the ability to open SAS and run a small program that imports a CSV file.
+This step is successful when the learner can open and access a SAS environment.
 
 ---
 
@@ -205,6 +209,10 @@ The expected supporting files are present when you can locate:
 `sas/sas_import_telemetry.sas`
 
 If those files are not present, pause and confirm that the course repository copied or downloaded correctly.
+
+Lesson 00 Milestone:
+
+Basic telemetry lab environment is ready for Lesson 01.
 
 ---
 

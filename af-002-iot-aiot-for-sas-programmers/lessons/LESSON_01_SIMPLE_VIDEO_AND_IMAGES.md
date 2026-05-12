@@ -213,8 +213,39 @@ For example, on a local Windows PC:
 ```sas
 %let TELEMETRY_CSV = C:\AF-002\data\webcam_telemetry.csv;
 ```
+Fallback Path — SAS OnDemand / Restricted Upload Environments
+- For SAS OnDemand, upload the CSV to your SAS Files area and use the server-side path shown by SAS.
+- If direct CSV upload is awkward or unavailable, telemetry rows may also be copied from PowerShell output and loaded directly into SAS using a DATA step.
 
-For SAS OnDemand, upload the CSV to your SAS Files area and use the server-side path shown by SAS.
+Instead of PROC IMPORT, the learner can use this data step to import the data:
+
+```sas
+data work.webcam_telemetry (drop = dataline) ;
+   format timestamp datetime. ;
+   input @1 dataline $40. ;
+   
+   timestamp = input(scan(dataline, 1, ',', 't'), anydtdtm.) ;
+   if timestamp ne . ;
+   frame_number = input(scan(dataline, 2, ',', 't'), best.) ;
+   width = input(scan(dataline, 3, ',', 't'), best.) ;
+   height = input(scan(dataline, 4, ',', 't'), best.) ;
+   mean_brightness = input(scan(dataline, 5, ',', 't'), best.) ;
+cards ;
+/* 
+Run this PowerShell command:
+
+Get-Content .\data\webcam_telemetry.csv -TotalCount 10
+
+Then copy and paste telemetry rows below this comment
+and above the trailing semicolon before `run ;`
+
+Example:
+
+2026-05-12T10:54:40,0,640,480,97.53
+*/
+; /* be sure to keep this semicolon */
+run ;
+```
 
 ---
 

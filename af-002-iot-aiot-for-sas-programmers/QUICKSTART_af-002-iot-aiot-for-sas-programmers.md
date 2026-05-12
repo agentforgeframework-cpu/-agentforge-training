@@ -102,6 +102,10 @@ Ask the AI assistant to help you work through the lesson step by step.
 
 The lesson file is the instructional unit.
 
+Troubleshooting Tip:
+
+If setup or validation problems occur, copying and pasting terminal, PowerShell, Python, or SAS log output into your AI assistant often improves troubleshooting significantly.
+
 ---
 
 ## Development and Test Environment
