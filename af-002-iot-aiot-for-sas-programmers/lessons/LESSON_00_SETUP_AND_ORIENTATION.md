@@ -110,25 +110,35 @@ Do not continue until one of those commands returns a Python 3.x version.
 
 ---
 
-# Setup Check 2 — Confirm Python Package Installation
+# Setup Check 2 — Confirm Required Python Packages
 
 Lesson 01 expects Python packages that support webcam capture and CSV work.
 
 Run:
 
-```text
-python -m pip install opencv-python pandas
-```
+python -c "import cv2, pandas; print('Packages OK')"
 
 If `python` does not work but `py` does, run:
 
-```text
+py -c "import cv2, pandas; print('Packages OK')"
+
+Expected behavior:
+
+If the required packages are already available, Python should display:
+
+Packages OK
+
+If package errors occur, install the required packages:
+
+python -m pip install opencv-python pandas
+
+or:
+
 py -m pip install opencv-python pandas
-```
 
 Validation:
-This step is successful if pip reports that the packages were installed or already satisfied.
 
+This step is successful when the package check completes without errors.
 
 Lesson 00 Milestone:
 
