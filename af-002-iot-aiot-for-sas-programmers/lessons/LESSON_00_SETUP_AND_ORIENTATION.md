@@ -91,6 +91,9 @@ Python 3.11.8
 
 Any current Python 3.x version should be suitable for this introductory course.
 
+Validation:
+Python is available when `python --version` or `py --version` returns a Python 3.x version.
+
 ## If Python Is Not Found
 
 Install Python using a current trusted Windows installation method.
@@ -123,9 +126,9 @@ If `python` does not work but `py` does, run:
 py -m pip install opencv-python pandas
 ```
 
-A successful result may say the packages were installed or that they are already satisfied.
+Validation:
+This step is successful if pip reports that the packages were installed or already satisfied.
 
-Either result is acceptable.
 
 ---
 
@@ -142,6 +145,9 @@ If your webcam is blocked by security settings, privacy settings, or organizatio
 If webcam permissions, Python packages, or local file paths take a couple attempts to work correctly, that is normal.
 
 The goal is to recover calmly and keep the workflow understandable.
+
+Validation:
+This step is successful if the Windows Camera app displays an image, or if you have confirmed that the image-file fallback will be used.
 
 ---
 
@@ -167,6 +173,10 @@ You do not need a cloud IoT service.
 
 You do not need special hardware beyond the course assumptions.
 
+Validation:
+
+This step is successful when the learner verifies the ability to open SAS and run a small program that imports a CSV file.
+
 ---
 
 # Setup Check 5 — Confirm File Awareness
@@ -175,9 +185,9 @@ You should know where these course folders are:
 
 ```text
 /python
-/examples
+/sas
+/data
 /lessons
-/validation
 ```
 
 For Lesson 01, the most important supporting files are expected to be:
@@ -186,6 +196,13 @@ For Lesson 01, the most important supporting files are expected to be:
 python/webcam_telemetry_capture.py
 sas/sas_import_telemetry.sas
 ```
+
+Verification:
+
+The expected supporting files are present when you can locate:
+
+`python/webcam_telemetry_capture.py`
+`sas/sas_import_telemetry.sas`
 
 If those files are not present, pause and confirm that the course repository copied or downloaded correctly.
 
