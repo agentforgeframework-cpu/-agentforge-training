@@ -14,9 +14,9 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 # Lesson Purpose
 
-Create the first webcam-to-CSV-to-SAS success.
+Create the first visual-input-to-CSV-to-SAS success.
 
-This lesson turns a familiar device, your webcam, into a simple source of operational telemetry.
+This lesson turns familiar visual sources, a webcam and still images, into simple operational telemetry.
 
 ---
 
@@ -55,12 +55,12 @@ By the end of this lesson, the learner should be able to:
 # Core Workflow
 
 ```text
-webcam → telemetry → CSV → SAS analysis
+visual input → telemetry → CSV → SAS analysis
 ```
 
 Operationally, this means:
 
-1. Python observes webcam input.
+1. Python observes webcam input or still-image input.
 2. Python summarizes the observation into rows of telemetry.
 3. Python writes those rows to a CSV file.
 4. SAS imports the CSV file.
@@ -75,6 +75,11 @@ This lesson expects the following files:
 ```text
 python/webcam_telemetry_capture.py
 sas/sas_import_telemetry.sas
+python/image_telemetry_capture.py
+media/bridge.jpg
+media/mountain.jpg
+media/dog.jpg
+media/banana.jpg
 ```
 
 If these files are missing, pause and confirm that the course repository copied or downloaded correctly.
@@ -89,9 +94,15 @@ During this lesson, the key paths are:
 
 ```text
 python/webcam_telemetry_capture.py
-sas/sas_import_telemetry.sas
+python/image_telemetry_capture.py
 data/webcam_telemetry.csv
 data/webcam_telemetry_sample.csv
+sas/sas_import_telemetry.sas
+media/bridge.jpg
+media/mountain.jpg
+media/dog.jpg
+media/banana.jpg
+data/image_telemetry.csv
 ```
 
 The Python script writes the telemetry CSV.
@@ -100,35 +111,25 @@ The SAS program reads the telemetry CSV.
 
 The sample CSV is a safety net if the webcam workflow fails.
 
+The image telemetry script reads sample images from `/media/` and writes an image telemetry CSV.
+
 ---
 
-# Step 1 — Confirm Python Packages
+# Step 1 — Confirm Python Environment
 
-Open Command Prompt or PowerShell.
+Lesson 00 should already have validated:
+- Python
+- required packages
+- webcam readiness
 
-Run:
-
-```text
-python -m pip install opencv-python pandas
-```
-
-If `python` does not work but `py` does, run:
-
-```text
-py -m pip install opencv-python pandas
-```
-
-A successful result may say the packages were installed or already satisfied.
-
-Either result is acceptable.
-
-If Python package installation takes a couple attempts, that is normal. Keep the error message visible and ask your AI assistant to help interpret it.
+If Lesson 00 completed successfully, continue to Step 2.
 
 ---
 
 # Step 2 — Run the Webcam Telemetry Script
 
 From the course folder, run:
+
 
 ```text
 python python/webcam_telemetry_capture.py
@@ -213,6 +214,7 @@ For example, on a local Windows PC:
 ```sas
 %let TELEMETRY_CSV = C:\AF-002\data\webcam_telemetry.csv;
 ```
+
 Fallback Path — SAS OnDemand / Restricted Upload Environments
 - For SAS OnDemand, upload the CSV to your SAS Files area and use the server-side path shown by SAS.
 - If direct CSV upload is awkward or unavailable, telemetry rows may also be copied from PowerShell output and loaded directly into SAS using a DATA step.
@@ -273,50 +275,71 @@ SAS can read and inspect the telemetry CSV.
 
 ---
 
-# Image-File Fallback
+# Image Telemetry Workflow
 
-If the webcam cannot be used, the lesson may be completed with an image-file fallback if the Python script supports it.
+The webcam workflow shows live visual input.
 
-The fallback pattern is:
+The image workflow shows that still images can also become telemetry data.
 
-```text
-image file → telemetry row → CSV → SAS analysis
-```
+This is not image recognition or object detection.
 
-Use this fallback when:
-
-- webcam access is blocked
-- a camera driver fails
-- organizational policy blocks the camera
-- you are testing without live camera access
-
-The Python script supports an image-file fallback with the `--image` option.
-
-Example:
+The goal is the same:
 
 ```text
-python python/webcam_telemetry_capture.py --image path\to\your_image.jpg
+visual input → telemetry → CSV → SAS analysis
 ```
 
-or:
+Use the sample images in:
 
 ```text
-py python/webcam_telemetry_capture.py --image path\to\your_image.jpg
+/media
 ```
 
-If the webcam and image fallback are both unavailable, continue with:
+Expected files include:
 
 ```text
-data/webcam_telemetry_sample.csv
+media/bridge.jpg
+media/mountain.jpg
+media/dog.jpg
+media/banana.jpg
 ```
 
-That sample data keeps the SAS portion of the lesson survivable.
-
-The fallback should preserve the same learning point:
+From the course folder, run:
 
 ```text
-visual input can become structured telemetry data.
+python python/image_telemetry_capture.py
 ```
+
+If `python` does not work but `py` does, run:
+
+```text
+py python/image_telemetry_capture.py
+```
+
+Expected output file:
+
+```text
+data/image_telemetry.csv
+```
+
+Open the generated CSV file.
+
+The CSV should contain one row per image, with basic telemetry values derived from each image.
+
+Exact values will vary.
+
+That is normal.
+
+The important point is that still images can become structured telemetry data.
+
+To inspect the image telemetry in SAS, use the same import pattern from Step 4 and change the CSV path to:
+
+```text
+data/image_telemetry.csv
+```
+
+If using SAS OnDemand, upload image_telemetry.csv or use the same copy/paste DATA step pattern shown earlier.
+
 
 ---
 
@@ -355,7 +378,7 @@ Check:
 - whether another app is using the camera
 - workplace restrictions
 
-If the webcam remains unavailable, use the image-file fallback or sample CSV path.
+If the webcam remains unavailable, use the image telemetry workflow or sample CSV path.
 
 ## CSV not created
 
@@ -382,8 +405,10 @@ Before moving on, confirm that you can physically identify:
 - the SAS program in `/sas/`
 - the telemetry CSV in `/data/`
 - visible SAS output from the telemetry CSV
+- the image telemetry CSV in `/data/`, if you completed the image workflow
+- the sample images in `/media/`
 
-If you can identify those four things, you have completed the operational heart of Lesson 01.
+If you can identify the required files and visible SAS output, you have completed the operational heart of Lesson 01.
 
 ---
 
@@ -409,13 +434,13 @@ data/webcam_telemetry_sample.csv
 
 You are successful when you can say:
 
-> I generated operational telemetry data and analyzed it with SAS.
+> I generated visual telemetry data from webcam or image input and analyzed it with SAS.
 
 ---
 
 # What You Just Did
 
-You used a webcam as a simple sensor.
+You used webcam or image input as a simple visual sensor.
 
 You turned visual input into timestamped rows.
 
