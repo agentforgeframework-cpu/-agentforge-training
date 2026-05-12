@@ -18,6 +18,24 @@ Possible future assets:
 
 Conference assets are currently downstream and out of immediate implementation scope.
 
+---
+
+# Media Folder
+
+This folder contains lightweight image assets used by AF-002 lessons.
+
+The current images support:
+- image-file telemetry workflows
+- fallback survivability paths
+- telemetry comparison examples
+
+The goal is operational simplicity and reproducible telemetry generation, not image-processing complexity.
+
+See:
+`MEDIA_ATTRIBUTION.md`
+
+for source attribution and licensing information.
+
 
 ---
 
