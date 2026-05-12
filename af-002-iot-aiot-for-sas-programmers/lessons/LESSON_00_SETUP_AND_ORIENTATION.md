@@ -110,31 +110,33 @@ Do not continue until one of those commands returns a Python 3.x version.
 
 ---
 
-# Setup Check 2 — Confirm Required Python Packages
+# Setup Check 2 — Confirm Python Packages
 
-Lesson 01 expects Python packages that support webcam capture and CSV work.
+Open Command Prompt or PowerShell.
 
-Run:
+First check whether the required packages already exist.
 
-python -c "import cv2, pandas; print('Packages OK')"
+Run this command:
 
-If `python` does not work but `py` does, run:
+```text
+python -c "import pandas; print('pandas OK')"
+```
 
-py -c "import cv2, pandas; print('Packages OK')"
+If that succeeds, run:
 
-Expected behavior:
+```text
+python -c "import cv2; print('opencv OK')"
+```
 
-If the required packages are already available, Python should display:
+If both commands succeed, continue to the next setup check.
 
-Packages OK
+If either command fails, install the required packages using:
 
-If package errors occur, install the required packages:
-
+```text
 python -m pip install opencv-python pandas
+```
 
-or:
-
-py -m pip install opencv-python pandas
+If `python` does not work on your system but `py` does, replace `python` with `py` in the commands above.
 
 Validation:
 
