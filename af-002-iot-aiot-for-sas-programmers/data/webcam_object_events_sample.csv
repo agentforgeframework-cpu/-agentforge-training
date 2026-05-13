@@ -1,0 +1,5 @@
+timestamp,frame_number,object_detected,confidence,detection_count,source
+2026-05-12T10:54:40,0,person,0.9340,1,webcam
+2026-05-12T10:54:41,1,keyboard,0.8982,1,webcam
+2026-05-12T10:54:42,2,NONE,0.0,0,webcam
+2026-05-12T10:54:43,3,cup,0.7725,1,webcam

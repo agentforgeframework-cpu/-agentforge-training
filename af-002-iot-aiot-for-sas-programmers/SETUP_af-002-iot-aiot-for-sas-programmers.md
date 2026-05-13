@@ -126,6 +126,7 @@ Check packages with:
 ```text
 python -c "import cv2; print('opencv OK')"
 python -c "import pandas; print('pandas OK')"
+python -c "from ultralytics import YOLO; print('ultralytics OK')"
 ```
 
 If `python` does not work but `py` does, use:
@@ -133,18 +134,19 @@ If `python` does not work but `py` does, use:
 ```text
 py -c "import cv2; print('opencv OK')"
 py -c "import pandas; print('pandas OK')"
+py -c "from ultralytics import YOLO; print('ultralytics OK')"
 ```
 
 Install only if one of the checks fails:
 
 ```text
-python -m pip install opencv-python pandas
+python -m pip install ultralytics opencv-python pandas
 ```
 
 or:
 
 ```text
-py -m pip install opencv-python pandas
+py -m pip install ultralytics opencv-python pandas
 ```
 
 If pip reports that the packages are already installed, that is fine.
@@ -204,10 +206,10 @@ The important point is that the paths stay understandable.
 The early workflow expects:
 
 ```text
-python/webcam_telemetry_capture.py
-sas/sas_import_telemetry.sas
-data/webcam_telemetry.csv
-data/webcam_telemetry_sample.csv
+python/webcam_object_telemetry.py
+sas/sas_import_object_events.sas
+data/webcam_object_events.csv
+data/webcam_object_events_sample.csv
 ```
 
 If Python package installation, webcam permissions, or file paths take a couple attempts to work correctly, that is normal.
@@ -336,75 +338,75 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ### Supporting Operational Assets
 
-#### Python webcam telemetry script
+#### Python webcam object telemetry script
 
 Repository-relative path:
 
 ```text
-python/webcam_telemetry_capture.py
+python/webcam_object_telemetry.py
 ```
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py
 
 ---
 
-#### Python image telemetry script
+#### Python image object telemetry script
 
 Repository-relative path:
 
 ```text
-python/image_telemetry_capture.py
+python/image_object_telemetry.py
 ```
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_telemetry_capture.py
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/image_telemetry_capture.py
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py
 
 ---
 
-#### SAS import telemetry program
+#### SAS import object events program
 
 Repository-relative path:
 
 ```text
-sas/sas_import_telemetry.sas
+sas/sas_import_object_events.sas
 ```
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas
 
 ---
 
-#### Webcam telemetry sample CSV
+#### Webcam object telemetry sample CSV
 
 Repository-relative path:
 
 ```text
-data/webcam_telemetry_sample.csv
+data/webcam_object_events_sample.csv
 ```
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
 
 ---
 

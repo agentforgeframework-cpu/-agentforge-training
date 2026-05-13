@@ -55,15 +55,22 @@ By the end of this lesson, the learner should be able to:
 In Lesson 01, you will create the first practical course success:
 
 ```text
-webcam → telemetry → CSV → SAS analysis
+webcam 
+  → AI-assisted observations
+    → telemetry 
+       → raw data 
+          → SAS analysis
 ```
+
+In this course, "telemetry" means structured operational observations or measurements derived from webcams or other IoT/AIoT device input.
 
 This means:
 
-1. Python will use your webcam as a simple sensor.
-2. Python will write a small telemetry CSV file.
-3. SAS will import and inspect that CSV file.
-4. You will see that IoT data is operational analytics data.
+1. Python will use your webcam and an AI model to recognize simple operational objects.
+2. Python will convert those observations into telemetry data.
+3. The telemetry will be written as raw data for SAS analysis.
+4. SAS will import and analyze the telemetry data.
+5. You will see that AI-assisted operational observations can become analyzable SAS data.
 
 ---
 
@@ -81,6 +88,55 @@ This means:
 >
 > Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
 
+---
+
+# Why This Lesson Matters
+
+Modern systems constantly produce operational measurements.
+
+Those measurements might come from:
+- sensors
+- cameras
+- applications
+- industrial equipment
+- websites
+- operational processes
+
+This course demonstrates a lightweight version of that workflow using tools that many SAS professionals already understand.
+
+You are NOT building a hyperscale streaming platform.
+
+You are building a small operational telemetry workflow:
+
+In Lesson 01, the webcam will recognize simple operational objects and generate telemetry that SAS can analyze.
+
+```text
+webcam
+  → AI-assisted observations
+    → telemetry
+      → raw data
+        → SAS analysis
+```
+
+The goal is not perfection.
+
+The goal is operational familiarity and confidence.
+
+You do not need to understand everything immediately.
+
+If something feels confusing at first, that is normal.
+
+Most setup and workflow problems are recoverable by correcting the issue and rerunning the step.
+
+As you move through the lessons, focus on:
+
+- understanding the workflow
+- observing the outputs
+- building confidence with operational data
+
+You can always ask another person or an AI assistant for help if needed.
+
+---
 
 
 ## Resume Here
@@ -150,12 +206,16 @@ If that succeeds, run:
 python -c "import cv2; print('opencv OK')"
 ```
 
-If both commands succeed, continue to the next setup check.
-
-If either command fails, install the required packages using:
+If that succeeds, run:
 
 ```text
-python -m pip install opencv-python pandas
+python -c "from ultralytics import YOLO; print('ultralytics OK')"
+```
+
+If any command fails, install the required packages using:
+
+```text
+python -m pip install ultralytics opencv-python pandas
 ```
 
 If `python` does not work on your system but `py` does, replace `python` with `py` in the commands above.
@@ -231,18 +291,18 @@ You should know where these course folders are:
 For Lesson 01, the most important supporting files are expected to be:
 
 ```text
-python/webcam_telemetry_capture.py
-python/image_telemetry_capture.py
-sas/sas_import_telemetry.sas
+python/webcam_object_telemetry.py
+python/image_object_telemetry.py
+sas/sas_import_object_events.sas
 ```
 
 Verification:
 
 The expected supporting files are present when you can locate:
 
-`python/webcam_telemetry_capture.py`
-`python/image_telemetry_capture.py`
-`sas/sas_import_telemetry.sas`
+`python/webcam_object_telemetry.py`
+`python/image_object_telemetry.py`
+`sas/sas_import_object_events.sas`
 
 If those files are not present, pause and confirm that the course repository copied or downloaded correctly.
 
@@ -275,7 +335,7 @@ You are ready when you can say:
 
 You should also be able to say:
 
-> I know that Lesson 01 will turn webcam input into telemetry data, save it as CSV, and inspect it in SAS.
+> I know that Lesson 01 will turn AI-assisted webcam observations into telemetry data and analyze that telemetry in SAS.
 
 ---
 
