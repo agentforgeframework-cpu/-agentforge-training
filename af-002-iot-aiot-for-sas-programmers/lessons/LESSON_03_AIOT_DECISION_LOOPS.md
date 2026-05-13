@@ -52,6 +52,18 @@ The goal is operationally useful action with accountability and validation.
 
 ---
 
+# Visible Checkpoint
+
+You should now have or be able to describe:
+
+- one simple operational rule
+- one condition that should be reviewed
+- one explanation of what the human should verify
+
+If you cannot identify these items yet, pause and complete the activity before moving forward.
+
+---
+
 # Restart Checkpoint
 
 If you stop here, restart later by opening this lesson file and confirming what you completed in the previous lesson.

@@ -86,6 +86,142 @@ If these files are missing, pause and confirm that the course repository copied 
 
 ---
 
+---
+
+# Supporting File Links
+
+These explicit links support AI-assisted continuation and deterministic retrieval.
+
+## Webcam telemetry Python script
+
+Repository-relative path:
+
+```text
+python/webcam_telemetry_capture.py
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
+
+## Image telemetry Python script
+
+Repository-relative path:
+
+```text
+python/image_telemetry_capture.py
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_telemetry_capture.py
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/image_telemetry_capture.py
+
+## SAS import telemetry program
+
+Repository-relative path:
+
+```text
+sas/sas_import_telemetry.sas
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
+
+## Sample telemetry CSV
+
+Repository-relative path:
+
+```text
+data/webcam_telemetry_sample.csv
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
+
+## Image: bridge
+
+Repository-relative path:
+
+```text
+media/bridge.jpg
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
+
+## Image: mountain
+
+Repository-relative path:
+
+```text
+media/mountain.jpg
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
+
+## Image: dog
+
+Repository-relative path:
+
+```text
+media/dog.jpg
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
+
+## Image: banana
+
+Repository-relative path:
+
+```text
+media/banana.jpg
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
+
+---
+
 # Local File Map
 
 Keep this simple.
@@ -116,6 +252,9 @@ The image telemetry script reads sample images from `/media/` and writes an imag
 ---
 
 # Step 1 — Confirm Python Environment
+
+Most run problems are recoverable by fixing the issue and rerunning the step.
+
 
 Lesson 00 should already have validated:
 - Python
@@ -409,6 +548,19 @@ Before moving on, confirm that you can physically identify:
 - the sample images in `/media/`
 
 If you can identify the required files and visible SAS output, you have completed the operational heart of Lesson 01.
+
+---
+
+# Visible Checkpoint
+
+You should now have or be able to see:
+
+- `data/webcam_telemetry.csv`, or the fallback `data/webcam_telemetry_sample.csv`
+- optional `data/image_telemetry.csv` if you ran the still-image workflow
+- visible CSV rows
+- visible SAS output from PROC PRINT and PROC MEANS or PROC FREQ
+
+If the webcam path failed, using the sample CSV or image workflow is still a valid Lesson 01 path.
 
 ---
 

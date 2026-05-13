@@ -48,6 +48,18 @@ Architecture decisions become easier once workload behavior is understood.
 
 ---
 
+# Visible Checkpoint
+
+You should now have or be able to describe:
+
+- one telemetry workflow under review
+- one decision about where analysis belongs
+- one reason the architecture follows the data behavior
+
+If you cannot identify these items yet, pause and complete the activity before moving forward.
+
+---
+
 # Restart Checkpoint
 
 If you stop here, restart later by opening this lesson file and confirming what you completed in the previous lesson.

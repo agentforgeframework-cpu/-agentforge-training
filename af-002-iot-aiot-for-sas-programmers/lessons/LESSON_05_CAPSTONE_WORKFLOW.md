@@ -62,6 +62,19 @@ You now have a complete small AIoT workflow using practical SAS-centered techniq
 
 ---
 
+# Visible Checkpoint
+
+You should now have or be able to describe:
+
+- a small telemetry source or sample
+- a SAS analysis step
+- one detected operational signal
+- one human review explanation
+
+If you cannot identify these items yet, pause and complete the activity before moving forward.
+
+---
+
 # Restart Checkpoint
 
 If you stop here, restart later by opening this lesson file and confirming what you completed in the previous lesson.
@@ -83,6 +96,22 @@ A successful capstone should show that the learner can:
 - explain what the result means
 
 The goal is directed application, not a giant enterprise simulation.
+
+---
+
+# Course Reference
+
+Return to the course README anytime for file locations, lesson links, and general reference.
+
+`README.md`
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/README.md
 
 ---
 

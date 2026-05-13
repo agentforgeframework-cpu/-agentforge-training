@@ -1,5 +1,15 @@
 # QUICKSTART — AF-002 IoT/AIoT for SAS Programmers
 
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+
+---
+
 ## Purpose
 
 This QUICKSTART helps a human learner understand what the course does and where to begin.
@@ -64,7 +74,19 @@ The course is designed to use free and readily available tools where practical.
 
 ## Start the Course
 
-Begin with:
+After this QUICKSTART, continue to the SETUP file.
+
+`SETUP_af-002-iot-aiot-for-sas-programmers.md` validates the environment before Lesson 00 begins.
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+After SETUP, continue to:
 
 `LESSON_00_SETUP_AND_ORIENTATION.md`
 

@@ -108,6 +108,8 @@ After installation:
 
 Do not continue until one of those commands returns a Python 3.x version.
 
+Most setup problems are recoverable by fixing the issue and rerunning the step.
+
 ---
 
 # Setup Check 2 — Confirm Python Packages
@@ -210,6 +212,7 @@ For Lesson 01, the most important supporting files are expected to be:
 
 ```text
 python/webcam_telemetry_capture.py
+python/image_telemetry_capture.py
 sas/sas_import_telemetry.sas
 ```
 
@@ -218,6 +221,7 @@ Verification:
 The expected supporting files are present when you can locate:
 
 `python/webcam_telemetry_capture.py`
+`python/image_telemetry_capture.py`
 `sas/sas_import_telemetry.sas`
 
 If those files are not present, pause and confirm that the course repository copied or downloaded correctly.
@@ -225,6 +229,21 @@ If those files are not present, pause and confirm that the course repository cop
 Lesson 00 Milestone:
 
 Basic telemetry lab environment is ready for Lesson 01.
+
+---
+
+# Visible Checkpoint
+
+You should now have or be able to access:
+
+- a working Python command
+- required Python packages, or a clear plan to install them
+- SAS access
+- webcam access or the image-file fallback
+- the `/python/`, `/sas/`, `/data/`, and `/lessons/` folders
+- the Lesson 01 raw URL listed below
+
+If one item is not ready, fix that item and rerun the relevant check.
 
 ---
 

@@ -1,5 +1,15 @@
 # SETUP — AF-002 IoT/AIoT for SAS Programmers
 
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md`
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+---
+
 ## Purpose
 
 This file defines the basic environment assumptions and setup checks for AF-002.
@@ -76,21 +86,43 @@ Do not continue until one of those commands returns a Python 3.x version.
 
 ## Python Packages Used in Lesson 01
 
-Lesson 01 uses Python packages to capture webcam data and write telemetry output.
+Lesson 01 uses Python packages to capture webcam and image data and write telemetry output.
 
-Install the expected packages with:
+Use validation-first behavior:
+
+1. Check whether the packages are already available.
+2. Install only if the check fails.
+3. Recheck after installation.
+
+Check packages with:
+
+```text
+python -c "import cv2; print('opencv OK')"
+python -c "import pandas; print('pandas OK')"
+```
+
+If `python` does not work but `py` does, use:
+
+```text
+py -c "import cv2; print('opencv OK')"
+py -c "import pandas; print('pandas OK')"
+```
+
+Install only if one of the checks fails:
 
 ```text
 python -m pip install opencv-python pandas
 ```
 
-If `python` does not work but `py` does, use:
+or:
 
 ```text
 py -m pip install opencv-python pandas
 ```
 
 If pip reports that the packages are already installed, that is fine.
+
+Most setup problems are recoverable by fixing the issue and rerunning the step.
 
 ---
 
@@ -163,7 +195,21 @@ The following files form the primary operational path for AF-002.
 
 A learner or AI assistant should generally proceed in this order.
 
-### QUICKSTART
+### Course Support Files
+
+#### README
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/README.md
+
+---
+
+#### QUICKSTART
 
 GitHub URL:
 
@@ -175,7 +221,21 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
-### Lesson 00 — Setup and Orientation
+#### SETUP
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+---
+
+### Lesson Chain
+
+#### Lesson 00 — Setup and Orientation
 
 GitHub URL:
 
@@ -187,7 +247,7 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
-### Lesson 01 — Simple Video and Images
+#### Lesson 01 — Simple Video and Images
 
 GitHub URL:
 
@@ -199,31 +259,125 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
-### Supporting Python Workflow File
+#### Lesson 02 — Event Streams and Real-Time Thinking
 
-Expected operational file:
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+
+---
+
+#### Lesson 03 — AIoT Decision Loops
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+
+---
+
+#### Lesson 04 — Architecture Follows Data for AIoT
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+
+---
+
+#### Lesson 05 — Capstone Workflow
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+
+---
+
+### Supporting Operational Assets
+
+#### Python webcam telemetry script
+
+Repository-relative path:
 
 ```text
 python/webcam_telemetry_capture.py
 ```
 
-Operational raw URL:
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
+
+Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_telemetry_capture.py
 
 ---
 
-### Supporting SAS Workflow File
+#### Python image telemetry script
 
-Expected operational file:
+Repository-relative path:
+
+```text
+python/image_telemetry_capture.py
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_telemetry_capture.py
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/image_telemetry_capture.py
+
+---
+
+#### SAS import telemetry program
+
+Repository-relative path:
 
 ```text
 sas/sas_import_telemetry.sas
 ```
 
-Operational raw URL:
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
+
+Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_telemetry.sas
+
+---
+
+#### Webcam telemetry sample CSV
+
+Repository-relative path:
+
+```text
+data/webcam_telemetry_sample.csv
+```
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_telemetry_sample.csv
 
 ---
 
@@ -231,19 +385,19 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 When assisting with AF-002:
 
-* proceed lesson by lesson
-* keep the learner focused on first success
-* prefer operational clarity over theoretical depth
-* avoid enterprise architecture expansion
-* avoid unnecessary orchestration complexity
-* help the learner complete the current lesson before advancing
+- proceed lesson by lesson
+- keep the learner focused on first success
+- use explicit URLs rather than inferring repository structure
+- prefer operational clarity over theoretical depth
+- avoid enterprise architecture expansion
+- avoid unnecessary orchestration complexity
+- help the learner complete the current lesson before advancing
 
 The primary early success target is:
 
 ```text
 webcam → telemetry → CSV → SAS analysis
 ```
-
 
 ---
 

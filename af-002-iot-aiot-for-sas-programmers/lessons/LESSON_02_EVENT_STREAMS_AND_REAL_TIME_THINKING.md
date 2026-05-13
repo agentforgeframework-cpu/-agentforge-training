@@ -782,7 +782,7 @@ The goal is confidence, not complexity.
 
 # SECTION 16 — Visible Success Checklist
 
-Before moving on, confirm that you can see:
+You should now have or be able to see:
 
 - the original standardized event rows
 - PROC FREQ output stored as SAS datasets
