@@ -207,7 +207,7 @@ For a SAS programmer, this means asking practical questions:
 - Does this require a full recalculation?
 - Is the data cumulative, or do old records expire?
 
-This is not a replacement for normal SAS analysis.
+This is not a replacement for traditional SAS analysis.
 
 It is a different operational situation.
 
@@ -532,7 +532,7 @@ The operational context changed, but the programming ideas are familiar.
 
 Not all analytical results behave the same way when one new record arrives.
 
-Some results are easy to update from current state.
+Some results can be safely updated from stored state.
 
 Some results require more stored detail.
 
@@ -682,11 +682,34 @@ Operational lesson:
 Incremental update logic should be tested against full recalculation.
 ```
 
+When the result matters, compare incremental logic against full recalculation periodically.
 That is how confidence is earned.
 
 ---
 
-# SECTION 13 — Optional Tie-Back to Lesson 01 Telemetry
+# SECTION 13 — Demonstrate: Visualize the Event Stream
+
+```sas
+title "Sensor Readings Over Time";
+
+proc sgplot data=work.sensor_events_plus_one;
+   series x=event_dttm y=reading_value / group=sensor_id;
+run;
+
+title;
+```
+
+The graph makes operational behavior easier to see.
+
+SENSOR_A trends upward over time.
+
+The WARN condition is no longer just a row in a table.
+
+It becomes visible operational behavior.
+
+---
+
+# SECTION 14 — Optional Tie-Back to Lesson 01 Telemetry
 
 Lesson 01 generated visual telemetry.
 
@@ -724,7 +747,7 @@ The standardized teaching data is the main path for this lesson.
 
 ---
 
-# SECTION 14 — Enable: Learner Exercise
+# SECTION 15 — Enable: Learner Exercise
 
 Use the same original data.
 
@@ -757,7 +780,7 @@ The goal is confidence, not complexity.
 
 ---
 
-# SECTION 15 — Visible Success Checklist
+# SECTION 16 — Visible Success Checklist
 
 Before moving on, confirm that you can see:
 
@@ -870,6 +893,8 @@ You updated parts of the stored state from that event.
 You checked the result against full recalculation.
 
 You saw why continuously arriving data changes how some analyses are performed.
+
+You compared incremental operational thinking against full recalculation.
 
 ---
 
