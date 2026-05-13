@@ -38,12 +38,33 @@ AF-002 assumes the learner has access to:
 
 ## Python Setup Check
 
+
+> **🚀 Windows Users – Important Command Tip**
+>
+> On many Windows systems, the command `python` may not work immediately.
+> Try `py` instead.
+>
+> ```text
+> py --version
+> py -m pip install ...
+> py -c "import cv2; print('OK')"
+> ```
+>
+> Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+
+
 Open Command Prompt or PowerShell.
 
 Try:
 
 ```text
 python --version
+```
+
+Example successful output:
+
+```text
+Python 3.14.4
 ```
 
 If that does not work, try:
@@ -72,6 +93,12 @@ After installation, close and reopen Command Prompt or PowerShell, then run:
 
 ```text
 python --version
+```
+
+Example successful output:
+
+```text
+Python 3.14.4
 ```
 
 or:
@@ -417,3 +444,20 @@ The Operational File Links section above contains the GitHub and raw URLs needed
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
 - Notes: Updated after Claude digital twin survivability test.
+
+
+---
+
+# File Reference Information
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+Next Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Return to README:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md

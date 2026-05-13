@@ -944,3 +944,41 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 Paul McDonald Open Use License (MIT-style)
 
 © 2026 Paul McDonald
+
+
+> **Operational Guideline**
+>
+> Update what you can.
+> Recalculate what you must.
+
+
+This kind of incremental update thinking may feel familiar to experienced SAS programmers using techniques such as:
+- PROC APPEND
+- MODIFY statements
+- maintaining stored summary tables
+
+
+## Visual Brief
+
+Review visual summary:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png
+
+
+---
+
+# File Reference Information
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+
+Previous Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+Next Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+
+Return to README:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md

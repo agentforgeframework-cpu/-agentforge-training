@@ -67,6 +67,26 @@ This means:
 
 ---
 
+
+> **🚀 Windows Users – Important Command Tip**
+>
+> On many Windows systems, the command `python` may not work immediately.
+> Try `py` instead.
+>
+> ```text
+> py --version
+> py -m pip install ...
+> py -c "import cv2; print('OK')"
+> ```
+>
+> Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+
+
+
+## Resume Here
+
+If you are returning after interruption, continue from this step.
+
 # Setup Check 1 — Confirm Python
 
 Open Command Prompt or PowerShell.
@@ -319,3 +339,29 @@ Lesson 00 checks your gear and helps you get grounded so you can succeed in the 
 Paul McDonald Open Use License (MIT-style)
 
 © 2026 Paul McDonald
+
+
+## Visual Brief
+
+Review visual summary:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_00_VISUAL_BRIEF.png
+
+
+---
+
+# File Reference Information
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Previous Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
+
+Next Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+Return to README:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md

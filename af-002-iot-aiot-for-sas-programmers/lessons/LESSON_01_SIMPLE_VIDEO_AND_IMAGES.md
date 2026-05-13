@@ -251,6 +251,26 @@ The image telemetry script reads sample images from `/media/` and writes an imag
 
 ---
 
+
+> **🚀 Windows Users – Important Command Tip**
+>
+> On many Windows systems, the command `python` may not work immediately.
+> Try `py` instead.
+>
+> ```text
+> py --version
+> py -m pip install ...
+> py -c "import cv2; print('OK')"
+> ```
+>
+> Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+
+
+
+## Resume Here
+
+If you are returning after interruption, continue from this step.
+
 # Step 1 — Confirm Python Environment
 
 Most run problems are recoverable by fixing the issue and rerunning the step.
@@ -370,7 +390,7 @@ data work.webcam_telemetry (drop = dataline) ;
    frame_number = input(scan(dataline, 2, ',', 't'), best.) ;
    width = input(scan(dataline, 3, ',', 't'), best.) ;
    height = input(scan(dataline, 4, ',', 't'), best.) ;
-   mean_brightness = input(scan(dataline, 5, ',', 't'), best.) ;
+   brightness = input(scan(dataline, 5, ',', 't'), best.) ;
 cards ;
 /* 
 Run this PowerShell command:
@@ -640,3 +660,37 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 Paul McDonald Open Use License (MIT-style)
 
 © 2026 Paul McDonald
+
+
+## Checkpoint
+
+You should now have:
+- data/webcam_telemetry.csv
+- a successful SAS import or DATA step
+- a SAS dataset available for analysis
+
+
+## Visual Brief
+
+Review visual summary:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png
+
+
+---
+
+# File Reference Information
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+
+Previous Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+
+Next Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+
+Return to README:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
