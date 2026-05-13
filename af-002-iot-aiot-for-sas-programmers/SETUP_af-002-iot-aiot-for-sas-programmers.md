@@ -10,6 +10,45 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
+# Public Beta Testing Note
+
+Course AF-002 (IoT/AIoT for SAS Programmers) is currently in active deployment-hardening (stabilization) and public beta testing.
+
+The lessons in this course are:
+- Lesson 00: Setup and Orientation (public beta)
+- Lesson 01: Simple Video and Images (public beta)
+- Lesson 02: Event Streams and Real-Time Thinking (public beta)
+- Lesson 03: AIoT Decision Loops (under development)
+- Lesson 04: Architecture Follows Data for AIoT (under development)
+- Lesson 05: Capstone Workflow (under development)
+
+You may encounter:
+- rough edges
+- repeated validation steps
+- awkward pacing
+- evolving lesson flow
+- minor inconsistencies
+
+These areas are actively being refined through real-world testing.
+
+The operational workflows themselves are intentionally:
+- lightweight
+- local
+- survivable
+- SAS-centered
+
+The goal is to demonstrate how lightweight operational AIoT workflows can produce analyzable SAS data.
+
+If something feels awkward but operationally works, continue forward when possible and record the experience as feedback.
+
+The goal of this beta phase is to improve:
+- onboarding survivability
+- operational clarity
+- confidence continuity
+- real-world usability
+
+---
+
 ## Purpose
 
 This file defines the basic environment assumptions and setup checks for AF-002.
