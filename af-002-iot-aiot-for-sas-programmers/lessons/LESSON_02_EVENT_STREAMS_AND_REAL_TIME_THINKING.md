@@ -18,6 +18,15 @@ Help the learner understand that continuously arriving data changes how some ana
 
 This lesson uses standardized teaching data instead of live camera input so the examples are predictable, repeatable, and easy to test.
 
+In this lesson, you will:
+
+- create a small operational event stream in SAS
+- simulate new events arriving
+- compare incremental updates against full recalculation
+- visualize changing operational behavior over time
+
+You will run SAS code throughout the lesson and paste results into the AI assistant when prompted.
+
 ---
 
 # AI Assistant Guidance
@@ -34,6 +43,10 @@ If you are assisting a learner with this lesson:
 - explain real-time thinking as reasoning about what is happening now and what changed
 - emphasize visible state, restartability, and confidence
 - move forward only after the learner can see the SAS output
+- verify referenced files and URLs before relying on them
+- do not assume previously viewed artifacts remain current
+- if the learner pastes SAS output, use the visible output as the operational source of truth
+
 
 The goal is not to teach streaming infrastructure.
 
@@ -54,6 +67,8 @@ By the end of this lesson, the learner should be able to:
 - use SAS to inspect, summarize, and update simple event data
 - recognize compute-savings opportunities from incremental update logic
 - feel confident reasoning about continuously arriving operational data in SAS
+
+The lesson begins with simple operational concepts and gradually moves toward stream-aware SAS reasoning.
 
 ---
 
@@ -80,6 +95,8 @@ or does the analysis need to be recalculated from the broader data?
 
 That question is the heart of this lesson.
 
+You do not need streaming infrastructure to understand this operational thinking.
+
 ---
 
 # EDGE Structure
@@ -94,6 +111,10 @@ Explain → Demonstrate → Guide → Enable
 - Demonstrate: show small SAS examples using standardized data
 - Guide: walk through which results can and cannot be updated safely
 - Enable: give the learner a small independent exercise
+
+You are not expected to memorize terminology.
+
+The goal is to build operational confidence through visible SAS behavior.
 
 ---
 
@@ -114,6 +135,8 @@ data/image_telemetry.csv
 ```
 
 Use those only after the learner understands the standardized example.
+
+This lesson intentionally starts small and controlled so the operational behavior is easy to see and verify.
 
 ---
 
@@ -186,6 +209,8 @@ What just changed?
 Is the current state still acceptable?
 ```
 
+Operational thinking begins when the data is still changing.
+
 ---
 
 # SECTION 2 — Explain: What Is Real-Time Thinking?
@@ -210,6 +235,8 @@ For a SAS programmer, this means asking practical questions:
 This is not a replacement for traditional SAS analysis.
 
 It is a different operational situation.
+
+Timestamps indicate the order of events, which in turn helps understand the change in operational states.
 
 ---
 
@@ -243,7 +270,9 @@ Operational point:
 The timestamp tells SAS the event order.
 ```
 
-That order is what lets SAS reason about recent activity, stale data, rolling windows, and current state.
+That order is what allows the SAS analyst to reason about recent activity, stale data, rolling windows, and current state.
+
+Next, you will create a small standardized event stream in SAS and begin working with operational event data directly.
 
 ---
 
