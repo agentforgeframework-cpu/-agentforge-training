@@ -406,6 +406,9 @@ Paul McDonald Open Use License (MIT-style)
 Review visual summary:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_00_VISUAL_BRIEF.png
 
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_00_VISUAL_BRIEF.png
+
 
 ---
 

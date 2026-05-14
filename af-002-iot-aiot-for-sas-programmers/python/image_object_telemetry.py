@@ -104,7 +104,7 @@ def write_csv(output_path: Path, rows: list[dict]) -> None:
     df = pd.DataFrame(rows, columns=columns)
     df.to_csv(output_path, index=False)
 
-    print(f"\nDone. Events written to {output_path}")
+    print(f"\nDone. Events written to {output_path.resolve()}")
     print(f"Rows written: {len(df)}")
 
 

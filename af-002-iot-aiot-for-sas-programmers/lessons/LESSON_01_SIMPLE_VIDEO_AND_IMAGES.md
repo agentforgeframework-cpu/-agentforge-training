@@ -337,7 +337,11 @@ If `python` does not work but `py` does, run:
 py python/webcam_object_telemetry.py
 ```
 
-The script should access the webcam and create an object telemetry CSV file.
+A successful run should:
+
+- open the webcam
+- detect visible objects or record `NONE` when no recognized object is detected
+- create an object telemetry CSV file
 
 Expected output file:
 
@@ -370,7 +374,7 @@ timestamp,frame_number,object_detected,confidence,detection_count,source
 
 Exact values will vary.
 
-That is normal.
+That is normal. Rows containing `NONE` are also normal when no recognizable object is detected in a frame.
 
 The important point is that your webcam activity has become timestamped AI-assisted operational telemetry.
 
@@ -495,7 +499,7 @@ SAS can read and analyze AI-assisted operational telemetry.
 
 The webcam workflow shows live visual input.
 
-The image workflow shows that still images can also generate AI-assisted operational telemetry.
+The image workflow shows that still images can also generate AI-assisted operational telemetry. It is a valid success path if webcam access is unavailable or blocked.
 
 The goal remains:
 
@@ -543,6 +547,8 @@ data/image_object_events.csv
 Open the generated CSV file.
 
 The CSV should contain one row per image, with AI-assisted operational observations derived from each image.
+
+The output CSV should use the same column structure as the webcam telemetry CSV.
 
 Exact values will vary.
 
@@ -763,6 +769,9 @@ You should now have:
 
 Review visual summary:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png
 
 
 ---

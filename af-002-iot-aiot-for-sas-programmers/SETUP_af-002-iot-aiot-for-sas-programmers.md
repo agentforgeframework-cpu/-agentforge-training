@@ -126,6 +126,10 @@ Any current Python 3.x version should be suitable for this introductory course.
 
 Install Python from the official Python download site or another trusted standard source.
 
+Official Python download site:
+
+https://www.python.org/downloads/
+
 When installing on Windows, enable the option to add Python to PATH if it is offered.
 
 After installation, close and reopen Command Prompt or PowerShell, then run:
@@ -190,6 +194,8 @@ py -m pip install ultralytics opencv-python pandas
 
 If pip reports that the packages are already installed, that is fine.
 
+The first run of the Lesson 01 object-detection scripts may download the YOLO model file automatically. This is normal and may take extra time depending on internet speed and network restrictions.
+
 Most setup problems are recoverable by fixing the issue and rerunning the step.
 
 ---
@@ -235,6 +241,7 @@ C:\AF-002\
     python\
     sas\
     data\
+    media\
     lessons\
 ```
 
@@ -249,6 +256,10 @@ python/webcam_object_telemetry.py
 sas/sas_import_object_events.sas
 data/webcam_object_events.csv
 data/webcam_object_events_sample.csv
+media/bridge.jpg
+media/mountain.jpg
+media/dog.jpg
+media/banana.jpg
 ```
 
 If Python package installation, webcam permissions, or file paths take a couple attempts to work correctly, that is normal.
@@ -446,6 +457,39 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
+
+---
+
+#### Sample media images
+
+Repository-relative paths:
+
+```text
+media/bridge.jpg
+media/mountain.jpg
+media/dog.jpg
+media/banana.jpg
+```
+
+GitHub URLs:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
+
+Raw URLs:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
 
 ---
 

@@ -129,9 +129,9 @@ No live webcam, Python script, cloud service, or streaming platform is required.
 Optional tie-back files from Lesson 01:
 
 ```text
-data/webcam_telemetry.csv
-data/webcam_telemetry_sample.csv
-data/image_telemetry.csv
+data/webcam_object_events.csv
+data/webcam_object_events_sample.csv
+data/image_object_events.csv
 ```
 
 Use those only after the learner understands the standardized example.
@@ -151,9 +151,9 @@ lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
 Optional tie-back to Lesson 01 may use:
 
 ```text
-data/webcam_telemetry.csv
-data/webcam_telemetry_sample.csv
-data/image_telemetry.csv
+data/webcam_object_events.csv
+data/webcam_object_events_sample.csv
+data/image_object_events.csv
 ```
 
 If the learner creates a SAS program while working through this lesson, a reasonable local filename is:
@@ -991,6 +991,9 @@ This kind of incremental update thinking may feel familiar to experienced SAS pr
 
 Review visual summary:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png
 
 
 ---
