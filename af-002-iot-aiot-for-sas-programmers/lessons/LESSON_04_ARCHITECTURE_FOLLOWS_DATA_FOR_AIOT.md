@@ -11,53 +11,71 @@ Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
 
 ---
+# LESSON 04 — Architecture Follows Data
 
-# Freeze-Period Status
+## Status
 
-This lesson is part of the approved AF-002 course sequence.
-
-During the stabilization freeze, this lesson may function as a structured lesson description or lightweight operational module.
-
-Lesson 00 and Lesson 01 remain the primary fully operational first-success path.
+Preview Only — Under Development
 
 ---
 
-# Lesson Purpose
+# What This Lesson Will Explore
 
-Introduce workload-aware architecture thinking for telemetry systems.
+Lesson 04 will demonstrate how operational telemetry and workflow requirements influence architecture decisions.
 
----
+Topics currently planned include:
 
-# Learning Objectives
+- event-driven workflow concepts
+- telemetry storage considerations
+- operational scaling concepts
+- workflow boundaries
+- telemetry structure decisions
+- why architecture follows operational needs
 
-- understand data gravity
-- recognize latency concerns
-- identify where analysis should happen
-- avoid architecture-first thinking
-
----
-
-## Activity
-
-Given a simple telemetry workflow, decide which work belongs near the source, which work belongs in SAS, and which work belongs in human review.
-
-## Recap
-
-Architecture decisions become easier once workload behavior is understood.
-
+The lesson will intentionally avoid unnecessary enterprise complexity while preserving practical operational realism.
 
 ---
 
-# Visible Checkpoint
+# Why This Matters
 
-You should now have or be able to describe:
+Many systems fail because architecture is chosen before understanding operational data behavior.
 
-- one telemetry workflow under review
-- one decision about where analysis belongs
-- one reason the architecture follows the data behavior
+This lesson will demonstrate how:
 
-If you cannot identify these items yet, pause and complete the activity before moving forward.
+- telemetry shape
+- event timing
+- operational needs
+- workflow constraints
 
+influence practical architecture decisions.
+
+The focus will remain:
+
+- lightweight
+- understandable
+- SAS-compatible
+- Human-in-Command aligned
+
+---
+
+# Public Beta Status
+
+This lesson is intentionally being withheld from public beta until:
+
+- survivability validation is complete
+- onboarding continuity is validated
+- runtime behavior is fully verified
+- instructional progression is stabilized
+
+Thank you for participating in the AF-002 public beta.
+
+---
+
+# Next Lesson Preview
+
+LESSON 05 — Capstone Workflow
+
+Combine concepts from the course into a complete lightweight operational AIoT workflow.
 ---
 
 # Restart Checkpoint

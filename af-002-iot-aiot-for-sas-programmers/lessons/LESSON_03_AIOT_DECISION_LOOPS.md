@@ -12,55 +12,71 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
-# Freeze-Period Status
+# LESSON 03 — AIoT Decision Loops
 
-This lesson is part of the approved AF-002 course sequence.
+## Status
 
-During the stabilization freeze, this lesson may function as a structured lesson description or lightweight operational module.
-
-Lesson 00 and Lesson 01 remain the primary fully operational first-success path.
+Preview Only — Under Development
 
 ---
 
-# Lesson Purpose
+# What This Lesson Will Explore
 
-Introduce rules, validation, AI assistance, and operational decisions.
+Lesson 03 will introduce lightweight operational decision loops using telemetry generated from AI-assisted observations.
 
----
+Topics currently planned include:
 
-# Learning Objectives
+- threshold detection
+- operational alerts
+- lightweight monitoring concepts
+- event-driven operational responses
+- Human-in-Command review workflows
+- simple decision-support patterns
 
-- understand simple decision loops
-- distinguish rules from AI assistance
-- apply validation thinking
-- preserve human judgment
+The lesson will remain:
 
----
-
-## Activity
-
-Create a simple operational rule such as:
-
-> If brightness drops below a chosen threshold, flag the reading for review.
-
-Then discuss what the human should verify before acting.
-
-## Recap
-
-The goal is operationally useful action with accountability and validation.
-
+- lightweight
+- SAS-centered
+- operationally practical
+- survivable
+- understandable by working analysts and engineers
 
 ---
 
-# Visible Checkpoint
+# Why This Matters
 
-You should now have or be able to describe:
+Collecting telemetry is only the beginning.
 
-- one simple operational rule
-- one condition that should be reviewed
-- one explanation of what the human should verify
+Operational systems become valuable when telemetry begins supporting:
 
-If you cannot identify these items yet, pause and complete the activity before moving forward.
+- awareness
+- prioritization
+- monitoring
+- operational response
+- human decision-making
+
+This lesson will demonstrate how lightweight AIoT workflows can assist operational thinking without requiring hyperscale infrastructure or autonomous systems.
+
+---
+
+# Public Beta Status
+
+This lesson is intentionally being withheld from public beta until:
+
+- survivability validation is complete
+- onboarding continuity is validated
+- runtime behavior is fully verified
+- instructional progression is stabilized
+
+Thank you for participating in the AF-002 public beta.
+
+---
+
+# Next Lesson Preview
+
+LESSON 04 — Architecture Follows Data
+
+Explore how operational data shape influences workflow and system design.
 
 ---
 

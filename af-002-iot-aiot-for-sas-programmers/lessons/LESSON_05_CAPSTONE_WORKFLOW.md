@@ -12,67 +12,45 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
-# Freeze-Period Status
+# LESSON 05 — Capstone Workflow
 
-This lesson is part of the approved AF-002 course sequence.
+## Status
 
-During the stabilization freeze, this lesson may function as a structured lesson description or lightweight operational module.
-
-Lesson 00 and Lesson 01 remain the primary fully operational first-success path.
+Preview Only — Under Development
 
 ---
 
-# Lesson Purpose
+# What This Lesson Will Explore
 
-Apply the course in one small directed telemetry workflow.
+Lesson 05 will combine concepts from Lessons 00–04 into a lightweight end-to-end operational AIoT workflow.
 
----
+Topics currently planned include:
 
-# Learning Objectives
-
-- integrate telemetry capture
-- import telemetry into SAS
-- detect a simple event
-- apply a small rule
-- produce an operational result
-
----
-
-## Capstone Boundary
-
-This capstone is intentionally small.
-
-It exists to apply what was learned to a directed effort, not to build an enterprise AIoT platform.
-
-## Activity
-
-Build a mini telemetry workflow:
-
-1. Capture or use telemetry.
-2. Save it as CSV.
-3. Import it into SAS.
-4. Detect one simple event.
-5. Apply one simple operational rule.
-6. Summarize what a human should review.
-
-## Recap
-
-You now have a complete small AIoT workflow using practical SAS-centered techniques.
-
+- semantic telemetry generation
+- operational event analysis
+- SAS visualization workflows
+- lightweight operational monitoring
+- reporting concepts
+- Human-in-Command operational review
+- complete telemetry-to-analysis workflow integration
 
 ---
 
-# Visible Checkpoint
+# Why This Matters
 
-You should now have or be able to describe:
+The goal of AF-002 is not simply to demonstrate AI tools.
 
-- a small telemetry source or sample
-- a SAS analysis step
-- one detected operational signal
-- one human review explanation
+The goal is to demonstrate how lightweight operational AIoT workflows can produce analyzable SAS data and support operational understanding.
 
-If you cannot identify these items yet, pause and complete the activity before moving forward.
+This capstone lesson will bring the complete workflow together:
 
+```text
+visual input
+→ AI-assisted observation
+→ telemetry
+→ raw data
+→ SAS analysis
+→ operational understanding
 ---
 
 # Restart Checkpoint
