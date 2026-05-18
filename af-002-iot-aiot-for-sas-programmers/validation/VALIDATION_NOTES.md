@@ -1,4 +1,4 @@
-# Validation Notes — AF-002
+﻿# Validation Notes â€” AF-002
 
 ## Purpose
 
@@ -40,7 +40,7 @@ LESSON_*.md IS the loadable instructional unit.
 Validation should confirm that an AI assistant can operate correctly when provided directly with a lesson file such as:
 
 ```text
-LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+AF002_LESSON_01.md
 ```
 
 ---
@@ -97,3 +97,4 @@ Can an ideal expert succeed under ideal conditions?
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
 - Notes: Updated after Claude digital twin survivability test.
+

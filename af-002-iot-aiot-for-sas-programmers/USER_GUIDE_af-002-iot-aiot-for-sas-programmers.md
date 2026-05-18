@@ -1,4 +1,4 @@
-# USER GUIDE — AF-002 IoT/AIoT for SAS Programmers
+﻿# USER GUIDE â€” AF-002 IoT/AIoT for SAS Programmers
 
 ## Purpose
 
@@ -16,7 +16,7 @@ Start with:
 
 Then continue to:
 
-`LESSON_00_SETUP_AND_ORIENTATION.md`
+`AF002_LESSON_00.md`
 
 The course proceeds through the lesson files in `/lessons/`.
 
@@ -27,7 +27,7 @@ The course proceeds through the lesson files in `/lessons/`.
 The central early success pattern is:
 
 ```text
-webcam → telemetry → CSV → SAS analysis
+webcam â†’ telemetry â†’ CSV â†’ SAS analysis
 ```
 
 This gives the learner a fast operational win and helps reframe IoT as operational analytics data rather than mysterious hardware.
@@ -53,12 +53,12 @@ This means the lesson file itself is the AI-loadable instructional unit.
 ## Lesson Sequence
 
 ```text
-LESSON_00_SETUP_AND_ORIENTATION.md
-LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
-LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
-LESSON_03_AIOT_DECISION_LOOPS.md
-LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
-LESSON_05_CAPSTONE_WORKFLOW.md
+AF002_LESSON_00.md
+AF002_LESSON_01.md
+AF002_LESSON_02.md
+AF002_LESSON_03.md
+AF002_LESSON_04.md
+AF002_LESSON_05.md
 ```
 
 ---
@@ -124,3 +124,4 @@ The course should not drift into:
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
 - Notes: Updated after Claude digital twin survivability test.
+

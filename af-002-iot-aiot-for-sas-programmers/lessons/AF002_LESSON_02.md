@@ -1,14 +1,14 @@
-# LESSON 02 — Event Streams and Real-Time Thinking
+﻿# LESSON 02 â€” Event Streams and Real-Time Thinking
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md`
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md`
 
 GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
 Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
 ---
 
@@ -77,13 +77,13 @@ The lesson begins with simple operational concepts and gradually moves toward st
 Lesson 01 showed this pattern:
 
 ```text
-visual input → telemetry → CSV → SAS analysis
+visual input â†’ telemetry â†’ CSV â†’ SAS analysis
 ```
 
 Lesson 02 adds time and change:
 
 ```text
-new event arrives → operational state changes → SAS analysis may need to update
+new event arrives â†’ operational state changes â†’ SAS analysis may need to update
 ```
 
 The important question becomes:
@@ -104,7 +104,7 @@ You do not need streaming infrastructure to understand this operational thinking
 This lesson follows the EDGE teaching pattern:
 
 ```text
-Explain → Demonstrate → Guide → Enable
+Explain â†’ Demonstrate â†’ Guide â†’ Enable
 ```
 
 - Explain: what event streams and real-time thinking mean
@@ -145,7 +145,7 @@ This lesson intentionally starts small and controlled so the operational behavio
 This lesson primarily uses:
 
 ```text
-lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+lessons/AF002_LESSON_02.md
 ```
 
 Optional tie-back to Lesson 01 may use:
@@ -174,7 +174,7 @@ You are successful when you can say:
 
 ---
 
-# SECTION 1 — Explain: What Is an Event Stream?
+# SECTION 1 â€” Explain: What Is an Event Stream?
 
 An event stream is a sequence of operational events arriving over time.
 
@@ -213,7 +213,7 @@ Operational thinking begins when the data is still changing.
 
 ---
 
-# SECTION 2 — Explain: What Is Real-Time Thinking?
+# SECTION 2 â€” Explain: What Is Real-Time Thinking?
 
 Real-time thinking does not always mean instantaneous processing.
 
@@ -240,7 +240,7 @@ Timestamps indicate the order of events, which in turn helps understand the chan
 
 ---
 
-# SECTION 3 — Why Timestamps Matter
+# SECTION 3 â€” Why Timestamps Matter
 
 Without time, rows are just records.
 
@@ -276,7 +276,7 @@ Next, you will create a small standardized event stream in SAS and begin working
 
 ---
 
-# SECTION 4 — Demonstrate: Create Standard Event Data
+# SECTION 4 â€” Demonstrate: Create Standard Event Data
 
 This teaching data represents simple environmental sensor readings.
 
@@ -328,7 +328,7 @@ If you can see the rows, it is safe to continue.
 
 ---
 
-# SECTION 5 — Demonstrate: Basic Frequency State
+# SECTION 5 â€” Demonstrate: Basic Frequency State
 
 Now summarize the current event state using PROC FREQ.
 
@@ -372,7 +372,7 @@ That is stream-friendly thinking.
 
 ---
 
-# SECTION 6 — Demonstrate: Basic Summary State
+# SECTION 6 â€” Demonstrate: Basic Summary State
 
 Now summarize numeric readings using PROC SUMMARY.
 
@@ -413,7 +413,7 @@ The system does not always need to rerun every analysis from the beginning.
 
 ---
 
-# SECTION 7 — Demonstrate: One New Event Arrives
+# SECTION 7 â€” Demonstrate: One New Event Arrives
 
 Now simulate one new event.
 
@@ -450,7 +450,7 @@ A continuously arriving record may change the operational state.
 
 ---
 
-# SECTION 8 — Guide: Update Frequency State from the New Event
+# SECTION 8 â€” Guide: Update Frequency State from the New Event
 
 The new event has:
 
@@ -506,7 +506,7 @@ This is an example of an incrementally maintainable result.
 
 ---
 
-# SECTION 9 — Guide: Update Summary State from the New Event
+# SECTION 9 â€” Guide: Update Summary State from the New Event
 
 The new event has:
 
@@ -557,7 +557,7 @@ The operational context changed, but the programming ideas are familiar.
 
 ---
 
-# SECTION 10 — Guide: Which Results Can Be Updated?
+# SECTION 10 â€” Guide: Which Results Can Be Updated?
 
 Not all analytical results behave the same way when one new record arrives.
 
@@ -618,14 +618,14 @@ recalculate from the needed data.
 
 ---
 
-# SECTION 11 — Guide: Cumulative Streams vs Rolling Windows
+# SECTION 11 â€” Guide: Cumulative Streams vs Rolling Windows
 
 So far, the example has treated data as cumulative.
 
 That means:
 
 ```text
-new event arrives → add it to the current state
+new event arrives â†’ add it to the current state
 ```
 
 But many operational systems have staleness.
@@ -643,8 +643,8 @@ That changes the work.
 A rolling window behaves more like this:
 
 ```text
-new event arrives → add it
-old event expires → remove it or recompute the active window
+new event arrives â†’ add it
+old event expires â†’ remove it or recompute the active window
 ```
 
 That is different from simple cumulative updating.
@@ -662,7 +662,7 @@ Do not treat every stream as cumulative.
 
 ---
 
-# SECTION 12 — Demonstrate: Full Recalculation Check
+# SECTION 12 â€” Demonstrate: Full Recalculation Check
 
 Incremental updates are useful, but they should be validated.
 
@@ -716,7 +716,7 @@ That is how confidence is earned.
 
 ---
 
-# SECTION 13 — Demonstrate: Visualize the Event Stream
+# SECTION 13 â€” Demonstrate: Visualize the Event Stream
 
 ```sas
 title "Sensor Readings Over Time";
@@ -738,7 +738,7 @@ It becomes visible operational behavior.
 
 ---
 
-# SECTION 14 — Optional Tie-Back to Lesson 01 Telemetry
+# SECTION 14 â€” Optional Tie-Back to Lesson 01 Telemetry
 
 Lesson 01 generated visual telemetry.
 
@@ -776,7 +776,7 @@ The standardized teaching data is the main path for this lesson.
 
 ---
 
-# SECTION 15 — Enable: Learner Exercise
+# SECTION 15 â€” Enable: Learner Exercise
 
 Use the same original data.
 
@@ -809,7 +809,7 @@ The goal is confidence, not complexity.
 
 ---
 
-# SECTION 16 — Visible Success Checklist
+# SECTION 16 â€” Visible Success Checklist
 
 You should now have or be able to see:
 
@@ -890,10 +890,10 @@ Some are not safe to update from simple summary state alone.
 
 If you stop here, restart later by opening this lesson file and rerunning:
 
-1. Section 4 — create `work.sensor_events`
-2. Section 5 — create frequency state
-3. Section 6 — create summary state
-4. Section 7 — create `work.new_event`
+1. Section 4 â€” create `work.sensor_events`
+2. Section 5 â€” create frequency state
+3. Section 6 â€” create summary state
+4. Section 7 â€” create `work.new_event`
 
 After those four sections, you can continue with the update examples.
 
@@ -947,15 +947,15 @@ A good SAS programmer can tell the difference.
 
 After completing this lesson, continue to:
 
-`LESSON_03_AIOT_DECISION_LOOPS.md`
+`AF002_LESSON_03.md`
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
 
 ---
 
@@ -972,7 +972,7 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Paul McDonald Open Use License (MIT-style)
 
-© 2026 Paul McDonald
+Â© 2026 Paul McDonald
 
 
 > **Operational Guideline**
@@ -1001,16 +1001,17 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 # File Reference Information
 
 GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
 Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
 Previous Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
 Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+

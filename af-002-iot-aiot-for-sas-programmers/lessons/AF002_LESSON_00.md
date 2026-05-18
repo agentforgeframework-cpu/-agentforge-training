@@ -1,14 +1,14 @@
-# LESSON 00 — Setup and Orientation
+﻿# LESSON 00 â€” Setup and Orientation
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md`
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md`
 
 GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 ---
 
@@ -56,10 +56,10 @@ In Lesson 01, you will create the first practical course success:
 
 ```text
 webcam 
-  → AI-assisted observations
-    → telemetry 
-       → raw data 
-          → SAS analysis
+  â†’ AI-assisted observations
+    â†’ telemetry 
+       â†’ raw data 
+          â†’ SAS analysis
 ```
 
 In this course, "telemetry" means structured operational observations or measurements derived from webcams or other IoT/AIoT device input.
@@ -75,7 +75,7 @@ This means:
 ---
 
 
-> **🚀 Windows Users – Important Command Tip**
+> **ðŸš€ Windows Users â€“ Important Command Tip**
 >
 > On many Windows systems, the command `python` may not work immediately.
 > Try `py` instead.
@@ -112,10 +112,10 @@ In Lesson 01, the webcam will recognize simple operational objects and generate 
 
 ```text
 webcam
-  → AI-assisted observations
-    → telemetry
-      → raw data
-        → SAS analysis
+  â†’ AI-assisted observations
+    â†’ telemetry
+      â†’ raw data
+        â†’ SAS analysis
 ```
 
 The goal is not perfection.
@@ -143,7 +143,7 @@ You can always ask another person or an AI assistant for help if needed.
 
 If you are returning after interruption, continue from this step.
 
-# Setup Check 1 — Confirm Python
+# Setup Check 1 â€” Confirm Python
 
 Open Command Prompt or PowerShell.
 
@@ -188,7 +188,7 @@ Most setup problems are recoverable by fixing the issue and rerunning the step.
 
 ---
 
-# Setup Check 2 — Confirm Python Packages
+# Setup Check 2 â€” Confirm Python Packages
 
 Open Command Prompt or PowerShell.
 
@@ -230,7 +230,7 @@ Python and required packages are operational.
 
 ---
 
-# Setup Check 3 — Confirm Webcam Access
+# Setup Check 3 â€” Confirm Webcam Access
 
 Open the Windows Camera app.
 
@@ -249,7 +249,7 @@ This step is successful if the Windows Camera app displays an image, or if you h
 
 ---
 
-# Setup Check 4 — Confirm SAS Access
+# Setup Check 4 â€” Confirm SAS Access
 
 Open your SAS environment.
 
@@ -277,7 +277,7 @@ This step is successful when the learner can open and access a SAS environment.
 
 ---
 
-# Setup Check 5 — Confirm File Awareness
+# Setup Check 5 â€” Confirm File Awareness
 
 You should know where these course folders are:
 
@@ -367,15 +367,15 @@ Then continue to Lesson 01.
 
 Continue to:
 
-`LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md`
+`AF002_LESSON_01.md`
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
 ---
 
@@ -398,7 +398,7 @@ Lesson 00 checks your gear and helps you get grounded so you can succeed in the 
 
 Paul McDonald Open Use License (MIT-style)
 
-© 2026 Paul McDonald
+Â© 2026 Paul McDonald
 
 
 ## Visual Brief
@@ -415,16 +415,17 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 # File Reference Information
 
 GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 Previous Lesson:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
 
 Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+

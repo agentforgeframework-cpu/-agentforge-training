@@ -1,4 +1,4 @@
-# AF-002 AI-Side Hardening Pass Summary
+﻿# AF-002 AI-Side Hardening Pass Summary
 
 ## Purpose
 
@@ -15,12 +15,12 @@ No architecture redesign was performed.
 - `README.md`
 - `SETUP_af-002-iot-aiot-for-sas-programmers.md`
 - `af-002-iot-aiot-for-sas-programmers.md`
-- `lessons/LESSON_00_SETUP_AND_ORIENTATION.md`
-- `lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md`
-- `lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md`
-- `lessons/LESSON_03_AIOT_DECISION_LOOPS.md`
-- `lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md`
-- `lessons/LESSON_05_CAPSTONE_WORKFLOW.md`
+- `lessons/AF002_LESSON_00.md`
+- `lessons/AF002_LESSON_01.md`
+- `lessons/AF002_LESSON_02.md`
+- `lessons/AF002_LESSON_03.md`
+- `lessons/AF002_LESSON_04.md`
+- `lessons/AF002_LESSON_05.md`
 - `lessons-learned/AI_SIDE_HARDENING_PASS_SUMMARY.md`
 - `lessons-learned/OPERATIONAL_ASSET_SUMMARY.md`
 - `python/webcam_telemetry_capture.py`
@@ -99,3 +99,4 @@ The changes directly support:
 No files were identified for human deletion in this patch.
 
 Empty folders such as `/core-tools/` or `/examples/` may exist locally, but empty folders are normally not committed by Git unless placeholder files are present.
+

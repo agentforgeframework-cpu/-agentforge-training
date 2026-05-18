@@ -1,28 +1,28 @@
-# Lesson 05 - Capstone Workflow
+﻿# Lesson 05 - Capstone Workflow
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md`
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md`
 
 GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 
 Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 
 ---
 
-# LESSON 05 — Capstone Workflow
+# LESSON 05 â€” Capstone Workflow
 
 ## Status
 
-Preview Only — Under Development
+Preview Only â€” Under Development
 
 ---
 
 # What This Lesson Will Explore
 
-Lesson 05 will combine concepts from Lessons 00–04 into a lightweight end-to-end operational AIoT workflow.
+Lesson 05 will combine concepts from Lessons 00â€“04 into a lightweight end-to-end operational AIoT workflow.
 
 Topics currently planned include:
 
@@ -46,11 +46,11 @@ This capstone lesson will bring the complete workflow together:
 
 ```text
 visual input
-→ AI-assisted observation
-→ telemetry
-→ raw data
-→ SAS analysis
-→ operational understanding
+â†’ AI-assisted observation
+â†’ telemetry
+â†’ raw data
+â†’ SAS analysis
+â†’ operational understanding
 ---
 
 # Restart Checkpoint
@@ -106,23 +106,24 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Paul McDonald Open Use License (MIT-style)
 
-© 2026 Paul McDonald
+Â© 2026 Paul McDonald
 
 ---
 
 # File Reference Information
 
 GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 
 Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 
 Previous Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
 
 Next Lesson:
 None
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+

@@ -1,4 +1,4 @@
-# SETUP — AF-002 IoT/AIoT for SAS Programmers
+﻿# SETUP â€” AF-002 IoT/AIoT for SAS Programmers
 
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md`
 
@@ -57,7 +57,7 @@ SETUP is for environment preparation.
 
 After setup is complete, continue with:
 
-`LESSON_00_SETUP_AND_ORIENTATION.md`
+`AF002_LESSON_00.md`
 
 ---
 
@@ -78,7 +78,7 @@ AF-002 assumes the learner has access to:
 ## Python Setup Check
 
 
-> **🚀 Windows Users – Important Command Tip**
+> **ðŸš€ Windows Users â€“ Important Command Tip**
 >
 > On many Windows systems, the command `python` may not work immediately.
 > Try `py` instead.
@@ -314,75 +314,75 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ### Lesson Chain
 
-#### Lesson 00 — Setup and Orientation
+#### Lesson 00 â€” Setup and Orientation
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 ---
 
-#### Lesson 01 — Simple Video and Images
+#### Lesson 01 â€” Simple Video and Images
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_01_SIMPLE_VIDEO_AND_IMAGES.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
 ---
 
-#### Lesson 02 — Event Streams and Real-Time Thinking
+#### Lesson 02 â€” Event Streams and Real-Time Thinking
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_02_EVENT_STREAMS_AND_REAL_TIME_THINKING.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
 ---
 
-#### Lesson 03 — AIoT Decision Loops
+#### Lesson 03 â€” AIoT Decision Loops
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_03_AIOT_DECISION_LOOPS.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
 
 ---
 
-#### Lesson 04 — Architecture Follows Data for AIoT
+#### Lesson 04 â€” Architecture Follows Data for AIoT
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_04_ARCHITECTURE_FOLLOWS_DATA_FOR_AIOT.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
 
 ---
 
-#### Lesson 05 — Capstone Workflow
+#### Lesson 05 â€” Capstone Workflow
 
 GitHub URL:
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 
 Raw URL:
 
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_05_CAPSTONE_WORKFLOW.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 
 ---
 
@@ -508,7 +508,7 @@ When assisting with AF-002:
 The primary early success target is:
 
 ```text
-webcam → telemetry → CSV → SAS analysis
+webcam â†’ telemetry â†’ CSV â†’ SAS analysis
 ```
 
 ---
@@ -517,7 +517,7 @@ webcam → telemetry → CSV → SAS analysis
 
 Proceed to:
 
-`LESSON_00_SETUP_AND_ORIENTATION.md`
+`AF002_LESSON_00.md`
 
 The Operational File Links section above contains the GitHub and raw URLs needed to continue.
 
@@ -542,7 +542,8 @@ Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
 
 Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/LESSON_00_SETUP_AND_ORIENTATION.md
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+
