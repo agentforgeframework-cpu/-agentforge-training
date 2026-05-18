@@ -7,6 +7,14 @@ Status: Draft — Survivability Hardened Conversational Prototype
 Course Status: Public Beta  
 Instructional Mode: Conversational Instructor-Led Operational Lab
 
+Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md`
+
+GitHub URL:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
+
+Raw URL:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
+
 ---
 
 # Lesson Purpose
@@ -113,6 +121,23 @@ The instructor should deliver:
 
 per interaction cycle.
 
+Visible learner pacing is intentional.
+
+The learner should generally understand:
+- where they are in the lesson
+- what phase they are currently completing
+- that the lesson has bounded scope
+
+This reduces unnecessary cognitive load and improves operational focus.
+
+Runtime guidance:
+
+```text
+One operational step at a time.
+Pause after each operational result.
+Interpret before moving forward.
+```
+
 ---
 
 # Operational Scenario
@@ -135,6 +160,28 @@ This is NOT:
 - a birdwatching course
 - ornithology training
 - Raspberry Pi deployment instruction
+
+
+Operational note:
+
+```text
+If you eventually want telemetry like this yourself,
+the telemetry source could come from:
+- cameras
+- AI-assisted image systems
+- environmental sensors
+- operational logs
+- event streams
+- simple automation systems
+```
+
+The important lesson here is NOT the specific hardware.
+
+The important lesson is:
+- operational visibility
+- telemetry interpretation
+- Human-in-Command reasoning
+- operational awareness
 
 ---
 
@@ -186,7 +233,7 @@ One step at a time.
 
 ---
 
-# Phase 1 — Create Tiny Operational Telemetry
+# Phase 1 of 7 — Create Tiny Operational Telemetry
 
 Strong recommendation:
 
@@ -253,7 +300,7 @@ Which row catches your attention first?
 
 ---
 
-# Phase 2 — Human-Readable Telemetry
+# Phase 2 of 7 — Human-Readable Telemetry
 
 Goal:
 Demonstrate that operational telemetry must be understandable by humans.
@@ -291,7 +338,7 @@ run;
 
 ---
 
-# Phase 3 — Operational State Awareness
+# Phase 3 of 7 — Operational State Awareness
 
 Goal:
 Transition the learner from:
@@ -318,7 +365,22 @@ Recommended instructor prompts:
 
 ---
 
-# Phase 4 — Human Operational Interpretation
+# Restart Checkpoint
+
+At this point, the learner should have:
+- a working telemetry dataset
+- readable operational telemetry output
+- basic operational state awareness
+- operational interpretation experience
+
+If interrupted:
+restart from Phase 1 to rebuild operational context safely.
+
+---
+
+---
+
+# Phase 4 of 7 — Human Operational Interpretation
 
 Goal:
 Teach operational interpretation.
@@ -340,7 +402,7 @@ The instructor should encourage:
 
 ---
 
-# Phase 5 — Threshold Manipulation
+# Phase 5 of 7 — Threshold Manipulation
 
 Goal:
 Demonstrate that changing thresholds changes operational interpretation.
@@ -376,7 +438,7 @@ The operational interpretation changed.
 
 ---
 
-# Phase 6 — Summary Data vs Telemetry Data
+# Phase 6 of 7 — Summary Data vs Telemetry Data
 
 Goal:
 Demonstrate that summary statistics answer different questions than telemetry streams.
@@ -413,7 +475,7 @@ Summary data and telemetry data answer different operational questions.
 
 ---
 
-# Phase 7 — Quiet Telemetry Interpretation
+# Phase 7 of 7 — Quiet Telemetry Interpretation
 
 Goal:
 Teach that:
@@ -477,6 +539,21 @@ This is REQUIRED for:
 - confidence continuity
 - learner reassurance
 - survivability
+
+
+Strong recommendation:
+
+The instructor should pause here and allow the learner to recognize:
+
+```text
+I can now:
+- observe telemetry
+- interpret operational conditions
+- reason about operational meaning
+- manipulate thresholds
+- recognize operational ambiguity
+inside a SAS workflow.
+```
 
 Optional continuation prompt:
 
