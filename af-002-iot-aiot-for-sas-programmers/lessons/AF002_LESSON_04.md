@@ -1,7 +1,7 @@
 # AF002_LESSON_04.md
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Telemetry Operationally at Work
-### Prototype Draft v0.2
+### Prototype Draft v0.3
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
@@ -24,14 +24,14 @@ In earlier lessons, you learned how to:
 * understand telemetry
 * use telemetry operationally
 
-In this lesson, you will begin exploring what happens when organizations start depending on telemetry operationally.
+In this lesson, you will begin exploring what happens when organizations start depending on telemetry operationally at workplace scale.
 
 The goal is not to become:
 
 * a hyperscale architect
 * a cloud engineer
 * an AI evangelist
-* a vendor specialist
+* a dashboard theorist
 
 The goal is simpler:
 
@@ -42,7 +42,29 @@ inside telemetry-driven organizations.
 
 ---
 
+# Important Continuity Bridge
+
+The webcam telemetry and CSV telemetry from earlier lessons and warehouse telemetry are fundamentally the same operational idea.
+
+The difference is:
+
+* more devices
+* more events
+* more timing pressure
+* more operational coordination
+* more organizational visibility needs
+
+The telemetry itself is still ordinary telemetry.
+
+That matters.
+
+---
+
 # Phase 1 of 7 — You Are In The Meeting
+
+## Instructor / AI Assistant Direction
+
+Do not continue past this phase until the learner answers the reflection questions.
 
 Monday morning.
 
@@ -52,13 +74,13 @@ Nothing catastrophic has happened.
 
 But operations leadership is becoming uncomfortable.
 
-The current issues include:
+Current issues include:
 
 * dock queues increasing
 * delayed outbound shipments
 * forklift idle time increasing
 * repeated freezer alerts during peak activity
-* inconsistent visibility between sites
+* inconsistent visibility between warehouse sites
 
 A vice president asks:
 
@@ -69,7 +91,8 @@ A vice president asks:
 An operations supervisor responds:
 
 ```text
-“Because the dashboards don't show what the dock teams are actually experiencing.”
+“Because the dashboards don't show
+what the dock teams are actually experiencing.”
 ```
 
 Another manager says:
@@ -80,34 +103,34 @@ Another manager says:
 
 At this point, nobody fully agrees on:
 
-* what the real bottleneck is
+* what the bottleneck actually is
 * whether telemetry is current
 * whether systems are synchronized
-* whether operations are actually degrading
+* whether operations are truly degrading
 
 That uncertainty is important.
 
 ---
 
-# Stop Here
+# Operational Intercept Gate
 
-Before continuing, think about these questions.
+STOP HERE.
+
+Before continuing:
 
 1. What telemetry would YOU want immediately?
 2. Which operational groups probably see the situation differently?
 
-Possible examples:
+Possible groups:
 
 * dock workers
 * warehouse supervisors
 * executives
-* transportation teams
 * refrigeration teams
+* transportation teams
 * IT operations
 
-Do not overthink this.
-
-Operational reasoning matters more than “perfect answers.”
+Do not continue until the learner responds.
 
 ---
 
@@ -126,7 +149,7 @@ Another important operational principle:
 “Scale decisions you understand.”
 ```
 
-Many organizations already possess meaningful telemetry.
+Most organizations already possess meaningful telemetry.
 
 Examples include:
 
@@ -134,8 +157,8 @@ Examples include:
 * inventory movement
 * shipment timestamps
 * staffing schedules
-* queue buildup
 * dock occupancy
+* queue buildup
 * freezer telemetry
 * equipment status
 * forklift movement
@@ -144,8 +167,8 @@ Examples include:
 Most successful operational telemetry systems do NOT begin with:
 
 * futuristic AI systems
-* massive rebuilds
-* hyperscale transformation
+* complete infrastructure replacement
+* hyperscale redesign
 
 Instead:
 
@@ -153,18 +176,6 @@ Instead:
 Organizations often begin by operationalizing
 telemetry they already possess.
 ```
-
-The three companies in this lesson all began that way.
-
-Warehouse teams started connecting:
-
-* scanner systems
-* shipping systems
-* refrigeration alerts
-* operational timing events
-* local telemetry streams
-
-into broader operational visibility systems.
 
 ---
 
@@ -176,12 +187,12 @@ All three companies:
 
 * move inventory
 * process shipments
-* manage staffing
-* operate refrigeration areas
-* depend on operational timing
-* use telemetry operationally
+* coordinate staffing
+* manage refrigeration
+* depend on timing
+* rely on telemetry operationally
 
-None of the organizations are:
+None of the companies are:
 
 * villains
 * perfect
@@ -192,20 +203,50 @@ Each organization made understandable operational choices.
 
 ---
 
-# Operational Comparison
+# Operational Comparison Matrix
 
-| Operational Area | Company A — CloudOps | Company B — LocalOps | Company C — BalancedCo |
+| Operational Area | CloudOps | LocalOps | BalancedCo |
 |---|---|---|---|
-| Operational Philosophy | Centralized coordination | Local operational ownership | Proportional operational fit |
-| Visibility Style | Enterprise-wide dashboards | Strong local visibility | Mixed operational visibility |
-| Strength | Broad coordination | Local survivability | Flexible operational balance |
+| Philosophy | Centralized coordination | Local operational ownership | Operational fit by workload |
+| Visibility | Enterprise-wide dashboards | Strong local visibility | Mixed visibility |
+| Strength | Broad coordination | Local survivability | Flexible operations |
 | Weakness | Operational abstraction | Weak enterprise coordination | Reconciliation complexity |
 | Worker Experience | Centralized workflows | Local autonomy | Mixed workflows |
-| Outage Behavior | Visibility may continue while operations degrade locally | Operations may continue while leadership loses visibility | Partial visibility may require reconciliation |
-| Recovery Style | Central coordination | Local troubleshooting | Coordinated recovery |
-| Telemetry Risk | Delayed operational context | Fragmented visibility | Synchronization drift |
-| Human Workload | Central monitoring pressure | Local operational burden | Coordination overhead |
-| Operational Concern | “We can see everything.” | “We can still operate.” | “Which telemetry should we trust?” |
+| 2 AM Failure Mode | Local reality drifts first | Leadership visibility weakens first | Teams debate which telemetry is freshest |
+| Human Workload | Central monitoring pressure | Local coordination burden | Cross-system verification burden |
+
+---
+
+# Why The Differences Exist
+
+CloudOps retains enterprise visibility because telemetry ingestion is centralized and buffered.
+
+However:
+
+```text
+local operational reality may drift
+before centralized dashboards reflect it.
+```
+
+LocalOps retains continuity because warehouse teams can continue operating even if upstream systems stall.
+
+However:
+
+```text
+cross-site coordination becomes harder
+as operations scale.
+```
+
+BalancedCo attempts to preserve proportional architecture.
+
+However:
+
+```text
+teams must reconcile multiple telemetry streams
+and determine which operational view is freshest.
+```
+
+These differences emerge from operational priorities and constraints, not from abstract architecture ideology.
 
 ---
 
@@ -220,30 +261,32 @@ Architecture affects:
 * visibility
 * throughput
 * latency
-* coordination
-* survivability
-* human workload
 * maintainability
+* survivability
+* operational coordination
+* human workload
 * operational trust
 
 ---
 
 # Phase 4 of 7 — The Situation Evolves
 
+## Instructor / AI Assistant Direction
+
+Do not continue past this phase until the learner answers the reflection questions.
+
 Three hours later:
 
 * outbound delays continue increasing
 * dock queues continue growing
 * freezer alerts continue appearing
-* leadership dashboards still show mostly “green” systems
+* executive dashboards still show mostly “green”
 
-However:
+However, local supervisors report:
 
-local dock supervisors report:
-
+* forklifts waiting for loading lanes
 * workers rerouting pallets manually
 * refrigeration doors staying open longer
-* forklifts waiting for loading lanes
 * increasing confusion between teams
 
 One operations analyst notices something concerning:
@@ -259,46 +302,72 @@ Another analyst asks:
 “Where are the timestamps?”
 ```
 
-That question changes the meeting.
+The room becomes quieter.
+
+Another analyst adds:
+
+```text
+“The forklift dashboard says utilization is low,
+but dock congestion says the exact opposite.”
+```
+
+A refrigeration specialist says:
+
+```text
+“Freezer alerts are arriving BEFORE
+the temperature telemetry that explains them.”
+```
+
+That changes the meeting.
 
 ---
 
-# Stop Here
+# Operational Intercept Gate
 
-Think about the operational consequences.
+STOP HERE.
 
-If telemetry lacks clear timestamps:
+Think carefully about the operational consequences.
+
+If telemetry lacks trustworthy time context:
 
 * can leadership trust dashboards?
 * can operators trust alerts?
+* can stale telemetry look current?
 * can bottlenecks be identified reliably?
-* can stale telemetry be mistaken for live operations?
 
 Important operational insight:
 
 ```text
-Telemetry without time context
-can become operationally misleading.
+Telemetry is evidence,
+not truth.
 ```
+
+Do not continue until the learner responds.
 
 ---
 
 # Phase 5 of 7 — SAS Operational Investigation
 
-Run the following SAS program.
+Run the following SAS program before continuing.
 
 ```sas
 title "Lesson 04 - Warehouse Operational Telemetry";
 
 proc format;
-   value concern
-      low-high = 'Operationally Stable'
-      20-34    = 'Operational Attention Needed'
-      35-high  = 'Operational Concern';
+   value $freshness
+      'CURRENT' = 'Current telemetry'
+      'STALE'   = 'Stale telemetry - verify before trusting'
+      other     = 'Unknown telemetry state';
+
+   value $concern
+      'LOW'    = 'Monitor'
+      'MEDIUM' = 'Operational attention needed'
+      'HIGH'   = 'Operational concern';
 run;
 
 data warehouse_flow;
-length company $10 warehouse $8 telemetry_state $12;
+length company $10 warehouse $8 telemetry_state $12 concern_level $6;
+
 input company $ warehouse $
       avg_queue_minutes
       forklift_idle_percent
@@ -311,6 +380,18 @@ if telemetry_age_minutes > 20 then
 else
    telemetry_state='CURRENT';
 
+operational_score =
+   avg_queue_minutes
+ + delayed_shipments
+ + freezer_alerts;
+
+if operational_score >= 70 then
+   concern_level='HIGH';
+else if operational_score >= 45 then
+   concern_level='MEDIUM';
+else
+   concern_level='LOW';
+
 datalines;
 CloudOps   KC01 42 18 33 12 25
 CloudOps   KC02 39 16 28 10 31
@@ -321,52 +402,56 @@ BalancedCo KC02 31 13 20  7 14
 ;
 run;
 
-proc print data=warehouse_flow;
-label telemetry_age_minutes='Telemetry Age (Minutes)';
+proc print data=warehouse_flow label;
+label company='Company'
+      warehouse='Warehouse'
+      avg_queue_minutes='Average Queue Minutes'
+      forklift_idle_percent='Forklift Idle Percent'
+      delayed_shipments='Delayed Shipments'
+      freezer_alerts='Freezer Alerts'
+      telemetry_age_minutes='Telemetry Age (Minutes)'
+      telemetry_state='Telemetry Freshness'
+      operational_score='Operational Score'
+      concern_level='Operational Concern';
+format telemetry_state $freshness.
+       concern_level $concern.;
 run;
 
 proc freq data=warehouse_flow;
+tables company*telemetry_state / norow nocol nopercent;
+format telemetry_state $freshness.;
 label telemetry_state='Telemetry Freshness';
-tables telemetry_state;
 run;
 
 proc means data=warehouse_flow mean maxdec=1;
 class company;
 var avg_queue_minutes
-    forklift_idle_percent
     delayed_shipments
     freezer_alerts
-    telemetry_age_minutes;
+    telemetry_age_minutes
+    operational_score;
 run;
 
-data warehouse_review;
-set warehouse_flow;
-
-operational_score =
-   avg_queue_minutes
- + delayed_shipments
- + freezer_alerts;
-
-if operational_score >= 70 then
-   concern_level='HIGH';
-else if operational_score >= 45 then
-   concern_level='MEDIUM';
-else concern_level='LOW';
-run;
-
-proc print data=warehouse_review;
-label concern_level='Operational Concern';
-run;
-
-proc sgplot data=warehouse_review;
+proc sgplot data=warehouse_flow;
 vbar company / response=avg_queue_minutes stat=mean;
 yaxis label='Average Queue Minutes';
+title "Average Dock Queue Time by Company";
+run;
+
+proc sgplot data=warehouse_flow;
+vbar company / response=telemetry_age_minutes stat=mean;
+yaxis label='Average Telemetry Age in Minutes';
+title "Telemetry Freshness by Company";
 run;
 ```
 
 ---
 
-# Observation Moment
+# SAS Observation Moment
+
+## Instructor / AI Assistant Direction
+
+Do not continue until the learner comments on the SAS output.
 
 Do NOT rush.
 
@@ -374,41 +459,24 @@ Look carefully at the telemetry.
 
 Questions to consider:
 
+* Which telemetry appears freshest?
 * Which company appears easiest to troubleshoot locally?
-* Which company appears strongest operationally at enterprise scale?
-* Which company appears to preserve visibility best?
-* Which company appears to create more reconciliation work?
+* Which company appears strongest at enterprise coordination?
 * Which company appears most vulnerable to stale telemetry?
-* Which company might create hidden bottlenecks?
+* Which telemetry would YOU trust first?
 
-Most importantly:
-
-```text
-Which telemetry would YOU trust first?
-```
-
-There is probably NOT a single perfect answer.
-
-That is intentional.
-
----
-
-# Important Operational Insight
+Also consider:
 
 ```text
-Visibility and operational continuity
-are not identical.
+Executives need trends.
+Operators need timestamps and freshness.
 ```
 
-An organization may:
+Executive dashboards and operator dashboards should often look very different.
 
-* continue operating while leadership loses visibility
-* retain dashboards while local operations degrade
-* preserve local flow while enterprise coordination weakens
+That difference is operationally important.
 
-This creates operational tension.
-
-That tension is normal.
+Do not continue until the learner responds.
 
 ---
 
@@ -422,14 +490,14 @@ CloudOps leadership recommends:
 Escalate freezer alerts automatically.
 ```
 
-Local dock supervisors disagree.
+Local supervisors disagree.
 
 They report:
 
 * no actual spoilage
 * normal compressor operation
 * normal product temperatures
-* alerts occurring mainly during surge loading
+* alerts mainly occurring during surge loading
 
 One supervisor says:
 
@@ -442,30 +510,43 @@ Another responds:
 
 ```text
 “If we automate every alert,
-we'll eventually stop trusting the alerts.”
+eventually nobody will trust the alerts.”
 ```
 
 ---
 
-# Stop Here
+# Operational Trust Decision
 
-You are now participating in the meeting.
+STOP HERE.
 
-What would YOU recommend?
+You now have:
 
-Possible operational responses:
+* stale freezer telemetry
+* fresh alerts
+* conflicting congestion indicators
+* a supervisor saying operations are stable
+* leadership demanding escalation
+
+What do YOU trust first?
+
+Possible responses:
 
 * immediate escalation
+* human review before escalation
 * threshold adjustment
 * additional telemetry collection
 * operational workflow changes
-* refrigeration timing review
-* loading-lane redesign
-* human review before escalation
+* refrigeration timing analysis
 
-Think carefully.
+There is probably not a perfect answer.
 
-Important lesson principle:
+That is intentional.
+
+Do not continue until the learner responds.
+
+---
+
+# Important Operational Principle
 
 ```text
 Human-in-Command is operationally necessary.
@@ -475,18 +556,24 @@ Why?
 
 Because:
 
-* telemetry can drift
-* dashboards can mislead
-* bottlenecks can move
+* telemetry drifts
+* dashboards simplify reality
 * synchronization can fail
+* bottlenecks move
 * workflows evolve
 * humans provide operational context
+
+Humans are not decoration.
+
+```text
+Humans are the operational decision engine.
+```
 
 ---
 
 # Phase 7 of 7 — Operational Reflection
 
-At the end of the operational review meeting, leadership asks:
+Leadership now asks:
 
 ```text
 Which operational approach appears most sustainable?
@@ -506,13 +593,12 @@ Use proportional operational reasoning.
 Think about:
 
 * visibility
-* maintainability
 * latency
+* maintainability
 * throughput
-* survivability
-* coordination
-* bottleneck visibility
 * operational trust
+* survivability
+* bottleneck visibility
 * Human-in-Command oversight
 
 ---
@@ -532,6 +618,16 @@ Learn to reason operationally
 inside telemetry-driven organizations.
 ```
 
+You now understand more clearly that telemetry systems in real organizations are:
+
+* imperfect
+* delayed
+* partial
+* operationally useful
+* operationally dangerous if misunderstood
+
+not perfectly clean or magically synchronized.
+
 ---
 
 # Key Takeaways
@@ -549,7 +645,8 @@ Scale decisions you understand.
 ```
 
 ```text
-Telemetry systems exist to improve operational understanding.
+Telemetry is evidence,
+not truth.
 ```
 
 ```text
@@ -558,7 +655,7 @@ are not identical.
 ```
 
 ```text
-Complexity can hide operational constraints.
+Operational ambiguity creates operational immersion.
 ```
 
 ```text
@@ -576,25 +673,26 @@ At this point, you should be better able to:
 
 * recognize operational visibility problems
 * question telemetry trustworthiness
-* discuss proportional architecture tradeoffs
+* discuss architecture tradeoffs proportionally
 * identify operational bottlenecks
 * participate intelligently in telemetry discussions
-* understand how architecture affects operational reality
+* understand how telemetry affects operational reality
 
 ---
 
 # Optional Exploration
 
-If desired, continue exploring:
+Possible future exploration areas include:
 
-* stale telemetry detection
-* operational ranking systems
-* dashboard audience differences
-* executive vs operator telemetry
-* synchronization lag
-* bottleneck escalation
-* anomaly investigation
-* Human-in-Command review workflows
+* larger telemetry streams
+* rolling operational windows
+* anomaly escalation
+* dashboard audience design
+* synchronization drift analysis
+* operational forecasting
+* warehouse throughput forecasting
+
+These may be explored in later lessons, optional labs, or future courses.
 
 ---
 
@@ -604,6 +702,14 @@ After completing this lesson, continue to:
 
 `AF002_LESSON_05.md`
 
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
+
 ---
 
 # Development and Test Environment
@@ -611,7 +717,7 @@ After completing this lesson, continue to:
 - Platform: ChatGPT Web
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-19
-- Notes: Revised following live human survivability testing and operational ambiguity analysis.
+- Notes: Revised following human and multi-platform digital twin survivability testing.
 
 ---
 
@@ -643,4 +749,3 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 ---
 
 # End of Lesson 04
-
