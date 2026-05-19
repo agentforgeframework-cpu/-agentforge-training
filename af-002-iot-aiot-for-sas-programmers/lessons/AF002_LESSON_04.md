@@ -4,7 +4,7 @@
 
 ## Lesson 04 — Use Telemetry Operationally at Work
 
-### Prototype Draft v0.5
+### Prototype Draft v0.6
 
 Course: AF-002 — IoT and AIoT for SAS Programmers
 
@@ -28,6 +28,8 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ---
 
+---
+
 # Lesson Purpose
 
 In earlier lessons, you learned how to:
@@ -37,7 +39,7 @@ In earlier lessons, you learned how to:
 * understand telemetry
 * use telemetry operationally
 
-In this lesson, you will work inside a believable workplace situation where telemetry affects real operational decisions.
+In this lesson, you will work inside a believable workplace environment where telemetry affects real operational decisions.
 
 The goal is NOT to become:
 
@@ -45,7 +47,6 @@ The goal is NOT to become:
 * a hyperscale engineer
 * a cloud strategist
 * an AI evangelist
-* a dashboard theorist
 
 The goal is:
 
@@ -60,17 +61,12 @@ inside telemetry-driven organizations.
 
 The telemetry concepts from earlier lessons still apply here.
 
-The webcam telemetry, image telemetry, event-stream examples, and operational telemetry from earlier lessons were smaller.
-
-This lesson scales the same basic idea into a workplace setting.
-
 The difference is:
 
 * more operational pressure
 * more timing sensitivity
 * more organizational coordination
 * more competing visibility needs
-* more people interpreting the same signals differently
 
 The telemetry itself is still:
 
@@ -80,27 +76,11 @@ ordinary telemetry
 
 That matters.
 
-You are still working with:
-
-```text
-events
-timestamps
-counts
-states
-summaries
-freshness
-operational interpretation
-```
-
-This lesson simply places those familiar ideas into a workplace conversation.
-
 ---
 
 # Important Runtime Guidance
 
-This lesson is intentionally designed to run in small operational cycles.
-
-Recommended pattern:
+This lesson works best when handled in small operational cycles:
 
 ```text
 operational situation
@@ -111,10 +91,6 @@ operational situation
 ```
 
 Do NOT rush.
-
-Do NOT dump the entire lesson at once.
-
-Do NOT turn this into an architecture lecture.
 
 The learner should repeatedly feel:
 
@@ -130,45 +106,34 @@ I am listening to a lecture.
 
 ---
 
-# Phase 1 of 7 — Quick Operational Triage
+# Phase 1 of 7 — Start of Shift
 
 ## Instructor / AI Assistant Direction
 
-Do NOT continue past this phase until the learner responds to the observation questions.
+Do NOT continue until the learner responds.
 
-Keep this phase SAS-first.
+Do NOT begin with a meeting.
 
-Do not place the learner inside the meeting yet.
-
-The learner is preparing for the meeting.
+The learner should begin with ordinary SAS workflow.
 
 ---
 
-It is 7:42 AM.
+It is 7:38 AM.
 
-You have about ten minutes before a regional warehouse operations meeting begins.
+You arrive at work and log into your workstation.
 
-Overnight shipment delays increased again.
+Before the morning operations meeting starts, you usually spend a few minutes checking overnight telemetry activity.
 
-Nothing catastrophic happened.
+An overnight warehouse export is waiting in your inbox.
 
-But leadership is asking questions.
-
-A supervisor forwarded you a partial overnight export with the note:
-
-```text
-Can you take a quick look before the meeting?
-Something feels off.
-```
-
-You open SAS immediately.
+You open SAS and begin reviewing the data.
 
 Run this SAS program now.
 
 ```sas
-title "Lesson 04 - Overnight Operational Snapshot";
+title "Lesson 04 - Overnight Warehouse Activity";
 
-data warehouse_status;
+data overnight_activity;
 length warehouse $4 company $10 telemetry_state $8;
 
 input warehouse $
@@ -193,13 +158,20 @@ KC06 BalancedCo 31 20  7 14
 ;
 run;
 
-proc print data=warehouse_status;
+proc print data=overnight_activity;
 run;
 
-proc sgplot data=warehouse_status;
+proc means data=overnight_activity mean maxdec=1;
+   var avg_queue_minutes
+       delayed_shipments
+       freezer_alerts
+       telemetry_age_minutes;
+run;
+
+proc sgplot data=overnight_activity;
    vbar warehouse / response=avg_queue_minutes;
    yaxis label='Average Queue Minutes';
-   title "Dock Queue Minutes by Warehouse";
+   title "Overnight Queue Minutes by Warehouse";
 run;
 
 title;
@@ -209,15 +181,15 @@ title;
 
 # Observation Moment
 
-Take a second and actually inspect the telemetry.
+Take a moment and inspect the telemetry before continuing.
 
 Questions:
 
 * Which warehouse catches your attention first?
 * Which telemetry appears freshest?
 * Which telemetry appears questionable?
-* What deserves investigation first?
-* What would you NOT want to claim too strongly yet?
+* What would you investigate next?
+* What conclusions would be unsafe to make yet?
 
 When ready:
 
@@ -226,19 +198,17 @@ When ready:
 * offer an operational theory
 * or say `continue`
 
-Do not continue automatically.
+Do NOT continue automatically.
 
 ---
 
-# Phase 2 of 7 — The Meeting Starts
+# Phase 2 of 7 — The Operations Meeting Begins
 
 ## Instructor / AI Assistant Direction
 
-Do NOT continue past this phase until the learner responds.
+Do NOT continue until the learner responds.
 
-Use the learner's Phase 1 observations as the starting point.
-
-The learner should feel that the quick SAS review gave them something useful, but incomplete, before the meeting began.
+The learner should enter the meeting already carrying operational context from SAS.
 
 ---
 
@@ -264,11 +234,11 @@ Another manager asks:
 Then why can't we see the problem?
 ```
 
-You already know something important from your quick SAS review:
+You already know several things from your quick SAS review:
 
 * some telemetry appears fresh
 * some telemetry appears stale
-* queue buildup is not evenly distributed
+* queue buildup is uneven
 * operational visibility may not match operational reality
 
 One analyst asks:
@@ -278,12 +248,6 @@ Where are the timestamps?
 ```
 
 The room becomes quieter.
-
-That question matters.
-
-A dashboard without timing context may still be useful.
-
-But it may also be misleading.
 
 ---
 
@@ -296,18 +260,16 @@ are not identical.
 
 Executives often need:
 
-* trends
 * summaries
-* enterprise visibility
-* broad operational posture
+* trends
+* regional visibility
 
 Operators often need:
 
 * timestamps
-* queue buildup
 * telemetry freshness
-* local context
-* current operational state
+* queue buildup
+* local operational context
 
 That difference matters operationally.
 
@@ -315,13 +277,11 @@ That difference matters operationally.
 
 # Stop Here
 
-Think about the situation.
-
 Questions:
 
-* What did your quick SAS review help you see before the meeting?
+* What did your SAS review help you understand?
 * What did the SAS output NOT prove?
-* What would you be careful saying in front of leadership?
+* What would you avoid claiming too strongly yet?
 * What additional telemetry would help?
 
 When ready:
@@ -331,7 +291,7 @@ When ready:
 * offer an operational theory
 * or say `continue`
 
-Do not continue automatically.
+Do NOT continue automatically.
 
 ---
 
@@ -341,9 +301,7 @@ Do not continue automatically.
 
 Run the SAS code before continuing.
 
-This phase should feel like a second quick investigation, not a full analytics project.
-
-The learner should use SAS to support operational judgment.
+This phase should feel like another quick operational check, not a giant analytics project.
 
 ---
 
@@ -359,12 +317,12 @@ Another analyst responds:
 But the telemetry may already be delayed.
 ```
 
-You run a slightly broader SAS check.
+You run another quick SAS check.
 
 ```sas
-title "Lesson 04 - Company-Level Operational Summary";
+title "Lesson 04 - Company Operational Summary";
 
-proc means data=warehouse_status mean maxdec=1;
+proc means data=overnight_activity mean maxdec=1;
    class company;
    var avg_queue_minutes
        delayed_shipments
@@ -372,17 +330,16 @@ proc means data=warehouse_status mean maxdec=1;
        telemetry_age_minutes;
 run;
 
-title "Lesson 04 - Telemetry Freshness by Company";
+title "Lesson 04 - Telemetry Freshness";
 
-proc freq data=warehouse_status;
+proc freq data=overnight_activity;
    tables company*telemetry_state / norow nocol nopercent;
 run;
 
-title "Lesson 04 - Telemetry Freshness by Company";
-
-proc sgplot data=warehouse_status;
+proc sgplot data=overnight_activity;
    vbar company / response=telemetry_age_minutes stat=mean;
-   yaxis label='Average Telemetry Age (Minutes)';
+   yaxis label='Average Telemetry Age';
+   title "Average Telemetry Age by Company";
 run;
 
 title;
@@ -398,7 +355,6 @@ Questions:
 * Which company appears easiest to troubleshoot locally?
 * Which company appears most vulnerable to stale telemetry?
 * Which operational tradeoff appears most obvious?
-* What would you want to validate before making a recommendation?
 
 Important:
 
@@ -413,46 +369,26 @@ When ready:
 * offer an operational theory
 * or say `continue`
 
-Do not continue automatically.
+Do NOT continue automatically.
 
 ---
 
 # Phase 4 of 7 — A Tale of Three Companies
 
-## Instructor / AI Assistant Direction
-
-Keep this section brief.
-
-Do not drift into architecture theory.
-
-The purpose is to explain why the SAS output and meeting tension make operational sense.
-
----
-
-The organizations now begin making more sense operationally.
-
-They are not cartoon examples.
-
-They are not good company / bad company examples.
-
-Each company evolved around real operational choices.
-
----
-
 ## CloudOps
 
 CloudOps centralized telemetry aggressively.
 
-Strength:
+Strengths:
 
-* broad enterprise visibility
-* easier cross-site reporting
-* more consistent executive summaries
+* strong executive visibility
+* centralized reporting
+* enterprise coordination
 
-Weakness:
+Weaknesses:
 
-* local operational conditions may drift before dashboards reflect them
-* local teams may feel disconnected from the monitoring process
+* local operational drift may appear late
+* dashboards can become abstracted from floor reality
 
 Operational consequence:
 
@@ -460,24 +396,22 @@ Operational consequence:
 local reality drifts first
 ```
 
-CloudOps may retain broad visibility longer, but that visibility can become stale or abstracted.
-
 ---
 
 ## LocalOps
 
 LocalOps prioritized local operational continuity.
 
-Strength:
+Strengths:
 
-* warehouse teams retain strong local awareness
-* local supervisors can keep work moving during upstream disruption
-* local troubleshooting is often faster
+* strong local awareness
+* rapid local troubleshooting
+* operational resilience
 
-Weakness:
+Weaknesses:
 
-* enterprise coordination weakens as operations scale
-* leadership may lose visibility before local teams lose control
+* enterprise visibility weakens as operations scale
+* coordination becomes harder across regions
 
 Operational consequence:
 
@@ -485,32 +419,28 @@ Operational consequence:
 leadership visibility weakens first
 ```
 
-LocalOps may keep operating, but the broader organization may struggle to understand what is happening.
-
 ---
 
 ## BalancedCo
 
 BalancedCo attempted proportional architecture.
 
-Strength:
+Strengths:
 
 * flexible operational fit
-* local activity can continue
-* central reporting can still occur
+* balanced visibility
+* mixed survivability
 
-Weakness:
+Weaknesses:
 
-* multiple telemetry views require reconciliation
-* teams must ask which telemetry source is freshest
+* telemetry reconciliation complexity
+* disagreement over which telemetry is freshest
 
 Operational consequence:
 
 ```text
 teams debate which telemetry is freshest
 ```
-
-BalancedCo may be more adaptable, but adaptability creates coordination work.
 
 ---
 
@@ -528,19 +458,9 @@ Each evolved around:
 * operational constraints
 * staffing realities
 * survivability priorities
-* cost pressure
 * visibility tradeoffs
 
 That is operationally realistic.
-
-The goal is not to decide which company is morally superior.
-
-The goal is to understand:
-
-```text
-appropriate operational architecture
-for the operational problem being solved
-```
 
 ---
 
@@ -548,10 +468,10 @@ for the operational problem being solved
 
 Questions:
 
-* Which company feels most familiar from real workplace experience?
-* Which company would be easiest to explain in a meeting?
+* Which company feels most familiar?
 * Which company would be hardest to support at 2 AM?
-* Which architecture creates the clearest operational tradeoff?
+* Which operational tradeoff feels most believable?
+* Which approach creates the most operational tension?
 
 When ready:
 
@@ -560,7 +480,7 @@ When ready:
 * offer an operational theory
 * or say `continue`
 
-Do not continue automatically.
+Do NOT continue automatically.
 
 ---
 
@@ -568,9 +488,7 @@ Do not continue automatically.
 
 ## Instructor / AI Assistant Direction
 
-Do NOT continue past this phase until the learner responds.
-
-This phase should create bounded ambiguity.
+Do NOT continue until the learner responds.
 
 The ambiguity should feel diagnosable, not confusing.
 
@@ -584,7 +502,7 @@ Forklift telemetry reports:
 LOW UTILIZATION
 ```
 
-But dock telemetry shows:
+But dock telemetry reports:
 
 ```text
 HEAVY CONGESTION
@@ -605,13 +523,9 @@ The dashboards are technically correct,
 but operationally misleading.
 ```
 
-This is a realistic operational problem.
-
-The telemetry is not necessarily fake.
+The telemetry is not necessarily wrong.
 
 The dashboards are not necessarily useless.
-
-The people are not necessarily confused.
 
 But the signals do not yet form a complete operational picture.
 
@@ -641,19 +555,11 @@ When ready:
 * offer an operational theory
 * or say `continue`
 
-Do not continue automatically.
+Do NOT continue automatically.
 
 ---
 
 # Phase 6 of 7 — Human-in-Command
-
-## Instructor / AI Assistant Direction
-
-This phase should not become philosophical.
-
-Human-in-Command must be shown through operational pressure.
-
----
 
 Leadership recommends:
 
@@ -685,10 +591,6 @@ The floor was signaling distress
 before the dashboard showed failure.
 ```
 
-That statement matters.
-
-Humans may notice operational compensation before summary metrics show breakdown.
-
 Stable outputs do not always mean stable systems.
 
 Sometimes they mean people are working harder to keep the system stable.
@@ -716,7 +618,6 @@ Possible responses:
 * more telemetry collection
 * workflow investigation
 * synchronization review
-* temporary manual monitoring
 
 There is probably not a perfect answer.
 
@@ -736,7 +637,7 @@ Questions:
 
 * What would you recommend right now?
 * What would you NOT automate yet?
-* What would you monitor for the next hour?
+* What would you monitor over the next hour?
 * What would you tell leadership in plain operational language?
 
 When ready:
@@ -746,7 +647,7 @@ When ready:
 * offer an operational theory
 * or say `continue`
 
-Do not continue automatically.
+Do NOT continue automatically.
 
 ---
 
@@ -856,7 +757,6 @@ At this point, you should be better able to:
 * identify operational bottlenecks
 * discuss architecture tradeoffs proportionally
 * participate intelligently in telemetry-driven operational discussions
-* understand how telemetry affects operational reality
 
 ---
 
@@ -870,8 +770,6 @@ Possible future exploration areas include:
 * synchronization drift analysis
 * anomaly escalation
 * throughput forecasting
-* executive vs operator dashboard design
-* more detailed SAS operational reporting
 
 These are intentionally outside the core scope of Lesson 04.
 
@@ -883,18 +781,6 @@ Continue to:
 
 ```text
 AF002_LESSON_05.md
-```
-
-GitHub URL:
-
-```text
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
-```
-
-Raw URL:
-
-```text
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
 ```
 
 ---
@@ -922,15 +808,8 @@ Date:
 Status:
 
 ```text
-Prototype Draft v0.5
+Prototype Draft v0.6
 ```
-
-Primary Validation Sources:
-
-* human survivability testing
-* digital twin testing
-* operational pacing analysis
-* telemetry cognition testing
 
 ---
 
@@ -939,40 +818,6 @@ Primary Validation Sources:
 Paul McDonald Open Use License (MIT-style)
 
 © 2026 Paul McDonald
-
----
-
-# File Reference Information
-
-GitHub URL:
-
-```text
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
-```
-
-Raw URL:
-
-```text
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
-```
-
-Previous Lesson:
-
-```text
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
-```
-
-Next Lesson:
-
-```text
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
-```
-
-Return to README:
-
-```text
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
-```
 
 ---
 
