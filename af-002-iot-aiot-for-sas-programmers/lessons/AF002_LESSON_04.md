@@ -4,7 +4,7 @@
 
 ## Lesson 04 — Use Telemetry Operationally at Work
 
-### Prototype Draft v0.7
+### Prototype Draft v0.8
 
 Course: AF-002 — IoT and AIoT for SAS Programmers
 
@@ -25,7 +25,6 @@ Raw URL:
 ```text
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
 ```
-
 ---
 
 # Lesson Purpose
@@ -35,7 +34,7 @@ In earlier lessons, you learned how to:
 * generate telemetry
 * inspect telemetry
 * reason about telemetry
-* use telemetry operationally with SAS
+* work with telemetry operationally in SAS
 
 This lesson shifts from:
 
@@ -46,10 +45,49 @@ learning telemetry
 to:
 
 ```text
-working operationally inside telemetry-driven organizations
+working operationally
+inside telemetry-driven organizations
 ```
 
-The goal is to learn how experienced SAS professionals reason operationally inside changing organizations.
+The goal is NOT to become:
+
+* a cloud architect
+* an AI evangelist
+* a dashboard theorist
+* a modernization consultant
+
+The goal is:
+
+```text
+learn how experienced SAS professionals
+reason operationally inside imperfect telemetry systems
+```
+
+---
+
+# Runtime Guidance
+
+This lesson should feel like:
+
+```text
+ordinary operational SAS work
+```
+
+NOT:
+
+```text
+a telemetry simulation game
+```
+
+You are NOT expected to solve warehouse operations.
+
+You ARE expected to:
+
+* review telemetry
+* question telemetry credibility
+* identify operational stress
+* recognize modernization tradeoffs
+* prepare meaningful operational discussion points
 
 ---
 
@@ -59,6 +97,16 @@ The company where you work operates several regional warehouse and distribution 
 
 For years, the company operated mostly using local on-premises operational systems.
 
+Local teams had strong operational awareness.
+
+SAS reporting was tightly connected to day-to-day operations.
+
+Leadership often complained that:
+
+* enterprise visibility was fragmented
+* reporting was inconsistent
+* coordination across regions was difficult
+
 Several years ago, the CFO attended a cloud modernization conference.
 
 Consultants promised:
@@ -67,6 +115,7 @@ Consultants promised:
 * unified dashboards
 * lower operational costs
 * AI-ready infrastructure
+* simplified enterprise visibility
 
 Leadership embraced:
 
@@ -77,17 +126,17 @@ cloud-only
 
 Modernization accelerated.
 
-Dashboards multiplied.
+New dashboards appeared everywhere.
 
-Telemetry pipelines expanded.
+Telemetry pipelines expanded rapidly.
 
 But operations became more complicated than expected.
 
-Now the company exists in an uncomfortable middle ground between:
+Now the organization exists in an uncomfortable middle ground between:
 
 * older local operational systems
-* centralized cloud telemetry
-* business pressure
+* centralized telemetry platforms
+* executive dashboard expectations
 * operational reality
 
 Nobody is evil.
@@ -108,66 +157,27 @@ It is 7:38 AM.
 
 You arrive at work and sit down at your desk.
 
-Before the morning operations meeting starts, you spend a few minutes reviewing overnight telemetry in SAS.
+The regional operations meeting begins in about twenty minutes.
 
-An overnight export is waiting in your inbox.
+Before the meeting, you spend a few minutes reviewing overnight telemetry in SAS.
 
-You open SAS.
+Open and run:
 
-Run this code now.
-
-```sas
-title "Lesson 04 - Overnight Warehouse Activity";
-
-data overnight_activity;
-
-length warehouse $5
-       operating_phase $12
-       telemetry_state $8 ;
-
-input warehouse $
-      operating_phase $
-      queue_minutes
-      delayed_shipments
-      freezer_alerts
-      telemetry_age_minutes
-      manual_workaround_count ;
-
-if telemetry_age_minutes > 20 then
-   telemetry_state='STALE';
-else
-   telemetry_state='CURRENT';
-
-datalines;
-KC01 LOCALOPS    18 12  3  3  1
-KC02 LOCALOPS    22 14  4  5  2
-KC03 CLOUDOPS    41 31 11 29  8
-KC04 CLOUDOPS    46 36 14 33 11
-KC05 BALANCEDCO  24 18  5 10  3
-KC06 BALANCEDCO  28 20  6 12  4
-;
-run;
-
-proc print data=overnight_activity;
-run;
-
-proc means data=overnight_activity mean maxdec=1;
-   class operating_phase;
-   var queue_minutes
-       delayed_shipments
-       freezer_alerts
-       telemetry_age_minutes
-       manual_workaround_count;
-run;
-
-proc sgplot data=overnight_activity;
-   vbar operating_phase / response=queue_minutes stat=mean;
-   yaxis label="Average Queue Minutes";
-   title "Queue Minutes by Operating Phase";
-run;
-
-title;
+```text
+sas/AF002_LESSON_04_OPERATIONAL_TELEMETRY.sas
 ```
+
+Do NOT rush through the outputs.
+
+Review the telemetry like an operational analyst preparing for a real meeting.
+
+Focus especially on:
+
+* Overnight Warehouse Telemetry
+* Quick Operational Summary by Phase
+* Queue Minutes vs Telemetry Freshness
+* Manual Compensation vs Delayed Shipments
+* What Should Be Discussed In The Meeting
 
 ---
 
@@ -178,36 +188,58 @@ Questions:
 * Which operating phase catches your attention first?
 * Which telemetry appears freshest?
 * Which telemetry appears least trustworthy?
-* Which metrics feel meaningful?
-* Which metrics feel incomplete?
+* Which outputs feel operationally meaningful?
+* Which metrics feel questionable?
+* Which sites deserve discussion in the meeting?
+
+Important:
+
+```text
+Good operational SAS work is not merely technically correct.
 
 Good operational SAS work is operationally meaningful.
+```
+
+Do NOT continue automatically.
+
+When ready:
+
+* discuss observations
+* ask questions
+* challenge the metrics
+* offer operational theories
+* or say `continue`
 
 ---
 
-# Phase 2 of 7 — The Operations Meeting
+# Phase 2 of 7 — Entering The Meeting
 
 The operations meeting begins.
+
+Leadership reviews the overnight dashboard summary.
+
+Most indicators still appear healthy.
 
 The vice president asks:
 
 ```text
 Why are delays increasing
-if all the dashboards still look healthy?
+if the dashboards still look stable?
 ```
 
-An operations supervisor responds:
+An operations supervisor responds immediately:
 
 ```text
 Because the floor teams are compensating manually
 before the dashboards recognize the problem.
 ```
 
-You already know several things from your SAS review:
+You already know several important things from your SAS review:
 
 * telemetry freshness varies significantly
 * queue buildup increased sharply during the cloud-first phase
-* manual workaround activity increased dramatically
+* manual compensation increased dramatically
+* some operational stress may be hidden behind stable summaries
 
 One analyst quietly asks:
 
@@ -219,66 +251,191 @@ The room becomes quieter.
 
 ---
 
+# Operational Principle
+
+```text
+Visibility and operational understanding
+are not the same thing.
+```
+
+Executives often need:
+
+* trends
+* summaries
+* enterprise visibility
+* regional posture
+
+Operators often need:
+
+* timestamps
+* telemetry freshness
+* workflow timing
+* queue buildup
+* local operational context
+
+Both perspectives matter.
+
+---
+
+# Stop Here
+
+Questions:
+
+* What did your SAS review help you understand before the meeting?
+* Which outputs feel trustworthy?
+* Which outputs deserve skepticism?
+* What operational information still feels missing?
+* What additional telemetry would you want next?
+
+Do NOT continue automatically.
+
+When ready:
+
+* discuss observations
+* ask questions
+* offer operational theories
+* or say `continue`
+
+---
+
 # Phase 3 of 7 — Looking Closer
 
-A refrigeration specialist says:
+A refrigeration specialist speaks up.
 
 ```text
 Freezer alerts increased overnight.
 ```
 
-You decide to inspect telemetry freshness more closely.
+An operations supervisor responds:
 
-Run this SAS code.
+```text
+The alerts may be technically correct,
+but the timing may not reflect actual floor conditions.
+```
 
-```sas
-title "Lesson 04 - Telemetry Freshness";
+Another supervisor adds:
 
-proc freq data=overnight_activity;
-   tables operating_phase*telemetry_state / norow nocol nopercent;
-run;
+```text
+The workers already knew there was stress
+before the dashboards showed anything unusual.
+```
 
-proc sgplot data=overnight_activity;
-   vbar operating_phase /
-      response=manual_workaround_count
-      stat=mean;
+Suddenly the telemetry discussion changes.
 
-   yaxis label="Average Manual Workarounds";
+The problem is no longer:
 
-   title "Manual Operational Compensation";
-run;
+```text
+Do we have telemetry?
+```
 
-title;
+The problem becomes:
+
+```text
+Can we trust the operational meaning
+of the telemetry?
+```
+
+---
+
+# Operational Reflection
+
+Questions:
+
+* Can technically correct telemetry still become operationally misleading?
+* Can stable dashboards hide unstable operations?
+* Can workers stabilize operations before telemetry reflects the stress?
+* What operational signals would you trust most right now?
+
+Important operational principle:
+
+```text
+Telemetry is evidence,
+not truth.
 ```
 
 ---
 
 # Phase 4 of 7 — A Tale of Three Companies
 
-Leadership jokingly refers to the company internally as:
+Leadership jokingly refers to the organization internally as:
 
 ```text
 The Tale of Three Companies
 ```
 
-because the organization behaved like three different companies during three operational eras.
+Not because the company literally split into three businesses.
+
+But because the organization behaved like three different companies during three different operational eras.
+
+---
 
 ## LocalOps Era
 
-* strong local operational awareness
+The company originally operated mostly on-premises.
+
+The SAS outputs show:
+
+* strong telemetry freshness
+* low manual compensation
+* manageable queue pressure
+
+Strengths:
+
 * rapid local troubleshooting
-* fragmented executive visibility
+* strong operational awareness
+* telemetry tightly connected to operations
+
+Weaknesses:
+
+* fragmented enterprise visibility
+* inconsistent regional coordination
+* difficult executive rollups
+
+Operational realization:
+
+```text
+Local optimization did not automatically create
+enterprise understanding.
+```
+
+---
 
 ## CloudOps Era
 
-* centralized dashboards
-* unified reporting
+Leadership aggressively embraced cloud-first modernization.
+
+The SAS outputs now show:
+
+* rising queue pressure
 * stale telemetry
-* rising operational abstraction
+* increased manual compensation
+* operational stress appearing before dashboards recognize problems
+
+Strengths:
+
+* centralized visibility
+* enterprise dashboards
+* unified reporting
+
+Weaknesses:
+
+* operational abstraction
+* telemetry freshness drift
+* reduced local visibility
+* growing operational skepticism
+
+Operational realization:
+
+```text
+Centralized visibility did not automatically create
+operational clarity.
+```
+
+---
 
 ## BalancedCo Era
 
-The company is now trying to mature operationally.
+The organization is now trying to mature operationally.
 
 Not anti-cloud.
 
@@ -290,15 +447,54 @@ Instead:
 proportional operational architecture
 ```
 
+The SAS outputs suggest:
+
+* telemetry freshness improved
+* queue pressure moderated
+* manual compensation decreased
+* local operational review returned
+
 The organization is learning:
 
 * telemetry trust matters
 * dashboards alone do not create understanding
 * humans remain operationally essential
+* architecture must support operations
+
+Operational realization:
+
+```text
+The goal was never cloud or local.
+
+The goal was operational credibility.
+```
+
+---
+
+# Stop Here
+
+Questions:
+
+* Which operational phase feels most believable?
+* Which phase would executives probably prefer?
+* Which phase would operators probably trust most?
+* Which phase would be hardest to support at 2 AM?
+* Which phase best protects operational credibility?
+
+Do NOT continue automatically.
+
+When ready:
+
+* discuss observations
+* ask questions
+* offer operational theories
+* or say `continue`
 
 ---
 
 # Phase 5 of 7 — Telemetry Conflict
+
+A new operational issue appears.
 
 Forklift telemetry reports:
 
@@ -312,7 +508,7 @@ But dock telemetry reports:
 HEAVY CONGESTION
 ```
 
-Workers are manually rerouting shipments to avoid bottlenecks.
+Meanwhile, workers are manually rerouting shipments to prevent bottlenecks.
 
 One manager says:
 
@@ -321,11 +517,38 @@ The dashboards are technically correct,
 but the operation still feels unstable.
 ```
 
+Another replies:
+
+```text
+The workers are compensating
+before the metrics fully reflect the stress.
+```
+
+Suddenly the lesson becomes less about dashboards and more about trust.
+
 Questions emerge:
 
 * Which telemetry deserves trust?
 * Which metrics are operationally meaningful?
 * Which dashboards hide operational strain?
+* Which architecture decisions created these tradeoffs?
+
+---
+
+# Operational Reflection
+
+Questions:
+
+* Can organizations over-modernize too quickly?
+* Can telemetry freshness matter more than dashboard beauty?
+* Can averages hide site-level operational risk?
+* What operational signals deserve immediate human review?
+
+Important operational principle:
+
+```text
+Good SAS work protects operational credibility.
+```
 
 ---
 
@@ -337,9 +560,10 @@ Operations pushes back.
 
 Supervisors explain:
 
-* workers are compensating manually
+* workers are already compensating manually
 * timing drift affects interpretation
 * not every alert deserves escalation
+* human review still matters operationally
 
 One supervisor warns:
 
@@ -348,13 +572,55 @@ If every alert becomes an emergency,
 eventually nobody will trust the system.
 ```
 
-Humans remain operationally essential.
+Another quietly adds:
+
+```text
+The floor knew there was stress
+long before the dashboards admitted it.
+```
+
+---
+
+# Operational Trust Decision
+
+You now have:
+
+* stale telemetry
+* conflicting operational signals
+* dashboard pressure
+* manual compensation
+* modernization tension
+* operational skepticism
+
+Possible next steps include:
+
+* improving telemetry freshness
+* redesigning dashboards
+* restoring local visibility
+* validating thresholds
+* slowing modernization
+* requiring human review
+* collecting additional telemetry
+
+There is no perfect answer.
+
+That is intentional.
+
+Humans are not decoration.
+
+```text
+Humans are the operational decision engine.
+```
 
 ---
 
 # Phase 7 of 7 — Final Reflection
 
-By the end of the meeting, you understand something important:
+By the end of the meeting, you have not solved warehouse operations.
+
+That was never the goal.
+
+But you now understand something much more important:
 
 ```text
 Good SAS work is not about generating reports.
@@ -373,6 +639,10 @@ Architecture decisions are operational decisions.
 ```
 
 ```text
+Architecture follows data.
+```
+
+```text
 Telemetry is evidence,
 not truth.
 ```
@@ -383,9 +653,60 @@ are not identical.
 ```
 
 ```text
+Operational trust matters.
+```
+
+```text
+Humans remain operationally essential.
+```
+
+```text
 Good operational SAS work
 must be operationally meaningful.
 ```
+
+---
+
+# Completion Boundary
+
+At this point, you should be better able to:
+
+* reason operationally about telemetry
+* recognize modernization tradeoffs
+* identify operational visibility gaps
+* question telemetry credibility
+* discuss architecture proportionally
+* use SAS to support operational discussions
+* protect operational credibility with data
+
+---
+
+# Development & Test Environment
+
+Platform:
+
+```text
+ChatGPT Web
+```
+
+Model:
+
+```text
+GPT-5.5 Thinking
+```
+
+Date:
+
+```text
+2026-05-19
+```
+
+Status:
+
+```text
+Prototype Draft v0.8
+```
+
 
 ---
 
