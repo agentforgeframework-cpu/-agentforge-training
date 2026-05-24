@@ -3,250 +3,534 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Prototype Draft v0.1.1  
-Course Status: Public Beta Development  
-Instructional Mode: Conversational Instructor-Led Operational Lab
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md`
-
-GitHub URL:  
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
-
-Raw URL:  
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
-
 ---
 
-# Lesson Purpose
+# Lesson Identity
 
-In Lesson 03, you learned to use telemetry operationally.
-
-In this lesson, you will investigate visible telemetry evidence using SAS.
-
-The goal is not merely to:
-- look at images
-- count objects
-- trust AI detections
-- build a dashboard
-
-The goal is to ask:
+This lesson teaches:
 
 ```text
-What operational condition does this spatial telemetry help us investigate?
+how visible telemetry evidence
+becomes operationally useful SAS data
 ```
 
-This lesson uses:
-- warehouse and distribution operations
-- bounding-box telemetry
-- operational regions
-- visible telemetry evidence
-- SAS operational investigation
+This lesson is NOT:
 
-The learner should finish this lesson thinking:
-
-```text
-I can use visible telemetry evidence
-to investigate real operational conditions using SAS.
-```
-
----
-
-# Important Runtime Guidance
-
-This lesson works best when:
-- the learner performs one operational step at a time
-- the instructor pauses after each visible result
-- SAS output is inspected before moving forward
-- operational interpretation happens interactively
-
-Do not turn this lesson into:
 - AI theory
-- cloud architecture
-- orchestration engineering
-- telemetry philosophy
-- modernization governance
+- architecture philosophy
+- cloud engineering
+- orchestration systems
+- modernization consulting
 - dashboard theater
 
-Core lesson rhythm:
+This lesson IS:
+
+- operational investigation
+- visible telemetry interpretation
+- Human-in-Command reasoning
+- SAS operational analysis
+- spatial telemetry understanding
+
+---
+
+# What You Will Learn
+
+In this lesson you will learn how:
+
+- visible detections become telemetry
+- telemetry becomes operational data
+- SAS can investigate spatial telemetry
+- telemetry trustworthiness matters operationally
+- operational ambiguity emerges naturally
+- humans interpret telemetry evidence
+
+You are NOT expected to become:
+
+- a computer vision engineer
+- an AI architect
+- an infrastructure specialist
+
+You ARE expected to increasingly feel:
 
 ```text
-Look
-→ Investigate
-→ Interpret
+“I understand this.”
+```
+
+and:
+
+```text
+“This is just SAS data.”
+```
+
+and ideally:
+
+```text
+“I can use this right away on one of my current projects.”
 ```
 
 ---
 
-# Supporting Files
+# Operational Context
 
-This lesson expects the following files:
+Imagine a warehouse operation.
+
+Forklifts move continuously through loading areas.
+
+Cameras observe portions of the warehouse.
+
+Telemetry systems attempt to answer operational questions such as:
+
+- Which zones are active?
+- Which areas are congested?
+- Which docks are idle?
+- Which forklifts remain stationary too long?
+- Which operational areas experience heavy traffic?
+
+The important idea:
 
 ```text
-/data/sample_spatial_telemetry.csv
-/sas/AF002_LESSON_04_SAS_UTILITIES.sas
-/media/lesson04_*.png
-/exercises/AF002_LESSON_04_OPERATIONAL_CHALLENGES.md
-/validation/VALIDATION_AF002_LESSON_04.md
+The telemetry is not the operation.
+The telemetry is evidence about the operation.
+```
+
+That distinction matters.
+
+---
+
+# Bounding Boxes
+
+A bounding box is simply a visible rectangle identifying where something was detected inside an image.
+
+You have already seen these before even if you did not know the formal term.
+
+Examples:
+
+- rectangle around a forklift
+- box around a person
+- highlighted package
+- outlined pallet
+
+Bounding boxes are important because:
+
+```text
+the visible region becomes telemetry
 ```
 
 ---
 
-# Instructor Opening Example
+# Example Bounding Box
 
-Instructor:
-
-Okay — now we begin using spatial telemetry operationally.
-
-Not just looking at images.
-Not just collecting detections.
-
-We are going to investigate visible operational conditions using SAS.
-
-Look at this warehouse scene first.
-
-Recommended media:
+Simple conceptual example:
 
 ```text
-/media/lesson04_raw_frame.png
++------------------------------------------------+
+|                                                |
+|                                                |
+|          +--------------------+                |
+|          |                    |                |
+|          |     FORKLIFT       |                |
+|          |                    |                |
+|          +--------------------+                |
+|                                                |
+|                                                |
++------------------------------------------------+
 ```
 
-Then immediately show:
+The rectangle identifies:
 
 ```text
-/media/lesson04_bounding_boxes.png
+where the detected object exists
+inside the observed image
 ```
 
-Instructor:
-
-Take a second and look at the scene before continuing.
-
-What catches your attention first?
-
-Do not start by trusting the AI.
-Do not start by trusting the table.
-
-Start by observing the visible evidence.
+This visible region becomes telemetry.
 
 ---
 
-# Phase 1 of 6 — Visible Evidence and First Telemetry
+# Example Spatial Telemetry Row
 
-Recommended media:
-
-```text
-/media/lesson04_region_overlay.png
-```
-
-The warehouse scene contains:
-- visible objects
-- operational regions
-- bounding boxes
-- structured telemetry opportunities
-
-A bounding box is a rectangular coordinate region describing where a detected object appears.
-
-Example:
+You now receive the following telemetry row:
 
 ```text
-(x1,y1) ----------------
-   |                   |
-   |      object       |
-   |                   |
-   ---------------- (x2,y2)
+timestamp              object_type   zone      x1    y1    x2    y2
+2026-05-24 08:42:11    forklift      dock_3    122   88    344   410
 ```
 
-Bounding boxes are not merely graphics.
+Before analyzing this data:
 
-In this lesson:
+# First Operational Question
 
 ```text
-Bounding boxes are operational measurements.
+What would you want to know
+before trusting this telemetry?
 ```
 
-Example telemetry rows:
+Pause and think operationally.
+
+Possible considerations might include:
+
+- How current is this telemetry?
+- What camera generated it?
+- What does dock_3 represent?
+- Are the coordinates reliable?
+- What defines a forklift detection?
+- How often are observations collected?
+- Could detections be missed?
+- What happens if visibility is blocked?
+
+This is important:
 
 ```text
-timestamp,frame_number,object_type,confidence,x1,y1,x2,y2,center_x,center_y,zone
-2026-05-24T08:00:01,1,person,0.94,420,170,520,340,470,255,RESTRICTED
-2026-05-24T08:00:02,2,forklift,0.88,100,210,290,390,195,300,FORKLIFT
-2026-05-24T08:00:03,3,pallet,0.91,600,200,760,360,680,280,LOADING
+All telemetry data is incomplete in some way.
 ```
 
-Instructor:
+Operational telemetry always contains:
 
-The AI system did not produce operational conclusions.
+- assumptions
+- limitations
+- visibility boundaries
+- collection constraints
+- interpretation risk
 
-It produced rows.
-
-Those rows contain:
-- labels
-- coordinates
-- confidence values
-- operational regions
-
-Now SAS can help investigate what operational conditions may exist.
+Human-in-Command thinking begins here.
 
 ---
 
-# Phase 2 of 6 — First SAS Investigation
+# Why Coordinates Exist
 
-The first operational question is:
+The values:
 
 ```text
-Did an object appear in a restricted region?
+x1  y1  x2  y2
 ```
 
-Run this SAS step immediately:
+represent the boundaries of the bounding box.
+
+Conceptually:
+
+```text
+x1,y1 = upper-left corner
+x2,y2 = lower-right corner
+```
+
+Simple coordinate example:
+
+```text
+(122,88)
++----------------------+
+|                      |
+|      FORKLIFT        |
+|                      |
++----------------------+
+               (344,410)
+```
+
+The exact mathematics are less important right now than the operational meaning:
+
+```text
+The system observed something
+in a specific visible region.
+```
+
+---
+
+# Why Spatial Telemetry Matters
+
+Traditional telemetry might only tell you:
+
+```text
+forklift detected
+```
+
+Spatial telemetry begins telling you:
+
+- WHERE the forklift was
+- WHICH zone was occupied
+- HOW movement occurred
+- WHETHER congestion may exist
+- WHETHER operational flow changed
+
+This creates operational investigation opportunities.
+
+---
+
+# Beginning SAS Investigation
+
+Now the telemetry becomes ordinary SAS data.
+
+Example SAS DATA step:
 
 ```sas
-proc import datafile="data/sample_spatial_telemetry.csv"
-    out=work.spatial_telemetry
-    dbms=csv
-    replace;
-    guessingrows=max;
-run;
+DATA work.spatial_telemetry;
+    LENGTH object_type $20 zone $20;
 
-proc print data=work.spatial_telemetry;
-    title "Lesson 04 - Spatial Telemetry";
-run;
+    INPUT
+        timestamp :ANYDTDTM19.
+        object_type $
+        zone $
+        x1
+        y1
+        x2
+        y2;
+
+    FORMAT timestamp datetime19.;
+
+DATALINES;
+24MAY2026:08:42:11 forklift dock_3 122 88 344 410
+24MAY2026:08:42:14 forklift dock_3 128 90 350 412
+24MAY2026:08:42:17 forklift dock_4 410 102 612 430
+24MAY2026:08:42:22 forklift dock_4 420 108 620 438
+24MAY2026:08:42:28 forklift dock_2 88 72 250 388
+;
+RUN;
 ```
-
-Pause after the PROC PRINT output.
-
-Instructor:
-
-Take a second and inspect the rows before continuing.
-
-What catches your attention first?
 
 ---
 
-# Visible Checkpoint
+# First SAS Inspection
 
-You should now have:
-- a SAS dataset named WORK.SPATIAL_TELEMETRY
-- visible telemetry rows
-- object labels
-- coordinate values
-- operational zones
-- confidence values
+Run:
 
-You should also now recognize:
+```sas
+PROC PRINT data=work.spatial_telemetry;
+RUN;
+```
+
+You should now see:
+
+- timestamps
+- object detections
+- zones
+- coordinate regions
+
+At this point:
 
 ```text
-visible scene
-→ bounding boxes
-→ telemetry rows
-→ SAS investigation
+this is simply operational SAS data
+```
+
+That is important.
+
+The goal is NOT:
+
+```text
+understand computer vision systems
+```
+
+The goal IS:
+
+```text
+investigate operational telemetry evidence
+using SAS
 ```
 
 ---
 
-# Development and Test Environment
+# Basic Operational Questions
 
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
-- Date: 2026-05-24
-- Notes: Prototype Draft v0.1.1. Startup sequence redesigned to improve operational ignition and reduce framing latency.
+Now begin asking operational questions.
+
+Examples:
+
+- Which zones are busiest?
+- Which forklifts appear repeatedly?
+- Which areas appear inactive?
+- Which regions experience congestion?
+- Are observations stale?
+- Are timestamps believable?
+- Are detections continuous or intermittent?
+
+Operational investigation begins with:
+
+```text
+curiosity plus skepticism
+```
 
 ---
+
+# Frequency Investigation
+
+Run:
+
+```sas
+PROC FREQ data=work.spatial_telemetry;
+    TABLES zone;
+RUN;
+```
+
+You should now see:
+
+- operational activity counts by zone
+- visible concentration patterns
+- possible workload differences
+
+Pause and observe.
+
+Questions:
+
+```text
+Does this operational distribution
+look believable?
+```
+
+and:
+
+```text
+What additional telemetry
+would improve confidence?
+```
+
+---
+
+# Operational Growth
+
+The important realization:
+
+```text
+The telemetry itself did not change.
+Your operational understanding changed.
+```
+
+This is foundational.
+
+Operational telemetry work often involves:
+
+- incomplete evidence
+- evolving interpretation
+- operational questioning
+- reconciliation effort
+- trust evaluation
+
+Human judgment remains critical.
+
+---
+
+# Human-in-Command
+
+This lesson intentionally reinforces:
+
+```text
+Telemetry is evidence.
+Not truth.
+```
+
+The system helps humans:
+
+- observe
+- detect
+- summarize
+- organize
+- identify patterns
+
+Humans still:
+
+- interpret
+- validate
+- investigate
+- decide
+- act
+
+That is Human-in-Command operational reasoning.
+
+---
+
+# Operational Reflection
+
+At this point you should increasingly feel:
+
+```text
+“I already know how to investigate this.”
+```
+
+because:
+
+```text
+spatial telemetry became ordinary SAS operational data
+```
+
+That operational bridge is the purpose of Lesson 04.
+
+---
+
+# Success Checkpoint
+
+You should now understand:
+
+- what a bounding box is
+- how visible detections become telemetry
+- why telemetry trust matters
+- how spatial telemetry becomes SAS data
+- how SAS can investigate visible operational evidence
+- why Human-in-Command reasoning matters operationally
+
+---
+
+# Restart Checkpoint
+
+If interrupted, restart from:
+
+```text
+# Example Spatial Telemetry Row
+```
+
+Then rerun:
+
+- DATA step
+- PROC PRINT
+- PROC FREQ
+
+before continuing.
+
+---
+
+# Completion Signal
+
+You have completed:
+
+```text
+AF-002 Lesson 04
+Use Spatial Telemetry Operationally
+```
+
+You should now increasingly understand:
+
+```text
+visible operational telemetry
+can become understandable,
+investigatable,
+SAS-analyzable operational evidence
+```
+
+---
+
+# Next Lesson
+
+AF002_LESSON_05.md
+
+```text
+Deliver Practical Results Using Telemetry
+```
+
+---
+
+# Development & Test Environment
+
+Project:
+AF-002 — IoT/AIoT for SAS Programmers
+
+Lesson:
+Lesson 04 — Use Spatial Telemetry Operationally
+
+Model:
+GPT-5.5
+
+Date:
+2026-05-24
+
+Focus:
+- onboarding survivability
+- operational grounding
+- visible telemetry evidence
+- Human-in-Command reasoning
+- SAS operational investigation
+
