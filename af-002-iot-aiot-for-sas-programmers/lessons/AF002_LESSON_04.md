@@ -200,7 +200,7 @@ This visible region becomes telemetry.
 
 ---
 
-# Why Coordinates Exist
+# Coordinate Details (Later Reference)
 
 The values:
 
@@ -235,6 +235,15 @@ The exact mathematics are less important right now than the operational meaning:
 The system observed something
 in a specific visible region.
 ```
+
+---
+
+
+# First Telemetry Example
+
+The image becomes structured telemetry.
+
+Now look at a single telemetry row before worrying about coordinate mathematics.
 
 ---
 
@@ -287,7 +296,7 @@ Human-in-Command thinking begins here.
 
 ---
 
-# Why Coordinates Exist
+# Coordinate Details (Later Reference)
 
 The values:
 
@@ -496,34 +505,6 @@ Human judgment remains critical.
 
 ---
 
-# Human-in-Command
-
-This lesson intentionally reinforces:
-
-```text
-Telemetry is evidence.
-Not truth.
-```
-
-The system helps humans:
-
-- observe
-- detect
-- summarize
-- organize
-- identify patterns
-
-Humans still:
-
-- interpret
-- validate
-- investigate
-- decide
-- act
-
-That is Human-in-Command operational reasoning.
-
----
 
 # Operational Reflection
 
@@ -561,6 +542,15 @@ You should now understand:
 If interrupted, restart from:
 
 ```text
+
+# First Telemetry Example
+
+The image becomes structured telemetry.
+
+Now look at a single telemetry row before worrying about coordinate mathematics.
+
+---
+
 # Example Spatial Telemetry Row
 ```
 
