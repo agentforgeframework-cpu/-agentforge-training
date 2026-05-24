@@ -3,8 +3,6 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Prototype Draft v0.1.2
-
 ---
 
 # Lesson Identity
@@ -110,21 +108,20 @@ open the image and observe the scene operationally.
 
 Questions:
 - What stands out first?
-- Which objects were detected?
+- Which objects received bounding boxes?
 - Which objects did NOT receive bounding boxes?
 - Why might that matter operationally?
 
+---
 
-A bounding box is simply a visible rectangle identifying where something was detected inside an image.
+# First Definition
 
-You have already seen these before even if you did not know the formal term.
+A bounding box is:
 
-Examples:
-
-- rectangle around a forklift
-- box around a person
-- highlighted package
-- outlined pallet
+```text
+a way to describe
+where something was detected in an image
+```
 
 Bounding boxes are important because:
 
@@ -132,19 +129,52 @@ Bounding boxes are important because:
 the visible region becomes telemetry
 ```
 
+The learner should first understand:
+
+```text
+what is visible
+```
+
+before worrying about:
+- coordinates
+- telemetry structure
+- SAS analysis
+
+---
+
+# Visual Operational Grounding
+
+Recommended visual:
+
+[Open AF-002_LESSON_04_REGION_OVERLAY.png](../media/AF-002_LESSON_04_REGION_OVERLAY.png)
+
+Observe:
+- operational zones
+- forklift movement areas
+- pedestrian regions
+- shared operational space
+- restricted areas
+
+Questions:
+- Which operational regions matter most?
+- Which areas appear sensitive?
+- Which detections might deserve investigation?
+
+Important:
+
+```text
+The AI system does not understand
+operational meaning.
+
+Humans define the operational meaning.
+```
+
 ---
 
 # Example Bounding Box
 
-Recommended visual:
-
-[Open AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
-
 If image assets are unavailable,
 the following simplified diagram illustrates the concept.
-
-
-Simple conceptual example:
 
 ```text
 +------------------------------------------------+
@@ -171,6 +201,44 @@ This visible region becomes telemetry.
 
 ---
 
+# Why Coordinates Exist
+
+The values:
+
+```text
+x1  y1  x2  y2
+```
+
+represent the boundaries of the bounding box.
+
+Conceptually:
+
+```text
+x1,y1 = upper-left corner
+x2,y2 = lower-right corner
+```
+
+Simple coordinate example:
+
+```text
+(122,88)
++----------------------+
+|                      |
+|      FORKLIFT        |
+|                      |
++----------------------+
+               (344,410)
+```
+
+The exact mathematics are less important right now than the operational meaning:
+
+```text
+The system observed something
+in a specific visible region.
+```
+
+---
+
 # Example Spatial Telemetry Row
 
 You now receive the following telemetry row:
@@ -180,7 +248,7 @@ timestamp              object_type   zone      x1    y1    x2    y2
 2026-05-24 08:42:11    forklift      dock_3    122   88    344   410
 ```
 
-Before analyzing this data:
+Before deeply analyzing this data operationally:
 
 # First Operational Question
 
@@ -202,16 +270,11 @@ Possible considerations might include:
 - Could detections be missed?
 - What happens if visibility is blocked?
 
-Recommended visual:
-
-[Open AF-002_LESSON_04_TIMING_GAP.png](../media/AF-002_LESSON_04_TIMING_GAP.png)
-
 This is important:
 
 ```text
 All telemetry data is incomplete in some way.
 ```
-
 
 Operational telemetry always contains:
 
@@ -264,17 +327,6 @@ in a specific visible region.
 ---
 
 # Why Spatial Telemetry Matters
-
-Recommended visual:
-
-[Open AF-002_LESSON_04_REGION_OVERLAY.png](../media/AF-002_LESSON_04_REGION_OVERLAY.png)
-
-Observe how:
-- operational regions create meaning
-- location changes interpretation
-- identical detections may matter differently depending on zone
-- humans define operational rules
-
 
 Traditional telemetry might only tell you:
 
@@ -424,21 +476,6 @@ would improve confidence?
 
 # Operational Growth
 
-Recommended visual:
-
-[Open AF-002_LESSON_04_PERSISTENCE_EXAMPLE.png](../media/AF-002_LESSON_04_PERSISTENCE_EXAMPLE.png)
-
-Observe:
-- the pallet remains present
-- other activity continues normally
-- persistence creates operational significance
-
-Questions:
-- When does temporary presence become obstruction?
-- When should humans investigate further?
-- What additional telemetry would help?
-
-
 The important realization:
 
 ```text
@@ -520,25 +557,7 @@ You should now understand:
 
 ---
 
-# Visual Survivability Guidance
-
-If images are unavailable:
-- continue using telemetry rows
-- continue using SAS investigation steps
-- continue operational reasoning
-- use the simplified diagrams where provided
-
-The lesson should remain survivable even when:
-- media files are unavailable
-- network access is interrupted
-- image rendering fails
-
-Operational investigation remains the priority.
-
----
-
 # Restart Checkpoint
-
 
 If interrupted, restart from:
 
@@ -598,7 +617,7 @@ Model:
 GPT-5.5
 
 Date:
-2026-05-25
+2026-05-24
 
 Focus:
 - onboarding survivability
