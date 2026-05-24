@@ -103,8 +103,7 @@ Recommended visual:
 
 [Open AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
 
-Before continuing:
-open the image and observe the scene operationally.
+Observe the image first before discussing telemetry or coordinates.
 
 Questions:
 - What stands out first?
