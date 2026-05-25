@@ -3,7 +3,7 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Prototype Draft v0.1.8
+Status: Prototype Draft v0.1.9
 
 ---
 
@@ -614,6 +614,185 @@ would improve confidence?
 
 ---
 
+# Congestion Escalation — The Second Discovery
+
+At this point, the learner understands that visible detections can become SAS data.
+
+Now introduce a slightly larger operational question.
+
+# ACTIVE EVIDENCE
+
+Image:
+
+click here --> [AF-002_LESSON_04_ZONE_DEFINITION.png](../media/AF-002_LESSON_04_ZONE_DEFINITION.png)
+
+Telemetry:
+
+```text
+/data/sample_spatial_telemetry_congestion.csv
+```
+
+SAS Program:
+
+```text
+/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas
+```
+
+Operational Question:
+
+```text
+Why does forklift and pedestrian overlap spike between 8:00 and 8:20 AM?
+```
+
+---
+
+# Short Ethics and Rules Acknowledgement
+
+In many operational systems, telemetry may be intentionally limited.
+
+The system may detect:
+
+```text
+person
+```
+
+without identifying:
+
+```text
+which person
+```
+
+Different organizations, industries, and regions continue debating:
+- privacy
+- consent
+- retention
+- monitoring
+- acceptable AI use
+
+This course does not attempt to resolve those debates.
+
+It recognizes that they exist.
+
+The focus here is operational telemetry interpretation using Human-in-Command reasoning.
+
+---
+
+# Congestion Investigation
+
+The next telemetry sample does not identify workers individually.
+
+The telemetry identifies:
+- `person`
+- `forklift`
+- shared operational space
+- timing concentration
+
+The learner should investigate:
+- why overlap increases
+- what operational process exists around 8:00 AM
+- whether the workflow is safe and efficient
+
+Core operational realization:
+
+```text
+Forklift and pedestrian overlap spikes every morning.
+```
+
+Run the congestion investigation program:
+
+```sas
+/* Run the local lesson program */
+%include "sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas";
+```
+
+If `%INCLUDE` is not appropriate in the learner environment,
+open the SAS program directly and run the code manually.
+
+Expected SAS evidence:
+- higher overlap during `08:00-08:10`
+- continued overlap during `08:10-08:20`
+- lower overlap after `08:20`
+- increased shared-zone activity
+
+Interpretation question:
+
+```text
+What ordinary operational process might explain
+this repeatable morning pattern?
+```
+
+---
+
+# Human Operational Follow-Up
+
+Preferred operational answer:
+
+```text
+Go see it.
+```
+
+If that is not immediately possible:
+
+```text
+Review the video feed.
+```
+
+If that is not immediately possible:
+
+```text
+Trace the data flow from camera to SAS.
+```
+
+Telemetry should guide investigation.
+
+Telemetry should not replace operational confirmation.
+
+---
+
+# Operational Reveal
+
+The time clock is mounted beside the shared warehouse path.
+
+The location made sense decades earlier when the warehouse operated with only one forklift.
+
+The workflow evolved.
+
+The time clock location did not.
+
+This is not primarily a worker problem.
+
+It is a system constraint that became invisible because everyone got used to it.
+
+Operational improvement:
+
+```text
+Move the time clock.
+```
+
+Other possible operational actions:
+- adjust traffic markings
+- stagger clock-in times
+- provide a safer pedestrian route
+- retrain around forklift/pedestrian interaction
+- review whether the time clock must remain in that exact location
+
+---
+
+# Teaching Point
+
+The strongest operational finding is not that AI detected people and forklifts.
+
+The strongest finding is:
+
+```text
+SAS helped reveal a normalized workflow problem.
+```
+
+The solution remains human.
+
+---
+
+
 # Operational Growth
 
 The important realization:
@@ -665,6 +844,7 @@ You should now understand:
 - why telemetry trust matters
 - how spatial telemetry becomes SAS data
 - how SAS can investigate visible operational evidence
+- how SAS can reveal a normalized workflow problem
 - why Human-in-Command reasoning matters operationally
 
 ---
@@ -691,6 +871,12 @@ Then rerun:
 - DATA step
 - PROC PRINT
 - PROC FREQ
+
+For the congestion escalation, rerun:
+
+```text
+/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas
+```
 
 before continuing.
 
@@ -751,4 +937,6 @@ Focus:
 - controlled operational evidence
 - instructional image integration
 - SAS operational investigation
+- congestion escalation
+- time-clock workflow discovery
 
