@@ -3,7 +3,7 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Prototype Draft v0.1.7
+Status: Prototype Draft v0.1.8
 
 ---
 
@@ -108,21 +108,27 @@ before worrying about:
 
 # Visual Operational Grounding
 
+INSTRUCTOR NOTE:
+Use AF-002_LESSON_04_ZONE_DEFINITION.png here.
+
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_REGION_OVERLAY.png](../media/AF-002_LESSON_04_REGION_OVERLAY.png)
+click here --> [AF-002_LESSON_04_ZONE_DEFINITION.png](../media/AF-002_LESSON_04_ZONE_DEFINITION.png)
+
+Keep ACTIVE EVIDENCE visible while discussing operational zones.
 
 Observe:
-- operational zones
-- forklift movement areas
-- pedestrian regions
-- shared operational space
 - restricted areas
+- shared zones
+- pedestrian paths
+- loading regions
+- operational movement patterns
 
 Questions:
 - Which operational regions matter most?
 - Which areas appear sensitive?
 - Which detections might deserve investigation?
+- What makes one zone operationally different from another?
 
 Important:
 
@@ -199,6 +205,39 @@ The exact mathematics are less important right now than the operational meaning:
 ```text
 The system observed something
 in a specific visible region.
+```
+
+---
+
+# Camera Coordinate System
+
+INSTRUCTOR NOTE:
+Use AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png here.
+
+Recommended visual:
+
+click here --> [AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png](../media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png)
+
+Keep ACTIVE EVIDENCE visible while discussing coordinates.
+
+Observe:
+- coordinate axes
+- bounding box corners
+- center points
+- frame dimensions
+
+Questions:
+- Why might coordinates matter operationally?
+- What do x1,y1 and x2,y2 represent?
+- Why might frame size matter?
+- What operational limitations still exist?
+
+Important:
+
+```text
+Coordinates describe visible regions.
+
+Coordinates alone do not create operational meaning.
 ```
 
 ---
@@ -287,6 +326,102 @@ Human-in-Command thinking begins here.
 ---
 
 
+
+
+# Confidence Interpretation
+
+INSTRUCTOR NOTE:
+Use AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png here.
+
+Recommended visual:
+
+click here --> [AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png](../media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png)
+
+Keep ACTIVE EVIDENCE visible while discussing confidence.
+
+Observe:
+- high confidence detections
+- medium confidence detections
+- possible false positives
+
+Questions:
+- Does confidence equal certainty?
+- Which detections would you trust most?
+- Which detections deserve human review?
+- What operational risks might exist?
+
+Important:
+
+```text
+Confidence scores represent probability,
+not certainty.
+```
+
+Human review may still be required.
+
+---
+
+# Timestamp Interpretation
+
+INSTRUCTOR NOTE:
+Use AF-002_LESSON_04_TIMESTAMP_PATHS.png here.
+
+Recommended visual:
+
+click here --> [AF-002_LESSON_04_TIMESTAMP_PATHS.png](../media/AF-002_LESSON_04_TIMESTAMP_PATHS.png)
+
+Observe:
+- capture time
+- processing time
+- transmission time
+- database insert time
+
+Questions:
+- Which timestamp represents the physical event?
+- Could telemetry be delayed?
+- Could timestamps become misleading operationally?
+- Which timestamp would matter most in an investigation?
+
+Important:
+
+```text
+Telemetry timestamps may represent
+different operational events.
+```
+
+Timestamp meaning must be verified operationally.
+
+---
+
+# Persistence Across Frames
+
+INSTRUCTOR NOTE:
+Use AF-002_LESSON_04_FRAME_SEQUENCE.png here.
+
+Recommended visual:
+
+click here --> [AF-002_LESSON_04_FRAME_SEQUENCE.png](../media/AF-002_LESSON_04_FRAME_SEQUENCE.png)
+
+Observe:
+- object movement across frames
+- persistence over time
+- frame numbering
+- repeated detections
+
+Questions:
+- Why might single-frame detections be unreliable?
+- Why does persistence improve confidence?
+- What operational meaning emerges over time?
+- Why might frame_number matter?
+
+Important:
+
+```text
+Operational telemetry often depends
+on temporal persistence.
+```
+
+---
 
 # Why Spatial Telemetry Matters
 
@@ -613,5 +748,7 @@ Focus:
 - operational grounding
 - visible telemetry evidence
 - Human-in-Command reasoning
+- controlled operational evidence
+- instructional image integration
 - SAS operational investigation
 
