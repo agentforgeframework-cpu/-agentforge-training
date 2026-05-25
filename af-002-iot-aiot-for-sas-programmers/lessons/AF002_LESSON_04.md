@@ -3,7 +3,7 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Prototype Draft v0.1.9
+Status: Release Candidate v0.2.1
 
 ---
 
@@ -740,7 +740,7 @@ title "Lesson 04 - Congestion Escalation";
    Update DATAFILE if your local folder structure differs. */
 
 /*
-proc import datafile="data/sample_spatial_telemetry_congestion_clean.csv"
+proc import datafile="data/sample_spatial_telemetry_congestion.csv"
     out=work.spatial_congestion_raw
     dbms=csv
     replace;
@@ -1092,7 +1092,7 @@ Date:
 2026-05-25
 
 Focus:
-- Prototype Draft v0.1.7
+- Release Candidate v0.2.1
 - active evidence persistence
 - local-first SAS data loading
 - onboarding survivability
