@@ -624,7 +624,13 @@ Now introduce a slightly larger operational question.
 
 Image:
 
-click here --> [AF-002_LESSON_04_ZONE_DEFINITION.png](../media/AF-002_LESSON_04_ZONE_DEFINITION.png)
+click here --> [AF-002_LESSON_04_MORNING_CONGESTION.png](../media/AF-002_LESSON_04_MORNING_CONGESTION.png)
+
+Observe:
+- pedestrian queue buildup
+- forklifts moving through shared space
+- overlap concentration
+- normalized operational behavior
 
 Telemetry:
 
