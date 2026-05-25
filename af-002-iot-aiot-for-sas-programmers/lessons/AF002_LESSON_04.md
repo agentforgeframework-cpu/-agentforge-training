@@ -3,12 +3,9 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Prototype Draft v0.1.9
+Status: Release Candidate v0.2.0
 
 ---
-
-
-
 
 # START HERE
 
@@ -251,11 +248,7 @@ Now look at a single telemetry row before worrying about coordinate mathematics.
 
 ---
 
-# Example Spatial Telemetry Row
-
-Keep this evidence visible while discussing the next few steps.
-
-# ACTIVE EVIDENCE
+# ACTIVE EVIDENCE — Spatial Telemetry
 
 Image:
 
@@ -647,7 +640,8 @@ SAS Program:
 Operational Question:
 
 ```text
-Why does forklift and pedestrian overlap spike between 8:00 and 8:20 AM?
+Why does shared-zone activity increase
+between 8:00 and 8:20 AM?
 ```
 
 ---
@@ -685,7 +679,17 @@ The focus here is operational telemetry interpretation using Human-in-Command re
 
 # Congestion Investigation
 
-The next telemetry sample does not identify workers individually.
+The telemetry intentionally identifies activity,
+not individuals.
+
+The telemetry is intentionally raw operational data.
+
+The dataset does not contain:
+- precomputed overlap states
+- congestion labels
+- worker identities
+
+SAS derives the operational interpretation.
 
 The telemetry identifies:
 - `person`
@@ -715,10 +719,15 @@ If `%INCLUDE` is not appropriate in the learner environment,
 open the SAS program directly and run the code manually.
 
 Expected SAS evidence:
-- higher overlap during `08:00-08:10`
-- continued overlap during `08:10-08:20`
-- lower overlap after `08:20`
-- increased shared-zone activity
+- increased SHARED-zone forklift detections
+- increased SHARED-zone pedestrian detections
+- visible escalation during 08:00-08:20
+- normalization afterward
+
+Important:
+
+SAS derived the operational pattern
+from ordinary telemetry observations.
 
 Interpretation question:
 
@@ -933,7 +942,7 @@ Date:
 2026-05-25
 
 Focus:
-- Prototype Draft v0.1.7
+- Release Candidate v0.2.0
 - active evidence persistence
 - local-first SAS data loading
 - onboarding survivability
@@ -945,4 +954,7 @@ Focus:
 - SAS operational investigation
 - congestion escalation
 - time-clock workflow discovery
+- raw telemetry integrity
+- SAS-derived operational interpretation
+- square operational datasets
 
