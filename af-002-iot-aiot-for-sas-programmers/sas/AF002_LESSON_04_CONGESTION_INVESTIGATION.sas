@@ -31,7 +31,7 @@ title "Lesson 04 - Congestion Escalation";
    Update DATAFILE if your local folder structure differs. */
 
 /*
-proc import datafile="data/sample_spatial_telemetry_congestion_clean.csv"
+proc import datafile="data/sample_spatial_telemetry_congestion.csv"
     out=work.spatial_congestion_raw
     dbms=csv
     replace;
