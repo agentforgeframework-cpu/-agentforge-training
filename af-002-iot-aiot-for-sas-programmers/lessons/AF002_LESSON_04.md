@@ -3,97 +3,62 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
----
-
-# Lesson Identity
-
-This lesson teaches:
-
-```text
-how visible telemetry evidence
-becomes operationally useful SAS data
-```
-
-This lesson is NOT:
-
-- AI theory
-- architecture philosophy
-- cloud engineering
-- orchestration systems
-- modernization consulting
-- dashboard theater
-
-This lesson IS:
-
-- operational investigation
-- visible telemetry interpretation
-- Human-in-Command reasoning
-- SAS operational analysis
-- spatial telemetry understanding
+Status: Prototype Draft v0.1.7
 
 ---
 
-# What You Will Learn
 
-In this lesson you will learn how:
 
-- visible detections become telemetry
-- telemetry becomes operational data
-- SAS can investigate spatial telemetry
-- telemetry trustworthiness matters operationally
-- operational ambiguity emerges naturally
-- humans interpret telemetry evidence
 
-You are NOT expected to become:
+# START HERE
 
-- a computer vision engineer
-- an AI architect
-- an infrastructure specialist
+You walk into the operations meeting.
 
-You ARE expected to increasingly feel:
+A warehouse camera alert is already on the screen.
+
+---
+
+# ACTIVE EVIDENCE
+
+Image:
+
+click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
+
+Telemetry Row:
 
 ```text
-“I understand this.”
+2026-05-24T08:00:01,person,RESTRICTED,0.94,420,170,520,340
 ```
 
-and:
+Operational Question:
 
 ```text
-“This is just SAS data.”
-```
-
-and ideally:
-
-```text
-“I can use this right away on one of my current projects.”
+What stands out operationally?
 ```
 
 ---
 
-# Operational Context
+Instructor:
 
-Imagine a warehouse operation.
+The rectangles are called **bounding boxes**.
 
-Forklifts move continuously through loading areas.
+Pause.
 
-Cameras observe portions of the warehouse.
+Let the learner inspect the image and telemetry row before continuing.
 
-Telemetry systems attempt to answer operational questions such as:
+Guide naturally toward questions such as:
+- What do the rectangles mean?
+- Why are some objects boxed and others not?
+- What does `RESTRICTED` mean here?
+- How reliable might this be?
+- What would you want to verify?
 
-- Which zones are active?
-- Which areas are congested?
-- Which docks are idle?
-- Which forklifts remain stationary too long?
-- Which operational areas experience heavy traffic?
+Then transition into:
+- telemetry rows
+- SAS investigation
+- operational interpretation
 
-The important idea:
-
-```text
-The telemetry is not the operation.
-The telemetry is evidence about the operation.
-```
-
-That distinction matters.
+Proceed one operational step at a time.
 
 ---
 
@@ -101,7 +66,7 @@ That distinction matters.
 
 Recommended visual:
 
-[Open AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
+click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
 
 Observe the image first before discussing telemetry or coordinates.
 
@@ -115,7 +80,7 @@ Questions:
 
 # First Definition
 
-A bounding box is:
+A **bounding box** is:
 
 ```text
 a way to describe
@@ -145,7 +110,7 @@ before worrying about:
 
 Recommended visual:
 
-[Open AF-002_LESSON_04_REGION_OVERLAY.png](../media/AF-002_LESSON_04_REGION_OVERLAY.png)
+click here --> [AF-002_LESSON_04_REGION_OVERLAY.png](../media/AF-002_LESSON_04_REGION_OVERLAY.png)
 
 Observe:
 - operational zones
@@ -249,6 +214,31 @@ Now look at a single telemetry row before worrying about coordinate mathematics.
 
 # Example Spatial Telemetry Row
 
+Keep this evidence visible while discussing the next few steps.
+
+# ACTIVE EVIDENCE
+
+Image:
+
+click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
+
+Telemetry Row:
+
+```text
+2026-05-24 08:42:11    forklift      dock_3    122   88    344   410
+```
+
+Operational Question:
+
+```text
+What does this row tell us?
+What does this row NOT tell us?
+```
+
+---
+
+# Example Spatial Telemetry Row
+
 You now receive the following telemetry row:
 
 ```text
@@ -296,43 +286,7 @@ Human-in-Command thinking begins here.
 
 ---
 
-# Coordinate Details (Later Reference)
 
-The values:
-
-```text
-x1  y1  x2  y2
-```
-
-represent the boundaries of the bounding box.
-
-Conceptually:
-
-```text
-x1,y1 = upper-left corner
-x2,y2 = lower-right corner
-```
-
-Simple coordinate example:
-
-```text
-(122,88)
-+----------------------+
-|                      |
-|      FORKLIFT        |
-|                      |
-+----------------------+
-               (344,410)
-```
-
-The exact mathematics are less important right now than the operational meaning:
-
-```text
-The system observed something
-in a specific visible region.
-```
-
----
 
 # Why Spatial Telemetry Matters
 
@@ -358,32 +312,72 @@ This creates operational investigation opportunities.
 
 Now the telemetry becomes ordinary SAS data.
 
-Example SAS DATA step:
+Preferred path:
+
+A companion utility program is available:
+
+```text
+/sas/AF002_LESSON_04_SAS_UTILITIES.sas
+```
+
+Use the local file:
+
+```text
+/data/sample_spatial_telemetry.csv
+```
+
+If file access is difficult, use the embedded `DATALINES` fallback below.
+
+The important operational rule is:
+
+```text
+No GitHub runtime dependency is required.
+```
+
+Create the SAS dataset before running PROC PRINT.
+
+Preferred local CSV pattern:
 
 ```sas
-DATA work.spatial_telemetry;
-    LENGTH object_type $20 zone $20;
+proc import datafile="data/sample_spatial_telemetry.csv"
+    out=work.spatial_telemetry
+    dbms=csv
+    replace;
+    guessingrows=max;
+run;
+```
 
-    INPUT
-        timestamp :ANYDTDTM19.
+Fallback embedded teaching data:
+
+```sas
+data work.spatial_telemetry;
+    length object_type $20 zone $20;
+    format timestamp datetime19.;
+
+    input
+        timestamp :anydtdtm.
         object_type $
         zone $
+        confidence
         x1
         y1
         x2
-        y2;
+        y2
+    ;
 
-    FORMAT timestamp datetime19.;
-
-DATALINES;
-24MAY2026:08:42:11 forklift dock_3 122 88 344 410
-24MAY2026:08:42:14 forklift dock_3 128 90 350 412
-24MAY2026:08:42:17 forklift dock_4 410 102 612 430
-24MAY2026:08:42:22 forklift dock_4 420 108 620 438
-24MAY2026:08:42:28 forklift dock_2 88 72 250 388
+datalines;
+24MAY2026:08:00:01 person RESTRICTED 0.94 420 170 520 340
+24MAY2026:08:00:02 forklift FORKLIFT 0.88 100 210 290 390
+24MAY2026:08:00:03 pallet LOADING 0.91 600 200 760 360
+24MAY2026:08:00:04 person SHARED 0.86 500 180 610 350
+24MAY2026:08:00:05 pallet SHARED 0.89 620 240 760 380
 ;
-RUN;
+run;
 ```
+
+Use either the preferred CSV path or the fallback DATALINES path.
+
+Then inspect the dataset.
 
 ---
 
@@ -392,8 +386,11 @@ RUN;
 Run:
 
 ```sas
-PROC PRINT data=work.spatial_telemetry;
-RUN;
+proc print data=work.spatial_telemetry;
+    title "Lesson 04 - Spatial Telemetry";
+run;
+
+title;
 ```
 
 You should now see:
@@ -606,9 +603,12 @@ Model:
 GPT-5.5
 
 Date:
-2026-05-24
+2026-05-25
 
 Focus:
+- Prototype Draft v0.1.7
+- active evidence persistence
+- local-first SAS data loading
 - onboarding survivability
 - operational grounding
 - visible telemetry evidence
