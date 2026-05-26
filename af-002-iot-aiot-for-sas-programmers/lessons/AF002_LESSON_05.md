@@ -438,6 +438,34 @@ the dashboards are false.
 It means:
 they are optimized differently.
 
+
+---
+
+## Optional SAS check: visualize timestamp separation with PROC TIMEPLOT
+
+If you want to inspect timestamp lag and visibility gaps more directly, this optional SAS program creates a classic PROC TIMEPLOT visualization of:
+
+- event capture time
+- telemetry buffer time
+- dashboard refresh time
+
+This is not intended to create a polished dashboard.
+
+Instead, it provides a simple operational evidence view that can help reveal:
+
+- timestamp separation
+- delayed refresh behavior
+- overlapping operational activity windows
+- possible telemetry gaps
+
+This style of output may look old-school, but it can provide extremely useful operational insight during investigation and troubleshooting.
+
+Raw SAS program:
+
+`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas`
+
+This optional check can help reveal timing relationships that may be difficult to notice in summarized dashboards.
+
 ---
 
 # CHECKPOINT — Visibility Gap Identified
