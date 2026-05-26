@@ -4,6 +4,9 @@ AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas
 AF-002: IoT / AIoT for SAS Programmers
 Lesson 05 — Deliver Practical Results Using Telemetry
 
+Raw Github Link:
+   https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas
+
 Purpose:
 This optional SAS evidence check visualizes separation between:
    - event capture time
