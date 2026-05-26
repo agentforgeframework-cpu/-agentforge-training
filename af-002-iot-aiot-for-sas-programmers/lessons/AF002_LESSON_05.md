@@ -1,7 +1,7 @@
-﻿# AF002 Lesson 05 Prototype Draft v0.1.0
+﻿# AF002 Lesson 05 Prototype Draft v0.1.1
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
-Status: PROTOTYPE
+Status: PROTOTYPE v0.1.1
 Lesson: AF-002 — Lesson 05 Capstone
 Title: Deliver Practical Results Using Telemetry
 Focus: Operational modernization reasoning using telemetry evidence and SAS operational analysis
@@ -203,35 +203,63 @@ No obvious failure is visible.
 
 ---
 
-# ARTIFACT PLACEHOLDER — Executive Dashboard
+# Executive Dashboard
 
-INSERT:
+![Executive Dashboard](../media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png)
 
-* Executive KPI dashboard image
-* Stable throughput trends
-* Positive modernization metrics
-* Green operational status indicators
-* Visible dashboard refresh timestamp
+Artifact:
+AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
+
+Key operational observation:
+The executive dashboard appears modern, stable, professional, and operationally successful.
+
+Nothing immediately appears wrong.
+
+However:
+the dashboard is optimized primarily for:
+- executive visibility
+- operational summaries
+- trend monitoring
+- modernization KPI reporting
+
+Question to consider:
+
+```text
+What operational details might become less visible
+when telemetry is aggregated for executive simplicity?
+```
 
 ---
 
-# ARTIFACT PLACEHOLDER — Operations Dashboard
+# Operations Dashboard
 
-INSERT:
+![Operations Dashboard](../media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png)
 
-* Dock queue operational dashboard
-* Queue trend panels
-* Forklift utilization summary
-* Shift staffing indicators
-* Last refresh timestamp visible
+Artifact:
+AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
 
-Important:
-The operations dashboard should NOT appear broken.
+This dashboard exposes:
+- localized queue behavior
+- operational variability
+- escalation watch zones
+- forklift redistribution activity
+- operational intervention visibility
 
-It should appear:
-reasonable,
+The dashboard still appears:
+professional,
 useful,
-and incomplete.
+and operationally healthy.
+
+However:
+the learner should begin noticing:
+operations personnel may experience the system differently than executives.
+
+Question to consider:
+
+```text
+Why might warehouse supervisors sense operational discomfort
+before executive dashboards show clear concern?
+```
 
 ---
 
@@ -272,24 +300,36 @@ You compare:
 
 ---
 
-# SAS ACTIVITY PLACEHOLDER
+# SAS Investigation Activity
 
-INSERT:
+Use the following telemetry sample:
 
-* simple SAS PROC FREQ
-* interval comparison report
-* queue growth visualization
-* staffing comparison chart
+`AF002_L05_TELEMETRY_SAMPLE_v0_1.csv`
 
-Possible operational fields:
+Run the following SAS program:
 
-* timestamp
-* zone
-* queue_depth
-* staffing_level
-* forklift_active_count
-* dashboard_refresh_time
-* event_capture_time
+`AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`
+
+The SAS investigation generates:
+- queue depth timeline
+- timestamp comparison table
+- queue depth by zone
+- operational delay summary
+- intervention window observations
+
+As you review the outputs, pay particular attention to:
+- queue growth timing
+- timestamp semantics
+- telemetry freshness
+- dashboard delay
+- operational intervention timing
+
+Question to consider:
+
+```text
+Did the queue buildup appear sudden,
+or did the operational visibility change?
+```
 
 ---
 
@@ -326,16 +366,34 @@ You begin investigating timestamp behavior.
 
 ---
 
-# ARTIFACT PLACEHOLDER — Timestamp Comparison
+# Timestamp Comparison Graphic
 
-INSERT:
+![Timestamp Comparison](../media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png)
 
-* event_capture_time
-* telemetry_buffer_time
-* dashboard_refresh_time
+Artifact:
+AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
 
-Visual goal:
-show different operational moments represented by different timestamps.
+This graphic demonstrates:
+- event capture time
+- telemetry buffer time
+- dashboard refresh time
+- operational response time
+
+The key realization is:
+
+```text
+Telemetry can be accurate
+and still arrive too late for intervention.
+```
+
+Question to consider:
+
+```text
+Which timestamp matters most operationally:
+event capture,
+dashboard refresh,
+or operational response?
+```
 
 ---
 
@@ -455,6 +513,65 @@ The learner should NOT:
 * become an executive strategist
 
 ---
+
+
+# Semi-Interactive Meeting Prompts
+
+During the operational review meeting, consider the following questions carefully.
+
+## Prompt 1 — Executive Interpretation
+
+```text
+The executive dashboard still shows acceptable throughput.
+
+Should operations still be concerned?
+Why or why not?
+```
+
+## Prompt 2 — Timestamp Meaning
+
+```text
+Which timestamp matters most operationally:
+event capture,
+dashboard refresh,
+or operational response?
+
+Explain your reasoning.
+```
+
+## Prompt 3 — Operational Tradeoff
+
+```text
+The modernization reduced infrastructure complexity
+and improved centralized reporting consistency.
+
+What operational capability became less visible?
+```
+
+## Prompt 4 — Human-in-Command
+
+```text
+Warehouse supervisors sensed operational discomfort
+before dashboards clearly showed congestion.
+
+How should organizations treat this type of human operational feedback?
+```
+
+## Prompt 5 — SAS Interpretation
+
+```text
+What did the SAS investigation reveal
+that was less visible in the dashboards?
+```
+
+## Prompt 6 — Bounded Uncertainty
+
+```text
+Do the findings fully prove the root cause?
+
+What uncertainty still remains?
+```
+
 
 # Suggested Learner Communication Style
 
@@ -620,7 +737,7 @@ Current Status:
 * dashboard placeholders identified
 * artifact milestones identified
 
-Still Required:
+Remaining Development Needs:
 
 * dashboard graphics
 * telemetry CSV samples
