@@ -3,7 +3,7 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 04 — Use Spatial Telemetry Operationally
 
-Status: Release Candidate v0.2.1
+Status: Release Candidate v0.2.2
 
 ---
 
@@ -22,7 +22,7 @@ A warehouse camera alert is already on the screen.
 
 Image:
 
-click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
+click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png)
 
 Telemetry Row:
 
@@ -66,7 +66,7 @@ Proceed one operational step at a time.
 
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
+click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png)
 
 Observe the image first before discussing telemetry or coordinates.
 
@@ -113,7 +113,7 @@ Use AF-002_LESSON_04_ZONE_DEFINITION.png here.
 
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_ZONE_DEFINITION.png](../media/AF-002_LESSON_04_ZONE_DEFINITION.png)
+click here --> [AF-002_LESSON_04_ZONE_DEFINITION.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_ZONE_DEFINITION.png)
 
 Keep ACTIVE EVIDENCE visible while discussing operational zones.
 
@@ -216,7 +216,7 @@ Use AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png here.
 
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png](../media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png)
+click here --> [AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png)
 
 Keep ACTIVE EVIDENCE visible while discussing coordinates.
 
@@ -251,7 +251,7 @@ Now look at a single telemetry row before worrying about coordinate mathematics.
 
 ---
 
-# Example Spatial Telemetry Row
+# ACTIVE EVIDENCE — Spatial Telemetry
 
 Keep this evidence visible while discussing the next few steps.
 
@@ -259,7 +259,7 @@ Keep this evidence visible while discussing the next few steps.
 
 Image:
 
-click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](../media/AF-002_LESSON_04_BOUNDING_BOXES.png)
+click here --> [AF-002_LESSON_04_BOUNDING_BOXES.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png)
 
 Telemetry Row:
 
@@ -335,7 +335,7 @@ Use AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png here.
 
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png](../media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png)
+click here --> [AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png)
 
 Keep ACTIVE EVIDENCE visible while discussing confidence.
 
@@ -368,7 +368,7 @@ Use AF-002_LESSON_04_TIMESTAMP_PATHS.png here.
 
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_TIMESTAMP_PATHS.png](../media/AF-002_LESSON_04_TIMESTAMP_PATHS.png)
+click here --> [AF-002_LESSON_04_TIMESTAMP_PATHS.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_TIMESTAMP_PATHS.png)
 
 Observe:
 - capture time
@@ -400,7 +400,7 @@ Use AF-002_LESSON_04_FRAME_SEQUENCE.png here.
 
 Recommended visual:
 
-click here --> [AF-002_LESSON_04_FRAME_SEQUENCE.png](../media/AF-002_LESSON_04_FRAME_SEQUENCE.png)
+click here --> [AF-002_LESSON_04_FRAME_SEQUENCE.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_FRAME_SEQUENCE.png)
 
 Observe:
 - object movement across frames
@@ -624,7 +624,7 @@ Now introduce a slightly larger operational question.
 
 Image:
 
-click here --> [AF-002_LESSON_04_MORNING_CONGESTION.png](../media/AF-002_LESSON_04_MORNING_CONGESTION.png)
+click here --> [AF-002_LESSON_04_MORNING_CONGESTION.png](https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_MORNING_CONGESTION.png)
 
 Observe:
 - pedestrian queue buildup
@@ -638,16 +638,24 @@ Telemetry:
 /data/sample_spatial_telemetry_congestion.csv
 ```
 
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv
+
 SAS Program:
 
 ```text
 /sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas
 ```
 
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas
+
 Operational Question:
 
 ```text
-Why does forklift and pedestrian overlap spike between 8:00 and 8:20 AM?
+Why does shared-zone activity increase between 8:00 and 8:20 AM?
 ```
 
 ---
@@ -685,7 +693,17 @@ The focus here is operational telemetry interpretation using Human-in-Command re
 
 # Congestion Investigation
 
-The next telemetry sample does not identify workers individually.
+The telemetry intentionally identifies activity,
+not individuals.
+
+The telemetry is intentionally raw operational data.
+
+The dataset does not contain:
+- precomputed overlap states
+- congestion labels
+- worker identities
+
+SAS derives the operational interpretation.
 
 The telemetry identifies:
 - `person`
@@ -874,10 +892,17 @@ If `%INCLUDE` is not appropriate in the learner environment,
 use the copy-and-run code block above.
 
 Expected SAS evidence:
-- higher overlap during `08:00-08:10`
-- continued overlap during `08:10-08:20`
-- lower overlap after `08:20`
-- increased shared-zone activity
+- increased SHARED-zone forklift detections
+- increased SHARED-zone pedestrian detections
+- visible escalation during `08:00-08:20`
+- normalization afterward
+
+Important:
+
+```text
+SAS derived the operational pattern
+from ordinary telemetry observations.
+```
 
 Interpretation question:
 
@@ -1092,7 +1117,7 @@ Date:
 2026-05-25
 
 Focus:
-- Release Candidate v0.2.1
+- Release Candidate v0.2.2
 - active evidence persistence
 - local-first SAS data loading
 - onboarding survivability
@@ -1104,4 +1129,46 @@ Focus:
 - SAS operational investigation
 - congestion escalation
 - time-clock workflow discovery
+- fully resolvable raw artifact links
+- clean-room artifact survivability
+- square operational datasets
+- SAS-derived operational interpretation
+- raw telemetry integrity
 
+
+
+---
+
+# File Reference Information
+
+GitHub URL:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
+
+Raw URL:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
+
+Supporting SAS Program:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas
+
+Supporting Congestion CSV:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv
+
+Supporting Congestion Image:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_MORNING_CONGESTION.png
+
+Previous Lesson:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
+
+Next Lesson:
+
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
+
+Return to README:
+
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
