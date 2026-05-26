@@ -1,7 +1,7 @@
-﻿# AF002 Lesson 05 Prototype Draft v0.1.1
+﻿# AF002 Lesson 05 Prototype Draft v0.1.2
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
-Status: PROTOTYPE v0.1.1
+Status: OPERATIONAL PROTOTYPE - HUMAN VALIDATED v0.1.2
 Lesson: AF-002 — Lesson 05 Capstone
 Title: Deliver Practical Results Using Telemetry
 Focus: Operational modernization reasoning using telemetry evidence and SAS operational analysis
@@ -15,6 +15,24 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
+
+
+## Runtime Artifact References
+
+Executive Dashboard:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
+
+Operations Dashboard:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
+
+Timestamp Comparison Graphic:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
+
+Telemetry Sample CSV:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
+
+SAS Investigation Program:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas
 
 ---
 
@@ -397,6 +415,43 @@ or operational response?
 
 ---
 
+
+
+# Timestamp Lineage Definitions
+
+The following timestamps represent different operational moments.
+
+## event_capture_time
+
+When the operational event actually occurred on the warehouse floor.
+
+## telemetry_buffer_time
+
+When telemetry became available to downstream telemetry systems after buffering or transport delay.
+
+## dashboard_refresh_time
+
+When dashboards displayed the event to operational users.
+
+## operational_response_time
+
+When humans could reasonably react operationally.
+
+Important operational concept:
+
+```text
+These timestamps do NOT represent the same operational moment.
+```
+
+Operational reasoning often depends on understanding:
+- when events occurred
+- when systems received them
+- when dashboards displayed them
+- when humans could act
+
+
+---
+
 # SECTION 6 — Emerging Operational Discovery
 
 You discover two modernization-related changes:
@@ -425,6 +480,28 @@ the dashboards are false.
 
 It means:
 they are optimized differently.
+
+---
+
+
+
+# Example Operational Threshold
+
+The warehouse currently uses the following escalation watch guideline:
+
+```text
+Queue depth above 15
+for more than 5 minutes
+triggers escalation watch status.
+```
+
+This is not an emergency threshold.
+
+It is intended to:
+- increase operational awareness
+- support earlier intervention
+- preserve response timing
+
 
 ---
 
@@ -466,6 +543,24 @@ You compare:
 * telemetry freshness degradation affects intervention timing
 * aggregation smooths escalation visibility
 * delayed operational reaction windows emerge
+
+---
+
+
+
+# Example Operational Ownership
+
+Operational responsibilities are intentionally separated.
+
+Example:
+
+* Operations supervisors may reroute forklifts locally.
+* Regional operations leadership handles staffing escalation decisions.
+* Executive leadership reviews broader throughput and modernization trends.
+
+This separation helps explain why:
+different organizational layers may require different operational visibility.
+
 
 ---
 
@@ -706,6 +801,29 @@ Humans still interpreted reality.
 
 ---
 
+
+
+# Facilitator Runtime Guardrails
+
+Important runtime guidance for facilitators and AI systems:
+
+* Allow the learner to inspect dashboards before explaining conclusions.
+* Do not jump immediately to modernization blame.
+* Preserve operational ambiguity early in the lesson.
+* Allow timestamp meaning to emerge gradually.
+* Encourage operational questioning before explanation.
+* Avoid over-explaining SAS outputs.
+* Keep the learner in the role of operational investigator.
+
+Important:
+The learner should feel:
+- trusted
+- operationally credible
+- capable of contributing meaningful interpretation
+
+
+---
+
 # FINAL CHECKPOINT — Capstone Complete
 
 By completing this lesson,
@@ -725,7 +843,7 @@ You are now contributing operational understanding.
 
 ---
 
-# Development Notes — Prototype v0.1.0
+# Development Notes - Prototype v0.1.2
 
 Current Status:
 
