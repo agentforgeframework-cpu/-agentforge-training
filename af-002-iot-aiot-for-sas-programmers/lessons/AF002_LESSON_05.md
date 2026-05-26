@@ -1,7 +1,7 @@
-﻿# AF002 Lesson 05 Prototype Draft v0.1.1
+# AF002 Lesson 05 Release Candidate Hardening Draft v0.1.3
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
-Status: PROTOTYPE v0.1.1
+Status: RELEASE CANDIDATE HARDENING - GUIDED OPERATIONAL USE v0.1.3
 Lesson: AF-002 — Lesson 05 Capstone
 Title: Deliver Practical Results Using Telemetry
 Focus: Operational modernization reasoning using telemetry evidence and SAS operational analysis
@@ -186,6 +186,9 @@ Can you take a look before tomorrow's operational review meeting?
 
 # SECTION 2 — Initial Evidence Package
 
+Facilitator Note:
+Do not explain the operational gap yet. Allow inspection first.
+
 You are provided:
 
 * Executive Operations Dashboard
@@ -207,8 +210,6 @@ No obvious failure is visible.
 
 ![Executive Dashboard](../media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png)
 
-You should see a professional executive dashboard with stable KPIs and no obvious operational failure.
-
 Artifact:
 AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
 
@@ -224,7 +225,7 @@ the dashboard is optimized primarily for:
 - trend monitoring
 - modernization KPI reporting
 
-PAUSE — Consider before continuing:
+Question to consider:
 
 ```text
 What operational details might become less visible
@@ -236,8 +237,6 @@ when telemetry is aggregated for executive simplicity?
 # Operations Dashboard
 
 ![Operations Dashboard](../media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png)
-
-You should see a more localized operational dashboard with slightly more variability and intervention visibility.
 
 Artifact:
 AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
@@ -258,7 +257,7 @@ However:
 the learner should begin noticing:
 operations personnel may experience the system differently than executives.
 
-PAUSE — Consider before continuing:
+Question to consider:
 
 ```text
 Why might warehouse supervisors sense operational discomfort
@@ -268,6 +267,9 @@ before executive dashboards show clear concern?
 ---
 
 # SECTION 3 — Initial Interpretation
+
+Facilitator Note:
+Do not resolve the tension yet. Preserve ambiguity through Section 6.
 
 Your first review suggests:
 
@@ -287,7 +289,34 @@ You decide to investigate further using SAS.
 
 ---
 
+
+# Operational Communication Before Analysis
+
+Before you begin the SAS investigation, remember that the goal is not merely to run code.
+
+The goal is to translate evidence into operational meaning.
+
+Weak:
+
+```text
+The telemetry latency characteristics changed.
+```
+
+Stronger:
+
+```text
+We are still receiving operational telemetry,
+but we now detect developing dock congestion later than before.
+```
+
+Operational meaning matters.
+
+---
+
 # SECTION 4 — Initial SAS Investigation
+
+Facilitator Note:
+Keep SAS execution time bounded. Operational interpretation is the goal.
 
 You review:
 
@@ -310,9 +339,15 @@ Use the following telemetry sample:
 
 `AF002_L05_TELEMETRY_SAMPLE_v0_1.csv`
 
+Raw CSV:
+`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv`
+
 Run the following SAS program:
 
 `AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`
+
+Raw SAS program:
+`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`
 
 Your focus is interpreting the operational meaning of the outputs, not writing SAS code from scratch.
 
@@ -334,7 +369,7 @@ As you review the outputs, pay particular attention to:
 - dashboard delay
 - operational intervention timing
 
-PAUSE — Consider before continuing:
+Question to consider:
 
 ```text
 Did the queue buildup appear sudden,
@@ -380,8 +415,6 @@ You begin investigating timestamp behavior.
 
 ![Timestamp Comparison](../media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png)
 
-You should see the same operational event represented through multiple operational timestamps.
-
 Artifact:
 AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
 
@@ -398,13 +431,51 @@ Telemetry can be accurate
 and still arrive too late for intervention.
 ```
 
-PAUSE — Consider before continuing:
+Question to consider:
 
 ```text
 Which timestamp matters most operationally:
 event capture,
 dashboard refresh,
 or operational response?
+```
+
+---
+
+
+# Timestamp Lineage Definitions
+
+The following timestamps represent different operational moments.
+
+## event_capture_time
+
+When the operational event actually occurred on the warehouse floor.
+
+## telemetry_buffer_time
+
+When telemetry became available to downstream telemetry systems after buffering or transport delay.
+
+## dashboard_refresh_time
+
+When dashboards displayed the event to operational users.
+
+## operational_response_time
+
+When humans could reasonably react operationally.
+
+Important operational concept:
+
+```text
+These timestamps do NOT represent the same operational moment.
+```
+
+Simple operational example:
+
+```text
+A forklift slowdown may occur at 08:12,
+appear in telemetry at 08:17,
+reach the dashboard at 08:19,
+and trigger operational response at 08:20.
 ```
 
 ---
@@ -437,34 +508,6 @@ the dashboards are false.
 
 It means:
 they are optimized differently.
-
-
----
-
-## Optional SAS check: visualize timestamp separation with PROC TIMEPLOT
-
-If you want to inspect timestamp lag and visibility gaps more directly, this optional SAS program creates a classic PROC TIMEPLOT visualization of:
-
-- event capture time
-- telemetry buffer time
-- dashboard refresh time
-
-This is not intended to create a polished dashboard.
-
-Instead, it provides a simple operational evidence view that can help reveal:
-
-- timestamp separation
-- delayed refresh behavior
-- overlapping operational activity windows
-- possible telemetry gaps
-
-This style of output may look old-school, but it can provide extremely useful operational insight during investigation and troubleshooting.
-
-Raw SAS program:
-
-`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas`
-
-This optional check can help reveal timing relationships that may be difficult to notice in summarized dashboards.
 
 ---
 
@@ -510,9 +553,6 @@ You compare:
 ---
 
 # SECTION 8 — Operational Review Meeting
-
-Facilitator Note:
-Treat prompts as discussion anchors, not a checklist.
 
 You attend the operational review meeting.
 
@@ -780,7 +820,7 @@ Current Status:
 * dashboard placeholders identified
 * artifact milestones identified
 
-Remaining Minor Hardening Areas:
+Remaining Development Needs:
 
 * dashboard graphics
 * telemetry CSV samples
