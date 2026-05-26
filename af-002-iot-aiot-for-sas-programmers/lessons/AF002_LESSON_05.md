@@ -1,7 +1,7 @@
-﻿# AF002 Lesson 05 Prototype Draft v0.1.2
+﻿# AF002 Lesson 05 Prototype Draft v0.1.1
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
-Status: OPERATIONAL PROTOTYPE - HUMAN VALIDATED v0.1.2
+Status: PROTOTYPE v0.1.1
 Lesson: AF-002 — Lesson 05 Capstone
 Title: Deliver Practical Results Using Telemetry
 Focus: Operational modernization reasoning using telemetry evidence and SAS operational analysis
@@ -15,24 +15,6 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
-
-
-## Runtime Artifact References
-
-Executive Dashboard:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
-
-Operations Dashboard:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
-
-Timestamp Comparison Graphic:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
-
-Telemetry Sample CSV:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
-
-SAS Investigation Program:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas
 
 ---
 
@@ -225,6 +207,8 @@ No obvious failure is visible.
 
 ![Executive Dashboard](../media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png)
 
+You should see a professional executive dashboard with stable KPIs and no obvious operational failure.
+
 Artifact:
 AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
 
@@ -240,7 +224,7 @@ the dashboard is optimized primarily for:
 - trend monitoring
 - modernization KPI reporting
 
-Question to consider:
+PAUSE — Consider before continuing:
 
 ```text
 What operational details might become less visible
@@ -252,6 +236,8 @@ when telemetry is aggregated for executive simplicity?
 # Operations Dashboard
 
 ![Operations Dashboard](../media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png)
+
+You should see a more localized operational dashboard with slightly more variability and intervention visibility.
 
 Artifact:
 AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
@@ -272,7 +258,7 @@ However:
 the learner should begin noticing:
 operations personnel may experience the system differently than executives.
 
-Question to consider:
+PAUSE — Consider before continuing:
 
 ```text
 Why might warehouse supervisors sense operational discomfort
@@ -328,6 +314,12 @@ Run the following SAS program:
 
 `AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`
 
+Your focus is interpreting the operational meaning of the outputs, not writing SAS code from scratch.
+
+Example operational observations:
+- Queue depth crossed escalation-watch thresholds before dashboards visibly reflected concern.
+- Operational visibility changed more slowly than physical queue conditions.
+
 The SAS investigation generates:
 - queue depth timeline
 - timestamp comparison table
@@ -342,7 +334,7 @@ As you review the outputs, pay particular attention to:
 - dashboard delay
 - operational intervention timing
 
-Question to consider:
+PAUSE — Consider before continuing:
 
 ```text
 Did the queue buildup appear sudden,
@@ -388,6 +380,8 @@ You begin investigating timestamp behavior.
 
 ![Timestamp Comparison](../media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png)
 
+You should see the same operational event represented through multiple operational timestamps.
+
 Artifact:
 AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
 
@@ -404,7 +398,7 @@ Telemetry can be accurate
 and still arrive too late for intervention.
 ```
 
-Question to consider:
+PAUSE — Consider before continuing:
 
 ```text
 Which timestamp matters most operationally:
@@ -412,43 +406,6 @@ event capture,
 dashboard refresh,
 or operational response?
 ```
-
----
-
-
-
-# Timestamp Lineage Definitions
-
-The following timestamps represent different operational moments.
-
-## event_capture_time
-
-When the operational event actually occurred on the warehouse floor.
-
-## telemetry_buffer_time
-
-When telemetry became available to downstream telemetry systems after buffering or transport delay.
-
-## dashboard_refresh_time
-
-When dashboards displayed the event to operational users.
-
-## operational_response_time
-
-When humans could reasonably react operationally.
-
-Important operational concept:
-
-```text
-These timestamps do NOT represent the same operational moment.
-```
-
-Operational reasoning often depends on understanding:
-- when events occurred
-- when systems received them
-- when dashboards displayed them
-- when humans could act
-
 
 ---
 
@@ -480,28 +437,6 @@ the dashboards are false.
 
 It means:
 they are optimized differently.
-
----
-
-
-
-# Example Operational Threshold
-
-The warehouse currently uses the following escalation watch guideline:
-
-```text
-Queue depth above 15
-for more than 5 minutes
-triggers escalation watch status.
-```
-
-This is not an emergency threshold.
-
-It is intended to:
-- increase operational awareness
-- support earlier intervention
-- preserve response timing
-
 
 ---
 
@@ -546,25 +481,10 @@ You compare:
 
 ---
 
-
-
-# Example Operational Ownership
-
-Operational responsibilities are intentionally separated.
-
-Example:
-
-* Operations supervisors may reroute forklifts locally.
-* Regional operations leadership handles staffing escalation decisions.
-* Executive leadership reviews broader throughput and modernization trends.
-
-This separation helps explain why:
-different organizational layers may require different operational visibility.
-
-
----
-
 # SECTION 8 — Operational Review Meeting
+
+Facilitator Note:
+Treat prompts as discussion anchors, not a checklist.
 
 You attend the operational review meeting.
 
@@ -801,29 +721,6 @@ Humans still interpreted reality.
 
 ---
 
-
-
-# Facilitator Runtime Guardrails
-
-Important runtime guidance for facilitators and AI systems:
-
-* Allow the learner to inspect dashboards before explaining conclusions.
-* Do not jump immediately to modernization blame.
-* Preserve operational ambiguity early in the lesson.
-* Allow timestamp meaning to emerge gradually.
-* Encourage operational questioning before explanation.
-* Avoid over-explaining SAS outputs.
-* Keep the learner in the role of operational investigator.
-
-Important:
-The learner should feel:
-- trusted
-- operationally credible
-- capable of contributing meaningful interpretation
-
-
----
-
 # FINAL CHECKPOINT — Capstone Complete
 
 By completing this lesson,
@@ -843,7 +740,7 @@ You are now contributing operational understanding.
 
 ---
 
-# Development Notes - Prototype v0.1.2
+# Development Notes — Prototype v0.1.0
 
 Current Status:
 
@@ -855,7 +752,7 @@ Current Status:
 * dashboard placeholders identified
 * artifact milestones identified
 
-Remaining Development Needs:
+Remaining Minor Hardening Areas:
 
 * dashboard graphics
 * telemetry CSV samples
