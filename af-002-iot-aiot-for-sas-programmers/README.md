@@ -1,4 +1,4 @@
-﻿# AF-002 â€” IoT/AIoT for SAS Programmers
+# AF-002 - IoT/AIoT for SAS Programmers
 
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/README.md`
 
@@ -19,7 +19,7 @@ They are operational analytics problems.
 The early course success pattern is:
 
 ```text
-webcam â†’ telemetry â†’ CSV â†’ SAS analysis
+webcam -> telemetry -> CSV -> SAS analysis
 ```
 
 By the end of the first working lesson, you should have created a small telemetry dataset and analyzed it with SAS.
@@ -74,7 +74,7 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ## Course Sequence and Lesson Links
 
-### Lesson 00 â€” Setup and Orientation
+### Lesson 00 - Setup and Orientation
 
 GitHub URL:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
@@ -82,7 +82,7 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
 
-### Lesson 01 â€” Simple Video and Images
+### Lesson 01 - Simple Video and Images
 
 GitHub URL:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
@@ -90,7 +90,7 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
 
-### Lesson 02 â€” Event Streams and Real-Time Thinking
+### Lesson 02 - Event Streams and Real-Time Thinking
 
 GitHub URL:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
@@ -98,7 +98,7 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
-### Lesson 03 â€” AIoT Decision Loops
+### Lesson 03 - AIoT Decision Loops
 
 GitHub URL:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
@@ -106,7 +106,7 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
 
-### Lesson 04 â€” Architecture Follows Data for AIoT
+### Lesson 04 - Architecture Follows Data for AIoT
 
 GitHub URL:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
@@ -114,7 +114,7 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
 
-### Lesson 05 â€” Capstone Workflow
+### Lesson 05 - Capstone Workflow
 
 GitHub URL:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
@@ -128,21 +128,21 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 ```text
 /af-002-iot-aiot-for-sas-programmers
-â”‚
-â”œâ”€â”€ README.md
-â”œâ”€â”€ LICENSE.md
-â”œâ”€â”€ QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
-â”œâ”€â”€ SETUP_af-002-iot-aiot-for-sas-programmers.md
-â”œâ”€â”€ USER_GUIDE_af-002-iot-aiot-for-sas-programmers.md
-â”œâ”€â”€ af-002-iot-aiot-for-sas-programmers.md
-â”‚
-â”œâ”€â”€ /python
-â”œâ”€â”€ /lessons
-â”œâ”€â”€ /examples
-â”œâ”€â”€ /exercises
-â”œâ”€â”€ /validation
-â”œâ”€â”€ /lessons-learned
-â””â”€â”€ /media
+│
+├── README.md
+├── LICENSE.md
+├── QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+├── SETUP_af-002-iot-aiot-for-sas-programmers.md
+├── USER_GUIDE_af-002-iot-aiot-for-sas-programmers.md
+├── af-002-iot-aiot-for-sas-programmers.md
+│
+├── /python
+├── /lessons
+├── /examples
+├── /exercises
+├── /validation
+├── /lessons-learned
+└── /media
 ```
 
 ### Lessons Folder
@@ -187,4 +187,5 @@ The goal is operational usefulness under real-world conditions.
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
 - Notes: Updated after Claude digital twin survivability test.
+
 

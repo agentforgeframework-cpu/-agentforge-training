@@ -1,4 +1,4 @@
-﻿# LESSON 00 â€” Setup and Orientation
+# LESSON 00 - Setup and Orientation
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
@@ -56,10 +56,10 @@ In Lesson 01, you will create the first practical course success:
 
 ```text
 webcam 
-  â†’ AI-assisted observations
-    â†’ telemetry 
-       â†’ raw data 
-          â†’ SAS analysis
+  -> AI-assisted observations
+    -> telemetry 
+       -> raw data 
+          -> SAS analysis
 ```
 
 In this course, "telemetry" means structured operational observations or measurements derived from webcams or other IoT/AIoT device input.
@@ -75,7 +75,7 @@ This means:
 ---
 
 
-> **ðŸš€ Windows Users â€“ Important Command Tip**
+> ** Windows Users - Important Command Tip**
 >
 > On many Windows systems, the command `python` may not work immediately.
 > Try `py` instead.
@@ -112,10 +112,10 @@ In Lesson 01, the webcam will recognize simple operational objects and generate 
 
 ```text
 webcam
-  â†’ AI-assisted observations
-    â†’ telemetry
-      â†’ raw data
-        â†’ SAS analysis
+  -> AI-assisted observations
+    -> telemetry
+      -> raw data
+        -> SAS analysis
 ```
 
 The goal is not perfection.
@@ -143,7 +143,7 @@ You can always ask another person or an AI assistant for help if needed.
 
 If you are returning after interruption, continue from this step.
 
-# Setup Check 1 â€” Confirm Python
+# Setup Check 1 - Confirm Python
 
 Open Command Prompt or PowerShell.
 
@@ -188,7 +188,7 @@ Most setup problems are recoverable by fixing the issue and rerunning the step.
 
 ---
 
-# Setup Check 2 â€” Confirm Python Packages
+# Setup Check 2 - Confirm Python Packages
 
 Open Command Prompt or PowerShell.
 
@@ -230,7 +230,7 @@ Python and required packages are operational.
 
 ---
 
-# Setup Check 3 â€” Confirm Webcam Access
+# Setup Check 3 - Confirm Webcam Access
 
 Open the Windows Camera app.
 
@@ -249,7 +249,7 @@ This step is successful if the Windows Camera app displays an image, or if you h
 
 ---
 
-# Setup Check 4 â€” Confirm SAS Access
+# Setup Check 4 - Confirm SAS Access
 
 Open your SAS environment.
 
@@ -277,7 +277,7 @@ This step is successful when the learner can open and access a SAS environment.
 
 ---
 
-# Setup Check 5 â€” Confirm File Awareness
+# Setup Check 5 - Confirm File Awareness
 
 You should know where these course folders are:
 
@@ -398,7 +398,7 @@ Lesson 00 checks your gear and helps you get grounded so you can succeed in the 
 
 Paul McDonald Open Use License (MIT-style)
 
-Â© 2026 Paul McDonald
+Copyright (c) 2026 Paul McDonald
 
 
 ## Visual Brief
@@ -428,4 +428,5 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+
 

@@ -3,7 +3,7 @@
 # AF-002 — IoT/AIoT for SAS Programmers
 ## Lesson 03 — Use Telemetry Operationally
 
-Status: Draft — Survivability Hardened Conversational Prototype  
+Status: Release Candidate A for Version 1.0 - Survivability Hardened Conversational Lesson
 Course Status: Public Beta  
 Instructional Mode: Conversational Instructor-Led Operational Lab
 
@@ -606,19 +606,16 @@ Operational understanding emerges through guided operational interaction.
 
 ---
 
-# File Reference Information
+# Lesson Navigation
 
-Repository:
--agentforge-training
+Previous Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
 
-Suggested Path:
-af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
+Next Lesson:
+https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
 
-Human URL:
-(TBD after repository commit)
-
-Raw URL:
-(TBD after repository commit)
+Return to README:
+https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
 
 ---
 

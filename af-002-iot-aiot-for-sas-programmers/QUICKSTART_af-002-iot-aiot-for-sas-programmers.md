@@ -1,4 +1,4 @@
-﻿# QUICKSTART â€” AF-002 IoT/AIoT for SAS Programmers
+# QUICKSTART - AF-002 IoT/AIoT for SAS Programmers
 
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`
 
@@ -23,7 +23,7 @@ This is the human entry point.
 Your first working success will be:
 
 ```text
-webcam â†’ telemetry â†’ CSV â†’ SAS analysis
+webcam -> telemetry -> CSV -> SAS analysis
 ```
 
 In plain language:
@@ -153,4 +153,5 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+
 

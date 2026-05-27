@@ -1,4 +1,4 @@
-﻿# USER GUIDE â€” AF-002 IoT/AIoT for SAS Programmers
+# USER GUIDE - AF-002 IoT/AIoT for SAS Programmers
 
 ## Purpose
 
@@ -27,7 +27,7 @@ The course proceeds through the lesson files in `/lessons/`.
 The central early success pattern is:
 
 ```text
-webcam â†’ telemetry â†’ CSV â†’ SAS analysis
+webcam -> telemetry -> CSV -> SAS analysis
 ```
 
 This gives the learner a fast operational win and helps reframe IoT as operational analytics data rather than mysterious hardware.
@@ -124,4 +124,5 @@ The course should not drift into:
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
 - Notes: Updated after Claude digital twin survivability test.
+
 

@@ -1,4 +1,4 @@
-﻿# LESSON 01 â€” Simple Video and Images
+# LESSON 01 - Simple Video and Images
 
 Course: AF-002 - IoT and AIoT for SAS Programmers
 
@@ -79,10 +79,10 @@ You are observing how operational events become structured analytical data.
 
 ```text
 visual input
-  â†’ AI-assisted observation
-    â†’ telemetry
-      â†’ raw data
-        â†’ SAS analysis
+  -> AI-assisted observation
+    -> telemetry
+      -> raw data
+        -> SAS analysis
 ```
 
 Operationally, this means:
@@ -291,7 +291,7 @@ The image telemetry script reads sample images from `/media/` and writes an imag
 ---
 
 
-> **ðŸš€ Windows Users â€“ Important Command Tip**
+> ** Windows Users - Important Command Tip**
 >
 > On many Windows systems, the command `python` may not work immediately.
 > Try `py` instead.
@@ -308,7 +308,7 @@ The image telemetry script reads sample images from `/media/` and writes an imag
 
 If you are returning after interruption, continue from this step.
 
-# Step 1 â€” Confirm Python Environment
+# Step 1 - Confirm Python Environment
 
 Most run problems are recoverable by fixing the issue and rerunning the step.
 
@@ -322,7 +322,7 @@ If Lesson 00 completed successfully, continue to Step 2.
 
 ---
 
-# Step 2 â€” Run the Webcam Object Telemetry Script
+# Step 2 - Run the Webcam Object Telemetry Script
 
 From the course folder, run:
 
@@ -353,7 +353,7 @@ If the script uses a different output path, use the path shown by the script.
 
 ---
 
-# Step 3 â€” Confirm the CSV Exists
+# Step 3 - Confirm the CSV Exists
 
 Open the generated CSV file.
 
@@ -380,7 +380,7 @@ The important point is that your webcam activity has become timestamped AI-assis
 
 ---
 
-# Step 4 â€” Run the SAS Import Example
+# Step 4 - Run the SAS Import Example
 
 Open your SAS environment.
 
@@ -472,7 +472,7 @@ For example, on a local Windows PC:
 
 ---
 
-# Step 5 â€” Confirm Visible SAS Output
+# Step 5 - Confirm Visible SAS Output
 
 A successful result should show the telemetry data in SAS.
 
@@ -505,10 +505,10 @@ The goal remains:
 
 ```text
 visual input
-  â†’ AI-assisted observation
-    â†’ telemetry
-      â†’ raw data
-        â†’ SAS analysis
+  -> AI-assisted observation
+    -> telemetry
+      -> raw data
+        -> SAS analysis
 ```
 
 Use the sample images in:
@@ -656,10 +656,10 @@ You have now:
 
 ```text
 visual input
-  â†’ AI-assisted observations
-    â†’ telemetry
-      â†’ raw data
-        â†’ SAS analysis
+  -> AI-assisted observations
+    -> telemetry
+      -> raw data
+        -> SAS analysis
 ```
 
 You do not need a production AI system.
@@ -745,7 +745,7 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Paul McDonald Open Use License (MIT-style)
 
-Â© 2026 Paul McDonald
+Copyright (c) 2026 Paul McDonald
 
 
 ## Checkpoint
@@ -792,4 +792,5 @@ https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/r
 
 Return to README:
 https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+
 

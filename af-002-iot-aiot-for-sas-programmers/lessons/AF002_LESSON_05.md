@@ -834,7 +834,7 @@ You are now contributing operational understanding.
 
 ---
 
-# Development Notes — Prototype v0.1.0
+# Development Notes - Release Candidate A for Version 1.0
 
 Current Status:
 
@@ -856,7 +856,7 @@ Date: 2026-05-26
 
 Notes:
 
-* Prototype draft generated following Lesson 04 stabilization findings.
+* Release Candidate A generated following Lesson 04 stabilization findings.
 * Runtime structure intentionally emphasizes operational realism, SAS reasoning, visible evidence chains, and Human-in-Command continuity.
 * Visual and SAS artifacts intentionally deferred to iterative validation passes.
 
