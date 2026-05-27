@@ -1,4 +1,4 @@
-﻿# AF-002 Corrected Files â€” Change Summary
+# AF-002 Corrected Files — Change Summary
 
 ## Main Fixes
 
@@ -24,8 +24,8 @@
 - Action before theory.
 - Architecture Follows Data.
 - Lightweight survivability.
-- webcam â†’ telemetry â†’ CSV â†’ SAS analysis pattern.
-- â€œIoT stops being mysterious when it becomes timestamped operational data.â€
+- webcam → telemetry → CSV → SAS analysis pattern.
+- “IoT stops being mysterious when it becomes timestamped operational data.”
 
 ## Files Included
 

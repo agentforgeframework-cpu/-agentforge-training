@@ -1,4 +1,4 @@
-﻿# AF-002 AI-Side Hardening Pass Summary
+# AF-002 AI-Side Hardening Pass Summary
 
 ## Purpose
 

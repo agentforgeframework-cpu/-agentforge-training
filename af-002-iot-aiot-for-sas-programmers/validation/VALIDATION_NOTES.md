@@ -1,4 +1,4 @@
-﻿# Validation Notes â€” AF-002
+# Validation Notes — AF-002
 
 ## Purpose
 

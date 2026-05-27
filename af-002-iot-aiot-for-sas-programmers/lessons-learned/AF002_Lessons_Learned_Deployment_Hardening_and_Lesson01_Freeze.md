@@ -138,7 +138,7 @@ Resolution:
 Lesson 01 was expanded with:
 - bounded image telemetry workflow
 - sample Wikimedia image assets
-- MEDIA_ATTRIBUTION.md
+- AF002_MEDIA_ATTRIBUTION.md
 - image telemetry CSV workflow
 - SAS-compatible image ingestion path
 
