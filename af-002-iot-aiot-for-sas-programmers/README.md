@@ -34,9 +34,11 @@ That first success matters.
 
 The normal learner path is:
 
-1. `QUICKSTART_af-002-iot-aiot-for-sas-programmers.md` â€” course initialization and orientation
-2. `SETUP_af-002-iot-aiot-for-sas-programmers.md` â€” environment setup and validation
-3. `AF002_LESSON_00.md` â€” first lesson checkpoint
+1. `SETUP_af-002-iot-aiot-for-sas-programmers.md` - environment setup and validation
+2. `QUICKSTART_af-002-iot-aiot-for-sas-programmers.md` - course initialization and orientation
+3. `AF002_LESSON_00.md` - first lesson checkpoint
+
+AF-002 intentionally uses deterministic GitHub and raw.githubusercontent URL structures to improve survivability, restartability, portability, and clean-room validation across both human and AI-assisted workflows.
 
 ### QUICKSTART
 
