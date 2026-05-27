@@ -478,6 +478,32 @@ reach the dashboard at 08:19,
 and trigger operational response at 08:20.
 ```
 
+## Optional PROC TIMEPLOT Exploration
+
+Optional SAS program:
+
+`AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas`
+
+Raw SAS program:
+`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas`
+
+
+This optional exercise demonstrates how timestamp differences can become visible operationally when viewed across time.
+
+The goal is not advanced SAS programming.
+
+The goal is operational interpretation of:
+- event timing
+- telemetry buffering
+- dashboard refresh timing
+- operational response timing
+
+Learners should compare:
+- when events physically occurred
+- when telemetry became visible
+- when dashboards reflected operational conditions
+- when humans could reasonably react
+
 ---
 
 # SECTION 6 — Emerging Operational Discovery
@@ -819,19 +845,7 @@ Current Status:
 * SAS insertion points identified
 * dashboard placeholders identified
 * artifact milestones identified
-
-Remaining Development Needs:
-
-* dashboard graphics
-* telemetry CSV samples
-* SAS outputs
-* queue visualizations
-* timestamp comparison graphics
-* operational report artifacts
-* meeting runtime refinement
-* pacing validation
-* clean-room survivability testing
-
+* 
 ---
 
 # Development & Test Environment
