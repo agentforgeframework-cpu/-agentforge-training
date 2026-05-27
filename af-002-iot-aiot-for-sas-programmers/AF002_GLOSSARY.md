@@ -1,4 +1,4 @@
-# AF002 Glossary
+# AF-002 Glossary
 
 Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/AF002_GLOSSARY.md`
 
