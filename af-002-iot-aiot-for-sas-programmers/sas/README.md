@@ -1,3 +1,71 @@
+﻿# sas
+
+## README Attributes
+
+Repository Path: /af-002-iot-aiot-for-sas-programmers/sas/README.md
+
+GitHub URL: https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/README.md
+
+Raw URL: https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/README.md
+
+Status: Release Candidate A for Version 1.0
+
+## Purpose
+
+This folder is part of the AF-002 release candidate repository and supports operational survivability, deterministic navigation, and maintainable course delivery.
+
+## Audience
+
+This folder is intended for AF-002 maintainers, reviewers, contributors, and AI-assisted navigation workflows. Learner-facing use depends on the folder contents.
+
+## What Belongs Here
+
+Files and immediate subfolders that directly support the purpose of this folder belong here.
+
+## What Does NOT Belong Here
+
+Temporary files, unapproved generated artifacts, local cache files, and unrelated working drafts should not be stored here.
+
+## File and Immediate Subfolder Inventory
+
+<!-- BEGIN AUTO-INVENTORY -->
+
+| Item | References |
+|---|---|
+| AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas |
+| AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas |
+| AF002_LESSON_04_CONGESTION_INVESTIGATION.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas |
+| AF002_LESSON_04_OPERATIONAL_TELEMETRY.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_OPERATIONAL_TELEMETRY.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_OPERATIONAL_TELEMETRY.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_OPERATIONAL_TELEMETRY.sas |
+| AF002_LESSON_04_SAS_UTILITIES.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_SAS_UTILITIES.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_SAS_UTILITIES.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_SAS_UTILITIES.sas |
+| AF002_LESSON_04_VISUAL_REVIEW.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_VISUAL_REVIEW.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_VISUAL_REVIEW.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_VISUAL_REVIEW.sas |
+| README.md | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/README.md  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/README.md  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/README.md |
+| README.md.bak | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/README.md.bak  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/README.md.bak  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/README.md.bak |
+| sas_import_object_events.sas | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas |
+
+<!-- END AUTO-INVENTORY -->
+
+## Maintenance Notes
+
+- Update this README when files or immediate subfolders are added, renamed, or removed.
+- Keep inventory references deterministic and current.
+- Preserve the auto-inventory markers for future tooling.
+- Keep README files useful for both humans and AI-assisted repository navigation.
+
+## Development & Test Environment
+
+- Platform: Windows / PowerShell
+- Project: AgentForge Framework
+- Course/Tool Context: AF-002 release hardening
+- Date: 2026-05-27
+
+## Operational Guidance
+
+Use this README as a deterministic navigation and restartability surface. Inventory entries should remain accurate and machine-verifiable.
+
+## Legacy Content Preserved During Normalization
+
+The following content existed before README normalization and is preserved for human review.
+
 # Lesson 04 SAS Programs
 
 Place these files in the AF-002 `/sas` folder.
@@ -99,3 +167,4 @@ to investigate operational conditions using SAS?
 ```
 
 If the SAS output does not help answer that question, revise the program or remove it from the Lesson 04 path.
+
