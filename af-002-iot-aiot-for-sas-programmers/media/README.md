@@ -1,21 +1,10 @@
-# Media Folder
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/media/README.md`
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/README.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/README.md
-
-
 # Media
 
 This folder contains instructional and supporting media assets for:
 
 AF-002 — IoT/AIoT for SAS Programmers
 
-The media in this folder is intended to support:
+The media in this folder supports:
 - lesson instruction
 - learner orientation
 - operational visualization
@@ -23,13 +12,16 @@ The media in this folder is intended to support:
 - handbook/PDF production
 - conference presentations
 - public rollout materials
+- clean-room restartability
+- AI-assisted repository navigation
 
-The media folder is intentionally shallow and deterministic to improve:
+The media folder intentionally uses deterministic naming and shallow organization to improve:
 - discoverability
-- restartability
 - portability
+- maintainability
+- operational clarity
 - AI-assisted retrieval
-- clean-room survivability
+- publication survivability
 
 ---
 
@@ -42,42 +34,36 @@ VisualBrief images provide:
 - operational overview
 - instructional framing
 - visual continuity
+- lesson restart assistance
 
-VisualBriefs are intended to help learners quickly understand:
-- the operational environment
-- lesson objectives
-- telemetry flow
-- Human-in-Command reasoning
-
-VisualBrief images supplement lessons but do not replace lesson instruction.
+VisualBriefs supplement lesson instruction but do not replace lesson content.
 
 ---
 
 ## Instructional Operational Images
 
-Additional lesson images may demonstrate:
+Additional instructional visuals demonstrate:
 - telemetry interpretation
 - timestamp reasoning
-- operational ambiguity
 - confidence scoring
+- operational ambiguity
 - coordinate systems
 - event persistence
 - dashboard interpretation
 - workflow reasoning
+- Human-in-Command operational analysis
 
-These images are intentionally operationally grounded rather than cinematic or promotional.
+These visuals intentionally emphasize operational realism rather than cinematic or promotional presentation.
 
 ---
 
-## Sample Input Images
+## Sample Instructional Images
 
 Some images are included as instructional examples for:
 - object detection
 - telemetry generation
 - computer vision workflows
 - SAS telemetry analysis exercises
-
-These images are instructional support artifacts.
 
 ---
 
@@ -86,14 +72,14 @@ These images are instructional support artifacts.
 Media filenames intentionally use:
 - lesson-aligned naming
 - deterministic naming
-- verbose descriptive naming
+- descriptive naming
 
 This improves:
 - operational clarity
 - restartability
-- repository survivability
 - AI-assisted navigation
 - publication consistency
+- survivability during clean-room validation
 
 ---
 
@@ -107,27 +93,84 @@ AF-002 distinguishes between:
 
 Only approved instructional media should appear in:
 - learner-facing lessons
-- public handbook/PDF artifacts
+- handbook/PDF artifacts
 - conference presentation materials
 - operational deployment surfaces
+- public rollout materials
 
 Runtime-generated or experimental visuals should not be introduced into learner-facing instructional workflows without human review and approval.
 
 ---
 
-# Attribution and Sources
+# Attribution and Source Tracking
 
-Media attribution and source tracking are maintained in:
+Media attribution, licensing notes, and source tracking are maintained in:
 
-`AF002_MEDIA_ATTRIBUTION.md`
+`/af-002-iot-aiot-for-sas-programmers/media/AF002_MEDIA_ATTRIBUTION.md`
 
 Whenever practical:
-- source references
+- source URLs
+- attribution information
 - licensing notes
 - generation notes
-- usage guidance
+- operational usage guidance
 
 should be documented there.
+
+---
+
+# File Inventory
+
+## VisualBrief Images
+
+| File | References |
+|---|---|
+| `AF-002_LESSON_00_VISUAL_BRIEF.png` | **Repository Path**  `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_00_VISUAL_BRIEF.png`  <br><br> **GitHub URL**  `https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_00_VISUAL_BRIEF.png`  <br><br> **Raw URL**  `https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_00_VISUAL_BRIEF.png` |
+| `AF-002_LESSON_01_VISUAL_BRIEF.png` | **Repository Path**  `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png`  <br><br> **GitHub URL**  `https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png`  <br><br> **Raw URL**  `https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png` |
+| `AF-002_LESSON_02_VISUAL_BRIEF.png` | **Repository Path**  `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png`  <br><br> **GitHub URL**  `https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png`  <br><br> **Raw URL**  `https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png` |
+| `AF-002_LESSON_03_VISUAL_BRIEF.png` | **Repository Path**  `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_03_VISUAL_BRIEF.png`  <br><br> **GitHub URL**  `https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_03_VISUAL_BRIEF.png`  <br><br> **Raw URL**  `https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_03_VISUAL_BRIEF.png` |
+| `AF-002_LESSON_04_VISUAL_BRIEF.png` | **Repository Path**  `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_VISUAL_BRIEF.png`  <br><br> **GitHub URL**  `https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_VISUAL_BRIEF.png`  <br><br> **Raw URL**  `https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_VISUAL_BRIEF.png` |
+| `AF-002_LESSON_05_VISUAL_BRIEF.png` | **Repository Path**  `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_05_VISUAL_BRIEF.png`  <br><br> **GitHub URL**  `https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_05_VISUAL_BRIEF.png`  <br><br> **Raw URL**  `https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_05_VISUAL_BRIEF.png` |
+
+## Lesson 04 Instructional Operational Images
+
+| File | References |
+|---|---|
+| `AF-002_LESSON_04_BOUNDING_BOXES.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png` |
+| `AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png` |
+| `AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png` |
+| `AF-002_LESSON_04_FLOOR_PLAN.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_FLOOR_PLAN.png` |
+| `AF-002_LESSON_04_FRAME_SEQUENCE.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_FRAME_SEQUENCE.png` |
+| `AF-002_LESSON_04_MORNING_CONGESTION.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_MORNING_CONGESTION.png` |
+| `AF-002_LESSON_04_PERSISTENCE_EXAMPLE.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_PERSISTENCE_EXAMPLE.png` |
+| `AF-002_LESSON_04_REGION_OVERLAY.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_REGION_OVERLAY.png` |
+| `AF-002_LESSON_04_TIMESTAMP_PATHS.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_TIMESTAMP_PATHS.png` |
+| `AF-002_LESSON_04_TIMING_GAP.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_TIMING_GAP.png` |
+| `AF-002_LESSON_04_ZONE_DEFINITION.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_ZONE_DEFINITION.png` |
+
+## Lesson 05 Dashboard and Timestamp Visuals
+
+| File | References |
+|---|---|
+| `AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png` |
+| `AF002_L05_OPERATIONS_DASHBOARD_v0_1.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png` |
+| `AF002_L05_TIMESTAMP_COMPARISON_v0_1.png` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png` |
+
+## Sample Instructional Images
+
+| File | References |
+|---|---|
+| `banana.jpg` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/banana.jpg` |
+| `bridge.jpg` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg` |
+| `dog.jpg` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/dog.jpg` |
+| `mountain.jpg` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg` |
+
+## Documentation
+
+| File | References |
+|---|---|
+| `README.md` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/README.md` |
+| `AF002_MEDIA_ATTRIBUTION.md` | **Repository Path** `/af-002-iot-aiot-for-sas-programmers/media/AF002_MEDIA_ATTRIBUTION.md` |
 
 ---
 
@@ -142,19 +185,3 @@ rather than formal governance doctrine.
 
 These practices may evolve into broader AgentForge standards after additional projects validate their operational usefulness.
 
----
-
-# Development and Test Environment
-
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
-- Date: 2026-05-09
-- Notes: Implemented during AgentForge Step 5 Wave 2 operational rollout for AF-002.
-
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-© 2026 Paul McDonald
