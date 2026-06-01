@@ -77,20 +77,18 @@ AF-002 assumes the learner has access to:
 
 ## Python Setup Check
 
+```text
+WINDOWS USERS — IMPORTANT COMMAND TIP
 
-> ** Windows Users - Important Command Tip**
->
-> On many Windows systems, the command `python` may not work immediately.
-> Try `py` instead.
->
-> ```text
-> py --version
-> py -m pip install ...
-> py -c "import cv2; print('OK')"
-> ```
->
-> Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+On many Windows systems, the command `python` may not work immediately.
+Try `py` instead.
 
+py --version
+py -m pip install ...
+py -c "import cv2; print('OK')"
+
+Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+```
 
 Open Command Prompt or PowerShell.
 
