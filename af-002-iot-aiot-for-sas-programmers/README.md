@@ -121,6 +121,9 @@ The normal learner path is:
 
 AF-002 intentionally uses deterministic GitHub and raw.githubusercontent URL structures to improve survivability, restartability, portability, and clean-room validation across both human and AI-assisted workflows.
 
+Some AI environments may occasionally retrieve GitHub content inconsistently or partially. When troubleshooting, treat the browser view and local files as the authoritative source of truth.
+
+
 ### QUICKSTART
 
 GitHub URL:

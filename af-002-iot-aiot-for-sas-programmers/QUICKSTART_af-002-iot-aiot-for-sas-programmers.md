@@ -130,13 +130,47 @@ If setup or validation problems occur, copying and pasting terminal, PowerShell,
 
 ---
 
+## AI Retrieval Fallback Guidance
+
+Some AI environments may occasionally fail to retrieve GitHub files correctly, retrieve outdated content, or partially load repository files.
+
+If an AI assistant appears confused about repository structure, lesson order, or file contents:
+
+1. Open the GitHub file directly in your normal web browser.  The standard GitHub browser URLs are often more reliable than raw GitHub URLs in some AI environments.
+2. Verify the file contents yourself.
+3. Copy and paste the file text into the AI conversation if needed.
+4. Treat the browser and local files as the authoritative source of truth.
+
+This behavior is usually caused by AI runtime or retrieval-layer limitations rather than problems with the AF-002 repository itself.
+
+---
+
+## Optional Local Working Copy (Recommended)
+
+For the most stable experience:
+
+1. Open the AF-002 repository in your browser.
+2. Download the repository ZIP or the lesson files you are actively using.
+3. Work from local copies whenever practical.
+4. Upload or paste local files into your AI assistant if retrieval issues occur.
+
+This creates a deterministic working set and reduces dependence on AI retrieval behavior, cache state, or runtime differences between AI platforms.
+
+A good SAS programmer should always be able to continue operating from:
+
+- the browser,
+- the local files,
+- the SAS logs,
+- and the lesson content itself, even if AI retrieval becomes unreliable.
+
+---
+
 ## Development and Test Environment
 
 - Platform: ChatGPT Web
 - Model: GPT-5.5 Thinking
 - Date: 2026-05-09
 - Notes: Updated after Claude digital twin survivability test.
-
 
 ---
 
