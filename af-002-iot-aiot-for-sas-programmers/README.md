@@ -109,20 +109,66 @@ That first success matters.
 
 ---
 
-## Start Here
+## Startup & Recovery
 
-`README.md` is the general reference file. You can return to it anytime for orientation, course structure, and file locations.
+`README.md` is the authoritative startup, navigation, and recovery surface for AF-002.
 
-The normal learner path is:
+Return to the repository root `README.md` anytime for:
 
-1. `SETUP_af-002-iot-aiot-for-sas-programmers.md` - environment setup and validation
-2. `QUICKSTART_af-002-iot-aiot-for-sas-programmers.md` - course initialization and orientation
-3. `AF002_LESSON_00.md` - first lesson checkpoint
+* orientation
+* lesson sequencing
+* operational recovery
+* deterministic navigation
+* authoritative file references
 
-AF-002 intentionally uses deterministic GitHub and raw.githubusercontent URL structures to improve survivability, restartability, portability, and clean-room validation across both human and AI-assisted workflows.
+AF-002 intentionally uses deterministic GitHub and `raw.githubusercontent` URL structures to improve:
+
+* survivability
+* restartability
+* portability
+* clean-room validation
+* human and AI-assisted navigation workflows
 
 Some AI environments may occasionally retrieve GitHub content inconsistently or partially. When troubleshooting, treat the browser view and local files as the authoritative source of truth.
 
+---
+
+### First-Time Learners
+
+The recommended learner startup sequence is:
+
+1. Complete SETUP first
+   (`SETUP_af-002-iot-aiot-for-sas-programmers.md`)
+
+2. Follow QUICKSTART
+   (`QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`)
+
+3. Begin with Lesson 00
+   (`lessons/AF002_LESSON_00.md`)
+
+---
+
+### Returning Learners
+
+1. Resume from your most recent lesson
+2. Return to QUICKSTART if orientation becomes unclear
+3. Return to `README.md` if navigation or recovery becomes unclear
+
+---
+
+### AI / Machine Navigation
+
+1. Begin with `README.md`
+2. Use linked SETUP and QUICKSTART documents for operational detail
+3. Prefer repository files, browser view, and local files as authoritative references
+4. If startup or recovery fails, direct the user to:
+   `QUICKSTART_af-002-iot-aiot-for-sas-programmers.md`
+5. If startup or recovery remains unsuccessful, return to `README.md` and use the external support PDF for manual operational recovery guidance
+
+External Support PDF (Google Drive):
+https://drive.google.com/file/d/1K4EbxntIhcrrTsupDRhDkwKAv7pDQ69k/view
+
+---
 
 ### QUICKSTART
 
@@ -134,6 +180,8 @@ Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
 
+---
+
 ### SETUP
 
 GitHub URL:
@@ -144,6 +192,8 @@ Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
 
+---
+
 ### Lesson 00
 
 GitHub URL:
@@ -153,6 +203,15 @@ https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002
 Raw URL:
 
 https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
+
+---
+
+### Recovery Guidance
+
+* Prefer shallow navigation paths
+* Use deterministic filenames when possible
+* Restart from `README.md` if orientation or retrieval becomes unclear
+* Graceful degradation is expected and supported operationally
 
 ---
 
