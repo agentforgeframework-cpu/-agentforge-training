@@ -165,6 +165,30 @@ A good SAS programmer should always be able to continue operating from:
 
 ---
 
+## Canonical Lesson Execution
+
+AF-002 uses prepared repository artifacts.
+
+When guiding a learner, use repository-provided lesson files, Python scripts, SAS programs, data files, and media assets whenever available.
+
+Do not generate replacement lesson code unless recovery is required.
+
+The first hands-on telemetry/SAS workflow uses:
+
+- `python/webcam_object_telemetry.py`
+- `python/image_object_telemetry.py`
+- `sas/sas_import_object_events.sas`
+- `data/webcam_object_events.csv`
+- `data/webcam_object_events_sample.csv`
+
+Primary rule:
+
+```text
+canonical-first
+adaptive-recovery-second
+
+---
+
 ## Development and Test Environment
 
 - Platform: ChatGPT Web

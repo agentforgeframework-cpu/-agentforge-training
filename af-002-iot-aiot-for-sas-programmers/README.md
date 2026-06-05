@@ -75,6 +75,28 @@ Temporary files, unapproved generated artifacts, local cache files, and unrelate
 
 Use this README as a deterministic navigation and restartability surface. Inventory entries should remain accurate and machine-verifiable.
 
+## Canonical Lesson Execution
+
+AF-002 uses prepared repository artifacts.
+
+When guiding a learner, use repository-provided lesson files, Python scripts, SAS programs, data files, and media assets whenever available.
+
+Do not generate replacement lesson code unless recovery is required.
+
+The first hands-on telemetry/SAS workflow uses:
+
+- `python/webcam_object_telemetry.py`
+- `python/image_object_telemetry.py`
+- `sas/sas_import_object_events.sas`
+- `data/webcam_object_events.csv`
+- `data/webcam_object_events_sample.csv`
+
+Primary rule:
+
+```text
+canonical-first
+adaptive-recovery-second
+
 ## Legacy Content Preserved During Normalization
 
 The following content existed before README normalization and is preserved for human review.
