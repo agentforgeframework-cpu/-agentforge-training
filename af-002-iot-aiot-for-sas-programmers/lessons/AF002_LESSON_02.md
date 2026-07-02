@@ -1,56 +1,48 @@
-# LESSON 02 - Event Streams and Real-Time Thinking
+# Lesson 02 — Understand Event Streams
 
-Course: AF-002 - IoT and AIoT for SAS Programmers
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md`
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md  
 
 ---
 
-# Lesson Purpose
+# Purpose
 
-Help the learner understand that continuously arriving data changes how some analyses are performed, and help the learner feel confident working with that operational reality in SAS.
+Lesson 02 introduces event streams and real-time operational thinking.
 
-This lesson uses standardized teaching data instead of live camera input so the examples are predictable, repeatable, and easy to test.
+The learner will use standardized SAS data to:
 
-In this lesson, you will:
+- create a small operational event stream
+- simulate a newly arriving event
+- update stored analytical state
+- compare incremental updates with full recalculation
+- distinguish cumulative streams from rolling windows
+- visualize operational change over time
 
-- create a small operational event stream in SAS
-- simulate new events arriving
-- compare incremental updates against full recalculation
-- visualize changing operational behavior over time
-
-You will run SAS code throughout the lesson and paste results into the AI assistant when prompted.
+No live camera, Python program, cloud service, or streaming platform is required for the main lesson path.
 
 ---
 
 # AI Assistant Guidance
 
-If you are assisting a learner with this lesson:
+When assisting with this lesson:
 
-- keep the learner focused on operational thinking
-- do not expand into Kafka, cloud streaming, distributed systems, or enterprise architecture
-- do not expand into AI decision loops; that belongs in Lesson 03
-- do not expand into Architecture Follows Data; that belongs in Lesson 04
-- keep examples SAS-centered and DATA step friendly
-- use the standardized teaching data unless the learner specifically asks to connect back to Lesson 01 telemetry
+- keep the examples SAS-centered
+- use the standardized teaching data
+- do not introduce Kafka, cloud streaming, or distributed architecture
+- do not introduce automated decision loops; those belong later in the course
 - explain event streams as ordered operational activity over time
-- explain real-time thinking as reasoning about what is happening now and what changed
-- emphasize visible state, restartability, and confidence
-- move forward only after the learner can see the SAS output
-- verify referenced files and URLs before relying on them
-- do not assume previously viewed artifacts remain current
-- if the learner pastes SAS output, use the visible output as the operational source of truth
-
+- explain real-time thinking as reasoning about what changed and what matters now
+- use visible SAS output as the operational source of truth
+- move forward only after the learner confirms the expected output
 
 The goal is not to teach streaming infrastructure.
 
-The goal is to show that continuously arriving data can change how analysis should be handled.
+The goal is to show how continuously arriving data changes analytical handling.
 
 ---
 
@@ -58,205 +50,116 @@ The goal is to show that continuously arriving data can change how analysis shou
 
 By the end of this lesson, the learner should be able to:
 
-- explain what an event stream is in practical terms
-- explain what real-time thinking means operationally
-- recognize why timestamps matter
-- distinguish cumulative event streams from rolling event windows
-- identify which summary results can be updated from a new record
-- identify which analytical results may require recalculation
-- use SAS to inspect, summarize, and update simple event data
-- recognize compute-savings opportunities from incremental update logic
-- feel confident reasoning about continuously arriving operational data in SAS
-
-The lesson begins with simple operational concepts and gradually moves toward stream-aware SAS reasoning.
+- explain an event stream in practical terms
+- explain real-time operational thinking
+- describe why timestamps matter
+- distinguish cumulative streams from rolling windows
+- identify results that can be updated incrementally
+- identify results that require more state or full recalculation
+- use SAS to inspect and update simple event data
+- validate incremental logic against full recalculation
 
 ---
 
 # Core Idea
 
-Lesson 01 showed this pattern:
+Lesson 01 established this workflow:
 
 ```text
-visual input -> telemetry -> CSV -> SAS analysis
+visual input
+    -> telemetry
+        -> CSV data
+            -> SAS analysis
 ```
 
-Lesson 02 adds time and change:
+Lesson 02 adds continuing arrival and change:
 
 ```text
-new event arrives -> operational state changes -> SAS analysis may need to update
+new event arrives
+    -> operational state changes
+        -> analysis may need to update
 ```
 
-The important question becomes:
+The central question is:
 
 ```text
 Can this result be safely updated from the new event,
-or does the analysis need to be recalculated from the broader data?
+or must it be recalculated from broader data?
 ```
-
-That question is the heart of this lesson.
-
-You do not need streaming infrastructure to understand this operational thinking.
 
 ---
 
-# EDGE Structure
-
-This lesson follows the EDGE teaching pattern:
-
-```text
-Explain -> Demonstrate -> Guide -> Enable
-```
-
-- Explain: what event streams and real-time thinking mean
-- Demonstrate: show small SAS examples using standardized data
-- Guide: walk through which results can and cannot be updated safely
-- Enable: give the learner a small independent exercise
-
-You are not expected to memorize terminology.
-
-The goal is to build operational confidence through visible SAS behavior.
-
----
-
-# Required Supporting Files
-
-This first version of Lesson 02 is self-contained.
-
-The teaching data is included inside the SAS code blocks.
-
-No live webcam, Python script, cloud service, or streaming platform is required.
-
-Optional tie-back files from Lesson 01:
-
-```text
-data/webcam_object_events.csv
-data/webcam_object_events_sample.csv
-data/image_object_events.csv
-```
-
-Use those only after the learner understands the standardized example.
-
-This lesson intentionally starts small and controlled so the operational behavior is easy to see and verify.
-
----
-
-# Local File Map
-
-This lesson primarily uses:
-
-```text
-lessons/AF002_LESSON_02.md
-```
-
-Optional tie-back to Lesson 01 may use:
-
-```text
-data/webcam_object_events.csv
-data/webcam_object_events_sample.csv
-data/image_object_events.csv
-```
-
-If the learner creates a SAS program while working through this lesson, a reasonable local filename is:
-
-```text
-sas/sas_lesson02_event_streams.sas
-```
-
-That file is optional in this first version.
-
----
-
-# Success Target
-
-You are successful when you can say:
-
-> I understand that continuously arriving data changes how some analyses are performed, and I can reason about that operational reality in SAS.
-
----
-
-# SECTION 1 - Explain: What Is an Event Stream?
+# What Is an Event Stream?
 
 An event stream is a sequence of operational events arriving over time.
 
-An event might be:
+An event might represent:
 
 - a sensor reading
-- a webcam brightness reading
 - a badge scan
 - a door opening
-- a machine status update
-- a server CPU measurement
+- a machine status change
+- a server measurement
+- an object detection
 - a temperature reading
-- a motion detection value
 
 In a static dataset, the rows already exist.
 
-In an event stream, the rows keep arriving.
+In an event stream, new rows continue to arrive.
 
-That difference matters.
-
-A normal dataset often asks:
+A static analysis often asks:
 
 ```text
 What happened?
 ```
 
-An event stream often asks:
+An operational stream may ask:
 
 ```text
 What is happening now?
-What just changed?
+What changed?
 Is the current state still acceptable?
 ```
 
-Operational thinking begins when the data is still changing.
-
 ---
 
-# SECTION 2 - Explain: What Is Real-Time Thinking?
+# What Is Real-Time Thinking?
 
 Real-time thinking does not always mean instantaneous processing.
 
-In this lesson, real-time thinking means:
+In this lesson, it means:
 
 ```text
 reasoning about data while operational conditions are still changing
 ```
 
-For a SAS programmer, this means asking practical questions:
+For a SAS programmer, that means asking:
 
-- Did a new record arrive?
-- What time did it arrive?
-- Does the new record change the current state?
-- Can the current summary be updated safely?
-- Does this require a full recalculation?
-- Is the data cumulative, or do old records expire?
-
-This is not a replacement for traditional SAS analysis.
-
-It is a different operational situation.
-
-Timestamps indicate the order of events, which in turn helps understand the change in operational states.
+- Did a new event arrive?
+- When did it arrive?
+- What state did it change?
+- Can the current result be updated safely?
+- Is full recalculation required?
+- Do older records remain relevant?
+- Is the data cumulative, or does it use a rolling window?
 
 ---
 
-# SECTION 3 - Why Timestamps Matter
+# Why Timestamps Matter
 
-Without time, rows are just records.
+Without time, rows are records.
 
-With time, rows become events.
+With time, rows become ordered events.
 
-SAS has three important time-related value types:
+SAS uses three primary time-related value types:
 
-| Concept | SAS meaning | Practical use |
-|---|---:|---|
-| Date | Days since 01JAN1960 | calendar date |
-| Time | Seconds since midnight | time of day |
-| Datetime | Seconds since 01JAN1960:00:00:00 | event timestamp |
+| Concept  |               SAS representation | Practical use        |
+| -------- | -------------------------------: | -------------------- |
+| Date     |             Days since 01JAN1960 | Calendar date        |
+| Time     |           Seconds since midnight | Time of day          |
+| Datetime | Seconds since 01JAN1960:00:00:00 | Full event timestamp |
 
-For event streams, datetime values are usually the most useful because they preserve both date and time.
-
-Common SAS formats include:
+Common formats include:
 
 ```sas
 format event_dttm datetime19.;
@@ -264,29 +167,13 @@ format event_date date9.;
 format event_time time8.;
 ```
 
-Operational point:
-
-```text
-The timestamp tells SAS the event order.
-```
-
-That order is what allows the SAS analyst to reason about recent activity, stale data, rolling windows, and current state.
-
-Next, you will create a small standardized event stream in SAS and begin working with operational event data directly.
+The timestamp establishes event order and supports reasoning about recency, staleness, rolling windows, and current state.
 
 ---
 
-# SECTION 4 - Demonstrate: Create Standard Event Data
+# Create Standard Event Data
 
-This teaching data represents simple environmental sensor readings.
-
-It is intentionally small.
-
-It is not meant to be impressive.
-
-It is meant to be clear.
-
-Run this SAS code:
+Run:
 
 ```sas
 title "AF-002 Lesson 02 - Standard Event Stream Data";
@@ -294,7 +181,16 @@ title "AF-002 Lesson 02 - Standard Event Stream Data";
 data work.sensor_events;
    length sensor_id $12 location $12 status $8;
    format event_dttm datetime19.;
-   input event_id event_dttm :anydtdtm. sensor_id $ location $ reading_value status $;
+
+   input
+      event_id
+      event_dttm :anydtdtm.
+      sensor_id $
+      location $
+      reading_value
+      status $
+   ;
+
    datalines;
 1 12MAY2026:09:00:00 SENSOR_A LAB 71.2 OK
 2 12MAY2026:09:01:00 SENSOR_A LAB 71.5 OK
@@ -316,21 +212,21 @@ run;
 title;
 ```
 
-Expected visible result:
+Expected result:
 
 - 10 event rows
 - ordered datetime values
 - three sensors
-- reading values
-- OK and WARN statuses
+- numeric readings
+- `OK` and `WARN` statuses
 
-If you can see the rows, it is safe to continue.
+Continue when the rows are visible.
 
 ---
 
-# SECTION 5 - Demonstrate: Basic Frequency State
+# Create Frequency State
 
-Now summarize the current event state using PROC FREQ.
+Run:
 
 ```sas
 title "Current Frequency State";
@@ -341,40 +237,25 @@ proc freq data=work.sensor_events noprint;
 run;
 
 proc print data=work.status_freq;
-   title "Status Frequency Output Stored as a SAS Dataset";
+   title "Status Frequency State";
 run;
 
 proc print data=work.sensor_freq;
-   title "Sensor Frequency Output Stored as a SAS Dataset";
+   title "Sensor Frequency State";
 run;
 
 title;
 ```
 
-Important point:
+The resulting datasets represent stored analytical state.
 
-```text
-PROC FREQ output can become current operational state.
-```
-
-If one new record arrives, some parts of that state can often be updated without rerunning the full original analysis.
-
-For example:
-
-```text
-A new WARN event arrives.
-Increase WARN count by 1.
-Increase total count by 1.
-Recalculate percentages.
-```
-
-That is stream-friendly thinking.
+When one new event arrives, some values can be updated without rerunning the complete original analysis.
 
 ---
 
-# SECTION 6 - Demonstrate: Basic Summary State
+# Create Summary State
 
-Now summarize numeric readings using PROC SUMMARY.
+Run:
 
 ```sas
 title "Current Summary State";
@@ -382,6 +263,7 @@ title "Current Summary State";
 proc summary data=work.sensor_events nway;
    class sensor_id;
    var reading_value;
+
    output out=work.sensor_summary(drop=_type_ _freq_)
       n=N
       min=Min_Value
@@ -391,41 +273,40 @@ proc summary data=work.sensor_events nway;
 run;
 
 proc print data=work.sensor_summary;
-   title "PROC SUMMARY Output Stored as a SAS Dataset";
+   title "Sensor Summary State";
 run;
 
 title;
 ```
 
-This output is also operational state.
-
-If a new reading arrives for an existing sensor, SAS can update several values:
+If a new reading arrives for an existing sensor, these values can often be updated from stored state:
 
 - N
 - Sum
 - Min
 - Max
-- Mean, if N and Sum are preserved
-
-That can save compute.
-
-The system does not always need to rerun every analysis from the beginning.
+- Mean, when N and Sum are preserved
 
 ---
 
-# SECTION 7 - Demonstrate: One New Event Arrives
+# Simulate a New Event
 
-Now simulate one new event.
-
-This is not live streaming infrastructure.
-
-It is a controlled teaching example showing what changes when a new event arrives.
+Run:
 
 ```sas
 data work.new_event;
    length sensor_id $12 location $12 status $8;
    format event_dttm datetime19.;
-   input event_id event_dttm :anydtdtm. sensor_id $ location $ reading_value status $;
+
+   input
+      event_id
+      event_dttm :anydtdtm.
+      sensor_id $
+      location $
+      reading_value
+      status $
+   ;
+
    datalines;
 11 12MAY2026:09:10:00 SENSOR_A LAB 81.4 WARN
 ;
@@ -438,41 +319,25 @@ run;
 title;
 ```
 
-Expected visible result:
+Expected result:
 
 ```text
-one new SENSOR_A event with WARN status and reading_value 81.4
+One new SENSOR_A event with WARN status and reading value 81.4
 ```
-
-This is the key moment.
-
-A continuously arriving record may change the operational state.
 
 ---
 
-# SECTION 8 - Guide: Update Frequency State from the New Event
+# Update Frequency State
 
-The new event has:
+The new event adds one `WARN` record and increases the total number of events by one.
 
-```text
-status = WARN
-```
-
-That means the WARN count should increase by 1.
-
-The total count also increases by 1.
-
-The percentages need to be recalculated.
-
-Run this code:
+Run:
 
 ```sas
 proc sql noprint;
    select count(*) into :old_total trimmed
    from work.sensor_events;
-quit;
 
-proc sql noprint;
    select count(*) into :new_total trimmed
    from work.new_event;
 quit;
@@ -481,53 +346,49 @@ quit;
 
 data work.status_freq_updated;
    set work.status_freq;
-   length status $8;
 
-   if status = 'WARN' then count = count + 1;
+   if status = "WARN" then count = count + 1;
 
    percent = count / &updated_total * 100;
 run;
 
 proc print data=work.status_freq_updated;
-   title "Updated Status Frequency State After One New Event";
+   title "Updated Status Frequency State";
 run;
 
 title;
 ```
 
-What just happened?
+This demonstrates an incrementally maintainable result:
 
-- SAS used the stored PROC FREQ output as current state.
-- SAS applied one new event.
-- SAS updated the WARN count.
-- SAS recalculated the percent values.
-
-This is an example of an incrementally maintainable result.
+- the `WARN` count increases
+- the total increases
+- percentages are recalculated
 
 ---
 
-# SECTION 9 - Guide: Update Summary State from the New Event
+# Update Summary State
 
-The new event has:
+The new event belongs to `SENSOR_A` and has a reading of `81.4`.
 
-```text
-sensor_id = SENSOR_A
-reading_value = 81.4
-```
-
-For SENSOR_A, the current summary can be updated.
-
-Run this code:
+Run:
 
 ```sas
 data work.sensor_summary_updated;
-   if _n_ = 1 then set work.new_event(keep=sensor_id reading_value rename=(sensor_id=new_sensor_id reading_value=new_value));
+   if _n_ = 1 then
+      set work.new_event(
+         keep=sensor_id reading_value
+         rename=(
+            sensor_id=new_sensor_id
+            reading_value=new_value
+         )
+      );
 
    set work.sensor_summary;
 
    if sensor_id = new_sensor_id then do;
-      N + 1;
-      Sum_Value + new_value;
+      N = N + 1;
+      Sum_Value = Sum_Value + new_value;
       Min_Value = min(Min_Value, new_value);
       Max_Value = max(Max_Value, new_value);
       Mean_Value = Sum_Value / N;
@@ -537,136 +398,112 @@ data work.sensor_summary_updated;
 run;
 
 proc print data=work.sensor_summary_updated;
-   title "Updated Sensor Summary State After One New Event";
+   title "Updated Sensor Summary State";
 run;
 
 title;
 ```
 
-What just happened?
+For `SENSOR_A`:
 
-- N increased by 1 for SENSOR_A.
-- Sum increased by 81.4.
-- Min stayed the same unless the new value was lower.
-- Max changed if the new value was higher.
-- Mean was recalculated from updated Sum and N.
-
-This is still ordinary SAS thinking.
-
-The operational context changed, but the programming ideas are familiar.
+- N increases by one
+- Sum increases by `81.4`
+- Min remains or changes appropriately
+- Max updates if needed
+- Mean is recalculated from the updated Sum and N
 
 ---
 
-# SECTION 10 - Guide: Which Results Can Be Updated?
-
-Not all analytical results behave the same way when one new record arrives.
-
-Some results can be safely updated from stored state.
-
-Some results require more stored detail.
-
-Some results should be recalculated from the broader data.
+# Which Results Can Be Updated?
 
 ## Often Incrementally Maintainable
 
-These can often be updated safely when the right supporting state is stored:
+These can often be updated when the necessary supporting state is stored:
 
 - count
 - total N
 - sum
 - min
 - max
-- mean, if N and sum are stored
+- mean, when N and Sum are stored
 - simple frequency counts
 - percentages based on updated counts
-- threshold crossing counts
-- latest event timestamp
+- threshold counts
+- latest timestamp
 
-## Requires Caution or More Stored State
+## Requires More State or Caution
 
-These may be possible, but only if enough supporting detail is preserved:
+These may be maintainable only when additional detail is preserved:
 
-- mode
 - median
+- mode
 - percentiles
+- distinct counts
+- rolling-window summaries
 - skewness
 - kurtosis
-- rolling-window summaries
-- distinct counts
-- complex quality metrics
+- complex data-quality measures
 
 ## Often Recalculated or Handled by Specialized Methods
 
-These usually require broader recomputation or specialized incremental algorithms:
+These typically require broader recomputation or specialized incremental algorithms:
 
 - regression models
 - clustering
 - statistical tests
-- many model-fit statistics
-- global optimization results
+- model-fit statistics
+- global optimization
 - full distributional analysis
 
-Practical rule:
+Operational rule:
 
 ```text
-If the stored state contains enough information to update the result safely,
-incremental updating may be appropriate.
-
-If the stored state does not contain enough information,
-recalculate from the needed data.
+Update what the stored state supports safely.
+Recalculate what the stored state cannot support.
 ```
 
 ---
 
-# SECTION 11 - Guide: Cumulative Streams vs Rolling Windows
+# Cumulative Streams and Rolling Windows
 
-So far, the example has treated data as cumulative.
-
-That means:
+The current example is cumulative:
 
 ```text
-new event arrives -> add it to the current state
+new event arrives
+    -> add it to the current state
 ```
 
-But many operational systems have staleness.
+Many operational systems use rolling windows instead.
 
-A record might only matter for:
+Examples include:
 
-- the last 5 minutes
+- the last five minutes
 - the last hour
 - the current shift
 - the current production run
 - the current day
 
-That changes the work.
-
-A rolling window behaves more like this:
+A rolling window behaves like this:
 
 ```text
-new event arrives -> add it
-old event expires -> remove it or recompute the active window
+new event arrives
+    -> add it
+
+old event expires
+    -> remove it or recalculate the active window
 ```
 
-That is different from simple cumulative updating.
+Rolling windows require enough retained detail to identify and remove expired records, or they require recalculation from the active event data.
 
-If records fall out of interest after one hour, the system must know which records are still active.
-
-That usually means one of two things:
-
-1. Keep enough detail to remove expired records safely.
-2. Recalculate the current window from the detailed event data.
-
-This is an important operational design choice.
-
-Do not treat every stream as cumulative.
+Do not assume every stream is cumulative.
 
 ---
 
-# SECTION 12 - Demonstrate: Full Recalculation Check
+# Validate with Full Recalculation
 
-Incremental updates are useful, but they should be validated.
+Incremental logic should be checked against full recalculation.
 
-Now append the new event to the original data and rerun PROC FREQ and PROC SUMMARY.
+Run:
 
 ```sas
 data work.sensor_events_plus_one;
@@ -682,6 +519,7 @@ run;
 proc summary data=work.sensor_events_plus_one nway;
    class sensor_id;
    var reading_value;
+
    output out=work.sensor_summary_recalculated(drop=_type_ _freq_)
       n=N
       min=Min_Value
@@ -691,32 +529,37 @@ proc summary data=work.sensor_events_plus_one nway;
 run;
 
 proc print data=work.sensor_summary_recalculated;
-   title "Full PROC SUMMARY Recalculation After New Event";
+   title "Recalculated Sensor Summary";
 run;
 
 title;
 ```
 
-Compare the recalculated summary with the updated summary.
-
-Expected result:
+Compare:
 
 ```text
-For this simple example, the updated state and recalculated state should agree.
+work.sensor_summary_updated
 ```
+
+with:
+
+```text
+work.sensor_summary_recalculated
+```
+
+For this example, the values should agree.
 
 Operational lesson:
 
 ```text
-Incremental update logic should be tested against full recalculation.
+Incremental update logic earns confidence through validation.
 ```
-
-When the result matters, compare incremental logic against full recalculation periodically.
-That is how confidence is earned.
 
 ---
 
-# SECTION 13 - Demonstrate: Visualize the Event Stream
+# Visualize the Stream
+
+Run:
 
 ```sas
 title "Sensor Readings Over Time";
@@ -728,291 +571,164 @@ run;
 title;
 ```
 
-The graph makes operational behavior easier to see.
+The graph makes changing operational behavior visible.
 
-SENSOR_A trends upward over time.
-
-The WARN condition is no longer just a row in a table.
-
-It becomes visible operational behavior.
+`SENSOR_A` trends upward and enters repeated `WARN` conditions.
 
 ---
 
-# SECTION 14 - Optional Tie-Back to Lesson 01 Telemetry
+# Tie Back to Lesson 01
 
-Lesson 01 generated visual telemetry.
-
-That telemetry may contain fields such as:
+Lesson 01 telemetry contains fields such as:
 
 ```text
 timestamp
 frame_number
-width
-height
-mean_brightness
+object_detected
+confidence
+detection_count
+source
 ```
 
-The same thinking applies.
+The same stream-aware thinking applies:
 
-For webcam telemetry:
+- total event count can be updated
+- object frequencies can be updated
+- latest timestamp can be updated
+- confidence sum and N can support an updated mean
+- min and max confidence can be updated
+- median confidence usually cannot be updated safely from simple summary state alone
 
-- frame count can be updated incrementally
-- latest timestamp can be updated incrementally
-- min brightness can be updated incrementally
-- max brightness can be updated incrementally
-- mean brightness can be updated if N and sum are stored
-- median brightness usually cannot be updated safely from only N, min, max, sum, and mean
-
-This is the bridge from Lesson 01 to Lesson 02:
-
-```text
 Lesson 01 showed that telemetry exists.
-Lesson 02 shows that continuously arriving telemetry changes how analysis should be handled.
-```
 
-Do not spend much time here unless the learner is ready.
-
-The standardized teaching data is the main path for this lesson.
+Lesson 02 shows that continuing telemetry changes how analysis may be maintained.
 
 ---
 
-# SECTION 15 - Enable: Learner Exercise
+# Learner Exercise
 
-Use the same original data.
-
-Create this new event:
+Create a second new event:
 
 ```text
 12 12MAY2026:09:11:00 SENSOR_D STORAGE 55.0 OK
 ```
 
-This event introduces a new sensor.
+Complete these tasks:
 
-Your task:
-
-1. Add the new event as `work.new_event_2`.
+1. Create the event as `work.new_event_2`.
 2. Update the sensor frequency state.
-3. Decide whether the summary state can be updated directly.
-4. If needed, add a new row for SENSOR_D in the summary state.
-5. Rerun the full recalculation to check your work.
+3. Determine whether the existing summary can be updated directly.
+4. Add a new summary row for `SENSOR_D` if needed.
+5. Append the event to the detailed data.
+6. Perform a full recalculation.
+7. Compare the incremental and recalculated results.
 
-Questions to answer:
+Answer:
 
-- What changed because SENSOR_D is new?
+- What changed because `SENSOR_D` was new?
 - Which results were easy to update?
-- Which results required special handling?
-- Did the incremental update match the full recalculation?
-
-This exercise is intentionally small.
-
-The goal is confidence, not complexity.
-
----
-
-# SECTION 16 - Visible Success Checklist
-
-You should now have or be able to see:
-
-- the original standardized event rows
-- PROC FREQ output stored as SAS datasets
-- PROC SUMMARY output stored as a SAS dataset
-- one new event
-- updated frequency state
-- updated summary state
-- full recalculation output
-- agreement between simple incremental logic and full recalculation for this example
-
-If you can see those outputs, Lesson 02 has achieved its operational purpose.
+- Which required special handling?
+- Did the incremental result match full recalculation?
 
 ---
 
 # Troubleshooting
 
-## SAS datetime values do not look readable
+## Datetime values are not readable
 
-Add or confirm this format:
+Apply:
 
 ```sas
 format event_dttm datetime19.;
 ```
 
-## The new event does not update the expected row
+## The expected row does not update
 
 Check spelling and capitalization.
-
-For example:
 
 ```text
 SENSOR_A
 ```
 
-is not the same as:
+is different from:
 
 ```text
 Sensor_A
 ```
 
-## Percentages do not add up as expected
+## Percentages are incorrect
 
-Confirm the total record count.
+Confirm that the updated total is 11 after adding one event to the original 10.
 
-After adding one new event to 10 existing events, the updated total should be:
+## Mean is incorrect
 
-```text
-11
-```
+Confirm that both N and Sum are stored and updated before recalculating Mean.
 
-## Mean does not update correctly
+## Median or mode appears easy to update
 
-Confirm that both N and Sum are stored.
+Pause and determine whether the retained state actually contains enough information.
 
-Mean can be recalculated from:
+Do not infer maintainability from convenience.
 
-```text
-updated sum / updated N
-```
+---
 
-## Median or mode seems tempting to update
+# Lesson 02 Success
 
-Pause.
+Lesson 02 is complete when you can say:
 
-Median and mode may require more detail than the stored summary contains.
+> I used SAS to compare incremental update logic with full recalculation for continuously arriving event data.
 
-This is the point of the lesson.
+You should be able to explain:
 
-Some results are stream-friendly.
-
-Some are not safe to update from simple summary state alone.
+- what an event stream is
+- why timestamps matter
+- which summaries are easily maintained
+- why rolling windows are different
+- why incremental results must be validated
 
 ---
 
 # Restart Checkpoint
 
-If you stop here, restart later by opening this lesson file and rerunning:
+When returning after an interruption, rerun these sections:
 
-1. Section 4 - create `work.sensor_events`
-2. Section 5 - create frequency state
-3. Section 6 - create summary state
-4. Section 7 - create `work.new_event`
+1. Create `work.sensor_events`.
+2. Create `work.status_freq` and `work.sensor_freq`.
+3. Create `work.sensor_summary`.
+4. Create `work.new_event`.
 
-After those four sections, you can continue with the update examples.
+Then continue with the update and validation sections.
 
-No external files are required for the main path of this lesson.
-
----
-
-# First Success
-
-You are successful when you can say:
-
-> I used SAS to compare full recalculation with incremental update thinking for continuously arriving event data.
+No external files are required for the main lesson path.
 
 ---
 
 # What You Just Did
 
-You treated event data as operational state.
+You treated event data as changing operational state.
 
-You stored PROC FREQ and PROC SUMMARY output as SAS datasets.
+You stored frequency and summary results as SAS datasets.
 
-You simulated one new event arriving.
+You simulated a new event.
 
-You updated parts of the stored state from that event.
+You updated maintainable state.
 
-You checked the result against full recalculation.
+You compared the updated state with full recalculation.
 
-You saw why continuously arriving data changes how some analyses are performed.
-
-You compared incremental operational thinking against full recalculation.
-
----
-
-# Recap
-
-Continuously arriving data does not make SAS less relevant.
-
-It makes operational thinking more important.
-
-Some results can be updated from the next event.
-
-Some results need more stored state.
-
-Some results should be recalculated.
-
-A good SAS programmer can tell the difference.
+You saw why continuously arriving data changes analytical handling.
 
 ---
 
 # Next Step
 
-After completing this lesson, continue to:
+Continue to:
 
-`AF002_LESSON_03.md`
+```text
+AF002_LESSON_03.md
+```
 
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
+Retrieve the lesson from the authoritative location in `LIBRARY.md`.
 
 ---
 
-# Development and Test Environment
-
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
-- Date: 2026-05-12
-- Notes: First expanded draft created for AF-002 deployment-hardening review. Designed to preserve freeze discipline, use standardized teaching data, and avoid architecture expansion before Iowa SAS User Group readiness.
-
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-Copyright (c) 2026 Paul McDonald
-
-
-> **Operational Guideline**
->
-> Update what you can.
-> Recalculate what you must.
-
-
-This kind of incremental update thinking may feel familiar to experienced SAS programmers using techniques such as:
-- PROC APPEND
-- MODIFY statements
-- maintaining stored summary tables
-
-
-## Visual Brief
-
-Review visual summary:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_02_VISUAL_BRIEF.png
-
-
----
-
-# File Reference Information
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
-Previous Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
-
-Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
-
-Return to README:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
-
-
+End of Lesson 02

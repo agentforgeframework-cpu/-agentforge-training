@@ -1,548 +1,294 @@
-# SETUP - AF-002 IoT/AIoT for SAS Programmers
+# AF-002 Setup
 
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md`
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
-
----
-
-# Public Beta Testing Note
-
-Course AF-002 (IoT/AIoT for SAS Programmers) is currently in active deployment-hardening (stabilization) and public beta testing.
-
-The lessons in this course are:
-- Lesson 00: Setup and Orientation (public beta)
-- Lesson 01: Simple Video and Images (public beta)
-- Lesson 02: Event Streams and Real-Time Thinking (public beta)
-- Lesson 03: AIoT Decision Loops (under development)
-- Lesson 04: Architecture Follows Data for AIoT (under development)
-- Lesson 05: Capstone Workflow (under development)
-
-You may encounter:
-- rough edges
-- repeated validation steps
-- awkward pacing
-- evolving lesson flow
-- minor inconsistencies
-
-These areas are actively being refined through real-world testing.
-
-The operational workflows themselves are intentionally:
-- lightweight
-- local
-- survivable
-- SAS-centered
-
-The goal is to demonstrate how lightweight operational AIoT workflows can produce analyzable SAS data.
-
-If something feels awkward but operationally works, continue forward when possible and record the experience as feedback.
-
-The goal of this beta phase is to improve:
-- onboarding survivability
-- operational clarity
-- confidence continuity
-- real-world usability
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP.md  
 
 ---
 
-## Purpose
+# Purpose
 
-This file defines the basic environment assumptions and setup checks for AF-002.
+`SETUP.md` defines the environment preparation and validation required before beginning AF-002.
 
-SETUP is for environment preparation.
+Before completing setup, load `COURSE.md` from the location defined in `LIBRARY.md`.
 
-After setup is complete, continue with:
+`COURSE.md` is the authoritative definition of the course. It establishes the course's identity, instructional model, architecture, governing principles, and completion boundary.
 
-`AF002_LESSON_00.md`
+After reading `COURSE.md`, complete this setup before beginning Lesson 00.
 
----
-
-## Course Setup Assumptions
-
-AF-002 assumes the learner has access to:
-
-- a typical Windows PC
-- a working webcam
-- suitable internet access
-- suitable AI assistant access
-- Python or the ability to install Python
-- free and freely available Python tools where practical
-- SAS access, possibly through SAS OnDemand for Academics or another available SAS environment
+The goal is not to create a complex development environment. The goal is to establish a small, understandable, and restartable workspace capable of producing telemetry and analyzing it with SAS.
 
 ---
 
-## Python Setup Check
+# Required Access
+
+AF-002 assumes access to:
+
+- a Windows computer
+- internet access
+- an AI assistant capable of working with Markdown files
+- Python 3
+- a webcam or the supplied image-file alternative
+- SAS access
+- permission to create and modify local files
+
+Suitable SAS environments may include:
+
+- SAS OnDemand for Academics
+- SAS Studio
+- local SAS
+- an available workplace SAS environment
+
+The learner must be able to run a SAS program that imports and analyzes a CSV file.
+
+---
+
+# Create the Local Workspace
+
+Create a local working folder for AF-002.
+
+A suitable Windows location is:
 
 ```text
-WINDOWS USERS — IMPORTANT COMMAND TIP
-
-On many Windows systems, the command `python` may not work immediately.
-Try `py` instead.
-
-py --version
-py -m pip install ...
-py -c "import cv2; print('OK')"
-
-Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+C:\AF-002\
 ```
 
-Open Command Prompt or PowerShell.
-
-Try:
+Create these subfolders:
 
 ```text
+C:\AF-002\
+    data\
+    lessons\
+    media\
+    python\
+    sas\
+```
+
+Another location may be used, but the folder structure should remain simple and understandable.
+
+Do not begin by redesigning the repository structure or creating additional infrastructure.
+
+---
+
+# Confirm Python
+
+Open PowerShell or Command Prompt.
+
+Run:
+
+```powershell
 python --version
 ```
 
-Example successful output:
+A successful result displays a Python 3 version.
 
-```text
-Python 3.14.4
-```
+If `python` is not recognized, try:
 
-If that does not work, try:
-
-```text
+```powershell
 py --version
 ```
 
-A successful result should look something like:
+Use whichever command works consistently on the computer.
 
-```text
-Python 3.11.8
-```
+If neither command works, install Python from a trusted source and reopen PowerShell or Command Prompt before checking again.
 
-Any current Python 3.x version should be suitable for this introductory course.
+Do not continue until a Python 3 version is displayed.
 
 ---
 
-## If Python Is Not Found
+# Confirm pip
 
-Install Python from the official Python download site or another trusted standard source.
+Using the working Python command, run one of the following:
 
-Official Python download site:
-
-https://www.python.org/downloads/
-
-When installing on Windows, enable the option to add Python to PATH if it is offered.
-
-After installation, close and reopen Command Prompt or PowerShell, then run:
-
-```text
-python --version
-```
-
-Example successful output:
-
-```text
-Python 3.14.4
+```powershell
+python -m pip --version
 ```
 
 or:
 
-```text
-py --version
+```powershell
+py -m pip --version
 ```
 
-Do not continue until one of those commands returns a Python 3.x version.
+A successful result displays the installed pip version and location.
 
 ---
 
-## Python Packages Used in Lesson 01
+# Confirm Required Python Packages
 
-Lesson 01 uses Python packages to capture webcam and image data and write telemetry output.
+AF-002 uses:
 
-Use validation-first behavior:
+- OpenCV
+- pandas
+- Ultralytics YOLO
 
-1. Check whether the packages are already available.
-2. Install only if the check fails.
-3. Recheck after installation.
+Check the packages before installing anything.
 
-Check packages with:
+Using `python`:
 
-```text
+```powershell
 python -c "import cv2; print('opencv OK')"
 python -c "import pandas; print('pandas OK')"
 python -c "from ultralytics import YOLO; print('ultralytics OK')"
 ```
 
-If `python` does not work but `py` does, use:
+Using `py`:
 
-```text
+```powershell
 py -c "import cv2; print('opencv OK')"
 py -c "import pandas; print('pandas OK')"
 py -c "from ultralytics import YOLO; print('ultralytics OK')"
 ```
 
-Install only if one of the checks fails:
+Install the packages only when a check fails:
 
-```text
+```powershell
 python -m pip install ultralytics opencv-python pandas
 ```
 
 or:
 
-```text
+```powershell
 py -m pip install ultralytics opencv-python pandas
 ```
 
-If pip reports that the packages are already installed, that is fine.
+After installation, repeat the package checks.
 
-The first run of the Lesson 01 object-detection scripts may download the YOLO model file automatically. This is normal and may take extra time depending on internet speed and network restrictions.
-
-Most setup problems are recoverable by fixing the issue and rerunning the step.
+The first object-detection run may download a YOLO model file. This is expected.
 
 ---
 
-## SAS Access Check
+# Confirm SAS Access
 
-Confirm that you can open your SAS environment.
+Open the SAS environment that will be used for the course.
 
-Suitable options may include:
+Confirm that it can:
 
-- SAS OnDemand for Academics
-- SAS Studio
-- local SAS
-- a workplace SAS environment
-- another SAS environment available to you
+- create a SAS program
+- run a DATA step or procedure
+- access or upload a CSV file
+- display the SAS log
+- display results or output
 
-The goal is simple:
-
-You need to be able to run a small SAS program that imports a CSV file.
+The exact SAS platform may differ, but these capabilities are required.
 
 ---
 
-## Webcam Check
+# Confirm the Webcam
 
-Confirm that your webcam works in Windows.
+Open the Windows Camera application or another trusted camera application.
 
-A simple check is to open the Windows Camera app.
+Confirm that the webcam displays a live image.
 
-If the camera works there, it should usually be available to Python.
+If the webcam is unavailable, blocked, or unsuitable, AF-002 can begin with the supplied image files instead.
 
-If webcam access is blocked by your organization or operating system settings, Lesson 01 includes an image-file fallback path.
+A webcam failure does not prevent completion of the course.
 
 ---
 
-## Local Working Folder Guidance
+# Required Repository Objects
 
-A simple local working folder is enough.
+The initial AF-002 workflow requires the following repository objects:
 
-One workable Windows example is:
+```text
+python/webcam_object_telemetry.py
+python/image_object_telemetry.py
+sas/sas_import_object_events.sas
+data/webcam_object_events_sample.csv
+media/bridge.jpg
+media/mountain.jpg
+media/dog.jpg
+media/banana.jpg
+```
+
+Retrieve these objects using the locations defined in `LIBRARY.md`.
+
+Place each object in the matching local subfolder.
+
+Do not recreate or substitute repository-provided files when the authoritative version is available.
+
+---
+
+# Retrieval Failure
+
+If a required repository object cannot be retrieved:
+
+1. Stop the affected setup step.
+2. Identify the inaccessible object.
+3. Report the location that failed.
+4. Do not infer, reconstruct, or silently replace the object.
+5. Request a corrected location or an authorized copy.
+6. Continue only after the required object is available.
+
+A local or previously authorized copy may be used when it can be verified as the intended repository object.
+
+---
+
+# Confirm the Local Files
+
+Before continuing, confirm that the local workspace includes:
 
 ```text
 C:\AF-002\
-    python\
-    sas\
     data\
+        webcam_object_events_sample.csv
+
     media\
-    lessons\
+        banana.jpg
+        bridge.jpg
+        dog.jpg
+        mountain.jpg
+
+    python\
+        image_object_telemetry.py
+        webcam_object_telemetry.py
+
+    sas\
+        sas_import_object_events.sas
 ```
 
-If you are unsure where to place files on your PC, ask your AI assistant to help you create a simple AF-002 working folder and place the files in the matching folders.
-
-The important point is that the paths stay understandable.
-
-The early workflow expects:
-
-```text
-python/webcam_object_telemetry.py
-sas/sas_import_object_events.sas
-data/webcam_object_events.csv
-data/webcam_object_events_sample.csv
-media/bridge.jpg
-media/mountain.jpg
-media/dog.jpg
-media/banana.jpg
-```
-
-If Python package installation, webcam permissions, or file paths take a couple attempts to work correctly, that is normal.
-
-The goal is bounded recovery, not perfect first-try setup.
+The lesson files may remain in the repository or be copied into the local `lessons` folder.
 
 ---
 
-## Operational File Links
+# Setup Recovery
 
-The following files form the primary operational path for AF-002.
+Most setup failures are recoverable.
 
-A learner or AI assistant should generally proceed in this order.
+When a command or program fails:
 
-### Course Support Files
+1. Preserve the full error message or log.
+2. Confirm the current folder and filename.
+3. Confirm whether `python` or `py` is the working command.
+4. Confirm that the required package or file exists.
+5. Correct only the identified problem.
+6. Repeat the failed check.
 
-#### README
+Do not replace the course workflow with a more complex architecture merely because one setup step fails.
 
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/README.md
-
----
-
-#### QUICKSTART
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/QUICKSTART_af-002-iot-aiot-for-sas-programmers.md
+When using an AI assistant, provide the exact PowerShell, Python, or SAS error output rather than summarizing it.
 
 ---
 
-#### SETUP
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
-
----
-
-### Lesson Chain
-
-#### Lesson 00 - Setup and Orientation
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
-
----
-
-#### Lesson 01 - Simple Video and Images
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
-
----
-
-#### Lesson 02 - Event Streams and Real-Time Thinking
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
----
-
-#### Lesson 03 - AIoT Decision Loops
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
-
----
-
-#### Lesson 04 - Architecture Follows Data for AIoT
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
-
----
-
-#### Lesson 05 - Capstone Workflow
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
-
----
-
-### Supporting Operational Assets
-
-#### Python webcam object telemetry script
-
-Repository-relative path:
-
-```text
-python/webcam_object_telemetry.py
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py
-
----
-
-#### Python image object telemetry script
-
-Repository-relative path:
-
-```text
-python/image_object_telemetry.py
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py
-
----
-
-#### SAS import object events program
-
-Repository-relative path:
-
-```text
-sas/sas_import_object_events.sas
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas
-
----
-
-#### Webcam object telemetry sample CSV
-
-Repository-relative path:
-
-```text
-data/webcam_object_events_sample.csv
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
-
----
-
-#### Sample media images
-
-Repository-relative paths:
-
-```text
-media/bridge.jpg
-media/mountain.jpg
-media/dog.jpg
-media/banana.jpg
-```
-
-GitHub URLs:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
-
-Raw URLs:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
-
----
-
-### Operational Guidance for AI Assistants
-
-When assisting with AF-002:
-
-- proceed lesson by lesson
-- keep the learner focused on first success
-- use explicit URLs rather than inferring repository structure
-- prefer operational clarity over theoretical depth
-- avoid enterprise architecture expansion
-- avoid unnecessary orchestration complexity
-- help the learner complete the current lesson before advancing
-
-The primary early success target is:
-
-```text
-webcam -> telemetry -> CSV -> SAS analysis
-```
-
----
-
-## Recommended Next Step
-
-Proceed to:
-
-`AF002_LESSON_00.md`
-
-The Operational File Links section above contains the GitHub and raw URLs needed to continue.
-
----
-
-## Development and Test Environment
-
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
-- Date: 2026-05-09
-- Notes: Updated after Claude digital twin survivability test.
-
-
----
-
-# File Reference Information
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP_af-002-iot-aiot-for-sas-programmers.md
-
-Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
-
-Return to README:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
-
-
+# Setup Completion Check
+
+Setup is complete when all of the following are true:
+
+- the AF-002 local workspace exists
+- Python 3 runs successfully
+- pip runs successfully
+- OpenCV imports successfully
+- pandas imports successfully
+- Ultralytics imports successfully
+- SAS opens and can run a basic program
+- either the webcam works or the image-file alternative is available
+- the required repository objects are present in their expected folders
+- the learner knows where to find command output, Python errors, and the SAS log
+
+After setup is complete, load Lesson 00 from the location defined in `LIBRARY.md`.
+
+Do not begin Lesson 01 before completing Lesson 00.

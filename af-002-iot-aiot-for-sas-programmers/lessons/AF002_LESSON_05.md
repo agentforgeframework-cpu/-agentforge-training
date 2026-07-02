@@ -1,83 +1,103 @@
-# AF002 Lesson 05 Release Candidate Hardening Draft v0.1.3
+# Lesson 05 — Deliver Practical Results Using Telemetry
 
-Course: AF-002 - IoT and AIoT for SAS Programmers
-Status: RELEASE CANDIDATE HARDENING - GUIDED OPERATIONAL USE v0.1.3
-Lesson: AF-002 — Lesson 05 Capstone
-Title: Deliver Practical Results Using Telemetry
-Focus: Operational modernization reasoning using telemetry evidence and SAS operational analysis
-
-# File Reference Information
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md`
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md  
 
 ---
 
-## Lesson Identity
+# Purpose
 
-This lesson is the AF-002 capstone experience.
+Lesson 05 is the AF-002 capstone.
 
-The learner is no longer:
+The learner will combine telemetry, SAS analysis, dashboards, timestamp lineage, operational judgment, and clear communication to investigate a modernization-related visibility gap.
 
-* learning what telemetry is
-* learning what object detection is
-* learning what bounding boxes are
-* learning basic SAS operational workflows
+The goal is not to redesign enterprise architecture.
 
-The learner is now:
+The goal is to use evidence responsibly and communicate practical operational findings.
 
-* interpreting operational evidence
-* navigating bounded uncertainty
-* communicating operational implications
-* contributing credibly to operational modernization discussions
+---
 
-The lesson reinforces:
+# AI Assistant Guidance
+
+When assisting with this lesson:
+
+- preserve ambiguity until the evidence supports a conclusion
+- do not frame modernization as success or failure too early
+- keep the learner focused on operational evidence
+- use SAS output and visible artifacts as the source of truth
+- separate executive, operational, and raw-telemetry views
+- distinguish correlation from proven root cause
+- help the learner communicate implications in plain language
+- avoid executive roleplay, architecture evangelism, and dramatic conflict
+- preserve Human-in-Command accountability
+- explicitly identify remaining uncertainty
+
+The instructional pattern is:
+
+```text
+Observe
+    -> Compare
+        -> Investigate
+            -> Interpret
+                -> Communicate
+                    -> Recommend
+```
+
+---
+
+# Human-in-Command Principle
+
+This lesson reinforces:
 
 ```text
 Telemetry is evidence, not truth.
+Dashboards are views, not reality.
+Humans remain responsible for operational judgment.
 ```
 
-and:
+Technology may improve one operational capability while reducing another.
 
-```text
-Architecture decisions are operational decisions.
-```
-
-without becoming:
-
-* architecture evangelism
-* anti-cloud rhetoric
-* governance lecture
-* executive roleplay theater
+The task is to understand the tradeoff, not to declare a winner.
 
 ---
 
-# Operational Context
+# Learning Objectives
 
-You support operational analytics for a regional warehouse distribution operation.
+By the end of this lesson, the learner should be able to:
 
-Several modernization efforts were recently completed successfully.
+- compare executive and operational telemetry views
+- identify a possible visibility gap
+- use SAS to investigate timing and queue behavior
+- explain why timestamp lineage matters
+- distinguish accurate reporting from timely operational awareness
+- communicate findings without overstating certainty
+- recommend proportional improvements
+- identify what remains uncertain
+- preserve Human-in-Command responsibility
 
-The modernization achieved:
+---
 
-* reduced infrastructure complexity
-* centralized dashboard management
-* telemetry buffering improvements
-* increased dashboard aggregation efficiency
+# Operational Scenario
 
-Leadership considers the modernization:
-successful.
+You support analytics for a regional warehouse distribution operation.
+
+A recent modernization effort successfully:
+
+- reduced infrastructure complexity
+- centralized dashboard management
+- improved telemetry buffering
+- increased aggregation efficiency
+
+Leadership considers the modernization successful.
 
 Operations generally agrees.
 
-However:
-
-some warehouse supervisors have started reporting:
+However, warehouse supervisors report:
 
 ```text
 The dashboards look normal,
@@ -88,147 +108,56 @@ No major outage exists.
 
 No emergency exists.
 
-But:
-operations staff increasingly feel they are reacting later than before.
+The concern is that staff may be reacting later than before.
 
-You are asked to help investigate.
-
----
-
-# Runtime Structure
-
-This lesson is semi-interactive.
-
-You should:
-
-* inspect evidence
-* review telemetry
-* interpret SAS findings
-* compare operational views
-* identify uncertainty
-* communicate operational meaning
-
-You are NOT expected to:
-
-* redesign enterprise architecture
-* become an executive
-* solve modernization strategy
-* eliminate ambiguity completely
+You are asked to investigate before the next operational review meeting.
 
 ---
 
-# Lesson Objectives
+# Initial Evidence Package
 
-By the end of this lesson, you should be able to:
-
-* interpret operational telemetry under modernization pressure
-* identify visibility gaps caused by telemetry abstraction
-* use SAS operationally to validate concerns
-* distinguish telemetry evidence from operational truth
-* communicate operational implications clearly
-* contribute credibly to operational discussions
-* reinforce Human-in-Command operational reasoning
-
----
-
-# CHECKPOINT MODEL
-
-This lesson contains visible checkpoints.
-
-Example:
+Review these artifacts:
 
 ```text
-CHECKPOINT — Initial SAS Investigation Complete
+media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
+media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
+data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
+sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas
 ```
 
-These markers exist to:
+Use `LIBRARY.md` as the authoritative location for each file.
 
-* stabilize runtime pacing
-* reinforce learner progress
-* support restartability
-* improve operational clarity
-
----
-
-# SECTION 1 — Operational Trigger
-
-Monday morning operations review.
-
-No critical incidents have been declared.
-
-However:
-multiple warehouse supervisors independently report:
-
-* dock congestion feels harder to detect early
-* forklift slowdowns seem visible later than before
-* staffing adjustments feel delayed
-* queue buildup “appears suddenly”
-
-At the same time:
-
-executive dashboards remain stable.
-
-Throughput KPIs remain acceptable.
-Modernization KPIs remain positive.
-No major alerts are active.
-
-You receive the following note from warehouse operations:
-
-```text
-The dashboards say we're fine.
-
-The floor says we're reacting late.
-
-Can you take a look before tomorrow's operational review meeting?
-```
-
----
-
-# SECTION 2 — Initial Evidence Package
-
-Facilitator Note:
-Do not explain the operational gap yet. Allow inspection first.
-
-You are provided:
-
-* Executive Operations Dashboard
-* Warehouse Operations Dashboard
-* Dock Queue Telemetry Extract
-* Staffing Summary
-* Shift Observation Notes
-
-The dashboards appear:
-professional,
-stable,
-and operationally believable.
-
-No obvious failure is visible.
+Do not explain the operational gap before reviewing the evidence.
 
 ---
 
 # Executive Dashboard
 
-![Executive Dashboard](../media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png)
-
-Artifact:
-AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
-
-Key operational observation:
-The executive dashboard appears modern, stable, professional, and operationally successful.
-
-Nothing immediately appears wrong.
-
-However:
-the dashboard is optimized primarily for:
-- executive visibility
-- operational summaries
-- trend monitoring
-- modernization KPI reporting
-
-Question to consider:
+Review:
 
 ```text
-What operational details might become less visible
+media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png
+```
+
+The dashboard appears:
+
+- modern
+- stable
+- professional
+- operationally credible
+
+It emphasizes:
+
+- throughput
+- summarized KPIs
+- trend stability
+- modernization reporting
+- broad operational status
+
+Ask:
+
+```text
+What becomes less visible
 when telemetry is aggregated for executive simplicity?
 ```
 
@@ -236,65 +165,51 @@ when telemetry is aggregated for executive simplicity?
 
 # Operations Dashboard
 
-![Operations Dashboard](../media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png)
-
-Artifact:
-AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
-
-This dashboard exposes:
-- localized queue behavior
-- operational variability
-- escalation watch zones
-- forklift redistribution activity
-- operational intervention visibility
-
-The dashboard still appears:
-professional,
-useful,
-and operationally healthy.
-
-However:
-the learner should begin noticing:
-operations personnel may experience the system differently than executives.
-
-Question to consider:
+Review:
 
 ```text
-Why might warehouse supervisors sense operational discomfort
-before executive dashboards show clear concern?
+media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png
 ```
+
+This view exposes more detail about:
+
+- localized queue behavior
+- zone variability
+- escalation watches
+- intervention timing
+- forklift redistribution
+- short-term operational change
+
+Ask:
+
+```text
+Why might supervisors sense a problem
+before an executive dashboard shows one?
+```
+
+Different dashboards may be accurate while serving different operational purposes.
 
 ---
 
-# SECTION 3 — Initial Interpretation
+# Initial Interpretation
 
-Facilitator Note:
-Do not resolve the tension yet. Preserve ambiguity through Section 6.
-
-Your first review suggests:
+A reasonable first hypothesis is:
 
 ```text
 Possible staffing imbalance during peak dock activity.
 ```
 
-This is:
-a reasonable operational interpretation.
+That interpretation is not foolish.
 
-You are NOT being trapped.
+It is incomplete.
 
-Real operational analysis often begins with:
-reasonable but incomplete understanding.
-
-You decide to investigate further using SAS.
+Real operational analysis often begins with a plausible explanation that must be tested.
 
 ---
 
+# Operational Communication
 
-# Operational Communication Before Analysis
-
-Before you begin the SAS investigation, remember that the goal is not merely to run code.
-
-The goal is to translate evidence into operational meaning.
+Avoid language that is technically correct but operationally vague.
 
 Weak:
 
@@ -306,327 +221,225 @@ Stronger:
 
 ```text
 We are still receiving operational telemetry,
-but we now detect developing dock congestion later than before.
+but developing dock congestion becomes visible later than before.
 ```
 
-Operational meaning matters.
+The second statement explains operational consequence.
 
 ---
 
-# SECTION 4 — Initial SAS Investigation
+# Run the Initial SAS Investigation
 
-Facilitator Note:
-Keep SAS execution time bounded. Operational interpretation is the goal.
-
-You review:
-
-* queue timing
-* staffing alignment
-* congestion intervals
-* forklift idle windows
-
-You compare:
-
-* queue growth timing
-* staffing availability
-* dashboard refresh timing
-
----
-
-# SAS Investigation Activity
-
-Use the following telemetry sample:
-
-`AF002_L05_TELEMETRY_SAMPLE_v0_1.csv`
-
-Raw CSV:
-`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv`
-
-Run the following SAS program:
-
-`AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`
-
-Raw SAS program:
-`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`
-
-Your focus is interpreting the operational meaning of the outputs, not writing SAS code from scratch.
-
-Example operational observations:
-- Queue depth crossed escalation-watch thresholds before dashboards visibly reflected concern.
-- Operational visibility changed more slowly than physical queue conditions.
-
-The SAS investigation generates:
-- queue depth timeline
-- timestamp comparison table
-- queue depth by zone
-- operational delay summary
-- intervention window observations
-
-As you review the outputs, pay particular attention to:
-- queue growth timing
-- timestamp semantics
-- telemetry freshness
-- dashboard delay
-- operational intervention timing
-
-Question to consider:
+Use:
 
 ```text
-Did the queue buildup appear sudden,
-or did the operational visibility change?
+data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
+sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas
 ```
+
+The program is intended to produce a bounded set of outputs for interpretation.
+
+Focus on:
+
+- queue depth timing
+- dashboard refresh timing
+- telemetry freshness
+- staffing alignment
+- intervention windows
+- zone behavior
+
+Do not treat the exercise as a SAS coding test.
+
+The objective is operational interpretation.
 
 ---
 
-# CHECKPOINT — Initial SAS Investigation Complete
+# Checkpoint — Initial Investigation Complete
 
-Current understanding:
+At this point, the evidence may suggest:
 
 ```text
 Staffing may contribute,
-but timing inconsistencies appear present in the telemetry itself.
+but timing inconsistencies also appear in the telemetry path.
 ```
 
----
-
-# SECTION 5 — Evidence Divergence
-
-You begin comparing:
-
-* raw telemetry timing
-* dashboard update timing
-* floor observations
-* operational event windows
-
-Something now feels operationally inconsistent.
-
-Warehouse supervisors describe:
-“sudden queue spikes.”
-
-But:
-raw telemetry suggests:
-the queue buildup was gradual.
-
-You begin investigating timestamp behavior.
+Do not claim root cause yet.
 
 ---
 
-# Timestamp Comparison Graphic
+# Compare Event and Display Timing
 
-![Timestamp Comparison](../media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png)
+Review:
 
-Artifact:
-AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
+```text
+media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png
+```
 
-This graphic demonstrates:
+The graphic distinguishes:
+
 - event capture time
 - telemetry buffer time
 - dashboard refresh time
 - operational response time
 
-The key realization is:
+These are different operational moments.
+
+Example:
 
 ```text
-Telemetry can be accurate
-and still arrive too late for intervention.
+A slowdown occurs at 08:12.
+Telemetry becomes available at 08:17.
+The dashboard refreshes at 08:19.
+A human responds at 08:20.
 ```
 
-Question to consider:
+The event may have been captured correctly.
 
-```text
-Which timestamp matters most operationally:
-event capture,
-dashboard refresh,
-or operational response?
-```
+The operational response may still have been delayed.
 
 ---
 
+# Timestamp Lineage
 
-# Timestamp Lineage Definitions
+## Event Capture Time
 
-The following timestamps represent different operational moments.
+When the physical event occurred.
 
-## event_capture_time
+## Telemetry Buffer Time
 
-When the operational event actually occurred on the warehouse floor.
+When the event became available downstream after buffering or transport.
 
-## telemetry_buffer_time
+## Dashboard Refresh Time
 
-When telemetry became available to downstream telemetry systems after buffering or transport delay.
+When the dashboard displayed the event.
 
-## dashboard_refresh_time
+## Operational Response Time
 
-When dashboards displayed the event to operational users.
+When a human could reasonably act.
 
-## operational_response_time
-
-When humans could reasonably react operationally.
-
-Important operational concept:
+Important:
 
 ```text
-These timestamps do NOT represent the same operational moment.
+Accurate timestamps can still describe different operational moments.
 ```
 
-Simple operational example:
+Ask:
+
+- Which timestamp matters for intervention?
+- Which timestamp matters for audit?
+- Which timestamp matters for performance reporting?
+- Could delayed display make a gradual buildup appear sudden?
+
+---
+
+# Optional Timeplot Exploration
+
+Use:
 
 ```text
-A forklift slowdown may occur at 08:12,
-appear in telemetry at 08:17,
-reach the dashboard at 08:19,
-and trigger operational response at 08:20.
+sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas
 ```
 
-## Optional PROC TIMEPLOT Exploration
-
-Optional SAS program:
-
-`AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas`
-
-Raw SAS program:
-`https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas`
-
-
-This optional exercise demonstrates how timestamp differences can become visible operationally when viewed across time.
+This optional program helps visualize differences among event capture, buffering, display, and response.
 
 The goal is not advanced SAS programming.
 
-The goal is operational interpretation of:
-- event timing
-- telemetry buffering
-- dashboard refresh timing
-- operational response timing
-
-Learners should compare:
-- when events physically occurred
-- when telemetry became visible
-- when dashboards reflected operational conditions
-- when humans could reasonably react
+The goal is to make delay visible.
 
 ---
 
-# SECTION 6 — Emerging Operational Discovery
+# Emerging Discovery
 
-You discover two modernization-related changes:
+The evidence suggests two modernization-related changes:
 
-1. Dashboard aggregation intervals were increased.
+1. Dashboard aggregation intervals increased.
 2. Telemetry buffering was introduced before dashboard refresh.
 
 Neither change is inherently wrong.
 
-Both changes improved:
+Both may improve:
 
-* infrastructure efficiency
-* dashboard consistency
-* centralized reporting behavior
+- infrastructure efficiency
+- consistency
+- centralized reporting
+- dashboard stability
 
-However:
-
-the operational side effect appears to be:
+The possible side effect is:
 
 ```text
-Reduced visibility into rapidly developing queue buildup.
+Reduced visibility into rapidly developing queue conditions.
 ```
 
-This does NOT mean:
-the dashboards are false.
+This does not mean the dashboards are false.
 
-It means:
-they are optimized differently.
+It means they may be optimized for a different operational purpose.
 
 ---
 
-# CHECKPOINT — Visibility Gap Identified
+# Checkpoint — Visibility Gap Identified
 
-You now suspect:
+A reasonable evidence-based statement is:
 
 ```text
-Operations is seeing congestion later than before,
-even though executive reporting remains accurate at higher abstraction levels.
+Executive reporting remains accurate at a higher level,
+while operations may receive actionable queue information later than before.
 ```
+
+This is a visibility-gap hypothesis.
+
+It still requires validation.
 
 ---
 
-# SECTION 7 — Multiple Operational Views
-
-You compare:
+# Compare Operational Views
 
 ## Executive View
 
-* throughput stable
-* modernization successful
-* operational KPIs acceptable
+- throughput remains acceptable
+- modernization goals appear successful
+- summarized KPIs remain stable
 
 ## Operations View
 
-* delayed intervention timing
-* queue buildup harder to detect early
-* staffing adjustments happening later
+- queue buildup feels sudden
+- staffing adjustments occur later
+- intervention windows appear compressed
 
 ## Raw Telemetry View
 
-* congestion growth visible
-* operational escalation detectable earlier
-* timestamp semantics matter operationally
+- queue growth may be visible earlier
+- timestamp semantics matter
+- delay accumulates across stages
 
 ## SAS Investigation View
 
-* telemetry freshness degradation affects intervention timing
-* aggregation smooths escalation visibility
-* delayed operational reaction windows emerge
+- freshness affects intervention timing
+- aggregation can smooth escalation
+- delay may reduce operational reaction time
+
+No single view is complete.
 
 ---
 
-# SECTION 8 — Operational Review Meeting
-
-You attend the operational review meeting.
+# Operational Review Meeting
 
 Participants include:
 
-* warehouse operations lead
-* modernization lead
-* finance representative
-* operations analytics staff
-* you
+- warehouse operations lead
+- modernization lead
+- finance representative
+- operations analytics staff
+- the learner
 
-Professional disagreement exists.
+The meeting should remain professional and evidence-driven.
 
-Nobody is behaving irrationally.
 Nobody is the villain.
 
-Different participants are observing:
-different operational abstractions.
+Different participants are working from different abstractions.
 
 ---
 
-# Semi-Interactive Meeting Structure
-
-The meeting should remain:
-operational,
-professional,
-and evidence-driven.
-
-The learner should:
-
-* interpret findings
-* answer operational questions
-* explain uncertainty
-* clarify telemetry meaning
-* communicate operational implications
-
-The learner should NOT:
-
-* deliver dramatic speeches
-* “win” arguments
-* become an executive strategist
-
----
-
-
-# Semi-Interactive Meeting Prompts
-
-During the operational review meeting, consider the following questions carefully.
+# Meeting Prompts
 
 ## Prompt 1 — Executive Interpretation
 
@@ -640,241 +453,223 @@ Why or why not?
 ## Prompt 2 — Timestamp Meaning
 
 ```text
-Which timestamp matters most operationally:
+Which timestamp matters most for intervention:
 event capture,
 dashboard refresh,
 or operational response?
-
-Explain your reasoning.
 ```
 
 ## Prompt 3 — Operational Tradeoff
 
 ```text
-The modernization reduced infrastructure complexity
-and improved centralized reporting consistency.
+The modernization improved efficiency and reporting consistency.
 
-What operational capability became less visible?
+What operational capability may have become less visible?
 ```
 
-## Prompt 4 — Human-in-Command
+## Prompt 4 — Human Feedback
 
 ```text
-Warehouse supervisors sensed operational discomfort
-before dashboards clearly showed congestion.
+Supervisors sensed discomfort before dashboards showed clear congestion.
 
-How should organizations treat this type of human operational feedback?
+How should that feedback be treated?
 ```
 
-## Prompt 5 — SAS Interpretation
+## Prompt 5 — SAS Contribution
 
 ```text
-What did the SAS investigation reveal
-that was less visible in the dashboards?
+What did SAS reveal
+that the dashboards made less visible?
 ```
 
-## Prompt 6 — Bounded Uncertainty
+## Prompt 6 — Remaining Uncertainty
 
 ```text
-Do the findings fully prove the root cause?
+Do the findings prove the root cause?
 
-What uncertainty still remains?
-```
-
-
-# Suggested Learner Communication Style
-
-Weak:
-
-```text
-The telemetry latency characteristics changed.
-```
-
-Stronger:
-
-```text
-We are still receiving operational telemetry,
-but we now detect developing dock congestion later than before.
-```
-
-Operational meaning matters.
-
----
-
-# SECTION 9 — Primary Realization
-
-The modernization did NOT fail.
-
-The dashboards are NOT useless.
-
-The telemetry is NOT fake.
-
-Instead:
-
-```text
-Different operational phases
-require different operational visibility.
-```
-
-Executive dashboards remain operationally useful.
-
-However:
-warehouse intervention workflows require:
-fresher operational visibility windows.
-
-This is an operational tradeoff discussion,
-not a technology war.
-
----
-
-# CHECKPOINT — Operational Tradeoff Recognized
-
-You now understand:
-
-```text
-Modernization improved some operational capabilities
-while unintentionally reducing others.
+What still needs validation?
 ```
 
 ---
 
-# SECTION 10 — Recommendation Development
+# Primary Realization
 
-You are asked to provide a short operational findings summary.
+The modernization did not necessarily fail.
 
-Use the following structure.
+The dashboards are not useless.
+
+The telemetry is not fake.
+
+The operational lesson is:
+
+```text
+Different operational phases require different visibility.
+```
+
+Executive reporting may need stable, aggregated views.
+
+Operational intervention may need fresher, more granular views.
+
+This is a tradeoff discussion, not a technology war.
 
 ---
 
-# Operational Findings Summary Template
+# Develop an Operational Findings Summary
+
+Use this structure:
 
 ## Observations
 
-* What operational behavior was observed?
+What operational behavior was observed?
 
 ## Findings
 
-* What evidence supports the findings?
+What evidence supports the interpretation?
 
 ## Operational Implications
 
-* What operational consequence emerges?
+What consequence may result?
 
 ## Recommendations
 
-* What proportional operational adjustments may help?
+What proportional changes may help?
 
 ## Remaining Uncertainty
 
-* What still requires validation?
+What still requires validation?
 
 ---
 
-# Suggested Recommendation Direction
+# Example Findings Summary
 
-Possible proportional improvements:
+## Observations
 
-* preserve fresher operational telemetry windows
-* retain higher-granularity operational queue visibility
-* separate executive and operations telemetry views
-* preserve operator-level escalation visibility
-* maintain Human-in-Command operational review loops
+Warehouse supervisors report that queue buildup appears suddenly and that staffing adjustments occur later than expected.
 
-Avoid:
+## Findings
 
-* “replace everything”
-* “rollback modernization”
-* architecture absolutism
+SAS analysis indicates that raw queue growth begins before the operational dashboards visibly reflect escalation. Timestamp comparison suggests delay between event capture, buffering, dashboard refresh, and human response.
+
+## Operational Implications
+
+Operations may have less time to intervene even when executive reporting remains accurate at the summary level.
+
+## Recommendations
+
+- preserve a fresher operational telemetry view
+- retain higher-granularity queue visibility for supervisors
+- separate executive and operational dashboard purposes
+- expose timestamp lineage where delay matters
+- periodically compare raw telemetry with dashboard presentation
+- preserve human review and escalation authority
+
+## Remaining Uncertainty
+
+- whether the pattern repeats across multiple days
+- whether staffing also contributes
+- whether buffering or aggregation is the primary source of delay
+- whether sensor or ingestion gaps exist
+- whether the proposed visibility changes improve intervention timing
 
 ---
 
-# SECTION 11 — Human-in-Command Closure
+# Proportional Recommendations
 
-This lesson is not about:
+Appropriate recommendations may include:
 
-* dashboards being bad
-* modernization being bad
-* telemetry being wrong
-* humans rejecting technology
+- a lower-latency operational view
+- shorter refresh intervals for selected metrics
+- separate executive and operations dashboards
+- visibility into event capture and refresh timestamps
+- alerts based on freshness as well as queue depth
+- periodic raw-versus-dashboard reconciliation
+- supervisor feedback loops
 
-It is about:
+Avoid recommendations such as:
+
+- replace everything
+- reverse all modernization
+- abandon dashboards
+- remove aggregation everywhere
+- treat human intuition as unquestionable truth
+
+The response should fit the evidence.
+
+---
+
+# Human-in-Command Closure
+
+This lesson is not about rejecting technology.
+
+It is about maintaining operational responsibility inside increasingly abstract systems.
+
+Telemetry assisted the investigation.
+
+Dashboards assisted the investigation.
+
+SAS assisted the investigation.
+
+Humans still had to:
+
+- interpret the evidence
+- test assumptions
+- identify uncertainty
+- decide what mattered
+- choose a proportional response
+
+---
+
+# Lesson 05 Success
+
+Lesson 05 is complete when the learner can say:
+
+> I used telemetry, SAS analysis, dashboard evidence, and timestamp lineage to explain an operational visibility gap without overstating certainty.
+
+The learner should be able to:
+
+- compare multiple operational views
+- explain why accurate data may still arrive too late
+- communicate findings in operational language
+- recommend proportional improvements
+- identify remaining uncertainty
+- preserve Human-in-Command responsibility
+
+---
+
+# Restart Checkpoint
+
+When returning after interruption:
+
+1. Review the executive dashboard.
+2. Review the operations dashboard.
+3. Run `AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas`.
+4. Review the timestamp comparison graphic.
+5. Rebuild the findings summary from visible evidence.
+
+Do not assume prior SAS WORK datasets or conclusions remain available.
+
+---
+
+# Course Completion
+
+You have completed the AF-002 course when you can explain and demonstrate this progression:
 
 ```text
-Humans remaining responsible
-for operational judgment
-inside increasingly abstract operational systems.
+visual input
+    -> telemetry
+        -> SAS analysis
+            -> operational interpretation
+                -> Human-in-Command decision support
 ```
 
-Telemetry assisted operations.
+You should now understand that IoT and AIoT become operationally useful when:
 
-Dashboards assisted operations.
-
-SAS analysis assisted operations.
-
-Humans still interpreted reality.
-
----
-
-# FINAL CHECKPOINT — Capstone Complete
-
-By completing this lesson,
-you have practiced:
-
-* operational telemetry interpretation
-* SAS-supported operational reasoning
-* bounded skepticism
-* modernization tradeoff analysis
-* evidence-based communication
-* Human-in-Command operational thinking
-
-You are no longer:
-simply reading telemetry.
-
-You are now contributing operational understanding.
+- evidence is understandable
+- timing is explicit
+- limitations are visible
+- human judgment remains accountable
+- the resulting action is proportional to the evidence
 
 ---
 
-# Development Notes - Release Candidate A for Version 1.0
-
-Current Status:
-
-* runtime architecture established
-* emotional arc established
-* operational identity stabilized
-* modernization framing stabilized
-* SAS insertion points identified
-* dashboard placeholders identified
-* artifact milestones identified
-* 
----
-
-# Development & Test Environment
-
-Platform: ChatGPT
-Model: GPT-5.5
-Date: 2026-05-26
-
-Notes:
-
-* Release Candidate A generated following Lesson 04 stabilization findings.
-* Runtime structure intentionally emphasizes operational realism, SAS reasoning, visible evidence chains, and Human-in-Command continuity.
-* Visual and SAS artifacts intentionally deferred to iterative validation passes.
-
----
-
-This draft was created based on the stabilized AF-002 operational identity developed through Lesson 04 runtime testing and capstone planning discussions.
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-© 2026 Paul McDonald
-
----
-
-Next Lesson:
-None
-
-Return to README:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
-
+End of Lesson 05

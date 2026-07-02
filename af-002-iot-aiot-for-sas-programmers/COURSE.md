@@ -3,7 +3,7 @@
 **Kit Type:** Training Kit  
 **Status:** Production Candidate  
 **Version:** 1.0  
-**Repository:** AF-002 - IoT/AIoT for SAS Programmers
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
 **Repository Object:** ROOT_LIBRARY  
 **Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
 **This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/COURSE.md  

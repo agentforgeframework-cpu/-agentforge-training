@@ -1,41 +1,45 @@
-# LESSON 01 - Simple Video and Images
+# Lesson 01 — Create Telemetry
 
-Course: AF-002 - IoT and AIoT for SAS Programmers
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md`
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md  
 
 ---
 
-# Lesson Purpose
+# Purpose
 
-Create the first visual-input-to-CSV-to-SAS success.
+Lesson 01 creates the first complete AF-002 workflow:
 
-This lesson turns familiar visual sources, a webcam and still images, into simple operational telemetry.
+```text
+visual input
+    -> AI-assisted observation
+        -> structured telemetry
+            -> CSV data
+                -> SAS analysis
+```
+
+The learner will use either a webcam or retained sample images, generate telemetry, and analyze the result in SAS.
 
 ---
 
 # AI Assistant Guidance
 
-If you are assisting a learner with this lesson:
+When assisting with this lesson:
 
-- keep the learner focused on first success
-- do not expand into advanced computer vision
-- do not expand into enterprise IoT architecture
-- help the learner run the Python script
-- help the learner find the CSV output
-- help the learner import the CSV into SAS
+- focus on completing the first end-to-end workflow
+- do not expand into computer-vision theory
+- do not introduce enterprise IoT architecture
+- help the learner run one input path successfully
+- help locate and inspect the generated CSV
+- help import the CSV into SAS
 - explain errors in plain operational language
-- move to the recap only after the learner has seen SAS output
+- do not move to Lesson 02 until visible SAS output has been produced
 
-The goal is not to teach computer vision.
-
-The goal is to show that telemetry can become structured data that SAS can analyze.
+The goal is operational success, not technical depth.
 
 ---
 
@@ -43,295 +47,89 @@ The goal is to show that telemetry can become structured data that SAS can analy
 
 By the end of this lesson, the learner should be able to:
 
-- capture simple webcam or image information
-- generate a small telemetry CSV
-- inspect the CSV as operational data
-- import the CSV into SAS
-- produce visible SAS output
-- recognize telemetry as timestamped operational data
+- use a webcam or still images as telemetry input
+- generate a telemetry CSV
+- identify timestamps, object labels, confidence values, and source fields
+- import telemetry into SAS
+- summarize telemetry with SAS procedures
+- explain how an AI-assisted observation becomes operational data
 
 ---
 
 # What Is Telemetry?
 
-Telemetry is operational data produced while a system runs.
+Telemetry is structured data produced while a system operates.
 
-In this lesson, the webcam becomes a simple operational sensor.
+In this lesson, a webcam or image file acts as a simple visual sensor. An object-detection model converts visible objects into records containing fields such as:
 
-An AI model observes objects such as:
-- person
-- keyboard
-- chair
-- cup
-- dog
-
-Those observations become telemetry records.
-
-The telemetry is then written as raw data that SAS can analyze.
+```text
+timestamp
+frame_number
+object_detected
+confidence
+detection_count
+source
+```
 
 You are not training an AI model.
 
-You are observing how operational events become structured analytical data.
+You are observing how AI-assisted output becomes data that SAS can inspect and summarize.
 
 ---
 
-# Core Workflow
+# Required Files
 
-```text
-visual input
-  -> AI-assisted observation
-    -> telemetry
-      -> raw data
-        -> SAS analysis
-```
-
-Operationally, this means:
-
-1. Python observes webcam or image input.
-2. An AI model recognizes simple operational objects.
-3. Python converts those observations into telemetry rows.
-4. Python writes those rows as raw data.
-5. SAS imports and analyzes the telemetry.
-
----
-
-# Required Supporting Files
-
-This lesson expects the following files:
+Confirm that these repository files are available:
 
 ```text
 python/webcam_object_telemetry.py
 python/image_object_telemetry.py
-data/webcam_object_events.csv
-data/image_object_events.csv
 sas/sas_import_object_events.sas
-media/bridge.jpg
-media/mountain.jpg
-media/dog.jpg
-media/banana.jpg
-```
-
-If these files are missing, pause and confirm that the course repository copied or downloaded correctly.
-
----
-
-# Supporting File Links
-
-These explicit links support AI-assisted continuation and deterministic retrieval.
-
-## Webcam telemetry Python script
-
-Repository-relative path:
-
-```text
-python/webcam_object_telemetry.py
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py
-
-## Image telemetry Python script
-
-Repository-relative path:
-
-```text
-python/image_object_telemetry.py
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py
-
-## Read the Webcam Object Telemetry in SAS
-
-Copy and paste the SAS code below.
-
-If your project folder is different, change only the DATAFILE path.
-
-Repository-relative path:
-
-```text
-sas/sas_import_object_events.sas
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas
-
-
-## Checkpoint
-
-You should now have:
-- a SAS dataset named WORK.WEBCAM_OBJECT_EVENTS
-- the first telemetry rows printed
-- object counts from PROC FREQ and confidence statistics from PROC MEANS
-
-
-## Sample object telemetry CSV
-
-Repository-relative path:
-
-```text
 data/webcam_object_events_sample.csv
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv
-
-## Image: bridge
-
-Repository-relative path:
-
-```text
 media/bridge.jpg
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg
-
-## Image: mountain
-
-Repository-relative path:
-
-```text
 media/mountain.jpg
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg
-
-## Image: dog
-
-Repository-relative path:
-
-```text
 media/dog.jpg
-```
-
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/dog.jpg
-
-## Image: banana
-
-Repository-relative path:
-
-```text
 media/banana.jpg
 ```
 
-GitHub URL:
+Use `LIBRARY.md` as the authoritative location for repository objects.
 
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/banana.jpg
-
----
-
-# Local File Map
-
-Keep this simple.
-
-During this lesson, the key paths are:
+The following files are generated during the lesson and are not expected to exist before the scripts run:
 
 ```text
-python/webcam_object_telemetry.py
-python/image_object_telemetry.py
 data/webcam_object_events.csv
-sas/sas_import_object_events.sas
 data/image_object_events.csv
-media/bridge.jpg
-media/mountain.jpg
-media/dog.jpg
-media/banana.jpg
 ```
 
-The Python script writes the telemetry CSV.
+---
 
-The SAS program reads the telemetry CSV.
+# Choose an Input Path
 
-The sample CSV is a safety net if the webcam workflow fails.
+Complete at least one of the following:
 
-The image telemetry script reads sample images from `/media/` and writes an image telemetry CSV.
+## Path A — Webcam Telemetry
+
+Use this path when a webcam is available and permitted.
+
+## Path B — Still-Image Telemetry
+
+Use this path when webcam access is unavailable, blocked, or unsuitable.
+
+Both are valid Lesson 01 completion paths.
 
 ---
 
+# Path A — Webcam Telemetry
 
-> ** Windows Users - Important Command Tip**
->
-> On many Windows systems, the command `python` may not work immediately.
-> Try `py` instead.
->
-> ```text
-> py --version
-> py -m pip install ...
-> py -c "import cv2; print('OK')"
-> ```
->
-> Use `py` wherever you see `python` in the instructions if the plain `python` command fails.
+## Step 1 — Run the Script
 
-## Resume Here
-
-If you are returning after interruption, continue from this step.
-
-# Step 1 - Confirm Python Environment
-
-Most run problems are recoverable by fixing the issue and rerunning the step.
-
-
-Lesson 00 should already have validated:
-- Python
-- required packages
-- webcam readiness
-
-If Lesson 00 completed successfully, continue to Step 2.
-
----
-
-# Step 2 - Run the Webcam Object Telemetry Script
-
-From the course folder, run:
-
+From the AF-002 repository root, run:
 
 ```text
 python python/webcam_object_telemetry.py
 ```
 
-If `python` does not work but `py` does, run:
+On Windows, use this command when `python` is unavailable:
 
 ```text
 py python/webcam_object_telemetry.py
@@ -340,184 +138,51 @@ py python/webcam_object_telemetry.py
 A successful run should:
 
 - open the webcam
-- detect visible objects or record `NONE` when no recognized object is detected
-- create an object telemetry CSV file
-
-Expected output file:
+- process a series of frames
+- identify visible objects or record `NONE`
+- create:
 
 ```text
 data/webcam_object_events.csv
 ```
 
-If the script uses a different output path, use the path shown by the script.
+If the webcam cannot be opened, continue with the still-image path or use the sample CSV.
 
 ---
 
-# Step 3 - Confirm the CSV Exists
+## Step 2 — Inspect the CSV
 
-Open the generated CSV file.
+Open:
 
-A simple telemetry CSV should contain columns similar to:
+```text
+data/webcam_object_events.csv
+```
+
+The file should contain columns similar to:
 
 ```text
 timestamp,frame_number,object_detected,confidence,detection_count,source
 ```
 
-Example rows may look like:
+Example rows may resemble:
 
 ```text
-timestamp,frame_number,object_detected,confidence,detection_count,source
 2026-05-12T10:54:40,0,person,0.9340,1,webcam
 2026-05-12T10:54:41,1,keyboard,0.8982,1,webcam
-2026-05-12T10:54:42,2,NONE,0.0,0,webcam
+2026-05-12T10:54:42,2,NONE,0.0000,0,webcam
 ```
 
-Exact values will vary.
+Exact values will vary. That is expected.
 
-That is normal. Rows containing `NONE` are also normal when no recognizable object is detected in a frame.
-
-The important point is that your webcam activity has become timestamped AI-assisted operational telemetry.
+A `NONE` record means that no object passed the configured detection threshold for that frame.
 
 ---
 
-# Step 4 - Run the SAS Import Example
+# Path B — Still-Image Telemetry
 
-Open your SAS environment.
+## Step 1 — Confirm the Images
 
-## Read the Webcam Object Telemetry in SAS
-
-Copy and paste the SAS code below.
-
-If your project folder is different, change only the DATAFILE path.
-
-```sas
-proc import datafile="C:\AF-002\data\webcam_object_events.csv"
-    out=work.webcam_object_events
-    dbms=csv
-    replace;
-    guessingrows=max;
-run;
-
-proc print data=work.webcam_object_events(obs=20);
-run;
-
-proc freq data=work.webcam_object_events;
-   tables object_detected;
-run;
-
-proc means data=work.webcam_object_events;
-   var confidence detection_count;
-run;
-```
-
-If SAS cannot read the file path directly, use this copy/paste DATA step instead:
-
-```SAS
-data work.webcam_object_events;
-   length object_detected $32 source $20;
-   format timestamp anydtdtm19.;
-
-   infile datalines dsd dlm=',';
-   input
-      timestamp :anydtdtm.
-      frame_number
-      object_detected $
-      confidence
-      detection_count
-      source $
-   ;
-datalines;
-2026-05-12T10:54:40,0,person,0.9340,1,webcam
-2026-05-12T10:54:41,1,keyboard,0.8982,1,webcam
-2026-05-12T10:54:42,2,NONE,0.0,0,webcam
-;
-run;
-
-proc print data=work.webcam_object_events(obs=20);
-run;
-
-proc freq data=work.webcam_object_events;
-   tables object_detected;
-run;
-
-proc means data=work.webcam_object_events;
-   var confidence detection_count;
-run;
-```
-
-The SAS program should import the raw data and display the data.
-
-Expected SAS actions may include:
-
-- import the raw data into a dataset named WORK.WEBCAM_OBJECT_EVENTS
-- print several rows
-- summarize object detections and confidence values
-- show that SAS can work with the generated telemetry
-
-If the CSV path in the SAS program does not match your local folder, update the path to the location of your generated CSV file.
-
-Inside the SAS file, look for:
-
-```sas
-%let TELEMETRY_CSV = data/webcam_object_events.csv;
-```
-
-If needed, change it to the actual path of your generated CSV file.
-
-For example, on a local Windows PC:
-
-```sas
-%let TELEMETRY_CSV = C:\AF-002\data\webcam_object_events.csv;
-```
-
----
-
-# Step 5 - Confirm Visible SAS Output
-
-A successful result should show the telemetry data in SAS.
-
-You should be able to see:
-
-- timestamp values
-- object detection labels such as `person` or `keyboard`
-- confidence values
-- detection counts
-- source values such as `webcam`
-
-You do not need a complex model.
-
-You do not need a dashboard.
-
-You only need to confirm:
-
-```text
-SAS can read and analyze AI-assisted operational telemetry.
-```
----
-
-# Image Telemetry Workflow
-
-The webcam workflow shows live visual input.
-
-The image workflow shows that still images can also generate AI-assisted operational telemetry. It is a valid success path if webcam access is unavailable or blocked.
-
-The goal remains:
-
-```text
-visual input
-  -> AI-assisted observation
-    -> telemetry
-      -> raw data
-        -> SAS analysis
-```
-
-Use the sample images in:
-
-```text
-/media
-```
-
-Expected files include:
+Confirm that these files are present:
 
 ```text
 media/bridge.jpg
@@ -526,44 +191,143 @@ media/dog.jpg
 media/banana.jpg
 ```
 
-From the course folder, run:
+## Step 2 — Run the Script
+
+From the AF-002 repository root, run:
 
 ```text
 python python/image_object_telemetry.py
 ```
 
-If `python` does not work but `py` does, run:
+On Windows, use:
 
 ```text
 py python/image_object_telemetry.py
 ```
 
-Expected output file:
+A successful run should process the retained sample images and create:
 
 ```text
 data/image_object_events.csv
 ```
 
-Open the generated CSV file.
+## Step 3 — Inspect the CSV
 
-The CSV should contain one row per image, with AI-assisted operational observations derived from each image.
+Open the generated file.
 
-The output CSV should use the same column structure as the webcam telemetry CSV.
+It should use the same basic fields as the webcam telemetry:
 
-Exact values will vary.
+```text
+timestamp
+frame_number
+object_detected
+confidence
+detection_count
+source
+```
 
-That is normal.
+The `source` field should identify the image used for each observation.
 
-The important point is that still images can become structured telemetry data.
+Exact detections may vary by model version and confidence threshold.
 
-To inspect the image telemetry in SAS, use the same import pattern from Step 4 and change the CSV path to:
+---
+
+# Stable Sample-Data Fallback
+
+When neither generated-data path is available, use:
+
+```text
+data/webcam_object_events_sample.csv
+```
+
+This provides a stable dataset for completing the SAS portion of the lesson.
+
+Using the sample file still satisfies the lesson’s analytical objective, but the live or image-generated path is preferred when available.
+
+---
+
+# Import the Telemetry into SAS
+
+Use:
+
+```text
+sas/sas_import_object_events.sas
+```
+
+The program imports object-event telemetry and produces basic inspection and summary output.
+
+Before running the program, confirm that its telemetry path points to the CSV being used:
+
+```text
+data/webcam_object_events.csv
+```
+
+or:
 
 ```text
 data/image_object_events.csv
 ```
 
-If using SAS OnDemand, upload image_object_events.csv or use the same copy/paste DATA step pattern shown earlier.
+or:
 
+```text
+data/webcam_object_events_sample.csv
+```
+
+Local SAS installations may require an absolute path, such as:
+
+```text
+C:\AF-002\data\webcam_object_events.csv
+```
+
+SAS OnDemand or SAS Studio users may need to upload the CSV and use the server-side file path.
+
+---
+
+# Expected SAS Results
+
+A successful run should create a SAS dataset and produce visible output using procedures such as:
+
+```text
+PROC PRINT
+PROC FREQ
+PROC MEANS
+```
+
+The output should allow you to inspect:
+
+- telemetry rows
+- detected object labels
+- detection frequencies
+- confidence values
+- detection counts
+- source values
+
+The important result is:
+
+```text
+SAS can read and analyze AI-assisted operational telemetry.
+```
+
+---
+
+# Human-in-Command Review
+
+AI-assisted detections are observations, not final operational truth.
+
+Review the output carefully.
+
+Ask:
+
+- Does the object label appear reasonable?
+- Is the confidence value high or low?
+- Does a `NONE` record mean nothing happened, or only that nothing was recognized?
+- Could lighting, camera position, image quality, or model limits affect the result?
+- What should a human verify before using the record operationally?
+
+The model provides evidence.
+
+The human determines significance.
 
 ---
 
@@ -571,116 +335,75 @@ If using SAS OnDemand, upload image_object_events.csv or use the same copy/paste
 
 ## Python command not found
 
-Try:
+Use:
 
 ```text
 py --version
 ```
 
-Then use `py` instead of `python` in later commands.
+Then substitute `py` for `python`.
 
-## Missing Python package
+## Required package missing
 
-Run:
-
-```text
-python -m pip install ultralytics opencv-python pandas
-```
-
-or:
-
-```text
-py -m pip install ultralytics opencv-python pandas
-```
+Return to `SETUP.md` and complete the dependency installation steps.
 
 ## Webcam does not open
 
 Check:
 
-- Windows Camera app
-- privacy settings
-- whether another app is using the camera
-- workplace restrictions
+- Windows camera permissions
+- whether another application is using the camera
+- organizational restrictions
+- the configured camera index
 
-If the webcam remains unavailable, use the image telemetry workflow or sample CSV path.
+Then use the still-image path or sample-data fallback.
 
 ## CSV not created
 
-Check:
+Confirm:
 
-- whether the script completed
-- whether the script printed an output path
-- whether you ran the command from the course folder
-- whether the `/data/` folder exists
+- the command was run from the repository root
+- the script completed without an error
+- the `data/` folder exists
+- the output path printed by the script
 
 ## SAS cannot find the CSV
 
-Update the file path in the SAS program.
+Update the SAS program to use the correct local or server-side path.
 
-Use the exact path to your generated CSV file.
-
----
-
-# Success Checkpoint
-
-Before moving on, confirm that you can physically identify:
-
-- the Python script in `/python/`
-- the SAS program in `/sas/`
-- the object telemetry CSV in `/data/`
-- visible SAS output from the object telemetry CSV
-- the image object-events CSV in `/data/`, if you completed the image workflow
-- the sample images in `/media/`
-
-If you can identify the required files and visible SAS output, you have completed the operational heart of Lesson 01.
+Do not change field names or file structure unless the lesson specifically requires it.
 
 ---
 
-# Visible Checkpoint
+# Lesson 01 Success
 
-You should now have or be able to see:
+Lesson 01 is complete when you can say:
 
-- `data/webcam_object_events.csv`
-- optional `data/image_object_events.csv` if you completed the still-image workflow
-- telemetry rows containing object detections such as:
-  - `person`
-  - `keyboard`
-  - `dog`
-  - `NONE`
-- visible SAS output from:
-  - `PROC PRINT`
-  - `PROC FREQ`
-  - `PROC MEANS`
+> I generated or used AI-assisted telemetry and analyzed it in SAS.
 
-You have now:
+You should be able to identify:
 
-```text
-visual input
-  -> AI-assisted observations
-    -> telemetry
-      -> raw data
-        -> SAS analysis
-```
-
-You do not need a production AI system.
-
-You only need to recognize that operational observations can become structured analytical data that SAS can analyze.
-
-If the webcam workflow failed, the sample CSV or image workflow still provides a valid operational Lesson 01 success path.
+- the input source
+- the telemetry CSV
+- the imported SAS dataset
+- visible SAS output
+- at least one limitation requiring human interpretation
 
 ---
 
 # Restart Checkpoint
 
-If you stop here, restart later by opening this lesson file again and checking:
+When returning after an interruption:
+
+1. Check whether one of these files exists:
 
 ```text
 data/webcam_object_events.csv
+data/image_object_events.csv
 ```
 
-If that file exists, continue with the SAS import step.
-
-If it does not exist, rerun the Python script or use:
+2. If a generated file exists, continue with the SAS import.
+3. If no generated file exists, rerun an input script or use:
 
 ```text
 data/webcam_object_events_sample.csv
@@ -688,109 +411,30 @@ data/webcam_object_events_sample.csv
 
 ---
 
-# First Success
-
-You are successful when you can say:
-
-> I generated AI-assisted operational telemetry from webcam or image input and analyzed it with SAS.
-
----
-
 # What You Just Did
 
-You used webcam or image input as a simple visual sensor.
+You used a webcam, still image, or stable sample file as an operational input.
 
-You turned AI-assisted observations into timestamped telemetry rows.
+You converted observations into structured telemetry.
 
-You saved those rows as raw data.
+You stored that telemetry as CSV data.
 
 You used SAS to inspect and summarize the result.
 
-That is the basic shape of many IoT and AIoT workflows.
-
----
-
-# Recap
-
-AIoT stops being mysterious when operational observations become timestamped data that SAS can analyze.
+This is the foundational pattern for the remainder of AF-002.
 
 ---
 
 # Next Step
 
-After completing this lesson, continue to:
+Continue to:
 
-`AF002_LESSON_02.md`
+```text
+AF002_LESSON_02.md
+```
 
-GitHub URL:
-
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
-Raw URL:
-
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
+Retrieve the lesson from the authoritative location in `LIBRARY.md`.
 
 ---
 
-# Development and Test Environment
-
-- Platform: ChatGPT Web
-- Model: GPT-5.5 Thinking
-- Date: 2026-05-09
-- Notes: Updated after Claude digital twin survivability test.
-
----
-
-# License
-
-Paul McDonald Open Use License (MIT-style)
-
-Copyright (c) 2026 Paul McDonald
-
-
-## Checkpoint
-
-You should now have:
-
-- `data/webcam_object_events.csv`
-- visible object detections such as:
-  - `person`
-  - `keyboard`
-  - `dog`
-  - `NONE`
-- successful SAS output from:
-  - `PROC PRINT`
-  - `PROC FREQ`
-  - `PROC MEANS`
-- a SAS dataset named:
-  - `WORK.WEBCAM_OBJECT_EVENTS`
-
-## Visual Brief
-
-Review visual summary:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_01_VISUAL_BRIEF.png
-
-
----
-
-# File Reference Information
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md
-
-Previous Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md
-
-Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
-
-Return to README:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
-
-
+End of Lesson 01

@@ -1,71 +1,67 @@
-﻿# data
+﻿# README.md
 
-## README Attributes
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/data/README.md  
 
-Repository Path: /af-002-iot-aiot-for-sas-programmers/data/README.md
+---
 
-GitHub URL: https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/README.md
+# Purpose
 
-Raw URL: https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/README.md
+The `data/` folder contains sample telemetry datasets required by AF-002 lessons and SAS programs.
 
-Status: Release Candidate A for Version 1.0
+These files support:
 
-## Purpose
+- introductory object-event analysis
+- spatial telemetry analysis
+- congestion investigation
+- Lesson 05 timestamp and dashboard analysis
 
-This folder is part of the AF-002 release candidate repository and supports operational survivability, deterministic navigation, and maintainable course delivery.
+Use the authoritative file locations defined in `LIBRARY.md`.
 
-## Audience
+---
 
-This folder is intended for AF-002 maintainers, reviewers, contributors, and AI-assisted navigation workflows. Learner-facing use depends on the folder contents.
+# Contents
 
-## What Belongs Here
+## Lessons 01 and 02
 
-Files and immediate subfolders that directly support the purpose of this folder belong here.
+```text
+webcam_object_events_sample.csv
+```
 
-## What Does NOT Belong Here
+Provides sample object-event telemetry when live webcam capture is unavailable or when a stable dataset is required.
 
-Temporary files, unapproved generated artifacts, local cache files, and unrelated working drafts should not be stored here.
+## Lesson 04
 
-## File and Immediate Subfolder Inventory
+```text
+sample_spatial_telemetry.csv
+sample_spatial_telemetry_congestion.csv
+```
 
-<!-- BEGIN AUTO-INVENTORY -->
+Provides spatial telemetry for region, confidence, persistence, and congestion analysis.
 
-| Item | References |
-|---|---|
-| AF002_L05_TELEMETRY_SAMPLE_v0_1.csv | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv |
-| README.md | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/data/README.md  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/README.md  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/README.md |
-| README.md.bak | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/data/README.md.bak  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/README.md.bak  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/README.md.bak |
-| sample_spatial_telemetry.csv | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry.csv  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry.csv  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry.csv |
-| sample_spatial_telemetry_congestion.csv | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv |
-| webcam_object_events_sample.csv | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv |
+## Lesson 05
 
-<!-- END AUTO-INVENTORY -->
+```text
+AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
+```
 
-## Maintenance Notes
+Provides timestamped telemetry for dashboard and freshness analysis.
 
-- Update this README when files or immediate subfolders are added, renamed, or removed.
-- Keep inventory references deterministic and current.
-- Preserve the auto-inventory markers for future tooling.
-- Keep README files useful for both humans and AI-assisted repository navigation.
+---
 
-## Attribution and Licensing
+# Use
 
-Attribution, licensing, or usage-rights information should be maintained for media, data, downloadable artifacts, and externally sourced materials when relevant.
+Use the dataset identified by the active lesson or SAS program.
 
-## Development & Test Environment
+Do not rename files or alter their field structure unless the lesson explicitly directs that action.
 
-- Platform: Windows / PowerShell
-- Project: AgentForge Framework
-- Course/Tool Context: AF-002 release hardening
-- Date: 2026-05-27
+If a required dataset cannot be retrieved, follow the retrieval-failure guidance in `SETUP.md`.
 
-## Operational Guidance
+---
 
-Use this README as a deterministic navigation and restartability surface. Inventory entries should remain accurate and machine-verifiable.
-
-## Legacy Content Preserved During Normalization
-
-The following content existed before README normalization and is preserved for human review.
-
-# data
-
+End of README

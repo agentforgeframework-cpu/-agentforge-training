@@ -1,65 +1,93 @@
-﻿# python
+﻿# README.md
 
-## README Attributes
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/python/README.md  
 
-Repository Path: /af-002-iot-aiot-for-sas-programmers/python/README.md
+---
 
-GitHub URL: https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/README.md
+# Purpose
 
-Raw URL: https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/python/README.md
+The `python/` folder contains the telemetry-generation programs used by AF-002.
 
-Status: Release Candidate A for Version 1.0
+These programs convert webcam frames or still images into structured CSV telemetry that can be analyzed in SAS.
 
-## Purpose
+Use the authoritative file locations defined in `LIBRARY.md`.
 
-This folder is part of the AF-002 release candidate repository and supports operational survivability, deterministic navigation, and maintainable course delivery.
+---
 
-## Audience
+# Contents
 
-This folder is intended for AF-002 maintainers, reviewers, contributors, and AI-assisted navigation workflows. Learner-facing use depends on the folder contents.
+## Webcam Telemetry
 
-## What Belongs Here
+```text
+webcam_object_telemetry.py
+```
 
-Files and immediate subfolders that directly support the purpose of this folder belong here.
+Captures webcam frames, performs object detection, and writes telemetry to:
 
-## What Does NOT Belong Here
+```text
+data/webcam_object_events.csv
+```
 
-Temporary files, unapproved generated artifacts, local cache files, and unrelated working drafts should not be stored here.
+This is the primary live-telemetry path.
 
-## File and Immediate Subfolder Inventory
+## Image Telemetry
 
-<!-- BEGIN AUTO-INVENTORY -->
+```text
+image_object_telemetry.py
+```
 
-| Item | References |
-|---|---|
-| image_object_telemetry.py | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py |
-| README.md | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/python/README.md  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/README.md  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/python/README.md |
-| README.md.bak | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/python/README.md.bak  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/README.md.bak  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/python/README.md.bak |
-| webcam_object_telemetry.py | **Repository Path**  /af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py  <br><br> **GitHub URL**  https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py  <br><br> **Raw URL**  https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/main/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py |
+Processes the sample images in `media/`, performs object detection, and writes telemetry to:
 
-<!-- END AUTO-INVENTORY -->
+```text
+data/image_object_events.csv
+```
 
-## Maintenance Notes
+This provides a deterministic fallback when webcam capture is unavailable or unsuitable.
 
-- Update this README when files or immediate subfolders are added, renamed, or removed.
-- Keep inventory references deterministic and current.
-- Preserve the auto-inventory markers for future tooling.
-- Keep README files useful for both humans and AI-assisted repository navigation.
+---
 
-## Development & Test Environment
+# Requirements
 
-- Platform: Windows / PowerShell
-- Project: AgentForge Framework
-- Course/Tool Context: AF-002 release hardening
-- Date: 2026-05-27
+Both programs require:
 
-## Operational Guidance
+```text
+ultralytics
+opencv-python
+pandas
+```
 
-Use this README as a deterministic navigation and restartability surface. Inventory entries should remain accurate and machine-verifiable.
+The object-detection model may be downloaded automatically by Ultralytics during the first run.
 
-## Legacy Content Preserved During Normalization
+---
 
-The following content existed before README normalization and is preserved for human review.
+# Use
 
-# python
+Run the scripts from the AF-002 repository root.
 
+Webcam telemetry:
+
+```text
+python python/webcam_object_telemetry.py
+```
+
+Image telemetry:
+
+```text
+python python/image_object_telemetry.py
+```
+
+Use `py` instead of `python` where required by the local Windows installation.
+
+Follow the active lesson for the required script, output, and validation steps.
+
+If a required program or dependency cannot be used, follow the fallback and retrieval guidance in `SETUP.md`.
+
+---
+
+End of README

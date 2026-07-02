@@ -1,71 +1,78 @@
-# AF002_LESSON_03.md
+# Lesson 03 — Use Telemetry Operationally
 
-# AF-002 — IoT/AIoT for SAS Programmers
-## Lesson 03 — Use Telemetry Operationally
-
-Status: Release Candidate A for Version 1.0 - Survivability Hardened Conversational Lesson
-Course Status: Public Beta  
-Instructional Mode: Conversational Instructor-Led Operational Lab
-
-Repository-relative path: `/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md`
-
-GitHub URL:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
-
-Raw URL:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md
+**Kit Type:** Training Kit  
+**Status:** Production Candidate  
+**Version:** 1.0  
+**Repository:** AF-002 - IoT/AIoT for SAS Programmers  
+**Repository Object:** ROOT_LIBRARY  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md  
 
 ---
 
-# Lesson Purpose
+# Purpose
 
-In Lesson 02, you learned that telemetry changes over time.
+Lesson 03 moves from analyzing telemetry to using telemetry operationally.
 
-In this lesson, you will begin using telemetry operationally.
-
-The goal is not merely to:
-- collect telemetry
-- summarize telemetry
-- graph telemetry
-
-The goal is to begin asking:
+The learner will begin asking:
 
 ```text
 What operational behavior does this telemetry represent?
+What deserves attention?
+What should a human verify?
 ```
 
-This lesson intentionally uses:
-- small understandable operational systems
-- guided operational interaction
-- incremental instructor pacing
-- Human-in-Command operational reasoning
+The lesson uses a small bird-feeder telemetry scenario because it is understandable, visible, and operationally useful without requiring specialized hardware knowledge.
+
+The subject is not birdwatching.
+
+The subject is operational interpretation.
 
 ---
 
-# Important Instructional Note
+# Instructional Mode
 
-This lesson is intentionally designed to be delivered conversationally.
+This lesson is designed for conversational delivery.
 
-This lesson works best when:
-- an instructor guides the learner
-- the learner runs one step at a time
-- operational interpretation occurs interactively
-- the learner influences investigation direction naturally
-
-This lesson is NOT intended to behave like:
-- a textbook chapter
-- a workbook dump
-- long-form instructional prose
-
-The operational teaching doctrine for this lesson is:
+Use this pattern:
 
 ```text
-Operational understanding emerges through guided operational interaction.
+Explain
+    -> Run
+        -> Observe
+            -> Interpret
+                -> Continue
 ```
+
+Deliver one operational idea and one SAS action at a time.
+
+Pause after each visible result.
+
+Do not move forward until the learner has interpreted what the output means.
+
+Operational understanding emerges through guided interaction.
 
 ---
 
-# Human-in-Command
+# AI Assistant Guidance
+
+When assisting with this lesson:
+
+- proceed one phase at a time
+- do not deliver the entire lesson as one uninterrupted block
+- ask the learner what they notice before explaining the result
+- use visible SAS output as the source of truth
+- distinguish evidence from interpretation
+- do not make operational decisions for the learner
+- do not introduce advanced architecture or hardware deployment
+- rebuild the lesson dataset when session state is uncertain
+- explicitly state when the core lesson is complete
+
+The goal is operational reasoning, not procedural completion alone.
+
+---
+
+# Human-in-Command Principle
 
 This lesson reinforces:
 
@@ -74,114 +81,65 @@ Systems increase awareness.
 Humans make decisions.
 ```
 
-Telemetry supports:
+Telemetry can support:
+
 - visibility
-- awareness
+- detection
 - investigation
-- operational understanding
+- comparison
+- operational awareness
 
-Telemetry does NOT replace:
+Telemetry does not replace:
+
 - human judgment
-- operational accountability
-- human responsibility
+- context
+- accountability
+- responsibility
+
+The system identifies evidence.
+
+A human determines what that evidence means and what action is appropriate.
 
 ---
 
-# Fresh-Session Survivability Rule
+# Learning Objectives
 
-Every operational cycle in this lesson should remain:
-- restartable
-- interruption-safe
-- fresh-session-safe
+By the end of this lesson, the learner should be able to:
 
-Never assume:
-- prior datasets exist
-- prior session state exists
-- previous lesson steps are still loaded
-
----
-
-# Recommended Instruction Pattern
-
-Recommended pacing:
-
-```text
-Explain
-→ Run
-→ Observe
-→ Interpret
-→ Continue
-```
-
-Strong recommendation:
-The instructor should deliver:
-- one operational idea
-- one SAS action
-- one interpretation opportunity
-
-per interaction cycle.
-
-Visible learner pacing is intentional.
-
-The learner should generally understand:
-- where they are in the lesson
-- what phase they are currently completing
-- that the lesson has bounded scope
-
-This reduces unnecessary cognitive load and improves operational focus.
-
-Runtime guidance:
-
-```text
-One operational step at a time.
-Pause after each operational result.
-Interpret before moving forward.
-```
+- read telemetry as operational evidence
+- distinguish a record from an operational condition
+- identify conditions that may deserve attention
+- make telemetry output easier for humans to understand
+- explain how thresholds change alerts without changing source telemetry
+- distinguish summary statistics from event-level evidence
+- recognize that inactivity can be meaningful
+- identify what a human should verify before acting
 
 ---
 
 # Operational Scenario
 
-This lesson uses:
+The lesson uses AI-assisted bird-feeder telemetry.
+
+The telemetry could have originated from:
+
+- a camera
+- an image-recognition system
+- a movement sensor
+- an environmental sensor
+- an event log
+- a small automated monitoring system
+
+The specific hardware is not important.
+
+The operational pattern is:
 
 ```text
-AI-assisted bird feeder telemetry
+observation
+    -> telemetry record
+        -> operational interpretation
+            -> human review
 ```
-
-This scenario is intentionally:
-- understandable
-- low-cost
-- operationally relatable
-- visually meaningful
-
-The bird feeder telemetry is a model for operational telemetry systems generally.
-
-This is NOT:
-- a birdwatching course
-- ornithology training
-- Raspberry Pi deployment instruction
-
-
-Operational note:
-
-```text
-If you eventually want telemetry like this yourself,
-the telemetry source could come from:
-- cameras
-- AI-assisted image systems
-- environmental sensors
-- operational logs
-- event streams
-- simple automation systems
-```
-
-The important lesson here is NOT the specific hardware.
-
-The important lesson is:
-- operational visibility
-- telemetry interpretation
-- Human-in-Command reasoning
-- operational awareness
 
 ---
 
@@ -200,9 +158,7 @@ alert_flag
 time_of_day
 ```
 
----
-
-# Approved Operational States
+Approved operational states are:
 
 ```text
 ACTIVE
@@ -212,48 +168,12 @@ NO_ACTIVITY
 
 ---
 
-# Instructor Opening Example
+# Phase 1 of 7 — Create Operational Telemetry
 
-Instructor:
-
-Okay — now we begin using telemetry operationally.
-
-Not just collecting telemetry.
-Not just graphing telemetry.
-
-We are going to start asking:
-
-```text
-What deserves attention?
-```
-
-We will stay small and simple.
-
-One step at a time.
-
----
-
-# Phase 1 of 7 — Create Tiny Operational Telemetry
-
-Strong recommendation:
-
-Combine:
-- DATA step
-- initial PROC PRINT
-
-into a SINGLE interaction cycle.
-
-Reason:
-This creates:
-- immediate operational visibility
-- immediate learner success
-- confidence continuity
-- fresh-session survivability
-
-Example:
+Run the DATA step and initial `PROC PRINT` together.
 
 ```sas
-title "Lesson 03 - Tiny Operational Telemetry";
+title "Lesson 03 - Operational Telemetry";
 
 data work.birdfeeder_telemetry;
    length event_id $4
@@ -266,18 +186,20 @@ data work.birdfeeder_telemetry;
 
    format timestamp datetime20.;
 
-   input timestamp :datetime20.
-         event_id $
-         species_detected $
-         species_count
-         confidence_score
-         movement_detected $
-         activity_level $
-         operational_state $
-         alert_flag $
-         time_of_day $;
+   input
+      timestamp :datetime20.
+      event_id $
+      species_detected $
+      species_count
+      confidence_score
+      movement_detected $
+      activity_level $
+      operational_state $
+      alert_flag $
+      time_of_day $
+   ;
 
-datalines;
+   datalines;
 18MAY2026:07:00:00 E001 cardinal 2 0.91 YES moderate ACTIVE NO morning
 18MAY2026:07:05:00 E002 cardinal 3 0.94 YES high HIGH_ACTIVITY YES morning
 18MAY2026:07:10:00 E003 none 0 0.00 NO low NO_ACTIVITY NO morning
@@ -285,138 +207,163 @@ datalines;
 run;
 
 proc print data=work.birdfeeder_telemetry;
+   title "Lesson 03 - Initial Telemetry Rows";
 run;
 
 title;
 ```
 
-Instructor guidance example:
+Pause and inspect the three rows.
 
-```text
-Take a second and look at the rows before continuing.
+Ask:
 
-Which row catches your attention first?
-```
+- Which event attracts attention first?
+- Which event looks routine?
+- Which event is ambiguous?
+- What can be observed directly?
+- What still requires interpretation?
+
+Do not assume that `HIGH_ACTIVITY` automatically means danger or that `NO_ACTIVITY` automatically means failure.
 
 ---
 
-# Phase 2 of 7 — Human-Readable Telemetry
+# Phase 2 of 7 — Make Telemetry Human-Readable
 
-Goal:
-Demonstrate that operational telemetry must be understandable by humans.
+Operational output should be understandable to a human under imperfect conditions.
 
-Introduce:
-- PROC FORMAT
-- LABEL statements
-- readable operational state descriptions
-
-Operational principle:
-
-```text
-Can a tired engineer understand this at 2 AM?
-```
-
-Example:
+Run:
 
 ```sas
 proc format;
    value $opstate
-      'ACTIVE'        = 'normal telemetry presence'
-      'HIGH_ACTIVITY' = 'elevated operational condition'
-      'NO_ACTIVITY'   = 'possible quiet or idle condition';
+      'ACTIVE'        = 'Normal telemetry presence'
+      'HIGH_ACTIVITY' = 'Elevated operational condition'
+      'NO_ACTIVITY'   = 'Possible quiet or idle condition';
 run;
 
 proc print data=work.birdfeeder_telemetry label;
-   label operational_state = 'Operational State'
-         species_count     = 'Bird Count'
-         confidence_score  = 'Detection Confidence'
-         alert_flag        = 'Alert Flag';
+   label
+      timestamp         = 'Event Timestamp'
+      species_detected  = 'Detected Species'
+      species_count     = 'Bird Count'
+      confidence_score  = 'Detection Confidence'
+      movement_detected = 'Movement Detected'
+      activity_level    = 'Activity Level'
+      operational_state = 'Operational State'
+      alert_flag        = 'Alert Flag'
+      time_of_day       = 'Time of Day'
+   ;
 
    format operational_state $opstate.;
 run;
 ```
 
----
-
-# Phase 3 of 7 — Operational State Awareness
-
-Goal:
-Transition the learner from:
-- rows
-to:
-- operational conditions
-
-Strong emphasis:
+Operational question:
 
 ```text
-These are not just rows anymore.
-They represent changing operational behavior.
+Could a tired operator understand this output quickly?
 ```
 
-Recommended procedures:
-- PROC PRINT
-- PROC FREQ
+Readable labels and state descriptions do not change the telemetry.
 
-Recommended instructor prompts:
-- What changed?
-- What catches your attention?
-- Does this seem normal?
-- Would this deserve investigation?
+They improve the human interface to the telemetry.
+
+---
+
+# Phase 3 of 7 — Summarize Operational State
+
+Run:
+
+```sas
+proc freq data=work.birdfeeder_telemetry;
+   tables operational_state alert_flag species_detected / nocum;
+   title "Lesson 03 - Operational State Summary";
+run;
+
+title;
+```
+
+Ask:
+
+- Which state appears most often?
+- Which event created the alert?
+- Does one alert establish a persistent problem?
+- What additional context would be useful?
+- Would you investigate the alert, the quiet event, or both?
+
+The output shows conditions.
+
+It does not explain them.
 
 ---
 
 # Restart Checkpoint
 
 At this point, the learner should have:
-- a working telemetry dataset
-- readable operational telemetry output
-- basic operational state awareness
-- operational interpretation experience
 
-If interrupted:
-restart from Phase 1 to rebuild operational context safely.
+- `work.birdfeeder_telemetry`
+- readable telemetry output
+- frequency summaries
+- an initial operational interpretation
 
----
+If session state is lost, restart from Phase 1.
 
----
-
-# Phase 4 of 7 — Human Operational Interpretation
-
-Goal:
-Teach operational interpretation.
-
-The learner should begin determining:
-- what deserves attention
-- what appears normal
-- what may require investigation
-- whether telemetry is trustworthy
-
-Strong emphasis:
-Operational ambiguity is valuable instructional territory.
-
-The instructor should encourage:
-- curiosity
-- skepticism
-- operational reasoning
-- investigative thinking
+The lesson is intentionally small enough to rebuild safely.
 
 ---
 
-# Phase 5 of 7 — Threshold Manipulation
+# Phase 4 of 7 — Interpret Evidence Carefully
 
-Goal:
-Demonstrate that changing thresholds changes operational interpretation.
+Review the three events directly.
 
-Strong emphasis:
-The telemetry itself may remain unchanged while:
-- alerts
-- visibility
-- operational attention
-- investigation triggers
+```sas
+proc print data=work.birdfeeder_telemetry noobs;
+   var timestamp
+       event_id
+       species_detected
+       species_count
+       confidence_score
+       movement_detected
+       operational_state
+       alert_flag;
+   title "Lesson 03 - Evidence Review";
+run;
 
-change dramatically.
+title;
+```
+
+For each row, distinguish:
+
+```text
+What the telemetry says
+What the telemetry may mean
+What a human should verify
+```
 
 Example:
+
+```text
+Telemetry says:
+Three cardinals were detected with confidence 0.94.
+
+Telemetry may mean:
+The feeder experienced elevated activity.
+
+A human should verify:
+Whether the image supports the count,
+whether repeated detections were possible,
+and whether the alert threshold is appropriate.
+```
+
+Avoid statements that convert telemetry directly into certainty.
+
+---
+
+# Phase 5 of 7 — Change the Threshold
+
+The source telemetry can remain unchanged while operational interpretation changes.
+
+Create a new alert result using a threshold of four birds.
 
 ```sas
 data work.birdfeeder_alerts;
@@ -427,204 +374,233 @@ data work.birdfeeder_alerts;
    else
       alert_flag = 'NO';
 run;
-```
 
-Important operational lesson:
-
-```text
-The telemetry did not change.
-The operational interpretation changed.
-```
-
----
-
-# Phase 6 of 7 — Summary Data vs Telemetry Data
-
-Goal:
-Demonstrate that summary statistics answer different questions than telemetry streams.
-
-Strong instructional anchor:
-
-```text
-2.2 birds
-```
-
-This tested extremely well operationally.
-
-The learner naturally recognizes:
-- mathematically valid
-- operationally absurd
-
-This strongly reinforces:
-- averages can hide operational behavior
-- telemetry and summaries serve different purposes
-
-Example:
-
-```sas
-proc means data=work.birdfeeder_telemetry mean;
-   var species_count;
+proc print data=work.birdfeeder_alerts noobs;
+   var timestamp
+       event_id
+       species_detected
+       species_count
+       operational_state
+       alert_flag;
+   title "Lesson 03 - Alert Threshold Set to Four";
 run;
+
+title;
 ```
+
+Compare the original and revised alert flags.
 
 Operational lesson:
 
 ```text
-Summary data and telemetry data answer different operational questions.
+The telemetry did not change.
+The threshold changed.
+The operational interpretation changed.
 ```
 
----
+Ask:
 
-# Phase 7 of 7 — Quiet Telemetry Interpretation
+- Did the underlying event change?
+- Did the alert decision change?
+- Who selected the threshold?
+- What evidence should support that threshold?
+- What could happen if the threshold is too low or too high?
 
-Goal:
-Teach that:
-- silence
-- inactivity
-- lack of telemetry
-
-can also represent operational telemetry.
-
-Strong emphasis:
-NO_ACTIVITY is not automatically failure.
-
-The learner should consider:
-- expected quiet periods
-- environmental conditions
-- telemetry trustworthiness
-- sensor failure possibilities
+Thresholds are operational decisions, not natural facts.
 
 ---
 
-# Optional Expansion Areas
+# Phase 6 of 7 — Compare Summary Data with Event Data
 
-Strong survivability success occurred when learners explored:
-- anomaly detection
-- fleet telemetry
-- operational dashboards
-- weather correlation
-- telemetry trustworthiness
-- missing telemetry
-- fleet comparison
-- operational visualization enhancement
-- ingestion gaps
-- sensor reliability
+Run:
 
-These should remain optional expansion paths.
+```sas
+proc means data=work.birdfeeder_telemetry mean maxdec=2;
+   var species_count;
+   title "Lesson 03 - Average Bird Count";
+run;
+
+title;
+```
+
+The average bird count for the three events is approximately:
+
+```text
+1.67 birds
+```
+
+That result is mathematically valid.
+
+It is not a literal event that occurred.
+
+No event contained 1.67 birds.
+
+Operational lesson:
+
+```text
+Summary data and event-level telemetry answer different questions.
+```
+
+The average describes the dataset.
+
+The individual rows describe specific operational events.
+
+Ask:
+
+- Could the average hide the high-activity event?
+- Could it hide the no-activity event?
+- Which view is better for immediate investigation?
+- Which view is better for broader comparison?
+
+Neither view is automatically superior.
+
+They serve different purposes.
 
 ---
 
-# Learner Artifacts
+# Phase 7 of 7 — Interpret Quiet Telemetry
 
-By the end of Lesson 03, the learner should possess:
-- telemetry dataset
-- SAS operational outputs
-- threshold analysis examples
-- operational state summaries
-- telemetry interpretation experience
-- operational reasoning exposure
+Review the `NO_ACTIVITY` event.
+
+```sas
+proc print data=work.birdfeeder_telemetry noobs;
+   where operational_state = 'NO_ACTIVITY';
+
+   var timestamp
+       event_id
+       species_detected
+       species_count
+       confidence_score
+       movement_detected
+       operational_state
+       alert_flag;
+
+   title "Lesson 03 - Quiet Telemetry Review";
+run;
+
+title;
+```
+
+`NO_ACTIVITY` may indicate:
+
+- normal quiet conditions
+- an expected gap in activity
+- environmental change
+- an obstructed view
+- a failed sensor
+- a failed data feed
+- a detection-model limitation
+
+The record alone does not establish which explanation is correct.
+
+Ask:
+
+- Was quiet activity expected at this time?
+- Was the sensor still reporting?
+- Was movement detection working?
+- Was the camera view obstructed?
+- Did surrounding events also become quiet?
+- What should a human inspect next?
+
+Operational silence can be meaningful.
+
+It can also be misleading.
 
 ---
 
-# Lesson Completion Signal
+# Independent Review
 
-The instructor should explicitly state:
+Choose one event and write a short operational review using this structure:
+
+```text
+Telemetry shows:
+This may matter because:
+A human should verify:
+```
+
+Example:
+
+```text
+Telemetry shows:
+A high-activity event with three detected cardinals,
+movement present, and confidence of 0.94.
+
+This may matter because:
+The event exceeded the original attention threshold.
+
+A human should verify:
+Whether the count is visually supported,
+whether duplicate detection occurred,
+and whether the selected threshold reflects a real operational need.
+```
+
+The review should report evidence without overstating certainty.
+
+---
+
+# Lesson 03 Success
+
+Lesson 03 is complete when the learner can say:
+
+> I can use SAS telemetry output to identify operational conditions, question thresholds, distinguish summaries from events, and identify what a human should verify.
+
+The learner should be able to explain:
+
+- why readable telemetry matters
+- why an alert is not the same as a confirmed problem
+- how thresholds change interpretation
+- why averages can hide operational behavior
+- why inactivity can be meaningful
+- why human review remains necessary
+
+The instructor or AI assistant should explicitly state:
 
 ```text
 You have completed the core operational objectives of Lesson 03.
 ```
 
-This is REQUIRED for:
-- closure
-- confidence continuity
-- learner reassurance
-- survivability
+---
 
+# Restart Checkpoint
 
-Strong recommendation:
+When returning after interruption:
 
-The instructor should pause here and allow the learner to recognize:
+1. Recreate `work.birdfeeder_telemetry` from Phase 1.
+2. Reapply the format from Phase 2.
+3. Continue from the phase where work stopped.
 
-```text
-I can now:
-- observe telemetry
-- interpret operational conditions
-- reason about operational meaning
-- manipulate thresholds
-- recognize operational ambiguity
-inside a SAS workflow.
-```
-
-Optional continuation prompt:
-
-```text
-Would you like to explore additional operational scenarios?
-```
+Do not assume that prior SAS WORK datasets remain available.
 
 ---
 
-# Emotional Handoff To Lesson 04
+# What You Just Did
 
-The learner should finish Lesson 03 feeling:
+You moved from observing telemetry to interpreting it operationally.
 
-```text
-This is operationally useful.
-How could I realistically use this at work?
-```
+You:
 
-NOT:
+- made telemetry human-readable
+- summarized operational states
+- reviewed individual evidence
+- changed an alert threshold
+- compared summaries with event-level data
+- treated inactivity as an operational condition
+- preserved human judgment and accountability
 
-```text
-I learned bird feeder analytics.
-```
-
----
-
-# Development & Test Environment
-
-Course:
-AF-002 — IoT/AIoT for SAS Programmers
-
-Lesson:
-Lesson 03 — Use Telemetry Operationally
-
-Primary Validation Method:
-- human survivability testing
-- conversational instructor testing
-- digital twin instructional analysis
-
-Validated Instructional Identity:
-- guided operational telemetry instruction
-- conversational operational coaching
-- incremental operational interaction
-
-Key Validated Doctrine:
-
-```text
-Operational understanding emerges through guided operational interaction.
-```
+This is the transition from telemetry analysis to operational use.
 
 ---
 
-# Lesson Navigation
+# Next Step
 
-Previous Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md
+Continue to:
 
-Next Lesson:
-https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md
+```text
+AF002_LESSON_04.md
+```
 
-Return to README:
-https://github.com/agentforgeframework-cpu/-agentforge-training/blob/main/af-002-iot-aiot-for-sas-programmers/README.md
+Retrieve the lesson from the authoritative location in `LIBRARY.md`.
 
 ---
 
-# License
-
-Copyright (c) AgentForge Framework
-
-Status:
-Public Beta Educational Material
-
-Additional licensing details:
-(TBD)
+End of Lesson 03
