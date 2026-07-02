@@ -233,24 +233,41 @@ The second statement explains operational consequence.
 Use:
 
 ```text
-data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
 sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas
 ```
 
-The program is intended to produce a bounded set of outputs for interpretation.
+The program provides two input options:
 
-Focus on:
+```text
+Option 1 — repository CSV
+Option 2 — embedded teaching data
+```
 
-- queue depth timing
-- dashboard refresh timing
+The embedded teaching data is active by default and requires no external file.
+
+To use the repository CSV instead, follow the input-option instructions inside the SAS program and use:
+
+```text
+data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
+```
+
+Use only one input option.
+
+Both paths create:
+
+```text
+WORK.L05_TELEMETRY
+```
+
+The exact row-level output may vary slightly between the two teaching datasets, but both support the same operational investigation:
+
+- queue-depth timing
 - telemetry freshness
-- staffing alignment
-- intervention windows
-- zone behavior
+- dashboard delay
+- localized congestion
+- intervention-window analysis
 
-Do not treat the exercise as a SAS coding test.
-
-The objective is operational interpretation.
+The objective is operational interpretation, not writing SAS code from scratch.
 
 ---
 

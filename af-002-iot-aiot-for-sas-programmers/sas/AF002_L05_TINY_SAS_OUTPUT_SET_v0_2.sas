@@ -25,6 +25,96 @@ title;
 footnote;
 
 /*------------------------------------------------------------------------------
+INPUT OPTIONS
+
+Use only one input option.
+
+OPTION 1 — REPOSITORY CSV
+
+To use the repository CSV:
+1. Remove the surrounding comment markers from Option 1.
+2. Comment out Option 2, the embedded DATALINES block.
+
+Update the file path when required by the local SAS environment.
+
+OPTION 2 — EMBEDDED TEACHING DATA
+
+This is the default input path.
+
+No external CSV file is required.
+
+To use Option 1 instead, comment out this entire DATA step.
+
+------------------------------------------------------------------------------*/
+
+/*
+%let L05_TELEMETRY_CSV =
+    data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv;
+
+data work.l05_telemetry;
+    infile "&L05_TELEMETRY_CSV"
+        dsd
+        dlm=','
+        firstobs=2
+        truncover
+        lrecl=32767
+    ;
+
+    length
+        camera_id $8
+        zone $20
+        object_type $12
+        event_window $12
+        operator_observation $40
+    ;
+
+    informat
+        event_capture_time anydtdtm.
+        telemetry_buffer_time anydtdtm.
+        dashboard_refresh_time anydtdtm.
+    ;
+
+    format
+        event_capture_time datetime19.
+        telemetry_buffer_time datetime19.
+        dashboard_refresh_time datetime19.
+    ;
+
+    input
+        event_capture_time :anydtdtm.
+        telemetry_buffer_time :anydtdtm.
+        dashboard_refresh_time :anydtdtm.
+        camera_id :$8.
+        zone :$20.
+        object_type :$12.
+        queue_depth
+        forklift_active_count
+        staffing_level
+        confidence
+        event_window :$12.
+        operator_observation :$40.
+    ;
+
+    buffer_delay_minutes =
+        intck(
+            'second',
+            event_capture_time,
+            telemetry_buffer_time
+        ) / 60;
+
+    dashboard_delay_minutes =
+        intck(
+            'second',
+            event_capture_time,
+            dashboard_refresh_time
+        ) / 60;
+
+    queue_growth_since_prior = .;
+run;
+*/
+
+
+/*------------------------------------------------------------------------------
 Step 1: Load inline telemetry sample data
 ------------------------------------------------------------------------------*/
 
