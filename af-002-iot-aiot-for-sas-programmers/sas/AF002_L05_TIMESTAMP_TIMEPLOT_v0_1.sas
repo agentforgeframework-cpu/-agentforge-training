@@ -24,8 +24,10 @@ The goal is to help operational investigators:
 This is intentionally simple, practical, and operational.
 
 Recommended usage:
-Run after importing:
-   AF002_L05_TELEMETRY_SAMPLE_v0_1.csv
+Run after AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas
+has created WORK.L05_TELEMETRY using either:
+   - the repository CSV input option, or
+   - the default embedded teaching data
 
 Expected input dataset:
    work.l05_telemetry
