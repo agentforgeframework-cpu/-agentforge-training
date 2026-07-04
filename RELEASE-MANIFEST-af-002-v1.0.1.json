@@ -1,259 +1,259 @@
 {
   "kit": "AF-002",
   "release_id": "af-002-v1.0.1",
-  "content_commit": "d4490c22f500987949c9c69b2ecf20642a44d02f",
-  "generated_at": "2026-07-04T01:50:10Z",
+  "content_commit": "b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83",
+  "generated_at": "2026-07-04T02:02:21Z",
   "expected_object_count": 42,
   "routing_table": {
     "COURSE_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/COURSE.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/COURSE.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/COURSE.md",
       "sha256": "34ba48d68285343342ea46028ac913a1a3e17d7c662500064c2cac30d4a6d9c6",
       "size_bytes": 6982
     },
     "LIBRARY_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/LIBRARY.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/LIBRARY.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/LIBRARY.md",
       "sha256": "57d0b1598847371e3099150838502f2b16f8dd0d24be57a87c96d8dcb42b8b35",
       "size_bytes": 10245
     },
     "LICENSE_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/LICENSE.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/LICENSE.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/LICENSE.md",
       "sha256": "ae7e03ce38c9dead83684475761da21b69b1bfb04df677bcadc9897ab7ef756f",
       "size_bytes": 1218
     },
     "README_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/README.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/README.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/README.md",
       "sha256": "8215c488364b878511a00befaf70bdf0ba8880adb73774d734ce6fb0a4e8979c",
       "size_bytes": 1445
     },
     "SETUP_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/SETUP.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/SETUP.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/SETUP.md",
       "sha256": "9951fe31d4be54d8319f75f08e3318b184d2e2203516296cb6640e955cbce053",
       "size_bytes": 10297
     },
     "SAS_AF002_L05_TIMESTAMP_TIMEPLOT_V0_1_SAS": {
       "path": "af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TIMESTAMP_TIMEPLOT_v0_1.sas",
       "sha256": "99eb37190193ff18b63f366d8d6e6c97f197b6efe949cc9d49c142554451d9a5",
       "size_bytes": 4000
     },
     "SAS_AF002_L05_TINY_SAS_OUTPUT_SET_V0_2_SAS": {
       "path": "af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/sas/AF002_L05_TINY_SAS_OUTPUT_SET_v0_2.sas",
       "sha256": "95a4fd837bc4097f0871664fa3b6b1645dc5d4854b6da4ebbfca23d84c337f98",
       "size_bytes": 10998
     },
     "SAS_AF002_LESSON_04_CONGESTION_INVESTIGATION_SAS": {
       "path": "af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_CONGESTION_INVESTIGATION.sas",
       "sha256": "a4bf9c9cdcf99c5e823fd29e5dfb2407cc83f88d88742fecd9f594ab37f7d085",
       "size_bytes": 7432
     },
     "SAS_AF002_LESSON_04_SAS_UTILITIES_SAS": {
       "path": "af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_SAS_UTILITIES.sas",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_SAS_UTILITIES.sas",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/sas/AF002_LESSON_04_SAS_UTILITIES.sas",
       "sha256": "3753e34438487bbf4da090200a710a6bb2e67bd3482f11dd408682bb27130593",
       "size_bytes": 2218
     },
     "SAS_README_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/sas/README.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/sas/README.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/sas/README.md",
       "sha256": "f15efad8048e7c68d2b45ed8dc8017fde73d7dc3803d356e4f5573dcdb43bfb9",
       "size_bytes": 2023
     },
     "SAS_SAS_IMPORT_OBJECT_EVENTS_SAS": {
       "path": "af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/sas/sas_import_object_events.sas",
       "sha256": "0b5225ed2067d4c28c186ba7dcad8af63ed7328e6199468a7cbf7b2d2ba46bb6",
       "size_bytes": 1913
     },
     "LESSONS_AF002_LESSON_00_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_00.md",
       "sha256": "eed557adb1375cea909056f6cee1678d87afaa930ac9f6c472e99530fd3e749a",
       "size_bytes": 4530
     },
     "LESSONS_AF002_LESSON_01_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_01.md",
       "sha256": "f7dc3111f42e94e0a7fbaabae72cad6c114ecc076fb2b44679304a7c9ce7c68d",
       "size_bytes": 8906
     },
     "LESSONS_AF002_LESSON_02_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_02.md",
       "sha256": "8629ecff046de0b9205ae0e8f316da86d82019ab5a7ef9d138d0f9f26a6b6c5f",
       "size_bytes": 14814
     },
     "LESSONS_AF002_LESSON_03_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_03.md",
       "sha256": "7fa45667f8c3f1f8a0adfa1977f4eceb80bc1a23e698eddabe3a52cc0c9963f6",
       "size_bytes": 12916
     },
     "LESSONS_AF002_LESSON_04_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_04.md",
       "sha256": "219f543e89b5ff8d7c0411fdd56e0738d6649a39c450d401e0cbcecdd6afa2ba",
       "size_bytes": 14704
     },
     "LESSONS_AF002_LESSON_05_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/AF002_LESSON_05.md",
       "sha256": "46da59202836b0f6b80bee9c1e14b13ebadbc2bd94fb799e285f76774d23331f",
       "size_bytes": 14775
     },
     "LESSONS_README_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/lessons/README.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/lessons/README.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/lessons/README.md",
       "sha256": "d1fde8ee8551381257209e8e8f21fd0d969c2f4af727d2c1159430c76adb0f75",
       "size_bytes": 1445
     },
     "PYTHON_README_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/python/README.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/python/README.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/python/README.md",
       "sha256": "3e02b8545894fa725c519acec54893ed10bf16904165d1b65fc6092141ff3db7",
       "size_bytes": 2001
     },
     "PYTHON_IMAGE_OBJECT_TELEMETRY_PY": {
       "path": "af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/python/image_object_telemetry.py",
       "sha256": "3ca06feaa721f5b6154a5f79b3396336153eeeea66ef21761aebe96f9c930078",
       "size_bytes": 4396
     },
     "PYTHON_WEBCAM_OBJECT_TELEMETRY_PY": {
       "path": "af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/python/webcam_object_telemetry.py",
       "sha256": "67cf9601a69a86e9a6a11274e75042a64ff6d8141b21797b3655abb87578d972",
       "size_bytes": 5479
     },
     "DATA_AF002_L05_TELEMETRY_SAMPLE_V0_1_CSV": {
       "path": "af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/data/AF002_L05_TELEMETRY_SAMPLE_v0_1.csv",
       "sha256": "5575d174506a128fd17193938ac5599ec2d1dde916f638de22b1229d0fabc97d",
       "size_bytes": 1737
     },
     "DATA_README_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/data/README.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/data/README.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/data/README.md",
       "sha256": "94e19b0e1efd239cb733baa1fe6cf04eaccade39bfcc2d564f5ba9d00673af19",
       "size_bytes": 1672
     },
     "DATA_SAMPLE_SPATIAL_TELEMETRY_CSV": {
       "path": "af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry.csv",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry.csv",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry.csv",
       "sha256": "7f2b770999d3f0dd6491490af1bbe7c8c22a65cce70dbc7a387050bcf2d5b652",
       "size_bytes": 353
     },
     "DATA_SAMPLE_SPATIAL_TELEMETRY_CONGESTION_CSV": {
       "path": "af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/data/sample_spatial_telemetry_congestion.csv",
       "sha256": "8b3d982434508d09d8591492a61d3a3662e98fea6ebc1be2f4f7219939af96ea",
       "size_bytes": 4315
     },
     "DATA_WEBCAM_OBJECT_EVENTS_SAMPLE_CSV": {
       "path": "af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/data/webcam_object_events_sample.csv",
       "sha256": "605d5d05ea1a99547fdc91e70b80250261a3e2ebf4911b82e8de8707b220b33b",
       "size_bytes": 247
     },
     "MEDIA_AF-002_LESSON_04_BOUNDING_BOXES_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_BOUNDING_BOXES.png",
       "sha256": "dc096b5587c03c4323cf7ab3ffaf292e61dce13783bdb6c6932c96be8baf34cf",
       "size_bytes": 2445804
     },
     "MEDIA_AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CAMERA_COORDINATE_SYSTEM.png",
       "sha256": "0aeb3ed56a675e797aa1cceb7705bdd6a8ccb038a5a94e4d9425420779edebc9",
       "size_bytes": 1874734
     },
     "MEDIA_AF-002_LESSON_04_CONFIDENCE_EXAMPLES_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_CONFIDENCE_EXAMPLES.png",
       "sha256": "0b75337d5b142550815f6bae6615422a49d3349f92d951284670e4da721e143a",
       "size_bytes": 2057500
     },
     "MEDIA_AF-002_LESSON_04_FRAME_SEQUENCE_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_FRAME_SEQUENCE.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_FRAME_SEQUENCE.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_FRAME_SEQUENCE.png",
       "sha256": "35f14b1a3b2d502d29a56b61ca6bddce87d332f7233d751c79c4f220e7beb8be",
       "size_bytes": 1930852
     },
     "MEDIA_AF-002_LESSON_04_MORNING_CONGESTION_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_MORNING_CONGESTION.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_MORNING_CONGESTION.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_MORNING_CONGESTION.png",
       "sha256": "662be0d45c5bed6ec16d276e09a84f88920d12f3fa4f58f541729049775acba6",
       "size_bytes": 2859037
     },
     "MEDIA_AF-002_LESSON_04_TIMESTAMP_PATHS_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_TIMESTAMP_PATHS.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_TIMESTAMP_PATHS.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_TIMESTAMP_PATHS.png",
       "sha256": "c09e6631e5d8cc55b6b918322a73cd5c1549097dc7fac4207f2c7cb49dcee7a8",
       "size_bytes": 1660657
     },
     "MEDIA_AF-002_LESSON_04_ZONE_DEFINITION_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_ZONE_DEFINITION.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_ZONE_DEFINITION.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF-002_LESSON_04_ZONE_DEFINITION.png",
       "sha256": "f6e4a086892ca29743b26ae9a5c2bcf4ee3872f2f3b458d98b3c2832a51578c5",
       "size_bytes": 2240850
     },
     "MEDIA_AF002_L05_EXECUTIVE_DASHBOARD_V0_1_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_EXECUTIVE_DASHBOARD_v0_1.png",
       "sha256": "ea94742286130a9a29ec153d42a3bf677632c58720ab1e8bf3af74129ef0ef85",
       "size_bytes": 1411373
     },
     "MEDIA_AF002_L05_OPERATIONS_DASHBOARD_V0_1_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_OPERATIONS_DASHBOARD_v0_1.png",
       "sha256": "85098b8d6929707785234f1c9b1e19b7b7e70246b52192f5a34f5ebbf7fa0bdd",
       "size_bytes": 1491821
     },
     "MEDIA_AF002_L05_TIMESTAMP_COMPARISON_V0_1_PNG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/AF002_L05_TIMESTAMP_COMPARISON_v0_1.png",
       "sha256": "c685c463f370030dda2a263c0a143276296e45c954bab4ea8eb317491bd3b7c2",
       "size_bytes": 1300572
     },
     "MEDIA_README_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/README.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/README.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/README.md",
       "sha256": "5ac27b2fb37411d033f924232a588ed2fb96fc0229bb0018ef57897a22c3f642",
       "size_bytes": 1904
     },
     "MEDIA_BANANA_JPG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/banana.jpg",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/banana.jpg",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/banana.jpg",
       "sha256": "77036e4ae91b7fbce3f16d2c32325a2c28e5ab3f2a9e388b6108c0554f44cde9",
       "size_bytes": 269723
     },
     "MEDIA_BRIDGE_JPG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/bridge.jpg",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/bridge.jpg",
       "sha256": "ce2c6d9fc89bb90a9c13e5d6b2e3efe471b0f69a98ce243c5af6616eea2aa365",
       "size_bytes": 4587237
     },
     "MEDIA_DOG_JPG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/dog.jpg",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/dog.jpg",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/dog.jpg",
       "sha256": "96471b2d32b0e7256455e0a1c1012a3528caa580bc445bc963e5dd22504289d5",
       "size_bytes": 5799890
     },
     "MEDIA_MEDIA-ATTRIBUTION_MD": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/media-attribution.md",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/media-attribution.md",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/media-attribution.md",
       "sha256": "059e0eb29978f6314ccdbb7cb4cdaa07316ab6a29927c4e9ead6638f6899c8dc",
       "size_bytes": 1784
     },
     "MEDIA_MOUNTAIN_JPG": {
       "path": "af-002-iot-aiot-for-sas-programmers/media/mountain.jpg",
-      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/d4490c22f500987949c9c69b2ecf20642a44d02f/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg",
+      "immutable_url": "https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/b0d9ab61fb6e66d65a2e334b7a0f66bea77abb83/af-002-iot-aiot-for-sas-programmers/media/mountain.jpg",
       "sha256": "7f915615464c0b264838b2fb59e16b612dbc484c28e6f426c950cd2a5464ceb6",
       "size_bytes": 7665281
     }
