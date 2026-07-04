@@ -131,15 +131,17 @@ jobs:
           print(f"{len(routing)} objects; content_commit={sha}; release={tag}")
           EOF
 
-      - name: Commit in-tree mirror to main
+      - name: Commit in-tree mirror to main (idempotent)
         run: |
           TAG="${GITHUB_REF_NAME}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          mv "RELEASE-MANIFEST-${TAG}.json" /tmp/          # park it: avoids untracked-file collision on re-runs
           git fetch origin main
-          git switch main            # untracked generated files carry over
+          git checkout -B main FETCH_HEAD                  # tag checkouts have no local main
+          mv "/tmp/RELEASE-MANIFEST-${TAG}.json" .
           git add "RELEASE-MANIFEST-${TAG}.json"
-          git commit -m "Release manifest mirror for ${TAG}"
+          git diff --cached --quiet || git commit -m "Release manifest mirror for ${TAG}"
           git push origin main
 
       - name: Publish release with manifest asset and gate body
