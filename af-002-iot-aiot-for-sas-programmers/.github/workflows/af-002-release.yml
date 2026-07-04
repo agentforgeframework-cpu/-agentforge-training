@@ -1,0 +1,68 @@
+# af-002-release.yml — corrected review patch (Claude, Round 8)
+# Fixes vs Grok's draft: push-tag trigger (B1), contents:write (B2),
+# full-tree routing table scoped to the course folder with sha256 (B3).
+# Place at: .github/workflows/af-002-release.yml
+name: AF-002 Release Manifest
+
+on:
+  push:
+    tags:
+      - 'af-002-v*'
+
+permissions:
+  contents: write   # required by softprops/action-gh-release
+
+jobs:
+  generate-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate RELEASE-MANIFEST.json
+        run: |
+          python3 << 'EOF'
+          import hashlib, json, os, subprocess, datetime
+
+          course = "af-002-iot-aiot-for-sas-programmers"
+          # rev-parse avoids the annotated-tag gotcha where GITHUB_SHA can
+          # point at the tag object rather than the commit.
+          sha = subprocess.check_output(
+              ["git", "rev-parse", "HEAD^{commit}"], text=True).strip()
+          tag = os.environ["GITHUB_REF_NAME"]
+          repo = os.environ["GITHUB_REPOSITORY"]
+          base = f"https://raw.githubusercontent.com/{repo}/{sha}"
+
+          routing = {}
+          for root, dirs, files in os.walk(course):
+              dirs[:] = [d for d in dirs if not d.startswith('.')]
+              for fn in sorted(files):
+                  p = os.path.join(root, fn)
+                  with open(p, "rb") as fh:
+                      data = fh.read()
+                  key = p[len(course)+1:].replace('/', '_').replace('.', '_').upper()
+                  routing[key] = {
+                      "path": p,
+                      "immutable_url": f"{base}/{p}",   # full literal string
+                      "sha256": hashlib.sha256(data).hexdigest(),
+                      "size_bytes": len(data),
+                  }
+
+          manifest = {
+              "kit": "AF-002",
+              "release_id": tag,
+              "content_commit": sha,          # never the manifest's own SHA
+              "generated_at": datetime.datetime.now(datetime.timezone.utc)
+                                .strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "expected_object_count": len(routing),  # = table length by construction
+              "routing_table": routing,
+          }
+          with open("RELEASE-MANIFEST.json", "w") as out:
+              json.dump(manifest, out, indent=2)
+          print(f"{len(routing)} objects; content_commit={sha}; release={tag}")
+          EOF
+
+      - name: Upload manifest as release asset (tag-scoped URL)
+        uses: softprops/action-gh-release@v2
+        with:
+          files: RELEASE-MANIFEST.json
+          tag_name: ${{ github.ref_name }}

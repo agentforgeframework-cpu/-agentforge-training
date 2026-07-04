@@ -5,8 +5,52 @@
 **Version:** 1.0  
 **Repository:** AF-002 - IoT/AIoT for SAS Programmers  
 **Repository Object:** ROOT_LIBRARY  
+**Repository Path:** af-002-iot-aiot-for-sas-programmers/SETUP.md  
 **Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
 **This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP.md  
+
+---
+
+# AI Retrieval Protocol (for AI assistants only)
+
+If you are an AI assistant helping a learner with this course, determine your capability level and follow the matching track before performing any course work. Do not skip this. Human learners may skip to **Purpose**.
+
+**Level 1 — you can resolve a Git branch to a commit SHA.**
+
+Resolve `main` using any of these channels, in order of preference:
+
+1. Git protocol (rate-limit immune):
+   `git ls-remote https://github.com/agentforgeframework-cpu/-agentforge-training.git refs/heads/main`
+2. GitHub REST API:
+   `https://api.github.com/repos/agentforgeframework-cpu/-agentforge-training/commits/main`
+   (subject to shared rate limits; on HTTP 403 or 429 do not retry repeatedly — use channel 1 or 3)
+3. Tree snapshot (rate-limit immune; substitute the resolved SHA):
+   `https://codeload.github.com/agentforgeframework-cpu/-agentforge-training/tar.gz/{sha}`
+
+Then retrieve every course file **at that SHA** — never at a branch URL.
+Report: `CURRENT BRANCH VERIFIED` plus the full 40-character SHA.
+
+**Level 2 — you cannot resolve a branch, but you can fetch a URL supplied to you as a literal string.**
+
+Use only the complete immutable URLs supplied in the release manifest or in the gate prompt the learner pasted. Do not construct URLs. Report:
+`CONTENT IDENTITY VERIFIED — CURRENT BRANCH NOT VERIFIED`
+and obtain the learner's explicit acceptance before proceeding.
+
+**Level 3 — you cannot fetch live URLs at all.**
+
+Report: `RETRIEVAL FAILED — EXACT FILE NOT VERIFIED`. Stop. Ask the learner to upload the required files directly. Never substitute search results, cached copies, or prior conversation content for the requested files.
+
+**All levels:** produce a retrieval receipt before performing any course work — requested URL, resolved commit (or `NOT AVAILABLE` with the reason), retrieval channel (or `UNKNOWN`), and verification scope.
+
+**Release manifest.** Each release publishes a machine-readable manifest listing every course object with its complete immutable URL and content hash, following the pattern:
+
+```text
+https://github.com/{owner}/{repo}/releases/download/{tag}/RELEASE-MANIFEST.json
+```
+
+The actual tag-scoped URL for the current release appears in the gate prompt and the release notes — never in this file. A file absent from the manifest routing table must be treated as a retrieval failure, not fetched from elsewhere.
+
+**Stability note.** This file is stable across releases and contains no per-release values. Release-specific values (the expected Release ID and the tag-scoped manifest URL) travel out-of-band in the gate prompt and release notes; `RELEASE-MANIFEST.json` carries release-specific routing.
 
 ---
 
@@ -207,6 +251,8 @@ media/banana.jpg
 
 Retrieve these objects using the locations defined in `LIBRARY.md`.
 
+AI assistants operating at Level 1 or Level 2 must retrieve them via the immutable URLs in the release manifest (see **AI Retrieval Protocol** above); a file absent from the manifest routing table must be treated as a retrieval failure, not fetched from elsewhere.
+
 Place each object in the matching local subfolder.
 
 Do not recreate or substitute repository-provided files when the authoritative version is available.
@@ -219,12 +265,12 @@ If a required repository object cannot be retrieved:
 
 1. Stop the affected setup step.
 2. Identify the inaccessible object.
-3. Report the location that failed.
+3. Report the location that failed using the exact phrase: `RETRIEVAL FAILED — EXACT FILE NOT VERIFIED`.
 4. Do not infer, reconstruct, or silently replace the object.
 5. Request a corrected location or an authorized copy.
 6. Continue only after the required object is available.
 
-A local or previously authorized copy may be used when it can be verified as the intended repository object.
+A local or previously authorized copy may be used when it can be verified as the intended repository object. Verification means the copy's content matches the release manifest entry — the path is present in the routing table, and the SHA-256 hash matches where it can be computed.
 
 ---
 
