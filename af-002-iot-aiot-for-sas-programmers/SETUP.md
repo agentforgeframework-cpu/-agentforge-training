@@ -138,6 +138,7 @@ After reading `COURSE.md`, complete this setup before beginning Lesson 00.
 
 The goal is not to create a complex development environment. The goal is to establish a small, understandable, and restartable workspace capable of producing telemetry and analyzing it with SAS.
 
+
 ---
 
 # Required Access
@@ -396,17 +397,25 @@ When using an AI assistant, provide the exact PowerShell, Python, or SAS error o
 
 Setup is complete when all of the following are true:
 
-- the AF-002 local workspace exists
-- Python 3 runs successfully
-- pip runs successfully
-- OpenCV imports successfully
-- pandas imports successfully
-- Ultralytics imports successfully
-- SAS opens and can run a basic program
-- either the webcam works or the image-file alternative is available
-- the required repository objects are present in their expected folders
-- the learner knows where to find command output, Python errors, and the SAS log
+* the AF-002 local workspace exists
+* Python 3 runs successfully
+* pip runs successfully
+* OpenCV imports successfully
+* pandas imports successfully
+* Ultralytics imports successfully
+* SAS opens and can run a basic program
+* either the webcam works or the image-file alternative is available
+* the required repository objects are present in their expected folders
+* the learner knows where to find command output, Python errors, and the SAS log
 
-After setup is complete, load Lesson 00 from the location defined in `LIBRARY.md`.
+## AI Startup Instructions
 
-Do not begin Lesson 01 before completing Lesson 00.
+The repository is the authority for this course.
+
+Do not create, infer, or substitute course content.
+
+Before teaching any lesson, retrieve and read the exact lesson file identified by the repository.
+
+If the required file cannot be retrieved and verified, stop.
+
+After setup is complete, retrieve and activate `AF002_LESSON_00.md`. Do not begin Lesson 01 until Lesson 00 is complete.
