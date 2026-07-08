@@ -191,13 +191,23 @@ Then continue to Lesson 01.
 
 # Next Step
 
-Continue to:
+When the Lesson 00 success conditions are complete, state:
 
 ```text
-AF002_LESSON_01.md
+LESSON 00 COMPLETE
 ```
 
-Retrieve the lesson from the authoritative location in `LIBRARY.md`.
+Retrieve and verify `AF002_LESSON_01.md` through the authoritative routing defined in `SETUP.md` and `LIBRARY.md`.
+
+Display the minimum identity check, then state:
+
+```text
+LESSON 01 VERIFIED — BEGINNING LESSON 01
+```
+
+Declare Lesson 01 active and begin instruction from that retrieved file.
+
+If retrieval or identity verification fails, stop and follow the failure rules in `SETUP.md`.
 
 ---
 

@@ -720,13 +720,23 @@ Spatial telemetry became ordinary SAS operational data.
 
 # Next Step
 
-Continue to:
+When the Lesson 04 success conditions are complete, state:
 
 ```text
-AF002_LESSON_05.md
+LESSON 04 COMPLETE
 ```
 
-Retrieve the lesson from the authoritative location in `LIBRARY.md`.
+Retrieve and verify `AF002_LESSON_05.md` through the authoritative routing defined in `SETUP.md` and `LIBRARY.md`.
+
+Display the minimum identity check, then state:
+
+```text
+LESSON 05 VERIFIED — BEGINNING LESSON 05
+```
+
+Declare Lesson 05 active and begin instruction from that retrieved file.
+
+If retrieval or identity verification fails, stop and follow the failure rules in `SETUP.md`.
 
 ---
 

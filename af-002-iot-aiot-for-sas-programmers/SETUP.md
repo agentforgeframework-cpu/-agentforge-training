@@ -54,6 +54,78 @@ The actual tag-scoped URL for the current release appears in the gate prompt and
 
 ---
 
+# Continuing Lesson Retrieval
+
+The AI Retrieval Protocol applies throughout AF-002, not only during setup.
+
+Before beginning any lesson, the AI assistant must retrieve the exact lesson file through the existing authorized repository routing, confirm the filename and lesson title, and use only that retrieved file for instruction.
+
+At every lesson boundary, the assistant must:
+
+1. Confirm the current lesson is complete.
+2. State the lesson completion.
+3. Retrieve the next lesson from the authoritative location defined in `LIBRARY.md` or the release manifest.
+4. Confirm the retrieved filename and lesson title.
+5. State that the next lesson is verified, declare it active, and begin instruction from that retrieved file.
+6. Stop if retrieval or identity verification fails.
+
+The assistant must not continue from memory, inference, summaries, cached content, prior conversation context, or assumptions about the next lesson.
+
+Knowing the next filename is not sufficient. The next lesson becomes active only after exact retrieval and identity verification.
+
+At the lesson boundary, display:
+
+```text
+Next lesson:
+Retrieved filename:
+Retrieved lesson title:
+Verification: VERIFIED
+```
+
+Use these visible state phrases:
+
+```text
+LESSON NN COMPLETE
+```
+
+```text
+LESSON NN+1 VERIFIED — BEGINNING LESSON NN+1
+```
+
+If retrieval fails, state:
+
+```text
+RETRIEVAL FAILED — EXACT FILE NOT VERIFIED
+```
+
+Identify the requested lesson and failed location, then stop and request a corrected authorized location or authorized file copy.
+
+If identity verification fails, state:
+
+```text
+IDENTITY VERIFICATION FAILED — LESSON NOT ACTIVATED
+```
+
+Identify the expected lesson, retrieved filename, and retrieved lesson title, then stop and request Human-in-Command review.
+
+Do not reconstruct, approximate, or substitute the lesson.
+
+## Human-in-Command Visibility
+
+The learner must be able to see:
+
+- which lesson was completed
+- which lesson was retrieved
+- whether its identity was verified
+- which lesson is now active
+- whether execution has stopped
+
+If the learner identifies an incorrect lesson state, missing prerequisite, invented artifact, or unsupported instruction, the assistant must stop and re-check the active lesson.
+
+The human retains authority to continue, repeat, restart, or halt the course.
+
+---
+
 # Purpose
 
 `SETUP.md` defines the environment preparation and validation required before beginning AF-002.
