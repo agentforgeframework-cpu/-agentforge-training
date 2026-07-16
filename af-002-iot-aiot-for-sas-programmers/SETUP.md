@@ -4,16 +4,66 @@
 **Status:** Production Candidate  
 **Version:** 1.0  
 **Repository:** AF-002 - IoT/AIoT for SAS Programmers  
-**Repository Object:** ROOT_LIBRARY  
+**Repository Object:** ROOT_SETUP  
 **Repository Path:** af-002-iot-aiot-for-sas-programmers/SETUP.md  
-**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/LIBRARY.md  
+**Raw:** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP.md  
 **This File (Raw):** https://raw.githubusercontent.com/agentforgeframework-cpu/-agentforge-training/refs/heads/main/af-002-iot-aiot-for-sas-programmers/SETUP.md  
+
+---
+
+# Repository Object Resolution Mode (for AI assistants only)
+
+If you are an AI assistant helping a learner with this course, determine the Repository Object Resolution Mode before performing any course work. Do not skip this. Human learners may skip to **Purpose**.
+
+Repository Objects are identified by HANDLE in `LIBRARY.md`.
+
+**LOCAL mode** applies when the complete course repository has been supplied in the current AI session, project, or uploaded archive.
+
+In LOCAL mode, resolve Repository Objects using the `LOCAL` filename in `LIBRARY.md`. Do not attempt Internet retrieval while the required local Repository Objects are available.
+
+Before course execution in LOCAL mode, display a startup receipt:
+
+```text
+Repository Object Resolution Mode: LOCAL
+Source: uploaded archive, uploaded files, project files, or current AI session files
+RAW retrieval: not used
+```
+
+**RAW mode** applies when the course repository has not been supplied locally and Repository Objects must be retrieved from GitHub or another authorized raw source.
+
+In RAW mode, resolve Repository Objects using the `RAW FILE` location in `LIBRARY.md` and follow the **AI Retrieval Protocol** below.
+
+Before course execution in RAW mode, display a startup receipt:
+
+```text
+Repository Object Resolution Mode: RAW
+Source: authorized raw repository location
+RAW retrieval: used
+```
+
+Do not mix LOCAL and RAW mode during the same course run.
+
+If the active mode fails, stop and report the failure. Do not switch modes unless the learner explicitly authorizes the switch.
+
+If a required Repository Object is missing, inaccessible, or cannot be identified, stop and report the required HANDLE and the expected LOCAL filename or RAW FILE location. Do not substitute or infer content.
+
+Entries marked `<not used>` in `LIBRARY.md` are not required for course execution.
+
+In LOCAL mode, use this failure phrase when a required local file is missing:
+
+```text
+LOCAL RESOLUTION FAILED — REQUIRED FILE NOT FOUND
+```
+
+In RAW mode, use the failure phrases defined in the **AI Retrieval Protocol**.
 
 ---
 
 # AI Retrieval Protocol (for AI assistants only)
 
-If you are an AI assistant helping a learner with this course, determine your capability level and follow the matching track before performing any course work. Do not skip this. Human learners may skip to **Purpose**.
+The AI Retrieval Protocol applies only in RAW mode.
+
+If you are operating in RAW mode, determine your retrieval capability level and follow the matching track before performing any course work. Do not skip this.
 
 **Level 1 — you can resolve a Git branch to a commit SHA.**
 
@@ -56,15 +106,15 @@ The actual tag-scoped URL for the current release appears in the gate prompt and
 
 # Continuing Lesson Retrieval
 
-The AI Retrieval Protocol applies throughout AF-002, not only during setup.
+Repository Object Resolution Mode applies throughout AF-002, not only during setup.
 
-Before beginning any lesson, the AI assistant must retrieve the exact lesson file through the existing authorized repository routing, confirm the filename and lesson title, and use only that retrieved file for instruction.
+Before beginning any lesson, the AI assistant must retrieve the exact lesson file through the active mode selected at startup, confirm the filename and lesson title, and use only that retrieved file for instruction.
 
 At every lesson boundary, the assistant must:
 
 1. Confirm the current lesson is complete.
 2. State the lesson completion.
-3. Retrieve the next lesson from the authoritative location defined in `LIBRARY.md` or the release manifest.
+3. Retrieve the next lesson from the authoritative location defined in `LIBRARY.md` using the active mode.
 4. Confirm the retrieved filename and lesson title.
 5. State that the next lesson is verified, declare it active, and begin instruction from that retrieved file.
 6. Stop if retrieval or identity verification fails.
@@ -92,7 +142,15 @@ LESSON NN COMPLETE
 LESSON NN+1 VERIFIED — BEGINNING LESSON NN+1
 ```
 
-If retrieval fails, state:
+If LOCAL resolution fails, state:
+
+```text
+LOCAL RESOLUTION FAILED — REQUIRED FILE NOT FOUND
+```
+
+Identify the requested lesson HANDLE, expected LOCAL filename, and failed local source, then stop and request a corrected authorized file copy. Do not use RAW retrieval unless the learner explicitly authorizes a mode switch.
+
+If RAW retrieval fails, state:
 
 ```text
 RETRIEVAL FAILED — EXACT FILE NOT VERIFIED
@@ -130,7 +188,7 @@ The human retains authority to continue, repeat, restart, or halt the course.
 
 `SETUP.md` defines the environment preparation and validation required before beginning AF-002.
 
-Before completing setup, load `COURSE.md` from the location defined in `LIBRARY.md`.
+Before completing setup, load `COURSE.md` from the location defined in `LIBRARY.md` using the active Repository Object Resolution Mode.
 
 `COURSE.md` is the authoritative definition of the course. It establishes the course's identity, instructional model, architecture, governing principles, and completion boundary.
 
@@ -322,11 +380,13 @@ media/dog.jpg
 media/banana.jpg
 ```
 
-Retrieve these objects using the locations defined in `LIBRARY.md`.
+Retrieve these objects using the locations defined in `LIBRARY.md` and the active Repository Object Resolution Mode.
 
-AI assistants operating at Level 1 or Level 2 must retrieve them via the immutable URLs in the release manifest (see **AI Retrieval Protocol** above); a file absent from the manifest routing table must be treated as a retrieval failure, not fetched from elsewhere.
+In LOCAL mode, the AI assistant resolves these Repository Objects from the supplied local repository package using the `LOCAL` filenames in `LIBRARY.md`. The learner workspace folders described below are for course execution on the learner's computer and do not require the AI deployment package itself to preserve subfolders.
 
-Place each object in the matching local subfolder.
+In RAW mode, AI assistants operating at Level 1 or Level 2 must retrieve them via the immutable URLs in the release manifest (see **AI Retrieval Protocol** above); a file absent from the manifest routing table must be treated as a retrieval failure, not fetched from elsewhere.
+
+Place each object in the matching learner workspace subfolder.
 
 Do not recreate or substitute repository-provided files when the authoritative version is available.
 
@@ -334,16 +394,19 @@ Do not recreate or substitute repository-provided files when the authoritative v
 
 # Retrieval Failure
 
-If a required repository object cannot be retrieved:
+If a required repository object cannot be resolved or retrieved:
 
 1. Stop the affected setup step.
-2. Identify the inaccessible object.
-3. Report the location that failed using the exact phrase: `RETRIEVAL FAILED — EXACT FILE NOT VERIFIED`.
-4. Do not infer, reconstruct, or silently replace the object.
-5. Request a corrected location or an authorized copy.
-6. Continue only after the required object is available.
+2. Identify the inaccessible object by HANDLE.
+3. In LOCAL mode, report the expected LOCAL filename using the exact phrase: `LOCAL RESOLUTION FAILED — REQUIRED FILE NOT FOUND`.
+4. In RAW mode, report the location that failed using the exact phrase: `RETRIEVAL FAILED — EXACT FILE NOT VERIFIED`.
+5. Do not infer, reconstruct, or silently replace the object.
+6. Request a corrected location or an authorized copy.
+7. Continue only after the required object is available.
 
-A local or previously authorized copy may be used when it can be verified as the intended repository object. Verification means the copy's content matches the release manifest entry — the path is present in the routing table, and the SHA-256 hash matches where it can be computed.
+Do not switch between LOCAL and RAW mode unless the learner explicitly authorizes the switch.
+
+A local or previously authorized copy may be used when it can be verified as the intended repository object. In LOCAL mode, verification means the file is available under the expected LOCAL filename for the required HANDLE in `LIBRARY.md`. In RAW mode, verification means the copy's content matches the release manifest entry — the path is present in the routing table, and the SHA-256 hash matches where it can be computed.
 
 ---
 
@@ -414,7 +477,7 @@ The repository is the authority for this course.
 
 Do not create, infer, or substitute course content.
 
-Before teaching any lesson, retrieve and read the exact lesson file identified by the repository.
+Before teaching any lesson, retrieve and read the exact lesson file identified by the repository using the active Repository Object Resolution Mode.
 
 If the required file cannot be retrieved and verified, stop.
 
